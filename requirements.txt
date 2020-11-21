@@ -1,5 +1,6 @@
 black
 click
+conda-package-handling
 flake8
 pip
 pytest
