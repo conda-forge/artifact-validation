@@ -6,6 +6,6 @@ def split_pkg(pkg):
         raise RuntimeError("Can only process packages that end in .tar.bz2")
     pkg = pkg[:-8]
     plat, pkg_name = pkg.split(os.path.sep)
-    name_ver, build = pkg_name.rsplit('-', 1)
-    name, ver = name_ver.rsplit('-', 1)
+    name_ver, build = pkg_name.rsplit("-", 1)
+    name, ver = name_ver.rsplit("-", 1)
     return plat, name, ver, build

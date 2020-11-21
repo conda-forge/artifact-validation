@@ -4,7 +4,6 @@ import subprocess
 import traceback
 import glob
 
-import yaml
 import conda_package_handling.api
 
 from .utils import split_pkg
@@ -29,7 +28,7 @@ def _validate_one(validate_yaml, pkg_dir):
 
 def download_and_validate(channel_url, subdir_pkg, validate_yamls):
     valid = True
-    bad_pths = set()
+    bad_pths = {}
 
     subdir, pkg = subdir_pkg.split(os.path.sep)
     _, output_name, _, _ = split_pkg(subdir_pkg)
@@ -53,13 +52,13 @@ def download_and_validate(channel_url, subdir_pkg, validate_yamls):
 
             pkg_dir = f"{tmpdir}/{pkg_nm}"
 
-            for validate_yaml_path in validate_yamls:
-                with open(validate_yaml_path) as fp:
-                    validate_yaml = yaml.safe_load(fp)
+            for validate_name, validate_yaml in validate_yamls.items():
                 _valid, _bad_pths = _validate_one(validate_yaml, pkg_dir, output_name)
                 valid = valid and _valid
-                bad_pths |= set(_bad_pths)
-
+                bad_pths[validate_name] = {
+                    "valid": _valid,
+                    "bad_files": sorted(_bad_pths),
+                }
         except Exception:
             traceback.print_exc()
             valid = False
