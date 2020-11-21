@@ -60,10 +60,11 @@ def download_and_validate(channel_url, subdir_pkg, validate_yamls):
                             output_name,
                         )
                         valid = valid and _valid
-                        bad_pths[validate_name] = {
-                            "valid": _valid,
-                            "bad_files": sorted(_bad_pths),
-                        }
+                        if not _valid:
+                            bad_pths[validate_name] = {
+                                "valid": _valid,
+                                "bad_files": sorted(_bad_pths),
+                            }
             else:
                 valid = False
 
