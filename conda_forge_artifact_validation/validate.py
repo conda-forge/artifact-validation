@@ -27,7 +27,7 @@ def _validate_one(validate_yaml, pkg_dir):
     return True, []
 
 
-def download_and_validate(channel_url, subdir_pkg, validate_yaml_paths):
+def download_and_validate(channel_url, subdir_pkg, validate_yamls):
     valid = True
     bad_pths = set()
 
@@ -53,7 +53,7 @@ def download_and_validate(channel_url, subdir_pkg, validate_yaml_paths):
 
             pkg_dir = f"{tmpdir}/{pkg_nm}"
 
-            for validate_yaml_path in validate_yaml_paths:
+            for validate_yaml_path in validate_yamls:
                 with open(validate_yaml_path) as fp:
                     validate_yaml = yaml.safe_load(fp)
                 _valid, _bad_pths = _validate_one(validate_yaml, pkg_dir, output_name)
