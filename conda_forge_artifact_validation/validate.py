@@ -3,21 +3,26 @@ import tempfile
 import subprocess
 import traceback
 import glob
+import logging
 
 import conda_package_handling.api
 
 from .utils import split_pkg
 
+LOGGER = logging.getLogger(__name__)
+
 
 def _validate_one(validate_yaml, pkg_dir):
     for file in validate_yaml["files"]:
         pkg_dir_file = os.path.join(pkg_dir, file)
+        LOGGER.debug("pkg_dir/file: %s", pkg_dir_file)
+
         if "*" in file:
             pths = glob.glob(pkg_dir_file, recursive=True)
-        elif os.path.isdir(pkg_dir_file):
-            pths = glob.glob(os.path.join(pkg_dir_file, "**"), recursive=True)
         else:
             pths = [pkg_dir_file]
+
+        LOGGER.debug("paths to be checked: %s", pths)
 
         for pth in pths:
             if os.path.exists(pth):
@@ -78,14 +83,15 @@ def download_and_validate(channel_url, subdir_pkg, validate_yamls):
                         _valid, _bad_pths = _validate_one(
                             validate_yaml,
                             pkg_dir,
-                            output_name,
                         )
                         valid = valid and _valid
                         if not _valid:
                             bad_pths[validate_name] = {
                                 "valid": _valid,
-                                "bad_files": sorted(_bad_pths),
+                                "bad_paths": sorted(_bad_pths),
                             }
+                    else:
+                        LOGGER.debug("skipping %s for %s", pkg_nm, validate_name)
             else:
                 valid = False
 
