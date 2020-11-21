@@ -27,6 +27,27 @@ def _validate_one(validate_yaml, pkg_dir):
 
 
 def download_and_validate(channel_url, subdir_pkg, validate_yamls):
+    """Download and validate a package.
+
+    Parameters
+    ----------
+    channel_url : str
+        The URL for the conda channel.
+    subdir_pkg : str
+        The fully qualified path of the package (e.g. "linux-64/numpy-...").
+    validate_yamls : dict
+        A dictionary mapping the filename of the validation yaml to its
+        contents.
+
+    Returns
+    -------
+    valid : bool
+        True if the package is valid, False otherwise.
+    bad_paths : dict
+        A dictionary mapping the validation YAML name information in the case
+        that the package is not valid.
+    """
+
     valid = True
     bad_pths = {}
 
