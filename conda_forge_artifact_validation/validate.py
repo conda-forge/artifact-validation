@@ -27,11 +27,10 @@ def _validate_one(validate_yaml, pkg_dir):
     return True, []
 
 
-def download_and_validate(channel_url, subdir_pkg):
+def download_and_validate(channel_url, subdir_pkg, validate_yaml_paths):
     valid = True
     bad_pths = set()
 
-    validate_yaml_paths = glob.glob("do_not_clobber_yamls/*.yaml")
     subdir, pkg = subdir_pkg.split(os.path.sep)
     _, output_name, _, _ = split_pkg(subdir_pkg)
 
