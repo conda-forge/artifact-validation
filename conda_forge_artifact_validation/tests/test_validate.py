@@ -29,6 +29,9 @@ def test_validate_skip():
     "globstr",
     [
         "lib/python*/site-packages/numpy/**/*",
+        "lib/python*/site-packages/numpy/**",
+        "lib/python*/site-packages/numpy",
+        "lib/python*/site-packages/numpy/",
         "lib/python*/site-packages/numpy-*.dist-info/**/*",
         "lib/python2.7/site-packages/numpy",
         "lib/python2.7/site-packages/numpy/polynomial/tests/__init__.pyc",
