@@ -53,16 +53,17 @@ def download_and_validate(channel_url, subdir_pkg, validate_yamls):
                 pkg_dir = f"{tmpdir}/{pkg_nm}"
 
                 for validate_name, validate_yaml in validate_yamls.items():
-                    _valid, _bad_pths = _validate_one(
-                        validate_yaml,
-                        pkg_dir,
-                        output_name,
-                    )
-                    valid = valid and _valid
-                    bad_pths[validate_name] = {
-                        "valid": _valid,
-                        "bad_files": sorted(_bad_pths),
-                    }
+                    if output_name not in validate_yaml["allowed"]:
+                        _valid, _bad_pths = _validate_one(
+                            validate_yaml,
+                            pkg_dir,
+                            output_name,
+                        )
+                        valid = valid and _valid
+                        bad_pths[validate_name] = {
+                            "valid": _valid,
+                            "bad_files": sorted(_bad_pths),
+                        }
             else:
                 valid = False
 
