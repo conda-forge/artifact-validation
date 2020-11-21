@@ -41,7 +41,7 @@ def download_and_validate(channel_url, subdir_pkg, validate_yamls):
                 shell=True,
             )
 
-            # unpack and validates
+            # unpack and validate
             if os.path.exists(f"{tmpdir}/{pkg}"):
                 conda_package_handling.api.extract(f"{tmpdir}/{pkg}")
 
