@@ -41,24 +41,30 @@ def download_and_validate(channel_url, subdir_pkg, validate_yamls):
                 shell=True,
             )
 
-            # unpack and read if it exists
+            # unpack and validates
             if os.path.exists(f"{tmpdir}/{pkg}"):
                 conda_package_handling.api.extract(f"{tmpdir}/{pkg}")
 
-            if pkg.endswith(".tar.bz2"):
-                pkg_nm = pkg[: -len(".tar.bz2")]
-            else:
-                pkg_nm = pkg[: -len(".conda")]
+                if pkg.endswith(".tar.bz2"):
+                    pkg_nm = pkg[: -len(".tar.bz2")]
+                else:
+                    pkg_nm = pkg[: -len(".conda")]
 
-            pkg_dir = f"{tmpdir}/{pkg_nm}"
+                pkg_dir = f"{tmpdir}/{pkg_nm}"
 
-            for validate_name, validate_yaml in validate_yamls.items():
-                _valid, _bad_pths = _validate_one(validate_yaml, pkg_dir, output_name)
-                valid = valid and _valid
-                bad_pths[validate_name] = {
-                    "valid": _valid,
-                    "bad_files": sorted(_bad_pths),
-                }
+                for validate_name, validate_yaml in validate_yamls.items():
+                    _valid, _bad_pths = _validate_one(
+                        validate_yaml,
+                        pkg_dir,
+                        output_name,
+                    )
+                    valid = valid and _valid
+                    bad_pths[validate_name] = {
+                        "valid": _valid,
+                        "bad_files": sorted(_bad_pths),
+                    }
+                else:
+                    valid = False
         except Exception:
             traceback.print_exc()
             valid = False
