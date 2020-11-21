@@ -8,8 +8,8 @@ def test_validate_skip():
         "numpy": {
             "allowed": ["numpy"],
             "files": [
-                "lib/python*/site-packages/numpy/**/*",
-                "lib/python*/site-packages/numpy-*.dist-info/**/*",
+                "lib/python*/site-packages/numpy",
+                "lib/python*/site-packages/numpy-*.dist-info",
             ],
         },
     }
