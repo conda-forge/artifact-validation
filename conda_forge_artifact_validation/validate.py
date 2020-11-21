@@ -63,8 +63,9 @@ def download_and_validate(channel_url, subdir_pkg, validate_yamls):
                         "valid": _valid,
                         "bad_files": sorted(_bad_pths),
                     }
-                else:
-                    valid = False
+            else:
+                valid = False
+
         except Exception:
             traceback.print_exc()
             valid = False
