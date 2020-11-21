@@ -24,9 +24,21 @@ jobs:
           conda install --quiet --file requirements.txt
           python -m pip install -e .
 
-      - name: test
+      - name: lint
         shell: bash -l {0}
         run: |
           flake8 conda_forge_artifact_validation
           flake8 bin/conda-forge-validate-artifact
+          black --check conda_forge_artifact_validation
+          black --check bin/conda-forge-validate-artifact
+
+      - name: test
+        shell: bash -l {0}
+        run: |
           pytest -vvs conda_forge_artifact_validation
+
+      - name: run cli
+        shell: bash -l {0}
+        run: |
+          conda-forge-validate-artifact --help
+          conda-forge-validate-artifact
