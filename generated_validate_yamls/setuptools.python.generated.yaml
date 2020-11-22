@@ -6,10 +6,12 @@ files:
 - Lib/site-packages/distutils-precedence.pth
 - Lib/site-packages/easy_install.py
 - Lib/site-packages/pkg_resources-*.dist-info/**/*
+- Lib/site-packages/pkg_resources-*.egg
 - Lib/site-packages/pkg_resources-*.egg-info
 - Lib/site-packages/pkg_resources-*.egg-info/**/*
 - Lib/site-packages/pkg_resources/**/*
 - Lib/site-packages/setuptools-*.dist-info/**/*
+- Lib/site-packages/setuptools-*.egg
 - Lib/site-packages/setuptools-*.egg-info
 - Lib/site-packages/setuptools-*.egg-info/**/*
 - Lib/site-packages/setuptools-23.0.0-py2.7.egg
@@ -39,10 +41,12 @@ files:
 - bin/easy_install-3.5
 - bin/easy_install-3.6
 - lib/python*/site-packages/pkg_resources-*.dist-info/**/*
+- lib/python*/site-packages/pkg_resources-*.egg
 - lib/python*/site-packages/pkg_resources-*.egg-info
 - lib/python*/site-packages/pkg_resources-*.egg-info/**/*
 - lib/python*/site-packages/pkg_resources/**/*
 - lib/python*/site-packages/setuptools-*.dist-info/**/*
+- lib/python*/site-packages/setuptools-*.egg
 - lib/python*/site-packages/setuptools-*.egg-info
 - lib/python*/site-packages/setuptools-*.egg-info/**/*
 - lib/python*/site-packages/setuptools/**/*

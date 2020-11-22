@@ -2,10 +2,12 @@ allowed:
 - requests
 files:
 - Lib/site-packages/requests-*.dist-info/**/*
+- Lib/site-packages/requests-*.egg
 - Lib/site-packages/requests-*.egg-info
 - Lib/site-packages/requests-*.egg-info/**/*
 - Lib/site-packages/requests/**/*
 - lib/python*/site-packages/requests-*.dist-info/**/*
+- lib/python*/site-packages/requests-*.egg
 - lib/python*/site-packages/requests-*.egg-info
 - lib/python*/site-packages/requests-*.egg-info/**/*
 - lib/python*/site-packages/requests/**/*

@@ -13,7 +13,7 @@ from conda_forge_artifact_validation.generate_validate_yamls import (
 
 
 def _append_and_write_validate_yaml(validate_yaml_path, validate_yaml):
-    if os.path.exists(validate_yaml):
+    if os.path.exists(validate_yaml_path):
         with open(validate_yaml_path, "r") as fp:
             old_validate_yaml = yaml.safe_load(fp)
 
