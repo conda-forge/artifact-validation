@@ -38,8 +38,7 @@ def _gen_from_validate_yamls():
 
         if all(len(gen_validate_yaml[key]) > 0 for key in ["files", "allowed"]):
             gen_validate_yaml_path = (
-                validate_yaml_path[:-len(".yaml")]
-                + ".generated.yaml"
+                validate_yaml_path[: -len(".yaml")] + ".generated.yaml"
             )
             gen_validate_yaml_path = gen_validate_yaml_path.replace(
                 "validate_yamls/",
