@@ -12,16 +12,16 @@ LIBCFGRAPH_INDEX = None
 
 # this is a default exclude set for a python package
 DEFAULT_PYTHON_GLOBS = [
-  "Lib/site-packages/{import_name}/**/*",
-  "Lib/site-packages/{import_name}-*.dist-info/**/*",
-  "Lib/site-packages/{import_name}-*.egg",
-  "Lib/site-packages/{import_name}-*.egg-info",
-  "Lib/site-packages/{import_name}-*.egg-info/**/*",
-  "lib/python*/site-packages/{import_name}/**/*",
-  "lib/python*/site-packages/{import_name}-*.dist-info/**/*",
-  "lib/python*/site-packages/{import_name}-*.egg",
-  "lib/python*/site-packages/{import_name}-*.egg-info",
-  "lib/python*/site-packages/{import_name}-*.egg-info/**/*",
+    "Lib/site-packages/{import_name}/**/*",
+    "Lib/site-packages/{import_name}-*.dist-info/**/*",
+    "Lib/site-packages/{import_name}-*.egg",
+    "Lib/site-packages/{import_name}-*.egg-info",
+    "Lib/site-packages/{import_name}-*.egg-info/**/*",
+    "lib/python*/site-packages/{import_name}/**/*",
+    "lib/python*/site-packages/{import_name}-*.dist-info/**/*",
+    "lib/python*/site-packages/{import_name}-*.egg",
+    "lib/python*/site-packages/{import_name}-*.egg-info",
+    "lib/python*/site-packages/{import_name}-*.egg-info/**/*",
 ]
 
 
@@ -37,10 +37,7 @@ def _get_all_json_blobs_for_artifact(artifact_name):
         LIBCFGRAPH_INDEX = r.json()
 
     sentinel = os.path.join("artifacts", artifact_name) + "/"
-    artifact_pths = [
-        pth for pth in LIBCFGRAPH_INDEX
-        if pth.startswith(sentinel)
-    ]
+    artifact_pths = [pth for pth in LIBCFGRAPH_INDEX if pth.startswith(sentinel)]
 
     def _download_jsob_blob(artifact_pth):
         try:
@@ -57,7 +54,7 @@ def _get_all_json_blobs_for_artifact(artifact_name):
         joblib.delayed(_download_jsob_blob)(artifact_pth)
         for artifact_pth in artifact_pths
     ]
-    artifacts = joblib.Parallel(n_jobs=20, backend='threading', verbose=0)(jobs)
+    artifacts = joblib.Parallel(n_jobs=20, backend="threading", verbose=0)(jobs)
 
     return [a for a in artifacts if a is not None]
 
@@ -97,16 +94,12 @@ def generate_validate_yaml_from_libcfgraph(artifact_name, exclude_globs=None):
     files_to_add = set()
     for a in blobs:
         for f in a["files"]:
-            if (
-                re_patt_comps
-                and not any(re_patt_comp.fullmatch(f) for re_patt_comp in re_patt_comps)
+            if re_patt_comps and not any(
+                re_patt_comp.fullmatch(f) for re_patt_comp in re_patt_comps
             ):
                 files_to_add.add(f)
 
-    return {
-        "files": sorted(list(files_to_add)),
-        "allowed": [artifact_name]
-    }
+    return {"files": sorted(list(files_to_add)), "allowed": [artifact_name]}
 
 
 def generate_validate_yaml_for_python(
