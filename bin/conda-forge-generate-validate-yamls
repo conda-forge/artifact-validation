@@ -1,0 +1,78 @@
+#!/usr/bin/env python
+import glob
+
+import tqdm
+import yaml
+import click
+
+from conda_forge_artifact_validation.generate_validate_yamls import (
+    generate_validate_yaml_from_libcfgraph,
+    generate_validate_yaml_for_python,
+)
+
+
+def _gen_from_validate_yamls():
+    validate_yaml_paths = glob.glob("validate_yamls/*.yaml")
+
+    for validate_yaml_path in tqdm.tqdm(
+        validate_yaml_paths,
+        desc="generating from validate yamls",
+    ):
+        with open(validate_yaml_path, "r") as fp:
+            validate_yaml = yaml.safe_load(fp)
+
+        gen_validate_yaml = {
+            "files": [],
+            "allowed": [],
+        }
+        for artifact_name in validate_yaml.get("generate_from_artifacts", []):
+            _gen_validate_yaml = generate_validate_yaml_from_libcfgraph(
+                artifact_name,
+                exclude_globs=validate_yaml.get("files", []),
+            )
+            for key in ["files", "allowed"]:
+                gen_validate_yaml[key].extend(_gen_validate_yaml[key])
+
+        for key in ["files", "allowed"]:
+            gen_validate_yaml[key] = sorted(list(set(gen_validate_yaml[key])))
+
+        if all(len(gen_validate_yaml[key]) > 0 for key in ["files", "allowed"]):
+            gen_validate_yaml_path = (
+                validate_yaml_path[:-len(".yaml")]
+                + ".generated.yaml"
+            )
+            gen_validate_yaml_path = gen_validate_yaml_path.replace(
+                "validate_yamls/",
+                "generated_validate_yamls/",
+            )
+            with open(gen_validate_yaml_path, "w") as fp:
+                yaml.dump(gen_validate_yaml, fp)
+
+
+def _gen_from_python_packages():
+    with open("generated_validate_yamls/python_packages.yaml") as fp:
+        pypkg = yaml.safe_load(fp)
+
+    for artifact_name, v in tqdm.tqdm(
+        pypkg.items(), desc="generating for python packages"
+    ):
+        validate_yaml = generate_validate_yaml_for_python(
+            artifact_name,
+            v["top_level_imports"],
+            allowed=v.get("allowed", None),
+        )
+
+        pth = f"generated_validate_yamls/{artifact_name}.python.generated.yaml"
+        with open(pth, "w") as fp:
+            yaml.dump(validate_yaml, fp)
+
+
+@click.command()
+def main():
+    """generate validate yamls"""
+    _gen_from_validate_yamls()
+    _gen_from_python_packages()
+
+
+if __name__ == "__main__":
+    main()

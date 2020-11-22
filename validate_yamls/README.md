@@ -1,4 +1,4 @@
-# do not clobber yamls
+# validate yamls
 
 This directory holds YAML files specifying paths that cannot be clobbered
 except by artifacts on an allowed list.

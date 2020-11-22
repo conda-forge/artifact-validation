@@ -1,0 +1,11 @@
+allowed:
+- scipy
+files:
+- Lib/site-packages/scipy-*.dist-info/**/*
+- Lib/site-packages/scipy-*.egg-info
+- Lib/site-packages/scipy-*.egg-info/**/*
+- Lib/site-packages/scipy/**/*
+- lib/python*/site-packages/scipy-*.dist-info/**/*
+- lib/python*/site-packages/scipy-*.egg-info
+- lib/python*/site-packages/scipy-*.egg-info/**/*
+- lib/python*/site-packages/scipy/**/*
