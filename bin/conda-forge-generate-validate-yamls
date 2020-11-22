@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import os
 import glob
 
 import tqdm
@@ -9,6 +10,19 @@ from conda_forge_artifact_validation.generate_validate_yamls import (
     generate_validate_yaml_from_libcfgraph,
     generate_validate_yaml_for_python,
 )
+
+
+def _append_and_write_validate_yaml(validate_yaml_path, validate_yaml):
+    if os.path.exists(validate_yaml):
+        with open(validate_yaml_path, "r") as fp:
+            old_validate_yaml = yaml.safe_load(fp)
+
+        for key in ["files", "allowed"]:
+            validate_yaml[key].extend(old_validate_yaml[key])
+            validate_yaml[key] = sorted(list(set(validate_yaml[key])))
+
+    with open(validate_yaml_path, "w") as fp:
+        yaml.dump(validate_yaml, fp)
 
 
 def _gen_from_validate_yamls():
@@ -44,8 +58,7 @@ def _gen_from_validate_yamls():
                 "validate_yamls/",
                 "generated_validate_yamls/",
             )
-            with open(gen_validate_yaml_path, "w") as fp:
-                yaml.dump(gen_validate_yaml, fp)
+            _append_and_write_validate_yaml(gen_validate_yaml_path, gen_validate_yaml)
 
 
 def _gen_from_python_packages():
@@ -62,8 +75,7 @@ def _gen_from_python_packages():
         )
 
         pth = f"generated_validate_yamls/{artifact_name}.python.generated.yaml"
-        with open(pth, "w") as fp:
-            yaml.dump(validate_yaml, fp)
+        _append_and_write_validate_yaml(pth, validate_yaml)
 
 
 @click.command()
