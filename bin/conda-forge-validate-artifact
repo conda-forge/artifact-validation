@@ -63,6 +63,7 @@ def main(artifact_path, md5sum, verbose):
             channel_url,
             subdir_pkg,
             validate_yamls,
+            md5sum=md5sum,
         )
     else:
         with tempfile.TemporaryDirectory() as tmpdir:

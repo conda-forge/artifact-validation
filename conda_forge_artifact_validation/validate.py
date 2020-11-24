@@ -8,7 +8,7 @@ import shutil
 
 import conda_package_handling.api
 
-from .utils import split_pkg
+from .utils import split_pkg, compute_md5sum
 
 LOGGER = logging.getLogger(__name__)
 
@@ -89,7 +89,7 @@ def validate_file(path, validate_yamls, tmpdir=None):
     return valid, bad_pths
 
 
-def download_and_validate(channel_url, subdir_pkg, validate_yamls):
+def download_and_validate(channel_url, subdir_pkg, validate_yamls, md5sum=None):
     """Download and validate a package.
 
     Parameters
@@ -101,6 +101,8 @@ def download_and_validate(channel_url, subdir_pkg, validate_yamls):
     validate_yamls : dict
         A dictionary mapping the filename of the validation yaml to its
         contents.
+    md5sum : str
+        If not None, then checksum the downloaded file with md5 before we validate.
 
     Returns
     -------
@@ -123,6 +125,10 @@ def download_and_validate(channel_url, subdir_pkg, validate_yamls):
 
             # unpack and validate
             if os.path.exists(f"{tmpdir}/{pkg}"):
+                if md5sum is not None and md5sum != compute_md5sum(f"{tmpdir}/{pkg}"):
+                    LOGGER.debug("bad md5sum for %s", pkg)
+                    return False, {}
+
                 valid, bad_pths = validate_file(f"{tmpdir}/{pkg}", validate_yamls)
             else:
                 valid = False

@@ -24,8 +24,40 @@ def test_validate_skip():
         channel_url,
         subdir_pkg,
         validate_yamls,
+        md5sum="c792b85aebf54d48fb3d7597d6688ed6",
     )
     assert valid
+    assert bad_pths == {}
+
+    valid, bad_pths = download_and_validate(
+        channel_url,
+        subdir_pkg,
+        validate_yamls,
+    )
+    assert valid
+    assert bad_pths == {}
+
+
+def test_validate_bad_md5sum():
+    validate_yamls = {
+        "numpy": {
+            "allowed": ["numpy"],
+            "files": [
+                "lib/python*/site-packages/numpy",
+                "lib/python*/site-packages/numpy-*.dist-info",
+            ],
+        },
+    }
+
+    channel_url = "https://conda.anaconda.org/conda-forge"
+    subdir_pkg = "osx-64/numpy-1.19.4-py36hcf5569d_1.tar.bz2"
+    valid, bad_pths = download_and_validate(
+        channel_url,
+        subdir_pkg,
+        validate_yamls,
+        md5sum="c7",
+    )
+    assert not valid
     assert bad_pths == {}
 
 
