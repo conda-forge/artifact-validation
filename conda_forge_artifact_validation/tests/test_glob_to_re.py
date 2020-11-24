@@ -1,3 +1,7 @@
+"""
+tests for converting globs to regular expressions
+lifted from https://stackoverflow.com/a/63212852/1745538
+"""
 import re
 
 import pytest
