@@ -1,7 +1,9 @@
 name: tests
 
 on:
-  push: null
+  push:
+    branches:
+      - master
   pull_request: null
 
 jobs:
@@ -28,9 +30,9 @@ jobs:
         shell: bash -l {0}
         run: |
           flake8 conda_forge_artifact_validation
-          flake8 bin/conda-forge-validate-artifact
+          flake8 bin/*
           black --check conda_forge_artifact_validation
-          black --check bin/conda-forge-validate-artifact
+          black --check bin/*
 
       - name: test
         shell: bash -l {0}
@@ -41,4 +43,10 @@ jobs:
         shell: bash -l {0}
         run: |
           conda-forge-validate-artifact --help
-          conda-forge-validate-artifact
+          conda-forge-generate-validate-yamls --help
+
+      - name: run generate
+        shell: bash -l {0}
+        run: |
+          conda-forge-generate-validate-yamls
+          git diff

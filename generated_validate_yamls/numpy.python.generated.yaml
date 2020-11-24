@@ -1,0 +1,29 @@
+allowed:
+- numpy
+files:
+- Lib/site-packages/numpy-*.dist-info/**/*
+- Lib/site-packages/numpy-*.egg
+- Lib/site-packages/numpy-*.egg-info
+- Lib/site-packages/numpy-*.egg-info/**/*
+- Lib/site-packages/numpy/**/*
+- Scripts/conv-template.exe
+- Scripts/f2py-script.py
+- Scripts/f2py.bat
+- Scripts/f2py.exe
+- Scripts/f2py.py
+- Scripts/from-template.exe
+- bin/conv-template
+- bin/f2py
+- bin/f2py2
+- bin/f2py2.7
+- bin/f2py3
+- bin/f2py3.6
+- bin/f2py3.7
+- bin/f2py3.8
+- bin/f2py3.9
+- bin/from-template
+- lib/python*/site-packages/numpy-*.dist-info/**/*
+- lib/python*/site-packages/numpy-*.egg
+- lib/python*/site-packages/numpy-*.egg-info
+- lib/python*/site-packages/numpy-*.egg-info/**/*
+- lib/python*/site-packages/numpy/**/*

@@ -1,0 +1,29 @@
+# this file holds mappings of artifact names to python import names
+# for artifacts for which we want to autogenerate validate yamls
+#
+# The format is
+#
+# <conda pkg name>:
+#   top_level_imports:
+#     - <any top level import names go here>
+#   # optional allowed section
+#   # entires in this list are conda pkgs that are allowed to stomp on this
+#   # python package's files
+#   # if not given, the <conda pkg name> is an implicit entry
+#   # if given, these are appended to a list with the <conda pkg name> in it
+#   allowed:
+#    - <other conda pkg>
+
+numpy:
+  top_level_imports:
+    - numpy
+requests:
+  top_level_imports:
+    - requests
+scipy:
+  top_level_imports:
+    - scipy
+setuptools:
+  top_level_imports:
+    - setuptools
+    - pkg_resources

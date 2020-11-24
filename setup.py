@@ -6,7 +6,10 @@ setup(
     description="",
     author="conda-forge/core",
     author_email="",
-    scripts=["bin/conda-forge-validate-artifact"],
+    scripts=[
+        "bin/conda-forge-validate-artifact",
+        "bin/conda-forge-generate-validate-yamls",
+    ],
     url="https://github.com/conda-forge/artifact-validation",
     packages=find_packages(),
 )

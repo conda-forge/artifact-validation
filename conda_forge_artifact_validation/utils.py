@@ -2,6 +2,26 @@ import os
 
 
 def split_pkg(pkg):
+    """Split a subdir + conda package into parts.
+
+    From @isuruf and @CJ-Wright originally.
+
+    Parameters
+    ----------
+    pkg : str
+        The conda package (e.g. `linux-64/python-3.7.6-py37djfa_0.tar.bz2`)
+
+    Returns
+    -------
+    plat : str
+        The platform (e.g., `linux-64`).
+    name : str
+        The package name (e.g., `python`).
+    ver : str
+        The version (e.g., `3.7.6`).
+    build : str
+        The build string (e.g., `py37djfa_0`)
+    """
     if not pkg.endswith(".tar.bz2"):
         raise RuntimeError("Can only process packages that end in .tar.bz2")
     pkg = pkg[:-8]

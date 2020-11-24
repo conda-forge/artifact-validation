@@ -1,4 +1,4 @@
-# do not clobber yamls
+# validate yamls
 
 This directory holds YAML files specifying paths that cannot be clobbered
 except by artifacts on an allowed list.
@@ -17,5 +17,10 @@ files:
 
 # list of packages allowed to write the files above
 allowed:
+  - conda
+
+# for any artifacts listed here, we will use libcfgraph to attempt
+# to generate an additional list of files that cannot be clobbered
+generate_from_artifacts:
   - conda
 ```

@@ -2,6 +2,10 @@ black
 click
 conda-package-handling
 flake8
+joblib
 pip
 pytest
 pyyaml
+rapidjson
+requests
+tqdm
