@@ -48,5 +48,10 @@ jobs:
       - name: run generate
         shell: bash -l {0}
         run: |
-          conda-forge-generate-validate-yamls
+          conda-forge-generate-validate-yamls --test
           git diff
+
+      - name: run validate
+        shell: bash -l {0}
+        run: |
+          conda-forge-validate-artifact -v https://anaconda.org/conda-forge/numpy/1.19.4/download/osx-64/numpy-1.19.4-py36hcf5569d_1.tar.bz2

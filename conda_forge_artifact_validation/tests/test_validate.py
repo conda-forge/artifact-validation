@@ -1,6 +1,10 @@
+import os
+import subprocess
+import tempfile
+
 import pytest
 
-from ..validate import download_and_validate
+from ..validate import download_and_validate, validate_file
 
 
 def test_validate_skip():
@@ -67,3 +71,45 @@ def test_validate_glob_dir_file(subdir_pkg, ok, globstr):
         assert bad_pths != {}
         assert "numpy" in bad_pths
         print(bad_pths)
+
+
+@pytest.mark.parametrize(
+    "subdir_pkg,ok",
+    [
+        ("linux-aarch64/iminuit-1.5.4-py36h47e6fc7_0.tar.bz2", True),
+        # this one is invalid and known to be so
+        ("linux-64/freud-0.11.0-py27h3e44d54_0.tar.bz2", False),
+    ],
+)
+def test_validate_file(subdir_pkg, ok):
+    channel_url = "https://conda.anaconda.org/conda-forge"
+    validate_yamls = {
+        "numpy": {
+            "allowed": ["numpy"],
+            "files": [
+                "lib/python*/site-packages/numpy",
+                "lib/python*/site-packages/numpy-*.dist-info",
+            ],
+        },
+    }
+    subdir, pkg = os.path.split(subdir_pkg)
+
+    with tempfile.TemporaryDirectory() as dwndir:
+        # download
+        subprocess.run(
+            f"cd {dwndir} && curl -s -L {channel_url}/{subdir_pkg} --output {pkg}",
+            shell=True,
+        )
+        with tempfile.TemporaryDirectory() as updir:
+            valid, bad_pths = validate_file(
+                os.path.join(dwndir, pkg),
+                validate_yamls,
+                tmpdir=updir,
+            )
+
+    if ok:
+        assert valid
+        assert bad_pths == {}
+    else:
+        assert not valid
+        assert bad_pths != {}

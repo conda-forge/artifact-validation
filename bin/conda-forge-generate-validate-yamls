@@ -25,7 +25,7 @@ def _append_and_write_validate_yaml(validate_yaml_path, validate_yaml):
         yaml.dump(validate_yaml, fp)
 
 
-def _gen_from_validate_yamls():
+def _gen_from_validate_yamls(test=False):
     validate_yaml_paths = glob.glob("validate_yamls/*.yaml")
 
     for validate_yaml_path in tqdm.tqdm(
@@ -64,8 +64,11 @@ def _gen_from_validate_yamls():
                     gen_validate_yaml,
                 )
 
+                if test:
+                    break
 
-def _gen_from_python_packages():
+
+def _gen_from_python_packages(test=False):
     with open("generated_validate_yamls/python_packages.yaml") as fp:
         pypkg = yaml.safe_load(fp)
 
@@ -81,12 +84,16 @@ def _gen_from_python_packages():
         pth = f"generated_validate_yamls/{artifact_name}.python.generated.yaml"
         _append_and_write_validate_yaml(pth, validate_yaml)
 
+        if test:
+            break
+
 
 @click.command()
-def main():
+@click.option("--test", is_flag=True, help='run a shorter test of the command')
+def main(test):
     """generate validate yamls"""
-    _gen_from_validate_yamls()
-    _gen_from_python_packages()
+    _gen_from_validate_yamls(test=test)
+    _gen_from_python_packages(test=test)
 
 
 if __name__ == "__main__":

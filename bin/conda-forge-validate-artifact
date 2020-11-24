@@ -1,11 +1,82 @@
 #!/usr/bin/env python
+import logging
+import glob
+import os
+import tempfile
+import sys
+import pprint
+
 import click
+import yaml
+
+from conda_forge_artifact_validation.utils import is_url
+from conda_forge_artifact_validation.validate import (
+    validate_file,
+    download_and_validate,
+)
+
+LOGGER = logging.getLogger("conda_forge_artifact_validation")
 
 
 @click.command()
-def main():
-    """validate artifacts for conda-forge"""
-    print("hello!")
+@click.argument('artifact_path')
+@click.option(
+    '--md5sum', type=str, default=None,
+    help='if given, check that the artifact has this checksum'
+)
+@click.option(
+    '-v', '--verbose', count=True,
+    help='if given, print increasing levels of output')
+def main(artifact_path, md5sum, verbose):
+    """Validate the artifact at ARTIFACT_PATH for conda-forge."""
+
+    # setup logging
+    levels = {0: logging.WARNING, 1: logging.INFO, 2: logging.DEBUG}
+    LOGGER.setLevel(levels[verbose])
+    ch = logging.StreamHandler()
+    ch.setLevel(levels[verbose])
+    ch.setFormatter(
+        logging.Formatter("%(levelname)-8s: %(message)s"),
+    )
+    LOGGER.addHandler(ch)
+
+    LOGGER.info("validating artifact '%s'", artifact_path)
+
+    # glob the validation yamls
+    validate_yaml_paths = (
+        glob.glob("validate_yamls/*.yaml")
+        + glob.glob("generated_validate_yamls/*.generated.yaml")
+    )
+    validate_yamls = {}
+    for pth in validate_yaml_paths:
+        key = os.path.basename(pth).rsplit(".yaml", maxsplit=1)[0]
+        with open(pth, "r") as fp:
+            validate_yamls[key] = yaml.safe_load(fp)
+    LOGGER.debug("found %s validate yaml files", len(validate_yamls))
+
+    if is_url(artifact_path):
+        LOGGER.info("downloading artifact")
+        parts = artifact_path.split("/")
+        channel_url = "/".join(parts[:-2])
+        subdir_pkg = "/".join(parts[-2:])
+        valid, bad_pths = download_and_validate(
+            channel_url,
+            subdir_pkg,
+            validate_yamls,
+        )
+    else:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            valid, bad_pths = validate_file(
+                artifact_path,
+                validate_yamls,
+                tmpdir=str(tmpdir),
+            )
+
+    if not valid:
+        LOGGER.info("invalid artifact: %s", pprint.pformat(bad_pths))
+        sys.exit(1)
+    else:
+        LOGGER.info("artifact is valid")
 
 
 if __name__ == "__main__":

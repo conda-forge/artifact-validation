@@ -1,0 +1,13 @@
+allowed:
+- conda_forge_artifact_validation
+files:
+- Lib/site-packages/conda_forge_artifact_validation-*.dist-info/**/*
+- Lib/site-packages/conda_forge_artifact_validation-*.egg
+- Lib/site-packages/conda_forge_artifact_validation-*.egg-info
+- Lib/site-packages/conda_forge_artifact_validation-*.egg-info/**/*
+- Lib/site-packages/conda_forge_artifact_validation/**/*
+- lib/python*/site-packages/conda_forge_artifact_validation-*.dist-info/**/*
+- lib/python*/site-packages/conda_forge_artifact_validation-*.egg
+- lib/python*/site-packages/conda_forge_artifact_validation-*.egg-info
+- lib/python*/site-packages/conda_forge_artifact_validation-*.egg-info/**/*
+- lib/python*/site-packages/conda_forge_artifact_validation/**/*

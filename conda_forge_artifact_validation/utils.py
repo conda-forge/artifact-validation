@@ -1,4 +1,5 @@
 import os
+import urllib
 
 
 def split_pkg(pkg):
@@ -29,3 +30,11 @@ def split_pkg(pkg):
     name_ver, build = pkg_name.rsplit("-", 1)
     name, ver = name_ver.rsplit("-", 1)
     return plat, name, ver, build
+
+
+def is_url(url):
+    """Test if something is a url.
+
+    See https://stackoverflow.com/questions/7849818/argument-is-url-or-path
+    """
+    return urllib.parse.urlparse(url).scheme in ["http", "https"]

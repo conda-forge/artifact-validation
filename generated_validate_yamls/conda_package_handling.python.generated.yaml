@@ -1,0 +1,13 @@
+allowed:
+- conda_package_handling
+files:
+- Lib/site-packages/conda_package_handling-*.dist-info/**/*
+- Lib/site-packages/conda_package_handling-*.egg
+- Lib/site-packages/conda_package_handling-*.egg-info
+- Lib/site-packages/conda_package_handling-*.egg-info/**/*
+- Lib/site-packages/conda_package_handling/**/*
+- lib/python*/site-packages/conda_package_handling-*.dist-info/**/*
+- lib/python*/site-packages/conda_package_handling-*.egg
+- lib/python*/site-packages/conda_package_handling-*.egg-info
+- lib/python*/site-packages/conda_package_handling-*.egg-info/**/*
+- lib/python*/site-packages/conda_package_handling/**/*

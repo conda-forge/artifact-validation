@@ -1,0 +1,13 @@
+allowed:
+- conda_build
+files:
+- Lib/site-packages/conda_build-*.dist-info/**/*
+- Lib/site-packages/conda_build-*.egg
+- Lib/site-packages/conda_build-*.egg-info
+- Lib/site-packages/conda_build-*.egg-info/**/*
+- Lib/site-packages/conda_build/**/*
+- lib/python*/site-packages/conda_build-*.dist-info/**/*
+- lib/python*/site-packages/conda_build-*.egg
+- lib/python*/site-packages/conda_build-*.egg-info
+- lib/python*/site-packages/conda_build-*.egg-info/**/*
+- lib/python*/site-packages/conda_build/**/*
