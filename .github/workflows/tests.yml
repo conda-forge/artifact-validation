@@ -31,8 +31,6 @@ jobs:
         run: |
           flake8 conda_forge_artifact_validation
           flake8 bin/*
-          black --check conda_forge_artifact_validation
-          black --check bin/*
 
       - name: test
         shell: bash -l {0}
@@ -48,5 +46,17 @@ jobs:
       - name: run generate
         shell: bash -l {0}
         run: |
-          conda-forge-generate-validate-yamls
+          conda-forge-generate-validate-yamls --test
           git diff
+
+      - name: run validate
+        shell: bash -l {0}
+        run: |
+          conda-forge-validate-artifact -v \
+            https://anaconda.org/conda-forge/numpy/1.19.4/download/osx-64/numpy-1.19.4-py36hcf5569d_1.tar.bz2 \
+            --md5sum="c792b85aebf54d48fb3d7597d6688ed6"
+
+          wget https://anaconda.org/conda-forge/numpy/1.19.4/download/osx-64/numpy-1.19.4-py36hcf5569d_1.tar.bz2
+          conda-forge-validate-artifact -v \
+            numpy-1.19.4-py36hcf5569d_1.tar.bz2 \
+            --md5sum="c792b85aebf54d48fb3d7597d6688ed6"

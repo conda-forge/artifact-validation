@@ -14,9 +14,40 @@
 #   allowed:
 #    - <other conda pkg>
 
+click:
+  top_level_imports:
+    - click
+conda:
+  top_level_imports:
+    - conda
+    - conda_env
+conda_build:
+  top_level_imports:
+    - conda_build
+conda_forge_artifact_validation:
+  top_level_imports:
+    - conda_forge_artifact_validation
+conda_package_handling:
+  top_level_imports:
+    - conda_package_handling
+conda_smithy:
+  top_level_imports:
+    - conda_smithy
+joblib:
+  top_level_imports:
+    - joblib
 numpy:
   top_level_imports:
     - numpy
+pip:
+  top_level_imports:
+    - pip
+pyyaml:
+  top_level_imports:
+    - yaml
+rapidjson:
+  top_level_imports:
+    - rapidjson
 requests:
   top_level_imports:
     - requests
@@ -27,3 +58,6 @@ setuptools:
   top_level_imports:
     - setuptools
     - pkg_resources
+tqdm:
+  top_level_imports:
+    - tqdm

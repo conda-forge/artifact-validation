@@ -1,4 +1,6 @@
 import os
+import urllib
+import hashlib
 
 
 def split_pkg(pkg):
@@ -29,3 +31,27 @@ def split_pkg(pkg):
     name_ver, build = pkg_name.rsplit("-", 1)
     name, ver = name_ver.rsplit("-", 1)
     return plat, name, ver, build
+
+
+def is_url(url):
+    """Test if something is a url.
+
+    See https://stackoverflow.com/questions/7849818/argument-is-url-or-path
+    """
+    return urllib.parse.urlparse(url).scheme in ["http", "https"]
+
+
+def compute_md5sum(path):
+    """Compute the MD5 checksum of a path.
+
+    See https://stackoverflow.com/a/59056837/1745538.
+    """
+
+    with open(path, "rb") as fp:
+        hash = hashlib.md5()
+        chunk = fp.read(8192)
+        while chunk:
+            hash.update(chunk)
+            chunk = fp.read(8192)
+
+    return hash.hexdigest()

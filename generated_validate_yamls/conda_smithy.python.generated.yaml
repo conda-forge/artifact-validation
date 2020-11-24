@@ -1,0 +1,13 @@
+allowed:
+- conda_smithy
+files:
+- Lib/site-packages/conda_smithy-*.dist-info/**/*
+- Lib/site-packages/conda_smithy-*.egg
+- Lib/site-packages/conda_smithy-*.egg-info
+- Lib/site-packages/conda_smithy-*.egg-info/**/*
+- Lib/site-packages/conda_smithy/**/*
+- lib/python*/site-packages/conda_smithy-*.dist-info/**/*
+- lib/python*/site-packages/conda_smithy-*.egg
+- lib/python*/site-packages/conda_smithy-*.egg-info
+- lib/python*/site-packages/conda_smithy-*.egg-info/**/*
+- lib/python*/site-packages/conda_smithy/**/*
