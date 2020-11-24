@@ -35,30 +35,34 @@ def _gen_from_validate_yamls():
         with open(validate_yaml_path, "r") as fp:
             validate_yaml = yaml.safe_load(fp)
 
-        gen_validate_yaml = {
-            "files": [],
-            "allowed": [],
-        }
-        for artifact_name in validate_yaml.get("generate_from_artifacts", []):
-            _gen_validate_yaml = generate_validate_yaml_from_libcfgraph(
-                artifact_name,
-                exclude_globs=validate_yaml.get("files", []),
-            )
+        if len(validate_yaml.get("generate_from_artifacts", [])) > 0:
+            gen_validate_yaml = {
+                "files": [],
+                "allowed": [],
+            }
+            for artifact_name in validate_yaml.get("generate_from_artifacts", []):
+                _gen_validate_yaml = generate_validate_yaml_from_libcfgraph(
+                    artifact_name,
+                    exclude_globs=validate_yaml.get("files", []),
+                )
+                for key in ["files", "allowed"]:
+                    gen_validate_yaml[key].extend(_gen_validate_yaml[key])
+
             for key in ["files", "allowed"]:
-                gen_validate_yaml[key].extend(_gen_validate_yaml[key])
+                gen_validate_yaml[key] = sorted(list(set(gen_validate_yaml[key])))
 
-        for key in ["files", "allowed"]:
-            gen_validate_yaml[key] = sorted(list(set(gen_validate_yaml[key])))
-
-        if all(len(gen_validate_yaml[key]) > 0 for key in ["files", "allowed"]):
-            gen_validate_yaml_path = (
-                validate_yaml_path[: -len(".yaml")] + ".generated.yaml"
-            )
-            gen_validate_yaml_path = gen_validate_yaml_path.replace(
-                "validate_yamls/",
-                "generated_validate_yamls/",
-            )
-            _append_and_write_validate_yaml(gen_validate_yaml_path, gen_validate_yaml)
+            if all(len(gen_validate_yaml[key]) > 0 for key in ["files", "allowed"]):
+                gen_validate_yaml_path = (
+                    validate_yaml_path[: -len(".yaml")] + ".generated.yaml"
+                )
+                gen_validate_yaml_path = gen_validate_yaml_path.replace(
+                    "validate_yamls/",
+                    "generated_validate_yamls/",
+                )
+                _append_and_write_validate_yaml(
+                    gen_validate_yaml_path,
+                    gen_validate_yaml,
+                )
 
 
 def _gen_from_python_packages():
