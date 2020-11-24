@@ -31,8 +31,6 @@ jobs:
         run: |
           flake8 conda_forge_artifact_validation
           flake8 bin/*
-          black --check conda_forge_artifact_validation
-          black --check bin/*
 
       - name: test
         shell: bash -l {0}

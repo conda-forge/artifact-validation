@@ -1,4 +1,3 @@
-black
 click
 conda-package-handling
 flake8
