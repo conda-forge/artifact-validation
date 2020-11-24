@@ -22,8 +22,7 @@ def test_generate_validate_yaml_from_libcfgraph():
 
 def test_generate_validate_yaml_from_libcfgraph_exclude():
     validate_yaml = generate_validate_yaml_from_libcfgraph(
-        "numpy",
-        exclude_globs=["lib/python*/site-packages/numpy/**/*"]
+        "numpy", exclude_globs=["lib/python*/site-packages/numpy/**/*"]
     )
 
     assert validate_yaml["allowed"] == ["numpy"]
