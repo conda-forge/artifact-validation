@@ -1,7 +1,9 @@
 name: tests
 
 on:
-  push: null
+  push:
+    branches:
+      - master
   pull_request: null
 
 jobs:
@@ -42,3 +44,9 @@ jobs:
         run: |
           conda-forge-validate-artifact --help
           conda-forge-generate-validate-yamls --help
+
+      - name: run generate
+        shell: bash -l {0}
+        run: |
+          conda-forge-generate-validate-yamls
+          git diff
