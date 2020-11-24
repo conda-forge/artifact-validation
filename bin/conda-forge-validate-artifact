@@ -9,7 +9,7 @@ import pprint
 import click
 import yaml
 
-from conda_forge_artifact_validation.utils import is_url
+from conda_forge_artifact_validation.utils import is_url, compute_md5sum
 from conda_forge_artifact_validation.validate import (
     validate_file,
     download_and_validate,
@@ -54,6 +54,8 @@ def main(artifact_path, md5sum, verbose):
             validate_yamls[key] = yaml.safe_load(fp)
     LOGGER.debug("found %s validate yaml files", len(validate_yamls))
 
+    valid = True
+
     if is_url(artifact_path):
         LOGGER.info("downloading artifact")
         parts = artifact_path.split("/")
@@ -66,12 +68,18 @@ def main(artifact_path, md5sum, verbose):
             md5sum=md5sum,
         )
     else:
-        with tempfile.TemporaryDirectory() as tmpdir:
-            valid, bad_pths = validate_file(
-                artifact_path,
-                validate_yamls,
-                tmpdir=str(tmpdir),
-            )
+        if md5sum is not None and md5sum != compute_md5sum(artifact_path):
+            LOGGER.info("bad md5sum")
+            valid = False
+            bad_pths = {}
+
+        if valid:
+            with tempfile.TemporaryDirectory() as tmpdir:
+                valid, bad_pths = validate_file(
+                    artifact_path,
+                    validate_yamls,
+                    tmpdir=str(tmpdir),
+                )
 
     if not valid:
         LOGGER.info("invalid artifact: %s", pprint.pformat(bad_pths))
