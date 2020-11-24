@@ -1,10 +1,13 @@
 import os
 import requests
 import re
+import logging
 
 import joblib
 
 from .glob_to_re import glob_to_re
+
+LOGGER = logging.getLogger(__name__)
 
 # holds the libcfgraph file index - used for finding out which possible
 # files there are to download
@@ -86,17 +89,22 @@ def generate_validate_yaml_from_libcfgraph(artifact_name, exclude_globs=None):
     # turn the globs into regular expressions
     re_patts = [glob_to_re(patt) for patt in exclude_globs]
     re_patt_comps = [re.compile(re_patt) for re_patt in re_patts]
+    LOGGER.debug("using %s regexes for %s", re_patt_comps, artifact_name)
 
     # get all json blobs for artifact
     blobs = _get_all_json_blobs_for_artifact(artifact_name)
+    LOGGER.debug("found %s json blobs for %s", len(blobs), artifact_name)
 
     # now find any files not matched by the excluide_globs, if any
     files_to_add = set()
     for a in blobs:
-        for f in a["files"]:
-            if re_patt_comps and not any(
-                re_patt_comp.fullmatch(f) for re_patt_comp in re_patt_comps
-            ):
+        for f in a.get("files", []):
+            if re_patt_comps:
+                if all(
+                    re_patt_comp.fullmatch(f) is None for re_patt_comp in re_patt_comps
+                ):
+                    files_to_add.add(f)
+            else:
                 files_to_add.add(f)
 
     return {"files": sorted(list(files_to_add)), "allowed": [artifact_name]}
