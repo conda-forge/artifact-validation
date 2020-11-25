@@ -41,6 +41,8 @@ jobs:
       - name: push
         shell: bash -l {0}
         run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git pull
           git add scan_data/.
           git commit -am "[ci skip] scan data for https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
