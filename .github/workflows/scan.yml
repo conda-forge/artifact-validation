@@ -2,6 +2,8 @@ name: scan
 
 on:
   workflow_dispatch: null
+  schedule:
+    - cron: "30 * * * *"
 
 jobs:
   scan:
@@ -34,13 +36,14 @@ jobs:
           conda-forge-scan-artifacts \
             -v \
             --libcfgraph-path=libcfgraph \
-            --time-limit=120 \
+            --time-limit=3000 \
             --restart-data=scan_data/restart.json \
             --output-path=scan_data/invalid_packages.yaml
 
       - name: push
         shell: bash -l {0}
         run: |
+          git config pull.rebase false
           git config user.name github-actions
           git config user.email github-actions@github.com
           git pull
