@@ -100,7 +100,11 @@ def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, ve
             flush=True,
         )
 
-    return {repodata["name"]: {pkg: {"valid": valid, "bad_paths": bad_pths}}}
+    return {
+        repodata["name"]: {
+            f"{subdir}/{pkg}": {"valid": valid, "bad_paths": bad_pths},
+        },
+    }
 
 
 @click.command()
