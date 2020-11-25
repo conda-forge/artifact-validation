@@ -1,9 +1,8 @@
 name: scan
 
 on:
-  workflow_dispatch: null
   schedule:
-    - cron: "30 * * * *"
+    - cron: "0 * * * *"
 
 jobs:
   scan:
