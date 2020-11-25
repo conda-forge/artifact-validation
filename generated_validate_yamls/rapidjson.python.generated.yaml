@@ -118,3 +118,6 @@ files:
 - share/doc/RapidJSON/examples/simplewriter/simplewriter.cpp
 - share/doc/RapidJSON/examples/tutorial/tutorial.cpp
 - share/doc/RapidJSON/readme.md
+- site-packages/rapidjson-*.dist-info/**/*
+- site-packages/rapidjson-*.egg-info/**/*
+- site-packages/rapidjson/**/*

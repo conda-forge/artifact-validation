@@ -13,6 +13,10 @@
 #   # if given, these are appended to a list with the <conda pkg name> in it
 #   allowed:
 #    - <other conda pkg>
+#
+#   # this key allows you to exclude generated files from the filters via globs
+#   exclude_files:
+#    - <globs to exclude>
 
 click:
   top_level_imports:
@@ -21,6 +25,9 @@ conda:
   top_level_imports:
     - conda
     - conda_env
+  exclude_files:
+    - Lib/site-packages/test_data/**/*
+    - lib/python*/site-packages/test_data/**/*
 conda_build:
   top_level_imports:
     - conda_build
@@ -45,6 +52,7 @@ pip:
 pyyaml:
   top_level_imports:
     - yaml
+    - PyYAML
 rapidjson:
   top_level_imports:
     - rapidjson

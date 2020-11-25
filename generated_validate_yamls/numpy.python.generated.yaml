@@ -27,3 +27,6 @@ files:
 - lib/python*/site-packages/numpy-*.egg-info
 - lib/python*/site-packages/numpy-*.egg-info/**/*
 - lib/python*/site-packages/numpy/**/*
+- site-packages/numpy-*.dist-info/**/*
+- site-packages/numpy-*.egg-info/**/*
+- site-packages/numpy/**/*

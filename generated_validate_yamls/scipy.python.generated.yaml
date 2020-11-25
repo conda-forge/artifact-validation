@@ -11,3 +11,6 @@ files:
 - lib/python*/site-packages/scipy-*.egg-info
 - lib/python*/site-packages/scipy-*.egg-info/**/*
 - lib/python*/site-packages/scipy/**/*
+- site-packages/scipy-*.dist-info/**/*
+- site-packages/scipy-*.egg-info/**/*
+- site-packages/scipy/**/*

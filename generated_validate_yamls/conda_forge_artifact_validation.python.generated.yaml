@@ -11,3 +11,6 @@ files:
 - lib/python*/site-packages/conda_forge_artifact_validation-*.egg-info
 - lib/python*/site-packages/conda_forge_artifact_validation-*.egg-info/**/*
 - lib/python*/site-packages/conda_forge_artifact_validation/**/*
+- site-packages/conda_forge_artifact_validation-*.dist-info/**/*
+- site-packages/conda_forge_artifact_validation-*.egg-info/**/*
+- site-packages/conda_forge_artifact_validation/**/*

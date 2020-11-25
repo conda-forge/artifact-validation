@@ -79,6 +79,7 @@ def _gen_from_python_packages(test=False):
             artifact_name,
             v["top_level_imports"],
             allowed=v.get("allowed", None),
+            exclude_files=v.get('exclude_files', None),
         )
 
         pth = f"generated_validate_yamls/{artifact_name}.python.generated.yaml"

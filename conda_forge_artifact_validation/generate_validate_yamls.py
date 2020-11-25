@@ -20,6 +20,9 @@ DEFAULT_PYTHON_GLOBS = [
     "Lib/site-packages/{import_name}-*.egg",
     "Lib/site-packages/{import_name}-*.egg-info",
     "Lib/site-packages/{import_name}-*.egg-info/**/*",
+    "site-packages/{import_name}-*.dist-info/**/*",
+    "site-packages/{import_name}-*.egg-info/**/*",
+    "site-packages/{import_name}/**/*",
     "lib/python*/site-packages/{import_name}/**/*",
     "lib/python*/site-packages/{import_name}-*.dist-info/**/*",
     "lib/python*/site-packages/{import_name}-*.egg",
@@ -114,6 +117,7 @@ def generate_validate_yaml_for_python(
     artifact_name,
     top_level_imports,
     allowed=None,
+    exclude_files=None,
 ):
     """Generate a validation YAML file from an artifact that is a python package.
 
@@ -133,6 +137,9 @@ def generate_validate_yaml_for_python(
         If not None, this set of artifacts will also be allowed to output files
         to the paths from `artifact_name` in addition to `artifact_name`. If not set,
         then only `artifact_name` will be allowed.
+    exclude_files : list of str
+        Any files matching these glob patterns will not be added to the list of
+        files in the outputs.
 
     Returns
     -------
@@ -140,6 +147,7 @@ def generate_validate_yaml_for_python(
         A dictionary with the contents of the validate YAML file.
     """
     allowed = allowed or []
+    exclude_files = exclude_files or []
 
     # first make the default globs
     default_globs = []
@@ -149,7 +157,7 @@ def generate_validate_yaml_for_python(
 
     validate_yaml = generate_validate_yaml_from_libcfgraph(
         artifact_name,
-        exclude_globs=default_globs,
+        exclude_globs=default_globs + exclude_files,
     )
 
     validate_yaml["files"].extend(default_globs)
