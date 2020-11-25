@@ -134,6 +134,7 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path):
                 resdat = json.load(fp)
         else:
             resdat = {"subdir": None, "pkg": None}
+    skipped_for_restart = False
 
     with joblib.Parallel(n_jobs=8, backend='loky') as para:
         for subdir in SUBDIRS:
@@ -154,7 +155,6 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path):
 
             pkgs = sorted(rd["packages"])
             tot = math.ceil(len(pkgs) / CHUNKSIZE)
-            skipped_for_restart = False
             for pkg_chunk in tqdm.tqdm(chunk_iterable(pkgs, CHUNKSIZE), total=tot):
                 if len(pkg_chunk) == 0:
                     continue
@@ -223,11 +223,11 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path):
             fp.write(yaml.dump(old_data, default_flow_style=False, indent=2))
 
     if restart_data is not None:
-        if out_of_time:
-            with open(restart_data, "w") as fp:
+        with open(restart_data, "w") as fp:
+            if out_of_time:
                 json.dump(curr_resdat, fp)
-        else:
-            json.dump({"subdir": None, "pkg": None}, fp)
+            else:
+                json.dump({"subdir": None, "pkg": None}, fp)
 
 
 if __name__ == "__main__":
