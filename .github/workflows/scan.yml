@@ -1,0 +1,49 @@
+name: scan
+
+on:
+  workflow_dispatch: null
+
+jobs:
+  scan:
+    name: scan
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          python-version: 3.8
+          channels: conda-forge,defaults
+          channel-priority: strict
+          show-channel-urls: true
+
+      - name: configure conda and install code
+        shell: bash -l {0}
+        run: |
+          conda install --quiet --file requirements.txt
+          python -m pip install -e .
+
+      - name: clone libcfgraph
+        shell: bash -l {0}
+        run: |
+          git clone --depth=1 https://github.com/regro/libcfgraph.git
+
+      - name: scan
+        shell: bash -l {0}
+        run: |
+          conda-forge-scan-artifacts \
+            -v \
+            --libcfgraph-path=libcfgraph \
+            --time-limit=120 \
+            --restart-data=scan_data/restart.json \
+            --output-path=scan_data/invalid_packages.yaml
+
+      - name: push
+        shell: bash -l {0}
+        run: |
+          git pull
+          git add scan_data/.
+          git commit -am "[ci skip] scan data for https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
+          git push
+        env:
+          RUN_ID: ${{ github.run_id }}

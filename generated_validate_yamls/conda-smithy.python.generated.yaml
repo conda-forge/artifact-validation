@@ -1,11 +1,21 @@
 allowed:
-- conda_smithy
+- conda-smithy
 files:
+- Lib/lib2to3/Grammar3.4.4.final.0.pickle
+- Lib/lib2to3/Grammar3.5.1.final.0.pickle
+- Lib/lib2to3/PatternGrammar3.4.4.final.0.pickle
+- Lib/lib2to3/PatternGrammar3.5.1.final.0.pickle
 - Lib/site-packages/conda_smithy-*.dist-info/**/*
 - Lib/site-packages/conda_smithy-*.egg
 - Lib/site-packages/conda_smithy-*.egg-info
 - Lib/site-packages/conda_smithy-*.egg-info/**/*
 - Lib/site-packages/conda_smithy/**/*
+- Scripts/conda-smithy-script.py
+- Scripts/conda-smithy.exe
+- Scripts/feedstocks-script.py
+- Scripts/feedstocks.exe
+- bin/conda-smithy
+- bin/feedstocks
 - lib/python*/site-packages/conda_smithy-*.dist-info/**/*
 - lib/python*/site-packages/conda_smithy-*.egg
 - lib/python*/site-packages/conda_smithy-*.egg-info

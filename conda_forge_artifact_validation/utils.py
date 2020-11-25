@@ -55,3 +55,22 @@ def compute_md5sum(path):
             chunk = fp.read(8192)
 
     return hash.hexdigest()
+
+
+def chunk_iterable(iterable, chunk_size):
+    """Generate sequences of `chunk_size` elements from `iterable`.
+    https://stackoverflow.com/a/12797249/1745538
+    """
+    chunk_size = max(chunk_size, 1)
+
+    iterable = iter(iterable)
+    while True:
+        chunk = []
+        try:
+            for _ in range(chunk_size):
+                chunk.append(next(iterable))
+            yield chunk
+        except StopIteration:
+            if chunk:
+                yield chunk
+            break

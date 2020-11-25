@@ -28,16 +28,18 @@ conda:
   exclude_files:
     - Lib/site-packages/test_data/**/*
     - lib/python*/site-packages/test_data/**/*
-conda_build:
+  allowed:
+    - conda-env
+conda-build:
   top_level_imports:
     - conda_build
-conda_forge_artifact_validation:
+conda-forge-artifact-validation:
   top_level_imports:
     - conda_forge_artifact_validation
-conda_package_handling:
+conda-package-handling:
   top_level_imports:
     - conda_package_handling
-conda_smithy:
+conda-smithy:
   top_level_imports:
     - conda_smithy
 joblib:

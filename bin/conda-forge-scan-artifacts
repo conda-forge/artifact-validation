@@ -1,0 +1,234 @@
+#!/usr/bin/env python
+import glob
+import os
+import pprint
+import re
+import math
+from collections import defaultdict
+import time
+
+import rapidjson as json
+import click
+import requests
+import yaml
+import tqdm
+import joblib
+from yaml.representer import Representer
+
+from conda_forge_artifact_validation.validate import (
+    download_and_validate,
+)
+from conda_forge_artifact_validation.glob_to_re import glob_to_re
+from conda_forge_artifact_validation.utils import chunk_iterable
+
+SUBDIRS = [
+    "linux-64", "osx-64", "noarch", "win-64",
+    "linux-ppc64le", "linux-aarch64", "osx-arm64",
+]
+CHANNEL_URL = "https://conda.anaconda.org/conda-forge"
+CHUNKSIZE = 64
+
+yaml.add_representer(defaultdict, Representer.represent_dict)
+
+
+def _test_file_paths(pkg_name, fnames, validate_yamls):
+    for key in validate_yamls:
+        if pkg_name in validate_yamls[key]["allowed"]:
+            continue
+        for rep in validate_yamls[key]["glob_regexes"]:
+            for fname in fnames:
+                if rep.fullmatch(fname) is not None:
+                    return False, {key: [fname]}
+    return True, {}
+
+
+def _munge_validate_yamls():
+    # glob the validation yamls
+    validate_yaml_paths = (
+        glob.glob("validate_yamls/*.yaml")
+        + glob.glob("generated_validate_yamls/*.generated.yaml")
+    )
+    validate_yamls = {}
+    for pth in validate_yaml_paths:
+        key = os.path.basename(pth).rsplit(".yaml", maxsplit=1)[0]
+        with open(pth, "r") as fp:
+            validate_yamls[key] = yaml.safe_load(fp)
+    for key in validate_yamls:
+        validate_yamls[key]["glob_regexes"] = [
+            re.compile(glob_to_re(patt)) for patt in validate_yamls[key]["files"]
+        ]
+    print("found %s validate yaml files" % len(validate_yamls), flush=True)
+    return validate_yamls
+
+
+def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, verbose):
+    lcfg_pth = os.path.join(
+        libcfgraph_path,
+        "artifacts",
+        repodata["name"],
+        "conda-forge",
+        subdir,
+        pkg.replace(".tar.bz2", ".json"),
+    )
+    try:
+        with open(lcfg_pth, "r") as fp:
+            data = json.load(fp).get("files", None)
+    except Exception:
+        data = None
+
+    if data is None:
+        pkg_url = f"{CHANNEL_URL}/{subdir}/{pkg}"
+        if verbose > 0:
+            print("downloading artifact '%s'" % pkg_url, flush=True)
+
+        valid, bad_pths = download_and_validate(
+            CHANNEL_URL,
+            f"{subdir}/{pkg}",
+            validate_yamls,
+            md5sum=repodata["md5"],
+        )
+    else:
+        valid, bad_pths = _test_file_paths(repodata["name"], data, validate_yamls)
+
+    if not valid:
+        print(
+            "invalid artifact %s/%s: %s" % (
+                subdir,
+                pkg,
+                pprint.pformat(bad_pths),
+            ),
+            flush=True,
+        )
+
+    return {repodata["name"]: {pkg: {"valid": valid, "bad_paths": bad_pths}}}
+
+
+@click.command()
+@click.option(
+    '--libcfgraph-path', type=str, default=None,
+    help='the path to libcfgraph')
+@click.option(
+    '-v', '--verbose', count=True,
+    help='if given, print increasing levels of output')
+@click.option(
+    '--time-limit', type=int, default=3600,
+    help='the time limit for running in seconds')
+@click.option(
+    '--restart-data', type=str, default=None,
+    help='a JSON blob with restart location information')
+@click.option(
+    '--output-path', type=str, default=None,
+    help='if given, output information on invalid artifacts is append to this path')
+def main(libcfgraph_path, verbose, time_limit, restart_data, output_path):
+    """Scan all conda-forge artifacts for invalid paths."""
+
+    validate_yamls = _munge_validate_yamls()
+    final_data = defaultdict(dict)
+    start_time = time.time()
+    out_of_time = False
+
+    curr_resdat = {"subdir": None, "pkg": None}
+    if restart_data is not None:
+        if os.path.exists(restart_data):
+            with open(restart_data, "r") as fp:
+                resdat = json.load(fp)
+        else:
+            resdat = {"subdir": None, "pkg": None}
+
+    with joblib.Parallel(n_jobs=8, backend='loky') as para:
+        for subdir in SUBDIRS:
+            if (
+                restart_data
+                and resdat["subdir"] is not None
+                and SUBDIRS.index(subdir) < SUBDIRS.index(resdat["subdir"])
+            ):
+                continue
+
+            print("\n" + "=" * 80, flush=True)
+            print("=" * 80, flush=True)
+            print("processing subdir %s" % subdir, flush=True)
+            rd = requests.get(
+                f"{CHANNEL_URL}/{subdir}/repodata.json"
+            ).json()
+            curr_resdat["subdir"] = subdir
+
+            pkgs = sorted(rd["packages"])
+            tot = math.ceil(len(pkgs) / CHUNKSIZE)
+            skipped_for_restart = False
+            for pkg_chunk in tqdm.tqdm(chunk_iterable(pkgs, CHUNKSIZE), total=tot):
+                if len(pkg_chunk) == 0:
+                    continue
+
+                if (
+                    restart_data
+                    and resdat["pkg"] is not None
+                    and not skipped_for_restart
+                ):
+                    if resdat["pkg"] not in pkg_chunk:
+                        continue
+                    else:
+                        skipped_for_restart = True
+
+                curr_resdat["pkg"] = pkg_chunk[0]
+
+                jobs = [
+                    joblib.delayed(_process_artifact)(
+                        pkg,
+                        rd["packages"][pkg],
+                        libcfgraph_path,
+                        subdir,
+                        validate_yamls,
+                        verbose,
+                    )
+                    for pkg in pkg_chunk
+                ]
+                any_new = False
+                for d in para(jobs):
+                    if not list(list(d.values())[0].values())[0]["valid"]:
+                        for k, v in d.items():
+                            final_data[k].update(v)
+                            any_new = True
+
+                if any_new:
+                    print(
+                        "data:\n%s" % yaml.dump(
+                            final_data,
+                            default_flow_style=False,
+                            indent=2,
+                        ),
+                        flush=True,
+                    )
+
+                if time_limit is not None and time.time() - start_time >= time_limit:
+                    out_of_time = True
+                    break
+
+            if out_of_time:
+                print("\nout of time - stopping!", flush=True)
+                break
+
+    if output_path is not None:
+        if os.path.exists(output_path):
+            with open(output_path, "r") as fp:
+                old_data = yaml.safe_load(fp)
+        else:
+            old_data = {}
+
+        for k, v in final_data.items():
+            if k not in old_data:
+                old_data[k] = {}
+            old_data[k].update(final_data[k])
+
+        with open(output_path, "w") as fp:
+            fp.write(yaml.dump(old_data, default_flow_style=False, indent=2))
+
+    if restart_data is not None:
+        if out_of_time:
+            with open(restart_data, "w") as fp:
+                json.dump(curr_resdat, fp)
+        else:
+            json.dump({"subdir": None, "pkg": None}, fp)
+
+
+if __name__ == "__main__":
+    main()

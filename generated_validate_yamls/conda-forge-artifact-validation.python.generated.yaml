@@ -1,5 +1,5 @@
 allowed:
-- conda_forge_artifact_validation
+- conda-forge-artifact-validation
 files:
 - Lib/site-packages/conda_forge_artifact_validation-*.dist-info/**/*
 - Lib/site-packages/conda_forge_artifact_validation-*.egg
