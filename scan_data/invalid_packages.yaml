@@ -41,22 +41,6 @@ conda-devenv:
       conda.python.generated:
       - bin/conda
     valid: false
-conda-env:
-  conda-env-2.5.2-py27_0.tar.bz2:
-    bad_paths:
-      conda.python.generated:
-      - bin/conda-env
-    valid: false
-  conda-env-2.5.2-py34_0.tar.bz2:
-    bad_paths:
-      conda.python.generated:
-      - bin/conda-env
-    valid: false
-  conda-env-2.5.2-py35_0.tar.bz2:
-    bad_paths:
-      conda.python.generated:
-      - bin/conda-env
-    valid: false
 flask-creole:
   flask-creole-0.4.4-py27_1000.tar.bz2:
     bad_paths:

@@ -1,5 +1,6 @@
 allowed:
 - conda
+- conda-env
 files:
 - Lib/site-packages/conda-*.dist-info/**/*
 - Lib/site-packages/conda-*.egg
