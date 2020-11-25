@@ -210,3 +210,63 @@ google-api-core:
       requests.python.generated:
       - lib/python3.8/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
     valid: false
+jsoncpp:
+  osx-64/jsoncpp-0.10.6-0.tar.bz2:
+    bad_paths:
+      conda.python.generated:
+      - bin/activate
+    valid: false
+libarchive:
+  osx-64/libarchive-3.2.1-0.tar.bz2:
+    bad_paths:
+      conda.python.generated:
+      - bin/activate
+    valid: false
+libmemcached:
+  osx-64/libmemcached-1.0.18-0.tar.bz2:
+    bad_paths:
+      conda.python.generated:
+      - bin/activate
+    valid: false
+meshpy:
+  osx-64/meshpy-2018.2.1-py27h7eb728f_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - bin/easy_install-2.7
+    valid: false
+  osx-64/meshpy-2018.2.1-py36h7eb728f_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - bin/easy_install-3.6
+    valid: false
+pyemd:
+  osx-64/pyemd-0.5.1-py27h1702cab_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  osx-64/pyemd-0.5.1-py27hf8a1672_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  osx-64/pyemd-0.5.1-py36h1702cab_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  osx-64/pyemd-0.5.1-py36hf8a1672_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  osx-64/pyemd-0.5.1-py37h1702cab_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  osx-64/pyemd-0.5.1-py37hf8a1672_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
