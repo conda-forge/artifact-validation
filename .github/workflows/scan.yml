@@ -37,7 +37,7 @@ jobs:
           conda-forge-scan-artifacts \
             -v \
             --libcfgraph-path=libcfgraph \
-            --time-limit=3000 \
+            --time-limit=2700 \
             --restart-data=scan_data/restart.json \
             --output-path=scan_data/invalid_packages.yaml
 
