@@ -211,3 +211,133 @@ meshpy:
       setuptools.python.generated:
       - bin/easy_install-3.6
     valid: false
+pyemd:
+  pyemd-0.5.1-py27h637b7d7_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  pyemd-0.5.1-py27hf8a1672_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  pyemd-0.5.1-py36h637b7d7_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  pyemd-0.5.1-py36hf8a1672_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  pyemd-0.5.1-py37h637b7d7_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  pyemd-0.5.1-py37hf8a1672_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+sagelib:
+  sagelib-7.6-np111py27_blas_openblas_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+      - bin/pip
+    valid: false
+signac-dashboard:
+  signac-dashboard-0.1.6-py36_0.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - lib/python3.6/site-packages/click/__init__.py
+    valid: false
+  signac-dashboard-0.1.6-py36_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - lib/python3.6/site-packages/click/__init__.py
+    valid: false
+  signac-dashboard-0.1.6-py37_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - lib/python3.7/site-packages/click/__init__.py
+    valid: false
+sisl:
+  sisl-0.9.5-py27h29d635c_1002.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  sisl-0.9.5-py27h56689b2_1002.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  sisl-0.9.5-py27h90f2d25_1002.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  sisl-0.9.6-py27h29d635c_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  sisl-0.9.6-py27h56689b2_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  sisl-0.9.6-py27h90f2d25_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  sisl-0.9.6-py27he824dc1_1.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  sisl-0.9.7-py27he824dc1_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  sisl-0.9.8-py27he824dc1_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+spglib:
+  spglib-1.11.1.2-py27h3010b51_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  spglib-1.11.1.2-py27h7eb728f_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  spglib-1.11.1.2-py36h3010b51_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  spglib-1.11.1.2-py36h7eb728f_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  spglib-1.11.1.2-py37h3010b51_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  spglib-1.11.1.2-py37h7eb728f_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
