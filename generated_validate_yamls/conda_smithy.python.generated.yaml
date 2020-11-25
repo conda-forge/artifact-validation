@@ -11,3 +11,6 @@ files:
 - lib/python*/site-packages/conda_smithy-*.egg-info
 - lib/python*/site-packages/conda_smithy-*.egg-info/**/*
 - lib/python*/site-packages/conda_smithy/**/*
+- site-packages/conda_smithy-*.dist-info/**/*
+- site-packages/conda_smithy-*.egg-info/**/*
+- site-packages/conda_smithy/**/*

@@ -11,3 +11,6 @@ files:
 - lib/python*/site-packages/conda_build-*.egg-info
 - lib/python*/site-packages/conda_build-*.egg-info/**/*
 - lib/python*/site-packages/conda_build/**/*
+- site-packages/conda_build-*.dist-info/**/*
+- site-packages/conda_build-*.egg-info/**/*
+- site-packages/conda_build/**/*
