@@ -354,6 +354,21 @@ google-api-core:
       requests.python.generated:
       - lib/python3.8/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
     valid: false
+  win-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - Lib/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/google-api-core-1.20.1-py37hc8dfbb8_0.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - Lib/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/google-api-core-1.20.1-py38h32f6830_0.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - Lib/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+    valid: false
 google-cloud-bigquery-storage-core:
   noarch/google-cloud-bigquery-storage-core-2.0.0-pyh9f0ad1d_1.tar.bz2:
     bad_paths:
@@ -369,6 +384,27 @@ google-cloud-bigquery-storage-core:
     bad_paths:
       requests.python.generated:
       - site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+    valid: false
+gridfill:
+  win-64/gridfill-1.0.0-np110py27_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-2.7-script.py
+    valid: false
+  win-64/gridfill-1.0.0-np110py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-3.4-script.py
+    valid: false
+  win-64/gridfill-1.0.0-np111py27_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-2.7-script.py
+    valid: false
+  win-64/gridfill-1.0.0-np111py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-3.4-script.py
     valid: false
 jsoncpp:
   osx-64/jsoncpp-0.10.6-0.tar.bz2:

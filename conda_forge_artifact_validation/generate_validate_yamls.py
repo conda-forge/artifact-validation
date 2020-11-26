@@ -6,6 +6,7 @@ import logging
 import joblib
 
 from .glob_to_re import glob_to_re
+from .cached_repodata import repodata_cache
 
 LOGGER = logging.getLogger(__name__)
 
@@ -31,6 +32,12 @@ DEFAULT_PYTHON_GLOBS = [
 ]
 
 
+def _get_subdir_pkg_from_libcfgraph_artifact(artifact_pth):
+    subdir_pkg = "/".join(artifact_pth.split('/')[-2:]).replace(".json", ".tar.bz2")
+    subdir, pkg = os.path.split(subdir_pkg)
+    return subdir, pkg
+
+
 def _get_all_json_blobs_for_artifact(artifact_name):
     """Given the name of a conda package, download all libcfgraph entries for it."""
     global LIBCFGRAPH_INDEX
@@ -46,6 +53,11 @@ def _get_all_json_blobs_for_artifact(artifact_name):
     artifact_pths = [pth for pth in LIBCFGRAPH_INDEX if pth.startswith(sentinel)]
 
     def _download_jsob_blob(artifact_pth):
+        # ignore things not on the main channel
+        subdir, pkg = _get_subdir_pkg_from_libcfgraph_artifact(artifact_pth)
+        if pkg not in repodata_cache[subdir]["packages"]:
+            return None
+
         try:
             r = requests.get(
                 "https://raw.githubusercontent.com/regro/libcfgraph/master/"
