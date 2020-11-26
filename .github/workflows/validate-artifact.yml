@@ -13,7 +13,6 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v2
         with:
           python-version: 3.8
-          mamba-version: "*"
           channels: conda-forge,defaults
           channel-priority: strict
           show-channel-urls: true
@@ -25,7 +24,7 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
 
-          mamba install --quiet --file requirements.txt
+          conda install --quiet --file requirements.txt
           python -m pip install -e .
 
       - name: validate
