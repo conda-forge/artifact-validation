@@ -1,0 +1,156 @@
+flask-creole:
+  win-64/flask-creole-0.4.4-py27_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
+flask-debugtoolbar:
+  win-64/flask-debugtoolbar-0.10.1-py27_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
+  win-64/flask-debugtoolbar-0.10.1-py35_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
+  win-64/flask-debugtoolbar-0.10.1-py36_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
+  win-64/flask-debugtoolbar-0.10.1-py37_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
+flask-rest-orm:
+  win-64/flask-rest-orm-0.5.0-py35_0.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click-6.7.dist-info/METADATA
+    valid: false
+  win-64/flask-rest-orm-0.5.0-py36_0.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click-6.7.dist-info/METADATA
+    valid: false
+gensim:
+  win-64/gensim-3.5.0-py27h39f3610_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/gensim-3.5.0-py36h830ac7b_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/gensim-3.5.0-py37h830ac7b_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+google-api-core:
+  win-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - Lib/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/google-api-core-1.20.1-py37hc8dfbb8_0.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - Lib/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/google-api-core-1.20.1-py38h32f6830_0.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - Lib/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+    valid: false
+gridfill:
+  win-64/gridfill-1.0.0-np110py27_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-2.7-script.py
+    valid: false
+  win-64/gridfill-1.0.0-np110py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-3.4-script.py
+    valid: false
+  win-64/gridfill-1.0.0-np111py27_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-2.7-script.py
+    valid: false
+  win-64/gridfill-1.0.0-np111py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-3.4-script.py
+    valid: false
+metakernel:
+  win-64/metakernel-0.12.6-py27_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-2.7-script.py
+    valid: false
+  win-64/metakernel-0.12.6-py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-3.4-script.py
+    valid: false
+  win-64/metakernel-0.12.6-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-3.5-script.py
+    valid: false
+pyamg:
+  win-64/pyamg-4.0.0-py36h8300f20_1000.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools-40.6.3.dist-info/INSTALLER
+    valid: false
+  win-64/pyamg-4.0.0-py37h8300f20_1000.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools-40.6.3.dist-info/INSTALLER
+    valid: false
+pyemd:
+  win-64/pyemd-0.5.1-py27h39f3610_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/pyemd-0.5.1-py36h830ac7b_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/pyemd-0.5.1-py37h830ac7b_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+pymapd:
+  win-64/pymapd-0.6.0-py36he025d50_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+signac-dashboard:
+  win-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
+  win-64/signac-dashboard-0.1.6-py36_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
+  win-64/signac-dashboard-0.1.6-py37_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
