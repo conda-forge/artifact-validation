@@ -125,9 +125,12 @@ def download_and_validate(channel_url, subdir_pkg, validate_yamls, md5sum=None):
 
             # unpack and validate
             if os.path.exists(f"{tmpdir}/{pkg}"):
-                if md5sum is not None and md5sum != compute_md5sum(f"{tmpdir}/{pkg}"):
-                    LOGGER.info("bad md5sum")
-                    return False, {}
+                if md5sum is not None:
+                    if md5sum != compute_md5sum(f"{tmpdir}/{pkg}"):
+                        LOGGER.info("bad md5sum")
+                        return False, {}
+                    else:
+                        LOGGER.info("md5 sum is valid")
 
                 valid, bad_pths = validate_file(f"{tmpdir}/{pkg}", validate_yamls)
             else:
