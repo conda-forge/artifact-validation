@@ -46,12 +46,7 @@ jobs:
       # - name: bump on fail
       #   shell: bash -l {0}
       #   run: |
-      #     git add scan_data/.
       #     git commit -am "[ci skip] scan data for https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
-      #     for _ in `seq 0 1`; do
-      #       git pull
-      #       git push
-      #     done
       #   env:
       #     RUN_ID: ${{ github.run_id }}
       #     MD5: ${{ github.event.client_payload.md5 }}
