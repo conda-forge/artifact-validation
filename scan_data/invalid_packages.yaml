@@ -14,6 +14,21 @@ apache-libcloud:
       requests.python.generated:
       - lib/python3.7/site-packages/requests-2.20.1.dist-info/INSTALLER
     valid: false
+  osx-64/apache-libcloud-2.4.0-py27_1000.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - lib/python2.7/site-packages/requests-2.20.1.dist-info/INSTALLER
+    valid: false
+  osx-64/apache-libcloud-2.4.0-py36_1000.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - lib/python3.6/site-packages/requests-2.20.1.dist-info/INSTALLER
+    valid: false
+  osx-64/apache-libcloud-2.4.0-py37_1000.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - lib/python3.7/site-packages/requests-2.20.1.dist-info/INSTALLER
+    valid: false
 aubio:
   linux-64/aubio-0.4.8-py27h7273d18_0.tar.bz2:
     bad_paths:
@@ -21,6 +36,16 @@ aubio:
       - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
     valid: false
   linux-64/aubio-0.4.8-py36h7273d18_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  osx-64/aubio-0.4.8-py27h7273d18_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  osx-64/aubio-0.4.8-py36h7273d18_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
       - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
@@ -378,7 +403,28 @@ pymapd:
       numpy.python.generated:
       - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
     valid: false
+sagelib:
+  linux-64/sagelib-7.6-np111py27_blas_openblas_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+      - bin/pip
+    valid: false
 signac-dashboard:
+  linux-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - lib/python3.6/site-packages/click/__init__.py
+    valid: false
+  linux-64/signac-dashboard-0.1.6-py36_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - lib/python3.6/site-packages/click/__init__.py
+    valid: false
+  linux-64/signac-dashboard-0.1.6-py37_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - lib/python3.7/site-packages/click/__init__.py
+    valid: false
   win-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
     bad_paths:
       click.python.generated:
@@ -394,7 +440,83 @@ signac-dashboard:
       click.python.generated:
       - Lib/site-packages/click/__init__.py
     valid: false
+sisl:
+  linux-64/sisl-0.9.5-py27h29d635c_1002.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  linux-64/sisl-0.9.5-py27h56689b2_1002.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  linux-64/sisl-0.9.5-py27h90f2d25_1002.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  linux-64/sisl-0.9.6-py27h29d635c_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  linux-64/sisl-0.9.6-py27h56689b2_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  linux-64/sisl-0.9.6-py27h90f2d25_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  linux-64/sisl-0.9.6-py27he824dc1_1.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  linux-64/sisl-0.9.7-py27he824dc1_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
+  linux-64/sisl-0.9.8-py27he824dc1_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python2.7/site-packages/setuptools.pth
+    valid: false
 spglib:
+  linux-64/spglib-1.11.1.2-py27h3010b51_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/spglib-1.11.1.2-py27h7eb728f_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/spglib-1.11.1.2-py36h3010b51_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/spglib-1.11.1.2-py36h7eb728f_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/spglib-1.11.1.2-py37h3010b51_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/spglib-1.11.1.2-py37h7eb728f_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
   win-64/spglib-1.11.1.2-py27hc997a72_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
