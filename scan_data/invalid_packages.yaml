@@ -19,6 +19,21 @@ apache-libcloud:
       requests.python.generated:
       - lib/python3.7/site-packages/requests-2.20.1.dist-info/INSTALLER
     valid: false
+  win-64/apache-libcloud-2.4.0-py27_1000.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - Lib/site-packages/requests-2.20.1.dist-info/INSTALLER
+    valid: false
+  win-64/apache-libcloud-2.4.0-py36_1000.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - Lib/site-packages/requests-2.20.1.dist-info/INSTALLER
+    valid: false
+  win-64/apache-libcloud-2.4.0-py37_1000.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - Lib/site-packages/requests-2.20.1.dist-info/INSTALLER
+    valid: false
 aubio:
   osx-64/aubio-0.4.8-py27h7273d18_0.tar.bz2:
     bad_paths:
@@ -30,11 +45,48 @@ aubio:
       numpy.python.generated:
       - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
     valid: false
+  win-64/aubio-0.4.8-py27hc997a72_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/aubio-0.4.8-py36h7fad82b_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
 autovizwidget:
   noarch/autovizwidget-0.12.6-py_1000.tar.bz2:
     bad_paths:
       setuptools.python.generated:
       - site-packages/setuptools-40.6.2.dist-info/INSTALLER
+    valid: false
+compas:
+  win-64/compas-0.4.0-py27_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+      - Lib/site-packages/pip-18.1.dist-info/INSTALLER
+    valid: false
+  win-64/compas-0.4.0-py36_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+      - Lib/site-packages/pip-18.1.dist-info/INSTALLER
+    valid: false
+  win-64/compas-0.4.0-py37_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+      - Lib/site-packages/pip-18.1.dist-info/INSTALLER
+    valid: false
+conda-build-all:
+  win-64/conda-build-all-0.7.1-py35_0.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
+  win-64/conda-build-all-0.8.0-py35_0.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
     valid: false
 conda-devenv:
   osx-64/conda-devenv-0.9.3-py27_0.tar.bz2:
@@ -52,6 +104,29 @@ conda-devenv:
       conda.python.generated:
       - bin/conda
     valid: false
+conda-execute:
+  win-64/conda-execute-0.4.0-py35_1.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
+conda-testenv:
+  win-64/conda-testenv-0.1.0-py35_1.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
+cycler:
+  win-64/cycler-0.9.0-py35_0.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
+  win-64/cycler-0.9.0-py35_1.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
 dbxfs:
   noarch/dbxfs-1.0.38-py_0.tar.bz2:
     bad_paths:
@@ -63,6 +138,11 @@ flask-creole:
     bad_paths:
       click.python.generated:
       - lib/python2.7/site-packages/click/__init__.py
+    valid: false
+  win-64/flask-creole-0.4.4-py27_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
     valid: false
 flask-debugtoolbar:
   osx-64/flask-debugtoolbar-0.10.1-py27_1000.tar.bz2:
@@ -84,6 +164,37 @@ flask-debugtoolbar:
     bad_paths:
       click.python.generated:
       - lib/python3.7/site-packages/click/__init__.py
+    valid: false
+  win-64/flask-debugtoolbar-0.10.1-py27_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
+  win-64/flask-debugtoolbar-0.10.1-py35_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
+  win-64/flask-debugtoolbar-0.10.1-py36_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
+  win-64/flask-debugtoolbar-0.10.1-py37_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
+flask-rest-orm:
+  win-64/flask-rest-orm-0.5.0-py35_0.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click-6.7.dist-info/METADATA
+    valid: false
+  win-64/flask-rest-orm-0.5.0-py36_0.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click-6.7.dist-info/METADATA
     valid: false
 freud:
   osx-64/freud-0.11.0-py27h3e44d54_0.tar.bz2:
@@ -210,6 +321,22 @@ freud:
     bad_paths:
       numpy.python.generated:
       - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+gensim:
+  win-64/gensim-3.5.0-py27h39f3610_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/gensim-3.5.0-py36h830ac7b_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/gensim-3.5.0-py37h830ac7b_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
     valid: false
 google-api-core:
   osx-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
