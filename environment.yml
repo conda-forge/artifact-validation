@@ -1,4 +1,7 @@
 name: conda-forge-artifact-validation
+channels:
+  - conda-forge
+  - defaults
 dependencies:
   - click
   - conda-package-handling
@@ -7,6 +10,7 @@ dependencies:
   - pip
   - pytest
   - python-rapidjson
+  - python=3.8
   - pyyaml
   - requests
   - tqdm
