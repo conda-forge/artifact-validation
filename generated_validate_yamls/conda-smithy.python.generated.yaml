@@ -1,10 +1,6 @@
 allowed:
 - conda-smithy
 files:
-- Lib/lib2to3/Grammar3.4.4.final.0.pickle
-- Lib/lib2to3/Grammar3.5.1.final.0.pickle
-- Lib/lib2to3/PatternGrammar3.4.4.final.0.pickle
-- Lib/lib2to3/PatternGrammar3.5.1.final.0.pickle
 - Lib/site-packages/conda_smithy-*.dist-info/**/*
 - Lib/site-packages/conda_smithy-*.egg
 - Lib/site-packages/conda_smithy-*.egg-info

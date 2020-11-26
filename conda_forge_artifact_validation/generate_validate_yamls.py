@@ -31,6 +31,12 @@ DEFAULT_PYTHON_GLOBS = [
     "lib/python*/site-packages/{import_name}-*.egg-info/**/*",
 ]
 
+# these files appear to be made when 2to3 was used on windows
+# any package can write them
+DEFAULT_PYTHON_EXCLUDES = [
+    "Lib/lib2to3/**/*"
+]
+
 
 def _get_subdir_pkg_from_libcfgraph_artifact(artifact_pth):
     subdir_pkg = "/".join(artifact_pth.split('/')[-2:]).replace(".json", ".tar.bz2")
@@ -160,6 +166,9 @@ def generate_validate_yaml_for_python(
     """
     allowed = allowed or []
     exclude_files = exclude_files or []
+
+    # add in the defaults that any python package is allowed to write
+    exclude_files += DEFAULT_PYTHON_EXCLUDES
 
     # first make the default globs
     default_globs = []
