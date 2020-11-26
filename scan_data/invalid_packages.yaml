@@ -1,4 +1,52 @@
+apache-libcloud:
+  linux-64/apache-libcloud-2.4.0-py27_1000.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - lib/python2.7/site-packages/requests-2.20.1.dist-info/INSTALLER
+    valid: false
+  linux-64/apache-libcloud-2.4.0-py36_1000.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - lib/python3.6/site-packages/requests-2.20.1.dist-info/INSTALLER
+    valid: false
+  linux-64/apache-libcloud-2.4.0-py37_1000.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - lib/python3.7/site-packages/requests-2.20.1.dist-info/INSTALLER
+    valid: false
+aubio:
+  linux-64/aubio-0.4.8-py27h7273d18_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/aubio-0.4.8-py36h7273d18_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+conda-devenv:
+  linux-64/conda-devenv-0.9.3-py27_0.tar.bz2:
+    bad_paths:
+      conda.python.generated:
+      - bin/conda
+    valid: false
+  linux-64/conda-devenv-0.9.3-py35_0.tar.bz2:
+    bad_paths:
+      conda.python.generated:
+      - bin/conda
+    valid: false
+  linux-64/conda-devenv-0.9.3-py36_0.tar.bz2:
+    bad_paths:
+      conda.python.generated:
+      - bin/conda
+    valid: false
 flask-creole:
+  linux-64/flask-creole-0.4.4-py27_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - lib/python2.7/site-packages/click/__init__.py
+    valid: false
   win-64/flask-creole-0.4.4-py27_1000.tar.bz2:
     bad_paths:
       click.python.generated:
@@ -26,6 +74,16 @@ flask-debugtoolbar:
       - Lib/site-packages/click/__init__.py
     valid: false
 flask-rest-orm:
+  linux-64/flask-rest-orm-0.5.0-py35_0.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - lib/python3.5/site-packages/click-6.7.dist-info/RECORD
+    valid: false
+  linux-64/flask-rest-orm-0.5.0-py36_0.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - lib/python3.6/site-packages/click-6.7.dist-info/INSTALLER
+    valid: false
   win-64/flask-rest-orm-0.5.0-py35_0.tar.bz2:
     bad_paths:
       click.python.generated:
@@ -35,6 +93,132 @@ flask-rest-orm:
     bad_paths:
       click.python.generated:
       - Lib/site-packages/click-6.7.dist-info/METADATA
+    valid: false
+freud:
+  linux-64/freud-0.11.0-py27h3e44d54_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.0-py27h8619c78_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.0-py35h3e44d54_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.5/site-packages/numpy-1.15.2.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.0-py36h3e44d54_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.2.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.0-py36h8619c78_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.2.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.0-py37h3e44d54_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.0-py37h8619c78_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.3-py27h2d50403_1.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.3.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.3-py27h3e44d54_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.3-py27h6bb024c_1.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.3.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.3-py27h8619c78_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.3-py36h2d50403_1.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.3.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.3-py36h3e44d54_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.2.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.3-py36h6bb024c_1.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.3.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.3-py36h8619c78_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.2.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.3-py37h2d50403_1.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.3.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.3-py37h3e44d54_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.3-py37h6bb024c_1.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.3.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.3-py37h8619c78_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.4-py27h2d50403_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.4-py27h6bb024c_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.4-py36h2d50403_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.4-py36h6bb024c_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.4-py37h2d50403_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/freud-0.11.4-py37h6bb024c_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
     valid: false
 gensim:
   win-64/gensim-3.5.0-py27h39f3610_1000.tar.bz2:
@@ -53,6 +237,21 @@ gensim:
       - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
     valid: false
 google-api-core:
+  linux-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - lib/python3.6/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+    valid: false
+  linux-64/google-api-core-1.20.1-py37hc8dfbb8_0.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - lib/python3.7/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+    valid: false
+  linux-64/google-api-core-1.20.1-py38h32f6830_0.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - lib/python3.8/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+    valid: false
   win-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
     bad_paths:
       requests.python.generated:
