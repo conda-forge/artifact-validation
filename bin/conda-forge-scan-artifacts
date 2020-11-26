@@ -6,10 +6,10 @@ import re
 import math
 from collections import defaultdict
 import time
+import subprocess
 
 import rapidjson as json
 import click
-import requests
 import yaml
 import tqdm
 import joblib
@@ -20,12 +20,12 @@ from conda_forge_artifact_validation.validate import (
 )
 from conda_forge_artifact_validation.glob_to_re import glob_to_re
 from conda_forge_artifact_validation.utils import chunk_iterable
+from conda_forge_artifact_validation.cached_repodata import (
+    CHANNEL_URL,
+    SUBDIRS,
+    repodata_cache,
+)
 
-SUBDIRS = [
-    "linux-64", "osx-64", "noarch", "win-64",
-    "linux-ppc64le", "linux-aarch64", "osx-arm64",
-]
-CHANNEL_URL = "https://conda.anaconda.org/conda-forge"
 CHUNKSIZE = 64
 
 yaml.add_representer(defaultdict, Representer.represent_dict)
@@ -123,7 +123,10 @@ def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, ve
 @click.option(
     '--output-path', type=str, default=None,
     help='if given, output information on invalid artifacts is append to this path')
-def main(libcfgraph_path, verbose, time_limit, restart_data, output_path):
+@click.option(
+    '--pull', is_flag=True,
+    help='if given, pull the repo again before writing data')
+def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
     """Scan all conda-forge artifacts for invalid paths."""
 
     validate_yamls = _munge_validate_yamls()
@@ -152,9 +155,7 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path):
             print("\n" + "=" * 80, flush=True)
             print("=" * 80, flush=True)
             print("processing subdir %s" % subdir, flush=True)
-            rd = requests.get(
-                f"{CHANNEL_URL}/{subdir}/repodata.json"
-            ).json()
+            rd = repodata_cache[subdir]
             curr_resdat["subdir"] = subdir
 
             pkgs = sorted(rd["packages"])
@@ -211,7 +212,13 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path):
                 print("\nout of time - stopping!", flush=True)
                 break
 
+    # do a git pull here in case repo is out of date
+    if pull:
+        print("pulling latest changes...", flush=True)
+        subprocess.run("git pull", shell=True)
+
     if output_path is not None:
+        print("writing invalid packages to '%s'..." % output_path, flush=True)
         if os.path.exists(output_path):
             with open(output_path, "r") as fp:
                 old_data = yaml.safe_load(fp)
@@ -223,10 +230,18 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path):
                 old_data[k] = {}
             old_data[k].update(final_data[k])
 
+        # clean out things not in the main channel
+        for pkg_nm in final_data:
+            for subdir_pkg in list(final_data[pkg_nm]):
+                subdir, pkg = os.path.split(subdir_pkg)
+                if pkg not in repodata_cache[subdir]["packages"]:
+                    del final_data[pkg_nm][pkg]
+
         with open(output_path, "w") as fp:
             fp.write(yaml.dump(old_data, default_flow_style=False, indent=2))
 
     if restart_data is not None:
+        print("writing restart info to '%s'..." % restart_data, flush=True)
         with open(restart_data, "w") as fp:
             if out_of_time:
                 json.dump(curr_resdat, fp)
