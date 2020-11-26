@@ -724,3 +724,20 @@ spglib:
       numpy.python.generated:
       - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
     valid: false
+wcwidth:
+  win-64/wcwidth-0.1.5-py35_0.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
+xonsh:
+  win-64/xonsh-0.2.3-py35_0.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
+  win-64/xonsh-0.2.4-py35_0.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
