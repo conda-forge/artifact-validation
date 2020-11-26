@@ -16,6 +16,8 @@ jobs:
           channels: conda-forge,defaults
           channel-priority: strict
           show-channel-urls: true
+          auto-activate-base: false
+          environment-file: environment.yml
 
       - name: configure ci and install code
         shell: bash -l {0}
@@ -24,7 +26,6 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
 
-          conda install --quiet --file requirements.txt
           python -m pip install -e .
 
       - name: validate

@@ -1,0 +1,13 @@
+name: conda-forge-artifact-validation
+dependencies:
+  - click
+  - conda-package-handling
+  - flake8
+  - joblib
+  - pip
+  - pytest
+  - python-rapidjson
+  - pyyaml
+  - requests
+  - tqdm
+  - wget
