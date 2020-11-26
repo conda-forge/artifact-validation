@@ -435,6 +435,39 @@ meshpy:
       setuptools.python.generated:
       - bin/easy_install-3.6
     valid: false
+metakernel:
+  win-64/metakernel-0.12.6-py27_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-2.7-script.py
+    valid: false
+  win-64/metakernel-0.12.6-py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-3.4-script.py
+    valid: false
+  win-64/metakernel-0.12.6-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-3.5-script.py
+    valid: false
+prompt_toolkit:
+  win-64/prompt_toolkit-0.54-py35_0.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
+pyamg:
+  win-64/pyamg-4.0.0-py36h8300f20_1000.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools-40.6.3.dist-info/INSTALLER
+    valid: false
+  win-64/pyamg-4.0.0-py37h8300f20_1000.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools-40.6.3.dist-info/INSTALLER
+    valid: false
 pyemd:
   osx-64/pyemd-0.5.1-py27h1702cab_1000.tar.bz2:
     bad_paths:
@@ -466,11 +499,71 @@ pyemd:
       numpy.python.generated:
       - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
     valid: false
+  win-64/pyemd-0.5.1-py27h39f3610_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/pyemd-0.5.1-py36h830ac7b_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/pyemd-0.5.1-py37h830ac7b_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+pygithub:
+  win-64/pygithub-1.21.0-py35_0.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
+pymapd:
+  win-64/pymapd-0.6.0-py36he025d50_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+pyproj:
+  win-64/pyproj-1.9.4-py35_0.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
+python:
+  win-64/python-3.5.1-0.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
+  win-64/python-3.5.1-1.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
 ruamel.yaml:
   osx-64/ruamel.yaml-0.10.5-py27_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - lib/python2.7/site-packages/_yaml.so
+    valid: false
+  win-64/ruamel.yaml-0.10.13-py35_0.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
+shapely:
+  win-64/shapely-1.5.13-np110py35_1.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
+  win-64/shapely-1.5.13-np19py35_1.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
     valid: false
 signac-dashboard:
   osx-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
@@ -487,6 +580,21 @@ signac-dashboard:
     bad_paths:
       click.python.generated:
       - lib/python3.7/site-packages/click/__init__.py
+    valid: false
+  win-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
+  win-64/signac-dashboard-0.1.6-py36_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
+  win-64/signac-dashboard-0.1.6-py37_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
     valid: false
 sisl:
   osx-64/sisl-0.9.5-py27h6762db8_1002.tar.bz2:
@@ -539,6 +647,12 @@ sisl:
       setuptools.python.generated:
       - lib/python2.7/site-packages/setuptools.pth
     valid: false
+smmap:
+  win-64/smmap-0.9.0-py35_0.tar.bz2:
+    bad_paths:
+      conda-smithy.python.generated:
+      - Lib/lib2to3/Grammar3.5.1.final.0.pickle
+    valid: false
 spglib:
   osx-64/spglib-1.11.1.2-py27h7eb728f_0.tar.bz2:
     bad_paths:
@@ -569,4 +683,44 @@ spglib:
     bad_paths:
       numpy.python.generated:
       - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  win-64/spglib-1.11.1.2-py27hc997a72_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/spglib-1.11.1.2-py36h452e1ab_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/spglib-1.11.1.2-py37h452e1ab_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/spglib-1.11.2-py27hc997a72_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/spglib-1.11.2-py27hc997a72_1.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/spglib-1.11.2-py36h452e1ab_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/spglib-1.11.2-py36h452e1ab_1.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/spglib-1.11.2-py37h452e1ab_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
     valid: false
