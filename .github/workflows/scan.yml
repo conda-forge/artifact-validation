@@ -21,9 +21,13 @@ jobs:
           channel-priority: strict
           show-channel-urls: true
 
-      - name: configure conda and install code
+      - name: configure ci and install code
         shell: bash -l {0}
         run: |
+          git config pull.rebase false
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          
           conda install --quiet --file requirements.txt
           python -m pip install -e .
 
@@ -46,9 +50,6 @@ jobs:
       - name: push
         shell: bash -l {0}
         run: |
-          git config pull.rebase false
-          git config user.name github-actions
-          git config user.email github-actions@github.com
           git add scan_data/.
           git commit -am "[ci skip] scan data for https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
           for _ in `seq 0 1`; do
