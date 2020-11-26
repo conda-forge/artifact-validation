@@ -288,6 +288,17 @@ gridfill:
       setuptools.python.generated:
       - Scripts/easy_install-3.4-script.py
     valid: false
+meshpy:
+  linux-64/meshpy-2018.2.1-py27h7eb728f_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - bin/easy_install-2.7
+    valid: false
+  linux-64/meshpy-2018.2.1-py36h7eb728f_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - bin/easy_install-3.6
+    valid: false
 metakernel:
   win-64/metakernel-0.12.6-py27_0.tar.bz2:
     bad_paths:
@@ -316,6 +327,36 @@ pyamg:
       - Lib/site-packages/setuptools-40.6.3.dist-info/INSTALLER
     valid: false
 pyemd:
+  linux-64/pyemd-0.5.1-py27h637b7d7_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/pyemd-0.5.1-py27hf8a1672_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/pyemd-0.5.1-py36h637b7d7_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/pyemd-0.5.1-py36hf8a1672_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/pyemd-0.5.1-py37h637b7d7_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  linux-64/pyemd-0.5.1-py37hf8a1672_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
   win-64/pyemd-0.5.1-py27h39f3610_1000.tar.bz2:
     bad_paths:
       numpy.python.generated:
