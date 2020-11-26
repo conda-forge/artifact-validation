@@ -37,6 +37,7 @@ jobs:
         run: |
           conda-forge-scan-artifacts \
             -v \
+            --pull \
             --libcfgraph-path=libcfgraph \
             --time-limit=2700 \
             --restart-data=scan_data/restart.json \
