@@ -715,6 +715,67 @@ pymapd:
       numpy.python.generated:
       - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
     valid: false
+racket:
+  osx-64/racket-6.12-hfc679d8_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.1.0.0.dylib
+    valid: false
+  osx-64/racket-7.0-h0a44026_2000.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.1.1.dylib
+    valid: false
+  osx-64/racket-7.0-hfc679d8_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.1.1.dylib
+    valid: false
+  osx-64/racket-7.0-hfc679d8_1000.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.1.1.dylib
+    valid: false
+  osx-64/racket-7.1-h0a44026_1000.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.1.1.dylib
+    valid: false
+  osx-64/racket-7.1-hfc679d8_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.1.1.dylib
+    valid: false
+  osx-64/racket-7.2-h0a44026_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.1.1.dylib
+    valid: false
+  osx-64/racket-7.3-h6de7cb9_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.1.1.dylib
+    valid: false
+  osx-64/racket-7.4-h6de7cb9_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.1.1.dylib
+    valid: false
+  osx-64/racket-7.5-h4a8c4bd_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.1.1.dylib
+    valid: false
+  osx-64/racket-7.7-h4a8c4bd_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.1.1.dylib
+    valid: false
+  osx-64/racket-7.8-hb1e8313_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.1.1.dylib
+    valid: false
 ruamel.yaml:
   osx-64/ruamel.yaml-0.10.5-py27_0.tar.bz2:
     bad_paths:
