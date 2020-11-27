@@ -1,0 +1,5 @@
+allowed:
+- ca-certificates
+files:
+- Library/ssl/cacert.pem
+- Library/ssl/cert.pem
