@@ -1,4 +1,7 @@
-files: []
+files:
+  - include/openssl/**/*
+  - bin/openssl
+  - Library/include/openssl/**/*
 
 allowed:
   - openssl

@@ -43,7 +43,10 @@ def _gen_from_validate_yamls(test=False):
             for artifact_name in validate_yaml.get("generate_from_artifacts", []):
                 _gen_validate_yaml = generate_validate_yaml_from_libcfgraph(
                     artifact_name,
-                    exclude_globs=validate_yaml.get("files", []),
+                    exclude_globs=(
+                        validate_yaml.get("files", [])
+                        + validate_yaml.get("exclude_files", [])
+                    ),
                 )
                 for key in ["files", "allowed"]:
                     gen_validate_yaml[key].extend(_gen_validate_yaml[key])
