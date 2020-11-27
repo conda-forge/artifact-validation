@@ -1,0 +1,16 @@
+allowed:
+- certifi
+files:
+- Lib/site-packages/certifi-*.dist-info/**/*
+- Lib/site-packages/certifi-*.egg
+- Lib/site-packages/certifi-*.egg-info
+- Lib/site-packages/certifi-*.egg-info/**/*
+- Lib/site-packages/certifi/**/*
+- lib/python*/site-packages/certifi-*.dist-info/**/*
+- lib/python*/site-packages/certifi-*.egg
+- lib/python*/site-packages/certifi-*.egg-info
+- lib/python*/site-packages/certifi-*.egg-info/**/*
+- lib/python*/site-packages/certifi/**/*
+- site-packages/certifi-*.dist-info/**/*
+- site-packages/certifi-*.egg-info/**/*
+- site-packages/certifi/**/*
