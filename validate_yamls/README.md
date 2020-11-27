@@ -23,4 +23,8 @@ allowed:
 # to generate an additional list of files that cannot be clobbered
 generate_from_artifacts:
   - conda
+
+# this key allows you to exclude generated files from the filters via globs
+exclude_files:
+  - <globs to exclude>
 ```

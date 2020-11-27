@@ -21,6 +21,8 @@
 certifi:
   top_level_imports:
     - certifi
+  exclude_files:
+    - lib-python/3/lib2to3/**/*
 click:
   top_level_imports:
     - click
