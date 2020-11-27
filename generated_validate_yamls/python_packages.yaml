@@ -18,6 +18,9 @@
 #   exclude_files:
 #    - <globs to exclude>
 
+certifi:
+  top_level_imports:
+    - certifi
 click:
   top_level_imports:
     - click

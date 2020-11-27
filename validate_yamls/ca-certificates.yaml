@@ -1,0 +1,9 @@
+files:
+  - ssl/cert.pem
+  - ssl/cacert.pem
+
+allowed:
+  - ca-certificates
+
+generate_from_artifacts:
+  - ca-certificates

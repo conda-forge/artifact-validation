@@ -1,0 +1,7 @@
+files: []
+
+allowed:
+  - openssl
+
+generate_from_artifacts:
+  - openssl
