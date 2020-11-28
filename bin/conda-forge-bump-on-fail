@@ -21,17 +21,17 @@ def main(job_name, job_url):
     repo.create_issue(
         title="failed job %s" % job_name,
         body="""
-    Hey @conda-forge/systems!
+Hey @conda-forge/systems!
 
-    It appears that the systems `%s` job failed! :(
+It appears that the systems `%s` job failed! :(
 
-    I hope it is not too much work to fix but we all know that is never the case.
+I hope it is not too much work to fix but we all know that is never the case.
 
-    Have a great day!
+Have a great day!
 
-    job url: %s
+job url: %s
 
-    """ % (job_name, job_url)
+""" % (job_name, job_url)
     )
 
     sys.exit(1)
