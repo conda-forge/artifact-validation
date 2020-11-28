@@ -19,12 +19,13 @@ jobs:
           wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/latest | tar -xvj bin/micromamba --strip-components=1
           ./micromamba shell init -s bash -p ~/micromamba
           mkdir -p ~/micromamba/pkgs/
-          echo 'export MAMBA_ROOT_PREFIX=~/micromamba' >> ~/.bashrc
-          echo 'export MAMBA_EXE=$(pwd)/micromamba' >> ~/.bashrc
-          echo '. $MAMBA_ROOT_PREFIX/etc/profile.d/mamba.sh' >> ~/.bashrc
+          # echo 'export MAMBA_ROOT_PREFIX=~/micromamba' >> ~/.bashrc
+          # echo 'export MAMBA_EXE=$(pwd)/micromamba' >> ~/.bashrc
+          # echo '. $MAMBA_ROOT_PREFIX/etc/profile.d/mamba.sh' >> ~/.bashrc
           echo 'micromamba activate test' >> ~/.bashrc
           ./micromamba create -f environment.yml -y
-          ./micromamba activate test
+          source ~/.bashrc
+          micromamba activate test
           python -m pip install -e .
 
       # - uses: conda-incubator/setup-miniconda@v2
