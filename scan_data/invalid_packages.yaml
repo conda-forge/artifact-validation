@@ -651,6 +651,20 @@ libopenssl-static:
       openssl.generated:
       - lib/libcrypto.a
     valid: false
+  osx-arm64/libopenssl-static-1.1.1g-h642e427_1.tar.bz2:
+    bad_paths:
+      openssl.generated:
+        bad_paths:
+        - $PREFIX/lib/libcrypto.a
+        valid: false
+    valid: false
+  osx-arm64/libopenssl-static-1.1.1h-h642e427_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+        bad_paths:
+        - $PREFIX/lib/libcrypto.a
+        valid: false
+    valid: false
 meshpy:
   linux-64/meshpy-2018.2.1-py27h7eb728f_0.tar.bz2:
     bad_paths:
