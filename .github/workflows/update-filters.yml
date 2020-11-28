@@ -17,6 +17,7 @@ jobs:
       - name: install micromamba and code
         run: |
           rm -f ~/.bashrc
+          touch ~/.bashrc
           wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/latest | tar -xvj bin/micromamba --strip-components=1
           ./micromamba shell init -s bash -p ~/micromamba
           mkdir -p ~/micromamba/pkgs/
