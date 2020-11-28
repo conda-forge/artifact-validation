@@ -3,6 +3,7 @@ conda-package-handling
 flake8
 joblib
 pip
+pygithub
 pytest
 python-rapidjson
 pyyaml

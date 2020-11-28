@@ -51,3 +51,15 @@ jobs:
       #     RUN_ID: ${{ github.run_id }}
       #     MD5: ${{ github.event.client_payload.md5 }}
       #     ARTIFACT_URL: ${{ github.event.client_payload.artifact_url }}
+
+      - name: bump on fail
+        shell: bash -l {0}
+        if: github.ref == 'refs/heads/master' && failure()
+        run: |
+          conda-forge-bump-on-fail \
+            --job-name=${ACTION_NAME} \
+            --job-url="https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_ID: ${{ github.run_id }}
+          ACTION_NAME: ${{ github.workflow }}
