@@ -14,23 +14,26 @@ jobs:
         with:
           fetch-depth: 100
 
-      - name: cache conda
-        uses: actions/cache@v1
-        env:
-          # Increase this value to reset cache if etc/example-environment.yml has not changed
-          CACHE_NUMBER: 0
-        with:
-          path: ~/conda_pkgs_dir
-          key:
-            ${{ runner.os }}-conda-${{ env.CACHE_NUMBER }}-${{ hashFiles('requirements.txt') }}
+      - name: install micromamba and code
+        run: |
+          wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/latest | tar -xvj bin/micromamba --strip-components=1
+          ./micromamba shell init -s bash -p ~/micromamba
+          mkdir -p ~/micromamba/pkgs/
+          echo 'export MAMBA_ROOT_PREFIX=~/micromamba' >> ~/.bashrc
+          echo 'export MAMBA_EXE=$(pwd)/micromamba' >> ~/.bashrc
+          echo '. $MAMBA_ROOT_PREFIX/etc/profile.d/mamba.sh' >> ~/.bashrc
+          echo 'micromamba activate test' >> ~/.bashrc
+          ./micromamba create -f environment.yml -y
+          ./micromamba activate test
+          python -m pip install -e .
 
-      - uses: conda-incubator/setup-miniconda@v2
-        with:
-          python-version: 3.8
-          channels: conda-forge,defaults
-          channel-priority: strict
-          show-channel-urls: true
-
+      # - uses: conda-incubator/setup-miniconda@v2
+      #   with:
+      #     python-version: 3.8
+      #     channels: conda-forge,defaults
+      #     channel-priority: strict
+      #     show-channel-urls: true
+      #
       - name: configure ci and install code
         shell: bash -l {0}
         run: |
@@ -38,8 +41,9 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
 
-          conda install --quiet --file requirements.txt
-          python -m pip install -e .
+
+          # conda install --quiet --file requirements.txt
+          # python -m pip install -e .
 
       - name: generate filters
         shell: bash -l {0}
