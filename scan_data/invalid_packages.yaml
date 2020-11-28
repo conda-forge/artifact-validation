@@ -830,6 +830,12 @@ pymapd:
       numpy.python.generated:
       - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
     valid: false
+pypy2.7:
+  linux-64/pypy2.7-5.10.0-0.tar.bz2:
+    bad_paths:
+      openssl:
+      - include/openssl/ecdh.h
+    valid: false
 racket:
   osx-64/racket-6.12-hfc679d8_0.tar.bz2:
     bad_paths:
