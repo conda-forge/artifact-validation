@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+import os
+import sys
+import github
+import click
+
+
+@click.command()
+@click.option(
+    '--job-name', type=str, default=None,
+    help='the name of the job')
+@click.option(
+    '--job-url', type=str, default=None,
+    help='the URL of the job')
+def main(job_name, job_url):
+    """Bump systems team on job failure."""
+    gh = github.Github(os.environ["GH_TOKEN"])
+
+    repo = gh.get_repo("conda-forge/artifact-validation")
+
+    repo.create_issue(
+        title="failed job %s" % job_name,
+        body="""
+    Hey @conda-forge/systems!
+
+    It appears that the systems `%s` job failed! :(
+
+    I hope it is not too much work to fix but we all know that is never the case.
+
+    Have a great day!
+
+    job url: %s
+
+    """ % (job_name, job_url)
+    )
+
+    sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

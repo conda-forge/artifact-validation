@@ -10,6 +10,7 @@ setup(
         "bin/conda-forge-validate-artifact",
         "bin/conda-forge-generate-validate-yamls",
         "bin/conda-forge-scan-artifacts",
+        "bin/conda-forge-bump-on-fail",
     ],
     url="https://github.com/conda-forge/artifact-validation",
     packages=find_packages(),
