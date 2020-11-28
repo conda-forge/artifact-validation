@@ -788,6 +788,12 @@ sagelib:
       pip.python.generated:
       - bin/pip
     valid: false
+sentry-sdk:
+  noarch/sentry-sdk-0.5.3-py_0.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+      - site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
+    valid: false
 signac-dashboard:
   linux-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
     bad_paths:
