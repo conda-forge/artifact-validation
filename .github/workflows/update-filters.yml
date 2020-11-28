@@ -16,13 +16,13 @@ jobs:
 
       - name: install micromamba and code
         run: |
+          rm -f ~/.bashrc
           wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/latest | tar -xvj bin/micromamba --strip-components=1
           ./micromamba shell init -s bash -p ~/micromamba
           mkdir -p ~/micromamba/pkgs/
-          # echo 'export MAMBA_ROOT_PREFIX=~/micromamba' >> ~/.bashrc
-          # echo 'export MAMBA_EXE=$(pwd)/micromamba' >> ~/.bashrc
-          # echo '. $MAMBA_ROOT_PREFIX/etc/profile.d/mamba.sh' >> ~/.bashrc
+          echo 'set -eo pipefail' >> ~/.bashrc
           echo 'micromamba activate test' >> ~/.bashrc
+          mv ~/.bashrc ~/.profile
           export MAMBA_ROOT_PREFIX=~/micromamba
           export MAMBA_EXE=$(pwd)/micromamba
           . $MAMBA_ROOT_PREFIX/etc/profile.d/mamba.sh
@@ -51,7 +51,6 @@ jobs:
       - name: generate filters
         shell: bash -l {0}
         run: |
-          cat ~/.bashrc
           conda-forge-generate-validate-yamls
 
       - name: push
