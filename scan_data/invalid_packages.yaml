@@ -585,6 +585,42 @@ libmemcached:
       conda.python.generated:
       - bin/activate
     valid: false
+libopenssl-static:
+  linux-ppc64le/libopenssl-static-1.1.1c-h6eb9509_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.a
+    valid: false
+  linux-ppc64le/libopenssl-static-1.1.1d-h6eb9509_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.a
+    valid: false
+  linux-ppc64le/libopenssl-static-1.1.1e-h6eb9509_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.a
+    valid: false
+  linux-ppc64le/libopenssl-static-1.1.1f-h6eb9509_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.a
+    valid: false
+  linux-ppc64le/libopenssl-static-1.1.1g-h6eb9509_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.a
+    valid: false
+  linux-ppc64le/libopenssl-static-1.1.1g-h6eb9509_1.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.a
+    valid: false
+  linux-ppc64le/libopenssl-static-1.1.1h-h6eb9509_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.a
+    valid: false
 meshpy:
   linux-64/meshpy-2018.2.1-py27h7eb728f_0.tar.bz2:
     bad_paths:
