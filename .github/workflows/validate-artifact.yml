@@ -10,22 +10,31 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: conda-incubator/setup-miniconda@v2
-        with:
-          python-version: 3.8
-          channels: conda-forge,defaults
-          channel-priority: strict
-          show-channel-urls: true
+      - name: install micromamba and code
+        run: |
+          rm -f ~/.bashrc
+          rm -f ~/.bash_profile
+          rm -f ~/.profile
+          touch ~/.bashrc
+          wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/latest | tar -xvj bin/micromamba --strip-components=1
+          ./micromamba shell init -s bash -p ~/micromamba
+          mkdir -p ~/micromamba/pkgs/
+          echo 'set -eo pipefail' >> ~/.bashrc
+          echo 'micromamba activate test' >> ~/.bashrc
+          mv ~/.bashrc ~/.profile
+          export MAMBA_ROOT_PREFIX=~/micromamba
+          export MAMBA_EXE=$(pwd)/micromamba
+          . $MAMBA_ROOT_PREFIX/etc/profile.d/mamba.sh
+          micromamba create -f environment.yml -y
+          micromamba activate test
+          python -m pip install -e .
 
-      - name: configure ci and install code
+      - name: configure git
         shell: bash -l {0}
         run: |
           git config pull.rebase false
           git config user.name github-actions
           git config user.email github-actions@github.com
-
-          conda install --quiet --file requirements.txt
-          python -m pip install -e .
 
       - name: validate
         shell: bash -l {0}

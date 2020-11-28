@@ -33,26 +33,12 @@ jobs:
           micromamba activate test
           python -m pip install -e .
 
-      # - uses: conda-incubator/setup-miniconda@v2
-      #   with:
-      #     python-version: 3.8
-      #     channels: conda-forge,defaults
-      #     channel-priority: strict
-      #     show-channel-urls: true
-      #
-      - name: configure ci and install code
+      - name: configure git
         shell: bash -l {0}
         run: |
-          ls -lah ~/.*
-          cat ~/.profile
-
           git config pull.rebase false
           git config user.name github-actions
           git config user.email github-actions@github.com
-
-
-          # conda install --quiet --file requirements.txt
-          # python -m pip install -e .
 
       - name: generate filters
         shell: bash -l {0}
