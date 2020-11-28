@@ -586,6 +586,36 @@ libmemcached:
       - bin/activate
     valid: false
 libopenssl-static:
+  linux-aarch64/libopenssl-static-1.1.1c-h516909a_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.a
+    valid: false
+  linux-aarch64/libopenssl-static-1.1.1d-h516909a_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.a
+    valid: false
+  linux-aarch64/libopenssl-static-1.1.1f-h516909a_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.a
+    valid: false
+  linux-aarch64/libopenssl-static-1.1.1g-h516909a_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.a
+    valid: false
+  linux-aarch64/libopenssl-static-1.1.1g-h516909a_1.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.a
+    valid: false
+  linux-aarch64/libopenssl-static-1.1.1h-h2923d19_0.tar.bz2:
+    bad_paths:
+      openssl.generated:
+      - lib/libcrypto.a
+    valid: false
   linux-ppc64le/libopenssl-static-1.1.1c-h6eb9509_0.tar.bz2:
     bad_paths:
       openssl.generated:
