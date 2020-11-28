@@ -23,8 +23,10 @@ jobs:
           # echo 'export MAMBA_EXE=$(pwd)/micromamba' >> ~/.bashrc
           # echo '. $MAMBA_ROOT_PREFIX/etc/profile.d/mamba.sh' >> ~/.bashrc
           echo 'micromamba activate test' >> ~/.bashrc
-          ./micromamba create -f environment.yml -y
-          source ~/.bashrc
+          export MAMBA_ROOT_PREFIX=~/micromamba
+          export MAMBA_EXE=$(pwd)/micromamba
+          . $MAMBA_ROOT_PREFIX/etc/profile.d/mamba.sh
+          micromamba create -f environment.yml -y
           micromamba activate test
           python -m pip install -e .
 
