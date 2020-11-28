@@ -17,6 +17,8 @@ jobs:
       - name: install micromamba and code
         run: |
           rm -f ~/.bashrc
+          rm -f ~/.bash_profile
+          rm -f ~/.profile
           touch ~/.bashrc
           wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/latest | tar -xvj bin/micromamba --strip-components=1
           ./micromamba shell init -s bash -p ~/micromamba
@@ -41,6 +43,7 @@ jobs:
       - name: configure ci and install code
         shell: bash -l {0}
         run: |
+          ls -lah ~/.*
           cat ~/.profile
 
           git config pull.rebase false
