@@ -51,6 +51,7 @@ jobs:
       - name: generate filters
         shell: bash -l {0}
         run: |
+          cat ~/.bashrc
           conda-forge-generate-validate-yamls
 
       - name: push
