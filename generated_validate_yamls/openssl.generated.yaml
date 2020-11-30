@@ -1,4 +1,5 @@
 allowed:
+- libopenssl-static
 - openssl
 files:
 - Library/bin/c_rehash.pl

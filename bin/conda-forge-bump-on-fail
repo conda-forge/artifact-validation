@@ -12,15 +12,26 @@ import click
 @click.option(
     '--job-url', type=str, default=None,
     help='the URL of the job')
-def main(job_name, job_url):
+@click.option(
+    '--artifact-url', type=str, default=None,
+    help='the URL of the artifact')
+def main(job_name, job_url, artifact_url):
     """Bump systems team on job failure."""
     gh = github.Github(os.environ["GH_TOKEN"])
 
     repo = gh.get_repo("conda-forge/artifact-validation")
 
-    repo.create_issue(
-        title="failed job %s" % job_name,
-        body="""
+    if artifact_url is not None:
+        if "label" in artifact_url:
+            title_slug = artifact_url.split("/label/")[1]
+        else:
+            title_slug = artifact_url.split("/conda.anaconda.org/cf-staging/")[1]
+
+        title = "failed job %s for %s" % (job_name, title_slug)
+    else:
+        title = "failed job %s" % job_name
+
+    body = """
 Hey @conda-forge/systems!
 
 It appears that the systems `%s` job failed! :(
@@ -32,7 +43,14 @@ Have a great day!
 job url: %s
 
 """ % (job_name, job_url)
-    )
+
+    if artifact_url is not None:
+        body += """\
+artifact url: %s
+
+""" % artifact_url
+
+    repo.create_issue(title=title, body=body)
 
     sys.exit(1)
 

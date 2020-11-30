@@ -38,7 +38,7 @@ def _gen_from_validate_yamls(test=False):
         if len(validate_yaml.get("generate_from_artifacts", [])) > 0:
             gen_validate_yaml = {
                 "files": [],
-                "allowed": [],
+                "allowed": [p for p in validate_yaml["allowed"]],
             }
             for artifact_name in validate_yaml.get("generate_from_artifacts", []):
                 _gen_validate_yaml = generate_validate_yaml_from_libcfgraph(
