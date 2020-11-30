@@ -5,6 +5,7 @@ files:
 
 allowed:
   - openssl
+  - libopenssl-static
 
 generate_from_artifacts:
   - openssl
