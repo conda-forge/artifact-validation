@@ -471,18 +471,18 @@ freud:
 gensim:
   win-64/gensim-3.5.0-py27h39f3610_1000.tar.bz2:
     bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      certifi.python.generated:
+      - Lib/site-packages/certifi-2018.11.29.dist-info/DESCRIPTION.rst
     valid: false
   win-64/gensim-3.5.0-py36h830ac7b_1000.tar.bz2:
     bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      certifi.python.generated:
+      - Lib/site-packages/certifi-2018.11.29.dist-info/DESCRIPTION.rst
     valid: false
   win-64/gensim-3.5.0-py37h830ac7b_1000.tar.bz2:
     bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      certifi.python.generated:
+      - Lib/site-packages/certifi-2018.11.29.dist-info/DESCRIPTION.rst
     valid: false
 google-api-core:
   linux-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
