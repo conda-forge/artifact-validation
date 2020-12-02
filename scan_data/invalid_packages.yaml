@@ -625,13 +625,13 @@ metakernel:
 pyamg:
   win-64/pyamg-4.0.0-py36h8300f20_1000.tar.bz2:
     bad_paths:
-      setuptools.python.generated:
-      - Lib/site-packages/setuptools-40.6.3.dist-info/INSTALLER
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
     valid: false
   win-64/pyamg-4.0.0-py37h8300f20_1000.tar.bz2:
     bad_paths:
-      setuptools.python.generated:
-      - Lib/site-packages/setuptools-40.6.3.dist-info/INSTALLER
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
     valid: false
 pyemd:
   linux-64/pyemd-0.5.1-py27h637b7d7_1000.tar.bz2:
