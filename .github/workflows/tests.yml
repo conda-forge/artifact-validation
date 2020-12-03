@@ -64,3 +64,5 @@ jobs:
         run: |
           wget https://anaconda.org/conda-forge/numpy/1.19.4/download/osx-64/numpy-1.19.4-py36hcf5569d_1.tar.bz2
           pytest -vvs scripts/test_cli_utils.py
+        env:
+          GH_TOKEN: ${{ secrets.CF_DAEMON_GH_TOKEN }}
