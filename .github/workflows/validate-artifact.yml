@@ -39,27 +39,22 @@ jobs:
       - name: validate
         shell: bash -l {0}
         run: |
-          conda-forge-validate-artifact -v --md5sum=${MD5} ${ARTIFACT_URL}
+          conda-forge-validate-artifact \
+            -v \
+            --feedstock=${FEEDSTOCK} \
+            --md5sum=${MD5} \
+            --job-url="https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}" \
+            --git-sha=${GIT_SHA} \
+            ${ARTIFACT_URL}
         env:
+          RUN_ID: ${{ github.run_id }}
           MD5: ${{ github.event.client_payload.md5 }}
           ARTIFACT_URL: ${{ github.event.client_payload.artifact_url }}
-
-      # - name: upload
-      #   shell: bash -l {0}
-      #   run: |
-      #     :
-      #   env:
-      #     MD5: ${{ github.event.client_payload.md5 }}
-      #     ARTIFACT_URL: ${{ github.event.client_payload.artifact_url }}
-
-      # - name: bump on fail
-      #   shell: bash -l {0}
-      #   run: |
-      #     git commit -am "[ci skip] scan data for https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
-      #   env:
-      #     RUN_ID: ${{ github.run_id }}
-      #     MD5: ${{ github.event.client_payload.md5 }}
-      #     ARTIFACT_URL: ${{ github.event.client_payload.artifact_url }}
+          FEEDSTOCK: ${{ github.event.client_payload.feedstock }}
+          GIT_SHA: ${{ github.event.client_payload.git_sha }}
+          GH_TOKEN: ${{ secrets.CF_DAEMON_GH_TOKEN }}
+          PROD_BINSTAR_TOKEN: ${{ secrets.PROD_BINSTAR_TOKEN }}
+          STAGING_BINSTAR_TOKEN: ${{ secrets.STAGING_BINSTAR_TOKEN }}
 
       - name: bump on fail
         shell: bash -l {0}
