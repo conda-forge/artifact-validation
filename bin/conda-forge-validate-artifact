@@ -68,7 +68,7 @@ def main(artifact_path, md5sum, verbose, feedstock, job_url, git_sha):
         key = os.path.basename(pth).rsplit(".yaml", maxsplit=1)[0]
         with open(pth, "r") as fp:
             validate_yamls[key] = yaml.safe_load(fp)
-    LOGGER.debug("found %s validate yaml files", len(validate_yamls))
+    LOGGER.info("found %s validate yaml files", len(validate_yamls))
 
     valid = True
     errors = []
