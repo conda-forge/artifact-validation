@@ -6,6 +6,7 @@ import glob
 import logging
 import shutil
 
+import github
 import conda_package_handling.api
 
 from .utils import split_pkg, compute_md5sum
@@ -128,7 +129,7 @@ def download_and_validate(channel_url, subdir_pkg, validate_yamls, md5sum=None):
                 if md5sum is not None:
                     if md5sum != compute_md5sum(f"{tmpdir}/{pkg}"):
                         LOGGER.info("bad md5sum")
-                        return False, {}
+                        return False, {"md5sum": {"valid": False}}
                     else:
                         LOGGER.info("md5 sum is valid")
 
@@ -143,3 +144,116 @@ def download_and_validate(channel_url, subdir_pkg, validate_yamls, md5sum=None):
             bad_pths = {}
 
     return valid, bad_pths
+
+
+def bump_team_with_error(
+    *,
+    feedstock, git_sha, errors, valid, copied,
+    artifact_url, bad_pths, job_url
+):
+    """Make an issue or comment if the artifact validation failed.
+
+    Parameters
+    ----------
+    feedstock : str
+        The name of the feedstock.
+    git_sha : str
+        The git SHA of the commit.
+    errors : list of str
+        A list of errors, if any.
+    valid : dict
+        A dictionary mapping outputs to where or not they were valid for the
+        feedstock.
+    copied : dict
+        A dictionary mapping outputs to whether or not they were copied.
+    artifact_url : string
+        The artifact being validated.
+    bad_pths : dict
+        A dictionary of any bad paths in the artifact.
+    job_url : string
+        A job url to reference.
+    """
+    if not feedstock.endswith("-feedstock"):
+        return None
+
+    gh = github.Github(os.environ['GH_TOKEN'])
+
+    team_name = feedstock[:-len("-feedstock")]
+
+    message = """\
+Hi @conda-forge/%s! This is the friendly automated conda-forge-webservice!
+
+It appears that one or more of your feedstock's outputs is either invalid or
+did not copy from the staging channel (cf-staging) to the production channel (conda-forge). :(
+
+This failure can happen for a lot of reasons, including an outdated feedstock
+token, a feedstock output that is not allowed for that feedstock, or a feedstock output
+with files that are not allowed for that output. Below we have put some information
+about the failure to help you debug it.
+
+**Rerendering the feedstock will usually fix these problems.**
+
+If you have any issues or questions, you can find us on gitter in the
+community [chat room](https://gitter.im/conda-forge/conda-forge.github.io) or you can bump us right here.
+""" % team_name  # noqa
+
+    if len(valid) > 0:
+        valid_msg = "output validation (is this output allowed for your feedstock?):\n"
+        for o, v in valid.items():
+            valid_msg += " - **%s**: %s\n" % (o, v)
+
+        message += "\n\n"
+        message += valid_msg
+
+    if len(copied) > 0:
+        copied_msg = "copied (did this output get copied to the production channel?):\n"
+        for o, v in copied.items():
+            copied_msg += " - **%s**: %s\n" % (o, v)
+
+        message += "\n\n"
+        message += copied_msg
+
+    if len(errors) > 0:
+        error_msg = "error messages:\n"
+        for err in errors:
+            error_msg += " - %s" % err
+
+        message += "\n\n"
+        message += error_msg
+
+    if len(bad_pths) > 0:
+        bad_pths_msg = (
+            "invalid paths in output (mapping of filter to file not allowed):\n"
+        )
+        for k, v in bad_pths:
+            bad_pths_msg += " - **%s**: %s\n" % (k, v["bad_paths"])
+
+        message += "\n\n"
+        message += bad_pths_msg
+
+    repo = gh.get_repo("conda-forge/%s" % feedstock)
+    issue = None
+    for _issue in repo.get_issues(state="all"):
+        if (
+            (git_sha is not None and git_sha in _issue.title)
+            or ("[warning] failed package validation and/or copy" in _issue.title)
+        ):
+            issue = _issue
+            break
+
+    if issue is None:
+        if git_sha is not None:
+            issue = repo.create_issue(
+                "[warning] failed package validation "
+                "and/or copy for commit %s" % git_sha,
+                body=message,
+            )
+        else:
+            issue = repo.create_issue(
+                "[warning] failed package validation and/or copy",
+                body=message,
+            )
+    else:
+        if issue.state == "closed":
+            issue.edit(state="open")
+        issue.create_comment(message)

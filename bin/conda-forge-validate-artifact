@@ -13,6 +13,7 @@ from conda_forge_artifact_validation.utils import is_url, compute_md5sum
 from conda_forge_artifact_validation.validate import (
     validate_file,
     download_and_validate,
+    bump_team_with_error,
 )
 
 LOGGER = logging.getLogger("conda_forge_artifact_validation")
@@ -27,7 +28,22 @@ LOGGER = logging.getLogger("conda_forge_artifact_validation")
 @click.option(
     '-v', '--verbose', count=True,
     help='if given, print increasing levels of output')
-def main(artifact_path, md5sum, verbose):
+@click.option(
+    '--feedstock', type=str, default=None,
+    help=(
+        'if given, the name of the feedstock to bump on fail -'
+        ' should end in "-feedstock"'
+    ),
+)
+@click.option(
+    '--job-url', type=str, default=None,
+    help='the URL of the job'
+)
+@click.option(
+    '--git-sha', type=str, default=None,
+    help='the git SHA for the commit for the artifact, if any'
+)
+def main(artifact_path, md5sum, verbose, feedstock, job_url, git_sha):
     """Validate the artifact at ARTIFACT_PATH for conda-forge."""
 
     # setup logging
@@ -52,9 +68,10 @@ def main(artifact_path, md5sum, verbose):
         key = os.path.basename(pth).rsplit(".yaml", maxsplit=1)[0]
         with open(pth, "r") as fp:
             validate_yamls[key] = yaml.safe_load(fp)
-    LOGGER.debug("found %s validate yaml files", len(validate_yamls))
+    LOGGER.info("found %s validate yaml files", len(validate_yamls))
 
     valid = True
+    errors = []
 
     if is_url(artifact_path):
         LOGGER.info("downloading artifact")
@@ -68,10 +85,11 @@ def main(artifact_path, md5sum, verbose):
             md5sum=md5sum,
         )
     else:
+        subdir_pkg = None
         if md5sum is not None and md5sum != compute_md5sum(artifact_path):
             LOGGER.info("bad md5sum")
             valid = False
-            bad_pths = {}
+            bad_pths = {"md5sum": {"valid": False}}
 
         if valid:
             with tempfile.TemporaryDirectory() as tmpdir:
@@ -83,6 +101,23 @@ def main(artifact_path, md5sum, verbose):
 
     if not valid:
         LOGGER.info("invalid artifact: %s", pprint.pformat(bad_pths))
+
+        if feedstock is not None:
+            if "md5sum" in bad_pths:
+                bad_pths = {}
+                errors.append("invalid md5 sum for artifact %s" % artifact_path)
+
+            bump_team_with_error(
+                feedstock=feedstock,
+                git_sha=git_sha,
+                errors=errors,
+                valid={},
+                copied={},
+                artifact_url=artifact_path,
+                bad_pths=bad_pths,
+                job_url=job_url,
+            )
+
         sys.exit(1)
     else:
         LOGGER.info("artifact is valid")

@@ -58,7 +58,7 @@ def test_validate_bad_md5sum():
         md5sum="c7",
     )
     assert not valid
-    assert bad_pths == {}
+    assert bad_pths == {'md5sum': {'valid': False}}
 
 
 @pytest.mark.parametrize(
