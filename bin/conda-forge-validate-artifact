@@ -105,7 +105,7 @@ def main(artifact_path, md5sum, verbose, feedstock, job_url, git_sha):
         if feedstock is not None:
             if "md5sum" in bad_pths:
                 bad_pths = {}
-                errors.append("invalid md5 sum for artifact")
+                errors.append("invalid md5 sum for artifact %s" % artifact_path)
 
             bump_team_with_error(
                 feedstock=feedstock,
