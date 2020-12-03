@@ -36,18 +36,18 @@ apache-libcloud:
     valid: false
   win-64/apache-libcloud-2.4.0-py27_1000.tar.bz2:
     bad_paths:
-      requests.python.generated:
-      - Lib/site-packages/requests-2.20.1.dist-info/INSTALLER
+      certifi.python.generated:
+      - Lib/site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
     valid: false
   win-64/apache-libcloud-2.4.0-py36_1000.tar.bz2:
     bad_paths:
-      requests.python.generated:
-      - Lib/site-packages/requests-2.20.1.dist-info/INSTALLER
+      certifi.python.generated:
+      - Lib/site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
     valid: false
   win-64/apache-libcloud-2.4.0-py37_1000.tar.bz2:
     bad_paths:
-      requests.python.generated:
-      - Lib/site-packages/requests-2.20.1.dist-info/INSTALLER
+      certifi.python.generated:
+      - Lib/site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
     valid: false
 aubio:
   linux-64/aubio-0.4.8-py27h7273d18_0.tar.bz2:
