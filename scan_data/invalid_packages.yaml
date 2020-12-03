@@ -533,18 +533,18 @@ google-api-core:
 google-cloud-bigquery-storage-core:
   noarch/google-cloud-bigquery-storage-core-2.0.0-pyh9f0ad1d_1.tar.bz2:
     bad_paths:
-      requests.python.generated:
-      - site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+      pyyaml.python.generated:
+      - site-packages/PyYAML-5.3.1.dist-info/INSTALLER
     valid: false
   noarch/google-cloud-bigquery-storage-core-2.0.1-pyh9f0ad1d_0.tar.bz2:
     bad_paths:
-      requests.python.generated:
-      - site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+      pyyaml.python.generated:
+      - site-packages/PyYAML-5.3.1.dist-info/INSTALLER
     valid: false
   noarch/google-cloud-bigquery-storage-core-2.1.0-pyhd3deb0d_0.tar.bz2:
     bad_paths:
-      requests.python.generated:
-      - site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+      pyyaml.python.generated:
+      - site-packages/PyYAML-5.3.1.dist-info/INSTALLER
     valid: false
 gridfill:
   win-64/gridfill-1.0.0-np110py27_0.tar.bz2:
