@@ -47,31 +47,20 @@ jobs:
         run: |
           pytest -vvs conda_forge_artifact_validation
 
-      - name: run cli
+      - name: run cli help commands
         shell: bash -l {0}
         run: |
           conda-forge-validate-artifact --help
           conda-forge-generate-validate-yamls --help
 
-      - name: run generate
+      - name: run generate smoke test
         shell: bash -l {0}
         run: |
           conda-forge-generate-validate-yamls --test
           git diff
 
-      - name: run validate
+      - name: run cli utils tests
         shell: bash -l {0}
         run: |
-          conda-forge-validate-artifact -v \
-            https://anaconda.org/conda-forge/numpy/1.19.4/download/osx-64/numpy-1.19.4-py36hcf5569d_1.tar.bz2 \
-            --md5sum="c792b85aebf54d48fb3d7597d6688ed6"
-
           wget https://anaconda.org/conda-forge/numpy/1.19.4/download/osx-64/numpy-1.19.4-py36hcf5569d_1.tar.bz2
-          conda-forge-validate-artifact -v \
-            numpy-1.19.4-py36hcf5569d_1.tar.bz2 \
-            --md5sum="c792b85aebf54d48fb3d7597d6688ed6"
-
-          conda-forge-validate-artifact -v \
-            https://anaconda.org/conda-forge/numpy/1.19.4/download/osx-64/numpy-1.19.4-py36hcf5569d_1.tar.bz2 \
-            --md5sum="c792b85aebf54d48fb3d7597d6688ed6" \
-            --feedstock=cf-autotick-bot-test-package-feedstock
+          pytest -vvs scripts/test_cli_utils.py
