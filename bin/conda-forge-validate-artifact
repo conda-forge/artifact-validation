@@ -111,7 +111,7 @@ def main(artifact_path, md5sum, verbose, feedstock, job_url, git_sha):
                 feedstock=feedstock,
                 git_sha=git_sha,
                 errors=errors,
-                valid={subdir_pkg: False},
+                valid={},
                 copied={},
                 artifact_url=artifact_path,
                 bad_pths=bad_pths,
