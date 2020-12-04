@@ -103,7 +103,7 @@ conda-forge-validate-artifact -v \
         assert r.returncode != 0
 
 
-@pytest.marl.parametrize('url_path', [
+@pytest.mark.parametrize('url_path', [
     (
         "https://conda.anaconda.org/conda-forge/"
         "linux-64/freud-0.11.0-py27h3e44d54_0.tar.bz2"
