@@ -101,3 +101,15 @@ conda-forge-validate-artifact -v \
         assert r.returncode == 0
     else:
         assert r.returncode != 0
+
+
+@pytest.marl.parametrize('url_path', [
+    "https://anaconda.org/conda-forge/linux-64/freud-0.11.0-py27h3e44d54_0.tar.bz2",
+    "freud-0.11.0-py27h3e44d54_0.tar.bz2"
+])
+def test_validate_bad_paths(url_path):
+    r = subprocess.run(
+        f"conda-forge-validate-artifact -v {url_path}",
+        shell=True,
+    )
+    assert r.returncode != 0
