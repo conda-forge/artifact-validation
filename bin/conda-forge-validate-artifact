@@ -99,6 +99,7 @@ def main(artifact_path, md5sum, verbose, feedstock, job_url, git_sha):
         )
 
         if valid and feedstock is not None:
+            LOGGER.info("validating outputs:")
             valid_mapping, _errors = validate_feedstock_outputs(
                 feedstock,
                 {subdir_pkg: md5sum},
@@ -133,6 +134,7 @@ def main(artifact_path, md5sum, verbose, feedstock, job_url, git_sha):
                 )
 
             if feedstock is not None:
+                LOGGER.info("validating outputs:")
                 valid_mapping, _errors = validate_feedstock_outputs(
                     feedstock,
                     {subdir_pkg: md5sum},  # md5sum not actually used
