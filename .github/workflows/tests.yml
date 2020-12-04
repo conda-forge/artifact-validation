@@ -62,7 +62,9 @@ jobs:
       - name: run cli utils tests
         shell: bash -l {0}
         run: |
-          wget https://anaconda.org/conda-forge/numpy/1.19.4/download/osx-64/numpy-1.19.4-py36hcf5569d_1.tar.bz2
+          wget -q https://conda.anaconda.org/conda-forge/osx-64/numpy-1.19.4-py36hcf5569d_1.tar.bz2
+          wget -q https://conda.anaconda.org/conda-forge/linux-64/cf-autotick-bot-test-package-0.10-py36h9f0ad1d_2.tar.bz2
+          wget -q https://conda.anaconda.org/conda-forge/linux-64/freud-0.11.0-py27h3e44d54_0.tar.bz2
           pytest -vvs scripts/test_cli_utils.py
         env:
           GH_TOKEN: ${{ secrets.CF_DAEMON_GH_TOKEN }}

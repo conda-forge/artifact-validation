@@ -9,11 +9,19 @@ import pprint
 import click
 import yaml
 
-from conda_forge_artifact_validation.utils import is_url, compute_md5sum
+from conda_forge_artifact_validation.utils import (
+    is_url,
+    compute_md5sum,
+    extract_subdir,
+)
 from conda_forge_artifact_validation.validate import (
     validate_file,
     download_and_validate,
     bump_team_with_error,
+)
+from conda_forge_artifact_validation.feedstock_outputs import (
+    validate_feedstock_outputs,
+    STAGING,
 )
 
 LOGGER = logging.getLogger("conda_forge_artifact_validation")
@@ -44,7 +52,11 @@ LOGGER = logging.getLogger("conda_forge_artifact_validation")
     help='the git SHA for the commit for the artifact, if any'
 )
 def main(artifact_path, md5sum, verbose, feedstock, job_url, git_sha):
-    """Validate the artifact at ARTIFACT_PATH for conda-forge."""
+    """Validate the artifact at ARTIFACT_PATH for conda-forge.
+
+    Note that unless the artifact is a URL on the staging channel, it cannot
+    be uploaded.
+    """
 
     # setup logging
     levels = {0: logging.WARNING, 1: logging.INFO, 2: logging.DEBUG}
@@ -72,6 +84,7 @@ def main(artifact_path, md5sum, verbose, feedstock, job_url, git_sha):
 
     valid = True
     errors = []
+    valid_mapping = {}
 
     if is_url(artifact_path):
         LOGGER.info("downloading artifact")
@@ -84,20 +97,50 @@ def main(artifact_path, md5sum, verbose, feedstock, job_url, git_sha):
             validate_yamls,
             md5sum=md5sum,
         )
+
+        if valid and feedstock is not None:
+            valid_mapping, _errors = validate_feedstock_outputs(
+                feedstock,
+                {subdir_pkg: md5sum},
+                register=False,
+                check_hashes=(
+                    True
+                    if md5sum is not None and STAGING in artifact_path
+                    else False
+                ),
+            )
+            errors.extend(_errors)
+            valid = valid and all(valid_mapping.values())
+
     else:
-        subdir_pkg = None
         if md5sum is not None and md5sum != compute_md5sum(artifact_path):
             LOGGER.info("bad md5sum")
             valid = False
             bad_pths = {"md5sum": {"valid": False}}
 
+        subdir = extract_subdir(artifact_path)
+        if subdir is None:
+            valid = False
+            errors.append("could not extract subdir from package")
+
         if valid:
+            subdir_pkg = os.path.join(subdir, os.path.basename(artifact_path))
             with tempfile.TemporaryDirectory() as tmpdir:
                 valid, bad_pths = validate_file(
                     artifact_path,
                     validate_yamls,
                     tmpdir=str(tmpdir),
                 )
+
+            if feedstock is not None:
+                valid_mapping, _errors = validate_feedstock_outputs(
+                    feedstock,
+                    {subdir_pkg: md5sum},  # md5sum not actually used
+                    register=False,
+                    check_hashes=False,
+                )
+                errors.extend(_errors)
+                valid = valid and all(valid_mapping.values())
 
     if not valid:
         LOGGER.info("invalid artifact: %s", pprint.pformat(bad_pths))
@@ -111,7 +154,7 @@ def main(artifact_path, md5sum, verbose, feedstock, job_url, git_sha):
                 feedstock=feedstock,
                 git_sha=git_sha,
                 errors=errors,
-                valid={},
+                valid=valid_mapping,
                 copied={},
                 artifact_url=artifact_path,
                 bad_pths=bad_pths,

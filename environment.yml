@@ -3,8 +3,10 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - anaconda-client
   - click
   - conda-package-handling
+  - curl
   - flake8
   - joblib
   - pip
