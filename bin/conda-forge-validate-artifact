@@ -51,7 +51,7 @@ LOGGER = logging.getLogger("conda_forge_artifact_validation")
     '--git-sha', type=str, default=None,
     help='the git SHA for the commit for the artifact, if any'
 )
-def main(artifact_path, md5sum, verbose, feedstock, subdir, job_url, git_sha):
+def main(artifact_path, md5sum, verbose, feedstock, job_url, git_sha):
     """Validate the artifact at ARTIFACT_PATH for conda-forge.
 
     Note that unless the artifact is a URL on the staging channel, it cannot
