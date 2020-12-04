@@ -1,6 +1,11 @@
 import os
 import urllib
 import hashlib
+import shutil
+import tempfile
+import json
+
+import conda_package_handling.api
 
 
 def split_pkg(pkg):
@@ -74,3 +79,29 @@ def chunk_iterable(iterable, chunk_size):
             if chunk:
                 yield chunk
             break
+
+
+def extract_subdir(path):
+    """Extract the subdir from an artifact."""
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmpdir = str(tmpdir)
+
+        shutil.copy2(path, tmpdir)
+        path = os.path.join(tmpdir, path)
+
+        pkg_dir, pkg = os.path.split(path)
+
+        if pkg.endswith(".tar.bz2"):
+            pkg_nm = pkg[: -len(".tar.bz2")]
+        else:
+            pkg_nm = pkg[: -len(".conda")]
+
+        conda_package_handling.api.extract(path)
+
+        try:
+            with open(f"{pkg_dir}/{pkg_nm}/info/index.json", "r") as fp:
+                subdir = json.load(fp)["subdir"]
+        except Exception:
+            subdir = None
+
+    return subdir
