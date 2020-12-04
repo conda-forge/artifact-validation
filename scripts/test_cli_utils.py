@@ -34,7 +34,7 @@ conda-forge-validate-artifact -v \
     (
         (
             "https://conda.anaconda.org/conda-forge/"
-            "osx-64/numpy-1.19.4-py36hcf5569d_1.tar.bz2"
+            "numpy-1.19.4-py36hcf5569d_1.tar.bz2"
         ),
         "c792b85aebf54d48fb3d7597d6688ed6",
         False,
@@ -82,7 +82,7 @@ conda-forge-validate-artifact -v \
         True,
     ),
     (
-        "osx-64/numpy-1.19.4-py36hcf5569d_1.tar.bz2",
+        "numpy-1.19.4-py36hcf5569d_1.tar.bz2",
         "c792b85aebf54d48fb3d7597d6688ed6",
         False,
     ),
