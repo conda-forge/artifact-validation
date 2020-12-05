@@ -154,7 +154,7 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
             resdat = {"subdir": None, "pkg": None}
     skipped_for_restart = False
 
-    with joblib.Parallel(n_jobs=16, backend='threading') as para:
+    with joblib.Parallel(n_jobs=8, backend='threading') as para:
         for subdir in SUBDIRS:
             if (
                 restart_data
