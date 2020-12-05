@@ -1,0 +1,75 @@
+name: mark-broken
+
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch: null
+
+jobs:
+  mark-broken:
+    name: mark-broken
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 100
+
+      - name: install micromamba and code
+        run: |
+          rm -f ~/.bashrc
+          rm -f ~/.bash_profile
+          rm -f ~/.profile
+          touch ~/.bashrc
+          wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/latest | tar -xvj bin/micromamba --strip-components=1
+          ./micromamba shell init -s bash -p ~/micromamba
+          mkdir -p ~/micromamba/pkgs/
+          echo 'set -eo pipefail' >> ~/.bashrc
+          echo 'micromamba activate test' >> ~/.bashrc
+          mv ~/.bashrc ~/.profile
+          export MAMBA_ROOT_PREFIX=~/micromamba
+          export MAMBA_EXE=$(pwd)/micromamba
+          . $MAMBA_ROOT_PREFIX/etc/profile.d/mamba.sh
+          micromamba create -f environment.yml -y
+          micromamba activate test
+          python -m pip install -e .
+
+      - name: configure git
+        shell: bash -l {0}
+        run: |
+          git config pull.rebase false
+          git config user.name conda-forge-daemon
+          git config user.email conda.forge.daemon@gmail.com
+
+      - name: mark-broken
+        shell: bash -l {0}
+        run: |
+          python scripts/make_admin_requests_broken_prs.py \
+          --job-url="https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}" \
+          --dry-run
+        env:
+          RUN_ID: ${{ github.run_id }}
+          GH_TOKEN: ${{ secrets.CF_DAEMON_GH_TOKEN }}
+
+      - name: push
+        shell: bash -l {0}
+        run: |
+          git add scan_data/.
+          git commit -m "[ci skip] mark broken for https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
+          for _ in `seq 0 1`; do
+            git pull
+            git push
+          done
+        env:
+          RUN_ID: ${{ github.run_id }}
+
+      - name: bump on fail
+        shell: bash -l {0}
+        if: github.ref == 'refs/heads/master' && failure()
+        run: |
+          conda-forge-bump-on-fail \
+            --job-name=${ACTION_NAME} \
+            --job-url="https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
+        env:
+          GH_TOKEN: ${{ secrets.CF_DAEMON_GH_TOKEN }}
+          RUN_ID: ${{ github.run_id }}
+          ACTION_NAME: ${{ github.workflow }}
