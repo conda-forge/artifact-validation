@@ -36,9 +36,9 @@ jobs:
       - name: configure git
         shell: bash -l {0}
         run: |
-          git config pull.rebase false
-          git config user.name conda-forge-daemon
-          git config user.email conda.forge.daemon@gmail.com
+          git config --global pull.rebase false
+          git config --global user.name conda-forge-daemon
+          git config --global user.email conda.forge.daemon@gmail.com
 
       - name: mark-broken
         shell: bash -l {0}
