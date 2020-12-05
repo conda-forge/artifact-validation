@@ -1,1 +1,812 @@
-{}
+linux-64/apache-libcloud-2.4.0-py27_1000.tar.bz2:
+  head_branch: apache-libcloud-b149f8e3
+  number: 171
+  url: https://github.com/conda-forge/admin-requests/pull/171
+linux-64/apache-libcloud-2.4.0-py36_1000.tar.bz2:
+  head_branch: apache-libcloud-b149f8e3
+  number: 171
+  url: https://github.com/conda-forge/admin-requests/pull/171
+linux-64/apache-libcloud-2.4.0-py37_1000.tar.bz2:
+  head_branch: apache-libcloud-b149f8e3
+  number: 171
+  url: https://github.com/conda-forge/admin-requests/pull/171
+linux-64/aubio-0.4.8-py27h7273d18_0.tar.bz2:
+  head_branch: aubio-1723455d
+  number: 172
+  url: https://github.com/conda-forge/admin-requests/pull/172
+linux-64/aubio-0.4.8-py36h7273d18_0.tar.bz2:
+  head_branch: aubio-1723455d
+  number: 172
+  url: https://github.com/conda-forge/admin-requests/pull/172
+linux-64/conda-devenv-0.9.3-py27_0.tar.bz2:
+  head_branch: conda-devenv-f11ce133
+  number: 175
+  url: https://github.com/conda-forge/admin-requests/pull/175
+linux-64/conda-devenv-0.9.3-py35_0.tar.bz2:
+  head_branch: conda-devenv-f11ce133
+  number: 175
+  url: https://github.com/conda-forge/admin-requests/pull/175
+linux-64/conda-devenv-0.9.3-py36_0.tar.bz2:
+  head_branch: conda-devenv-f11ce133
+  number: 175
+  url: https://github.com/conda-forge/admin-requests/pull/175
+linux-64/flask-creole-0.4.4-py27_1000.tar.bz2:
+  head_branch: flask-creole-d6be97cd
+  number: 177
+  url: https://github.com/conda-forge/admin-requests/pull/177
+linux-64/flask-rest-orm-0.5.0-py35_0.tar.bz2:
+  head_branch: flask-rest-orm-8b97d2f9
+  number: 179
+  url: https://github.com/conda-forge/admin-requests/pull/179
+linux-64/flask-rest-orm-0.5.0-py36_0.tar.bz2:
+  head_branch: flask-rest-orm-8b97d2f9
+  number: 179
+  url: https://github.com/conda-forge/admin-requests/pull/179
+linux-64/freud-0.11.0-py27h3e44d54_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.0-py27h8619c78_1000.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.0-py35h3e44d54_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.0-py36h3e44d54_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.0-py36h8619c78_1000.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.0-py37h3e44d54_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.0-py37h8619c78_1000.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.3-py27h2d50403_1.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.3-py27h3e44d54_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.3-py27h6bb024c_1.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.3-py27h8619c78_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.3-py36h2d50403_1.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.3-py36h3e44d54_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.3-py36h6bb024c_1.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.3-py36h8619c78_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.3-py37h2d50403_1.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.3-py37h3e44d54_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.3-py37h6bb024c_1.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.3-py37h8619c78_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.4-py27h2d50403_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.4-py27h6bb024c_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.4-py36h2d50403_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.4-py36h6bb024c_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.4-py37h2d50403_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/freud-0.11.4-py37h6bb024c_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+linux-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
+  head_branch: google-api-core-cf6921e2
+  number: 182
+  url: https://github.com/conda-forge/admin-requests/pull/182
+linux-64/google-api-core-1.20.1-py37hc8dfbb8_0.tar.bz2:
+  head_branch: google-api-core-cf6921e2
+  number: 182
+  url: https://github.com/conda-forge/admin-requests/pull/182
+linux-64/google-api-core-1.20.1-py38h32f6830_0.tar.bz2:
+  head_branch: google-api-core-cf6921e2
+  number: 182
+  url: https://github.com/conda-forge/admin-requests/pull/182
+linux-64/meshpy-2018.2.1-py27h7eb728f_0.tar.bz2:
+  head_branch: meshpy-9c29d28f
+  number: 188
+  url: https://github.com/conda-forge/admin-requests/pull/188
+linux-64/meshpy-2018.2.1-py36h7eb728f_0.tar.bz2:
+  head_branch: meshpy-9c29d28f
+  number: 188
+  url: https://github.com/conda-forge/admin-requests/pull/188
+linux-64/pyemd-0.5.1-py27h637b7d7_1000.tar.bz2:
+  head_branch: pyemd-685a9e5b
+  number: 191
+  url: https://github.com/conda-forge/admin-requests/pull/191
+linux-64/pyemd-0.5.1-py27hf8a1672_0.tar.bz2:
+  head_branch: pyemd-685a9e5b
+  number: 191
+  url: https://github.com/conda-forge/admin-requests/pull/191
+linux-64/pyemd-0.5.1-py36h637b7d7_1000.tar.bz2:
+  head_branch: pyemd-685a9e5b
+  number: 191
+  url: https://github.com/conda-forge/admin-requests/pull/191
+linux-64/pyemd-0.5.1-py36hf8a1672_0.tar.bz2:
+  head_branch: pyemd-685a9e5b
+  number: 191
+  url: https://github.com/conda-forge/admin-requests/pull/191
+linux-64/pyemd-0.5.1-py37h637b7d7_1000.tar.bz2:
+  head_branch: pyemd-685a9e5b
+  number: 191
+  url: https://github.com/conda-forge/admin-requests/pull/191
+linux-64/pyemd-0.5.1-py37hf8a1672_0.tar.bz2:
+  head_branch: pyemd-685a9e5b
+  number: 191
+  url: https://github.com/conda-forge/admin-requests/pull/191
+linux-64/pypy2.7-5.10.0-0.tar.bz2:
+  head_branch: pypy2.7-3ba3a98c
+  number: 193
+  url: https://github.com/conda-forge/admin-requests/pull/193
+linux-64/sagelib-7.6-np111py27_blas_openblas_0.tar.bz2:
+  head_branch: sagelib-e538c855
+  number: 196
+  url: https://github.com/conda-forge/admin-requests/pull/196
+linux-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
+  head_branch: signac-dashboard-cf984ca7
+  number: 198
+  url: https://github.com/conda-forge/admin-requests/pull/198
+linux-64/signac-dashboard-0.1.6-py36_1000.tar.bz2:
+  head_branch: signac-dashboard-cf984ca7
+  number: 198
+  url: https://github.com/conda-forge/admin-requests/pull/198
+linux-64/signac-dashboard-0.1.6-py37_1000.tar.bz2:
+  head_branch: signac-dashboard-cf984ca7
+  number: 198
+  url: https://github.com/conda-forge/admin-requests/pull/198
+linux-64/sisl-0.9.5-py27h29d635c_1002.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+linux-64/sisl-0.9.5-py27h56689b2_1002.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+linux-64/sisl-0.9.5-py27h90f2d25_1002.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+linux-64/sisl-0.9.6-py27h29d635c_0.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+linux-64/sisl-0.9.6-py27h56689b2_0.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+linux-64/sisl-0.9.6-py27h90f2d25_0.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+linux-64/sisl-0.9.6-py27he824dc1_1.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+linux-64/sisl-0.9.7-py27he824dc1_0.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+linux-64/sisl-0.9.8-py27he824dc1_0.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+linux-64/spglib-1.11.1.2-py27h3010b51_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+linux-64/spglib-1.11.1.2-py27h7eb728f_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+linux-64/spglib-1.11.1.2-py36h3010b51_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+linux-64/spglib-1.11.1.2-py36h7eb728f_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+linux-64/spglib-1.11.1.2-py37h3010b51_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+linux-64/spglib-1.11.1.2-py37h7eb728f_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+noarch/apache-libcloud-2.4.0-py_1000.tar.bz2:
+  head_branch: apache-libcloud-b149f8e3
+  number: 171
+  url: https://github.com/conda-forge/admin-requests/pull/171
+noarch/autovizwidget-0.12.6-py_1000.tar.bz2:
+  head_branch: autovizwidget-53e96986
+  number: 173
+  url: https://github.com/conda-forge/admin-requests/pull/173
+noarch/dbxfs-1.0.38-py_0.tar.bz2:
+  head_branch: dbxfs-de5f4fa6
+  number: 176
+  url: https://github.com/conda-forge/admin-requests/pull/176
+noarch/google-cloud-bigquery-storage-core-2.0.0-pyh9f0ad1d_1.tar.bz2:
+  head_branch: google-cloud-bigquery-storage-core-65f68e9a
+  number: 183
+  url: https://github.com/conda-forge/admin-requests/pull/183
+noarch/google-cloud-bigquery-storage-core-2.0.1-pyh9f0ad1d_0.tar.bz2:
+  head_branch: google-cloud-bigquery-storage-core-65f68e9a
+  number: 183
+  url: https://github.com/conda-forge/admin-requests/pull/183
+noarch/google-cloud-bigquery-storage-core-2.1.0-pyhd3deb0d_0.tar.bz2:
+  head_branch: google-cloud-bigquery-storage-core-65f68e9a
+  number: 183
+  url: https://github.com/conda-forge/admin-requests/pull/183
+noarch/sentry-sdk-0.5.3-py_0.tar.bz2:
+  head_branch: sentry-sdk-1ae062cc
+  number: 197
+  url: https://github.com/conda-forge/admin-requests/pull/197
+osx-64/apache-libcloud-2.4.0-py27_1000.tar.bz2:
+  head_branch: apache-libcloud-b149f8e3
+  number: 171
+  url: https://github.com/conda-forge/admin-requests/pull/171
+osx-64/apache-libcloud-2.4.0-py36_1000.tar.bz2:
+  head_branch: apache-libcloud-b149f8e3
+  number: 171
+  url: https://github.com/conda-forge/admin-requests/pull/171
+osx-64/apache-libcloud-2.4.0-py37_1000.tar.bz2:
+  head_branch: apache-libcloud-b149f8e3
+  number: 171
+  url: https://github.com/conda-forge/admin-requests/pull/171
+osx-64/aubio-0.4.8-py27h7273d18_0.tar.bz2:
+  head_branch: aubio-1723455d
+  number: 172
+  url: https://github.com/conda-forge/admin-requests/pull/172
+osx-64/aubio-0.4.8-py36h7273d18_0.tar.bz2:
+  head_branch: aubio-1723455d
+  number: 172
+  url: https://github.com/conda-forge/admin-requests/pull/172
+osx-64/conda-devenv-0.9.3-py27_0.tar.bz2:
+  head_branch: conda-devenv-f11ce133
+  number: 175
+  url: https://github.com/conda-forge/admin-requests/pull/175
+osx-64/conda-devenv-0.9.3-py35_0.tar.bz2:
+  head_branch: conda-devenv-f11ce133
+  number: 175
+  url: https://github.com/conda-forge/admin-requests/pull/175
+osx-64/conda-devenv-0.9.3-py36_0.tar.bz2:
+  head_branch: conda-devenv-f11ce133
+  number: 175
+  url: https://github.com/conda-forge/admin-requests/pull/175
+osx-64/flask-creole-0.4.4-py27_1000.tar.bz2:
+  head_branch: flask-creole-d6be97cd
+  number: 177
+  url: https://github.com/conda-forge/admin-requests/pull/177
+osx-64/flask-debugtoolbar-0.10.1-py27_1000.tar.bz2:
+  head_branch: flask-debugtoolbar-f4481d63
+  number: 178
+  url: https://github.com/conda-forge/admin-requests/pull/178
+osx-64/flask-debugtoolbar-0.10.1-py35_1000.tar.bz2:
+  head_branch: flask-debugtoolbar-f4481d63
+  number: 178
+  url: https://github.com/conda-forge/admin-requests/pull/178
+osx-64/flask-debugtoolbar-0.10.1-py36_1000.tar.bz2:
+  head_branch: flask-debugtoolbar-f4481d63
+  number: 178
+  url: https://github.com/conda-forge/admin-requests/pull/178
+osx-64/flask-debugtoolbar-0.10.1-py37_1000.tar.bz2:
+  head_branch: flask-debugtoolbar-f4481d63
+  number: 178
+  url: https://github.com/conda-forge/admin-requests/pull/178
+osx-64/freud-0.11.0-py27h3e44d54_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.0-py27h9888f84_1000.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.0-py35h3e44d54_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.0-py36h3e44d54_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.0-py36h9888f84_1000.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.0-py37h3e44d54_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.0-py37h9888f84_1000.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.3-py27h04f5b5a_1.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.3-py27h2d50403_1.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.3-py27h3e44d54_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.3-py27h9888f84_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.3-py36h04f5b5a_1.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.3-py36h2d50403_1.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.3-py36h3e44d54_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.3-py36h9888f84_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.3-py37h04f5b5a_1.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.3-py37h2d50403_1.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.3-py37h3e44d54_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.3-py37h9888f84_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.4-py27h04f5b5a_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.4-py27h2d50403_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.4-py36h04f5b5a_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.4-py36h2d50403_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.4-py37h04f5b5a_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/freud-0.11.4-py37h2d50403_0.tar.bz2:
+  head_branch: freud-675db749
+  number: 180
+  url: https://github.com/conda-forge/admin-requests/pull/180
+osx-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
+  head_branch: google-api-core-cf6921e2
+  number: 182
+  url: https://github.com/conda-forge/admin-requests/pull/182
+osx-64/google-api-core-1.20.1-py37hc8dfbb8_0.tar.bz2:
+  head_branch: google-api-core-cf6921e2
+  number: 182
+  url: https://github.com/conda-forge/admin-requests/pull/182
+osx-64/google-api-core-1.20.1-py38h32f6830_0.tar.bz2:
+  head_branch: google-api-core-cf6921e2
+  number: 182
+  url: https://github.com/conda-forge/admin-requests/pull/182
+osx-64/jsoncpp-0.10.6-0.tar.bz2:
+  head_branch: jsoncpp-6e1c7b06
+  number: 185
+  url: https://github.com/conda-forge/admin-requests/pull/185
+osx-64/libarchive-3.2.1-0.tar.bz2:
+  head_branch: libarchive-769469e0
+  number: 186
+  url: https://github.com/conda-forge/admin-requests/pull/186
+osx-64/libmemcached-1.0.18-0.tar.bz2:
+  head_branch: libmemcached-981ca610
+  number: 187
+  url: https://github.com/conda-forge/admin-requests/pull/187
+osx-64/meshpy-2018.2.1-py27h7eb728f_0.tar.bz2:
+  head_branch: meshpy-9c29d28f
+  number: 188
+  url: https://github.com/conda-forge/admin-requests/pull/188
+osx-64/meshpy-2018.2.1-py36h7eb728f_0.tar.bz2:
+  head_branch: meshpy-9c29d28f
+  number: 188
+  url: https://github.com/conda-forge/admin-requests/pull/188
+osx-64/pyemd-0.5.1-py27h1702cab_1000.tar.bz2:
+  head_branch: pyemd-685a9e5b
+  number: 191
+  url: https://github.com/conda-forge/admin-requests/pull/191
+osx-64/pyemd-0.5.1-py27hf8a1672_0.tar.bz2:
+  head_branch: pyemd-685a9e5b
+  number: 191
+  url: https://github.com/conda-forge/admin-requests/pull/191
+osx-64/pyemd-0.5.1-py36h1702cab_1000.tar.bz2:
+  head_branch: pyemd-685a9e5b
+  number: 191
+  url: https://github.com/conda-forge/admin-requests/pull/191
+osx-64/pyemd-0.5.1-py36hf8a1672_0.tar.bz2:
+  head_branch: pyemd-685a9e5b
+  number: 191
+  url: https://github.com/conda-forge/admin-requests/pull/191
+osx-64/pyemd-0.5.1-py37h1702cab_1000.tar.bz2:
+  head_branch: pyemd-685a9e5b
+  number: 191
+  url: https://github.com/conda-forge/admin-requests/pull/191
+osx-64/pyemd-0.5.1-py37hf8a1672_0.tar.bz2:
+  head_branch: pyemd-685a9e5b
+  number: 191
+  url: https://github.com/conda-forge/admin-requests/pull/191
+osx-64/racket-6.12-hfc679d8_0.tar.bz2:
+  head_branch: racket-8e1e7427
+  number: 194
+  url: https://github.com/conda-forge/admin-requests/pull/194
+osx-64/racket-7.0-h0a44026_2000.tar.bz2:
+  head_branch: racket-8e1e7427
+  number: 194
+  url: https://github.com/conda-forge/admin-requests/pull/194
+osx-64/racket-7.0-hfc679d8_0.tar.bz2:
+  head_branch: racket-8e1e7427
+  number: 194
+  url: https://github.com/conda-forge/admin-requests/pull/194
+osx-64/racket-7.0-hfc679d8_1000.tar.bz2:
+  head_branch: racket-8e1e7427
+  number: 194
+  url: https://github.com/conda-forge/admin-requests/pull/194
+osx-64/racket-7.1-h0a44026_1000.tar.bz2:
+  head_branch: racket-8e1e7427
+  number: 194
+  url: https://github.com/conda-forge/admin-requests/pull/194
+osx-64/racket-7.1-hfc679d8_0.tar.bz2:
+  head_branch: racket-8e1e7427
+  number: 194
+  url: https://github.com/conda-forge/admin-requests/pull/194
+osx-64/racket-7.2-h0a44026_0.tar.bz2:
+  head_branch: racket-8e1e7427
+  number: 194
+  url: https://github.com/conda-forge/admin-requests/pull/194
+osx-64/racket-7.3-h6de7cb9_0.tar.bz2:
+  head_branch: racket-8e1e7427
+  number: 194
+  url: https://github.com/conda-forge/admin-requests/pull/194
+osx-64/racket-7.4-h6de7cb9_0.tar.bz2:
+  head_branch: racket-8e1e7427
+  number: 194
+  url: https://github.com/conda-forge/admin-requests/pull/194
+osx-64/racket-7.5-h4a8c4bd_0.tar.bz2:
+  head_branch: racket-8e1e7427
+  number: 194
+  url: https://github.com/conda-forge/admin-requests/pull/194
+osx-64/racket-7.7-h4a8c4bd_0.tar.bz2:
+  head_branch: racket-8e1e7427
+  number: 194
+  url: https://github.com/conda-forge/admin-requests/pull/194
+osx-64/racket-7.8-hb1e8313_0.tar.bz2:
+  head_branch: racket-8e1e7427
+  number: 194
+  url: https://github.com/conda-forge/admin-requests/pull/194
+osx-64/ruamel.yaml-0.10.5-py27_0.tar.bz2:
+  head_branch: ruamel.yaml-1de9efb9
+  number: 195
+  url: https://github.com/conda-forge/admin-requests/pull/195
+osx-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
+  head_branch: signac-dashboard-cf984ca7
+  number: 198
+  url: https://github.com/conda-forge/admin-requests/pull/198
+osx-64/signac-dashboard-0.1.6-py36_1000.tar.bz2:
+  head_branch: signac-dashboard-cf984ca7
+  number: 198
+  url: https://github.com/conda-forge/admin-requests/pull/198
+osx-64/signac-dashboard-0.1.6-py37_1000.tar.bz2:
+  head_branch: signac-dashboard-cf984ca7
+  number: 198
+  url: https://github.com/conda-forge/admin-requests/pull/198
+osx-64/sisl-0.9.5-py27h6762db8_1002.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+osx-64/sisl-0.9.5-py27hb086daf_1002.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+osx-64/sisl-0.9.6-py27h6762db8_0.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+osx-64/sisl-0.9.6-py27h6fe5f1d_1.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+osx-64/sisl-0.9.6-py27hb086daf_0.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+osx-64/sisl-0.9.6-py27he80694f_1.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+osx-64/sisl-0.9.7-py27h4273ecb_0.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+osx-64/sisl-0.9.7-py27h6fe5f1d_0.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+osx-64/sisl-0.9.7-py27he80694f_0.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+osx-64/sisl-0.9.8-py27h4273ecb_0.tar.bz2:
+  head_branch: sisl-226d5a6e
+  number: 199
+  url: https://github.com/conda-forge/admin-requests/pull/199
+osx-64/spglib-1.11.1.2-py27h7eb728f_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+osx-64/spglib-1.11.1.2-py27h917ab60_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+osx-64/spglib-1.11.1.2-py36h7eb728f_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+osx-64/spglib-1.11.1.2-py36h917ab60_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+osx-64/spglib-1.11.1.2-py37h7eb728f_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+osx-64/spglib-1.11.1.2-py37h917ab60_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+win-64/apache-libcloud-2.4.0-py27_1000.tar.bz2:
+  head_branch: apache-libcloud-b149f8e3
+  number: 171
+  url: https://github.com/conda-forge/admin-requests/pull/171
+win-64/apache-libcloud-2.4.0-py36_1000.tar.bz2:
+  head_branch: apache-libcloud-b149f8e3
+  number: 171
+  url: https://github.com/conda-forge/admin-requests/pull/171
+win-64/apache-libcloud-2.4.0-py37_1000.tar.bz2:
+  head_branch: apache-libcloud-b149f8e3
+  number: 171
+  url: https://github.com/conda-forge/admin-requests/pull/171
+win-64/aubio-0.4.8-py27hc997a72_0.tar.bz2:
+  head_branch: aubio-1723455d
+  number: 172
+  url: https://github.com/conda-forge/admin-requests/pull/172
+win-64/aubio-0.4.8-py36h7fad82b_0.tar.bz2:
+  head_branch: aubio-1723455d
+  number: 172
+  url: https://github.com/conda-forge/admin-requests/pull/172
+win-64/compas-0.4.0-py27_0.tar.bz2:
+  head_branch: compas-b7272e8f
+  number: 174
+  url: https://github.com/conda-forge/admin-requests/pull/174
+win-64/compas-0.4.0-py36_0.tar.bz2:
+  head_branch: compas-b7272e8f
+  number: 174
+  url: https://github.com/conda-forge/admin-requests/pull/174
+win-64/compas-0.4.0-py37_0.tar.bz2:
+  head_branch: compas-b7272e8f
+  number: 174
+  url: https://github.com/conda-forge/admin-requests/pull/174
+win-64/flask-creole-0.4.4-py27_1000.tar.bz2:
+  head_branch: flask-creole-d6be97cd
+  number: 177
+  url: https://github.com/conda-forge/admin-requests/pull/177
+win-64/flask-debugtoolbar-0.10.1-py27_1000.tar.bz2:
+  head_branch: flask-debugtoolbar-f4481d63
+  number: 178
+  url: https://github.com/conda-forge/admin-requests/pull/178
+win-64/flask-debugtoolbar-0.10.1-py35_1000.tar.bz2:
+  head_branch: flask-debugtoolbar-f4481d63
+  number: 178
+  url: https://github.com/conda-forge/admin-requests/pull/178
+win-64/flask-debugtoolbar-0.10.1-py36_1000.tar.bz2:
+  head_branch: flask-debugtoolbar-f4481d63
+  number: 178
+  url: https://github.com/conda-forge/admin-requests/pull/178
+win-64/flask-debugtoolbar-0.10.1-py37_1000.tar.bz2:
+  head_branch: flask-debugtoolbar-f4481d63
+  number: 178
+  url: https://github.com/conda-forge/admin-requests/pull/178
+win-64/flask-rest-orm-0.5.0-py35_0.tar.bz2:
+  head_branch: flask-rest-orm-8b97d2f9
+  number: 179
+  url: https://github.com/conda-forge/admin-requests/pull/179
+win-64/flask-rest-orm-0.5.0-py36_0.tar.bz2:
+  head_branch: flask-rest-orm-8b97d2f9
+  number: 179
+  url: https://github.com/conda-forge/admin-requests/pull/179
+win-64/gensim-3.5.0-py27h39f3610_1000.tar.bz2:
+  head_branch: gensim-e49e5d83
+  number: 181
+  url: https://github.com/conda-forge/admin-requests/pull/181
+win-64/gensim-3.5.0-py36h830ac7b_1000.tar.bz2:
+  head_branch: gensim-e49e5d83
+  number: 181
+  url: https://github.com/conda-forge/admin-requests/pull/181
+win-64/gensim-3.5.0-py37h830ac7b_1000.tar.bz2:
+  head_branch: gensim-e49e5d83
+  number: 181
+  url: https://github.com/conda-forge/admin-requests/pull/181
+win-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
+  head_branch: google-api-core-cf6921e2
+  number: 182
+  url: https://github.com/conda-forge/admin-requests/pull/182
+win-64/google-api-core-1.20.1-py37hc8dfbb8_0.tar.bz2:
+  head_branch: google-api-core-cf6921e2
+  number: 182
+  url: https://github.com/conda-forge/admin-requests/pull/182
+win-64/google-api-core-1.20.1-py38h32f6830_0.tar.bz2:
+  head_branch: google-api-core-cf6921e2
+  number: 182
+  url: https://github.com/conda-forge/admin-requests/pull/182
+win-64/gridfill-1.0.0-np110py27_0.tar.bz2:
+  head_branch: gridfill-86a826e2
+  number: 184
+  url: https://github.com/conda-forge/admin-requests/pull/184
+win-64/gridfill-1.0.0-np110py34_0.tar.bz2:
+  head_branch: gridfill-86a826e2
+  number: 184
+  url: https://github.com/conda-forge/admin-requests/pull/184
+win-64/gridfill-1.0.0-np111py27_0.tar.bz2:
+  head_branch: gridfill-86a826e2
+  number: 184
+  url: https://github.com/conda-forge/admin-requests/pull/184
+win-64/gridfill-1.0.0-np111py34_0.tar.bz2:
+  head_branch: gridfill-86a826e2
+  number: 184
+  url: https://github.com/conda-forge/admin-requests/pull/184
+win-64/metakernel-0.12.6-py27_0.tar.bz2:
+  head_branch: metakernel-6a8cb69d
+  number: 189
+  url: https://github.com/conda-forge/admin-requests/pull/189
+win-64/metakernel-0.12.6-py34_0.tar.bz2:
+  head_branch: metakernel-6a8cb69d
+  number: 189
+  url: https://github.com/conda-forge/admin-requests/pull/189
+win-64/metakernel-0.12.6-py35_0.tar.bz2:
+  head_branch: metakernel-6a8cb69d
+  number: 189
+  url: https://github.com/conda-forge/admin-requests/pull/189
+win-64/pyamg-4.0.0-py36h8300f20_1000.tar.bz2:
+  head_branch: pyamg-eb1ca2d9
+  number: 190
+  url: https://github.com/conda-forge/admin-requests/pull/190
+win-64/pyamg-4.0.0-py37h8300f20_1000.tar.bz2:
+  head_branch: pyamg-eb1ca2d9
+  number: 190
+  url: https://github.com/conda-forge/admin-requests/pull/190
+win-64/pyemd-0.5.1-py27h39f3610_1000.tar.bz2:
+  head_branch: pyemd-685a9e5b
+  number: 191
+  url: https://github.com/conda-forge/admin-requests/pull/191
+win-64/pyemd-0.5.1-py36h830ac7b_1000.tar.bz2:
+  head_branch: pyemd-685a9e5b
+  number: 191
+  url: https://github.com/conda-forge/admin-requests/pull/191
+win-64/pyemd-0.5.1-py37h830ac7b_1000.tar.bz2:
+  head_branch: pyemd-685a9e5b
+  number: 191
+  url: https://github.com/conda-forge/admin-requests/pull/191
+win-64/pymapd-0.6.0-py36he025d50_1000.tar.bz2:
+  head_branch: pymapd-81be4af7
+  number: 192
+  url: https://github.com/conda-forge/admin-requests/pull/192
+win-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
+  head_branch: signac-dashboard-cf984ca7
+  number: 198
+  url: https://github.com/conda-forge/admin-requests/pull/198
+win-64/signac-dashboard-0.1.6-py36_1000.tar.bz2:
+  head_branch: signac-dashboard-cf984ca7
+  number: 198
+  url: https://github.com/conda-forge/admin-requests/pull/198
+win-64/signac-dashboard-0.1.6-py37_1000.tar.bz2:
+  head_branch: signac-dashboard-cf984ca7
+  number: 198
+  url: https://github.com/conda-forge/admin-requests/pull/198
+win-64/spglib-1.11.1.2-py27hc997a72_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+win-64/spglib-1.11.1.2-py36h452e1ab_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+win-64/spglib-1.11.1.2-py37h452e1ab_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+win-64/spglib-1.11.2-py27hc997a72_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+win-64/spglib-1.11.2-py27hc997a72_1.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+win-64/spglib-1.11.2-py36h452e1ab_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+win-64/spglib-1.11.2-py36h452e1ab_1.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
+win-64/spglib-1.11.2-py37h452e1ab_0.tar.bz2:
+  head_branch: spglib-65a6a74c
+  number: 200
+  url: https://github.com/conda-forge/admin-requests/pull/200
