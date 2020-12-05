@@ -44,8 +44,7 @@ jobs:
         shell: bash -l {0}
         run: |
           python scripts/make_admin_requests_broken_prs.py \
-          --job-url="https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}" \
-          --dry-run
+          --job-url="https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
         env:
           RUN_ID: ${{ github.run_id }}
           GH_TOKEN: ${{ secrets.CF_DAEMON_GH_TOKEN }}
@@ -54,7 +53,7 @@ jobs:
         shell: bash -l {0}
         run: |
           git add scan_data/.
-          git commit -am "[ci skip] mark broken for https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
+          git commit --allow-empty -am "[ci skip] mark broken for https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
           for _ in `seq 0 1`; do
             git pull
             git push
