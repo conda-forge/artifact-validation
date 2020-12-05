@@ -238,7 +238,7 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
                     del final_data[pkg_nm][pkg]
 
         with open(output_path, "w") as fp:
-            fp.write(yaml.dump(old_data, default_flow_style=False, indent=2))
+            fp.write(yaml.dump(final_data, default_flow_style=False, indent=2))
 
     if restart_data is not None:
         print("writing restart info to '%s'..." % restart_data, flush=True)
