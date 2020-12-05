@@ -32,14 +32,21 @@ yaml.add_representer(defaultdict, Representer.represent_dict)
 
 
 def _test_file_paths(pkg_name, fnames, validate_yamls):
+    valid = True
+    bad_pths = {}
+
     for key in validate_yamls:
         if pkg_name in validate_yamls[key]["allowed"]:
             continue
+
         for rep in validate_yamls[key]["glob_regexes"]:
             for fname in fnames:
                 if rep.fullmatch(fname) is not None:
-                    return False, {key: [fname]}
-    return True, {}
+                    valid = False
+                    bad_pths[key] = [fname]
+                    break
+
+    return valid, bad_pths
 
 
 def _munge_validate_yamls():
