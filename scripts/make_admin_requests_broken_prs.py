@@ -118,7 +118,7 @@ Information on invalid packages (see the files listed under `bad_paths`):
         pr = REPO.create_pull(
             title=title,
             body=body,
-            base="conda-forge:master",
+            base="master",
             head="%s:%s" % (USER, branch_name),
             maintainer_can_modify=True,
         )
