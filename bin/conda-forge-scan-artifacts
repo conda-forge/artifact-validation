@@ -7,6 +7,7 @@ import math
 from collections import defaultdict
 import time
 import subprocess
+import copy
 
 import rapidjson as json
 import click
@@ -23,7 +24,7 @@ from conda_forge_artifact_validation.utils import chunk_iterable
 from conda_forge_artifact_validation.cached_repodata import (
     CHANNEL_URL,
     SUBDIRS,
-    RepodataCache,
+    REPODATA_CACHE,
 )
 
 CHUNKSIZE = 64
@@ -139,8 +140,6 @@ def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, ve
 def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
     """Scan all conda-forge artifacts for invalid paths."""
 
-    repodata_cache = RepodataCache()
-
     validate_yamls = _munge_validate_yamls()
     final_data = defaultdict(dict)
     start_time = time.time()
@@ -155,7 +154,7 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
             resdat = {"subdir": None, "pkg": None}
     skipped_for_restart = False
 
-    with joblib.Parallel(n_jobs=8, backend='loky') as para:
+    with joblib.Parallel(n_jobs=16, backend='threading') as para:
         for subdir in SUBDIRS:
             if (
                 restart_data
@@ -167,12 +166,16 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
             print("\n" + "=" * 80, flush=True)
             print("=" * 80, flush=True)
             print("processing subdir %s" % subdir, flush=True)
-            rd = repodata_cache[subdir]
+            rd = REPODATA_CACHE[subdir]
             curr_resdat["subdir"] = subdir
 
             pkgs = sorted(rd["packages"])
             tot = math.ceil(len(pkgs) / CHUNKSIZE)
-            for pkg_chunk in tqdm.tqdm(chunk_iterable(pkgs, CHUNKSIZE), total=tot):
+            for pkg_chunk in tqdm.tqdm(
+                chunk_iterable(pkgs, CHUNKSIZE),
+                total=tot,
+                desc=subdir,
+            ):
                 if len(pkg_chunk) == 0:
                     continue
 
@@ -191,7 +194,7 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
                 jobs = [
                     joblib.delayed(_process_artifact)(
                         pkg,
-                        rd["packages"][pkg],
+                        copy.deepcopy(rd["packages"][pkg]),
                         libcfgraph_path,
                         subdir,
                         validate_yamls,
@@ -246,7 +249,7 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
         for pkg_nm in old_data:
             for subdir_pkg in list(old_data[pkg_nm]):
                 subdir, pkg = os.path.split(subdir_pkg)
-                if pkg not in repodata_cache[subdir]["packages"]:
+                if pkg not in REPODATA_CACHE[subdir]["packages"]:
                     del old_data[pkg_nm][pkg]
 
         with open(output_path, "w") as fp:

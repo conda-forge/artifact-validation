@@ -1,3 +1,4 @@
+import functools
 from collections import UserDict
 
 import requests
@@ -7,6 +8,15 @@ SUBDIRS = [
     "linux-ppc64le", "linux-aarch64", "osx-arm64",
 ]
 CHANNEL_URL = "https://conda.anaconda.org/conda-forge"
+
+
+@functools.lru_cache(maxsize=16)
+def _load_repodata(subdir):
+    rd = requests.get(
+        f"{CHANNEL_URL}/{subdir}/repodata.json"
+    )
+    rd.raise_for_status()
+    return rd.json()
 
 
 class RepodataCache(UserDict):
@@ -21,9 +31,11 @@ class RepodataCache(UserDict):
     def __init__(self):
         super().__init__()
 
-        for subdir in SUBDIRS:
-            rd = requests.get(
-                f"{CHANNEL_URL}/{subdir}/repodata.json"
-            )
-            rd.raise_for_status()
-            self[subdir] = rd.json()
+    def __getitem__(self, index):
+        if index not in self.data:
+            self[index] = _load_repodata(index)
+
+        return self.data[index]
+
+
+REPODATA_CACHE = RepodataCache()
