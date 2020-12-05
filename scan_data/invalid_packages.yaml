@@ -216,3 +216,21 @@ google-api-core:
       requests.python.generated:
       - lib/python3.8/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
     valid: false
+jsoncpp:
+  osx-64/jsoncpp-0.10.6-0.tar.bz2:
+    bad_paths:
+      conda.python.generated:
+      - bin/activate
+    valid: false
+libarchive:
+  osx-64/libarchive-3.2.1-0.tar.bz2:
+    bad_paths:
+      conda.python.generated:
+      - bin/activate
+    valid: false
+libmemcached:
+  osx-64/libmemcached-1.0.18-0.tar.bz2:
+    bad_paths:
+      conda.python.generated:
+      - bin/activate
+    valid: false
