@@ -250,7 +250,7 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
             for subdir_pkg in list(old_data[pkg_nm]):
                 subdir, pkg = os.path.split(subdir_pkg)
                 if pkg not in REPODATA_CACHE[subdir]["packages"]:
-                    del old_data[pkg_nm][pkg]
+                    del old_data[pkg_nm][subdir_pkg]
 
         with open(output_path, "w") as fp:
             fp.write(yaml.dump(old_data, default_flow_style=False, indent=2))
