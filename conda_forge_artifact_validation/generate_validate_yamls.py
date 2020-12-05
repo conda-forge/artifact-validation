@@ -6,13 +6,16 @@ import logging
 import joblib
 
 from .glob_to_re import glob_to_re
-from .cached_repodata import repodata_cache
+from .cached_repodata import RepodataCache
 
 LOGGER = logging.getLogger(__name__)
 
 # holds the libcfgraph file index - used for finding out which possible
 # files there are to download
 LIBCFGRAPH_INDEX = None
+
+# a cache of repodata
+REPODATA_CACHE = None
 
 # this is a default exclude set for a python package
 DEFAULT_PYTHON_GLOBS = [
@@ -55,13 +58,17 @@ def _get_all_json_blobs_for_artifact(artifact_name):
         r.raise_for_status()
         LIBCFGRAPH_INDEX = r.json()
 
+    global REPODATA_CACHE
+    if REPODATA_CACHE is None:
+        REPODATA_CACHE = RepodataCache()
+
     sentinel = os.path.join("artifacts", artifact_name) + "/"
     artifact_pths = [pth for pth in LIBCFGRAPH_INDEX if pth.startswith(sentinel)]
 
     def _download_jsob_blob(artifact_pth):
         # ignore things not on the main channel
         subdir, pkg = _get_subdir_pkg_from_libcfgraph_artifact(artifact_pth)
-        if pkg not in repodata_cache[subdir]["packages"]:
+        if pkg not in REPODATA_CACHE[subdir]["packages"]:
             return None
 
         try:

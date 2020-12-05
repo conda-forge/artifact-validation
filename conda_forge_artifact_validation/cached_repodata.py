@@ -27,6 +27,3 @@ class RepodataCache(UserDict):
             )
             rd.raise_for_status()
             self[subdir] = rd.json()
-
-
-repodata_cache = RepodataCache()

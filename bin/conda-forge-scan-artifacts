@@ -23,7 +23,7 @@ from conda_forge_artifact_validation.utils import chunk_iterable
 from conda_forge_artifact_validation.cached_repodata import (
     CHANNEL_URL,
     SUBDIRS,
-    repodata_cache,
+    RepodataCache,
 )
 
 CHUNKSIZE = 64
@@ -139,6 +139,8 @@ def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, ve
 def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
     """Scan all conda-forge artifacts for invalid paths."""
 
+    repodata_cache = RepodataCache()
+
     validate_yamls = _munge_validate_yamls()
     final_data = defaultdict(dict)
     start_time = time.time()
@@ -241,14 +243,14 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
             old_data[k].update(final_data[k])
 
         # clean out things not in the main channel
-        for pkg_nm in final_data:
-            for subdir_pkg in list(final_data[pkg_nm]):
+        for pkg_nm in old_data:
+            for subdir_pkg in list(old_data[pkg_nm]):
                 subdir, pkg = os.path.split(subdir_pkg)
                 if pkg not in repodata_cache[subdir]["packages"]:
-                    del final_data[pkg_nm][pkg]
+                    del old_data[pkg_nm][pkg]
 
         with open(output_path, "w") as fp:
-            fp.write(yaml.dump(final_data, default_flow_style=False, indent=2))
+            fp.write(yaml.dump(old_data, default_flow_style=False, indent=2))
 
     if restart_data is not None:
         print("writing restart info to '%s'..." % restart_data, flush=True)
