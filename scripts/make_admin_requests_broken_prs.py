@@ -153,7 +153,7 @@ def main(dry_run, job_url):
             )
 
             _run_git_cmd(
-                "remote set-url --push origin repo_url=https://%s@github.com/conda-forge/admin-requests.git" % os.environ["GH_TOKEN"],  # noqa
+                "remote set-url --push origin https://%s@github.com/conda-forge/admin-requests.git" % os.environ["GH_TOKEN"],  # noqa
                 cwd=os.path.join(tmpdir, "admin-requests")
             )
 
