@@ -152,6 +152,11 @@ def main(dry_run, job_url):
                 cwd=tmpdir,
             )
 
+            _run_git_cmd(
+                "remote set-url --push origin repo_url=https://%s@github.com/conda-forge/admin-requests.git" % os.environ["GH_TOKEN"],  # noqa
+                cwd=os.path.join(tmpdir, "admin-requests")
+            )
+
             for pkg, v in pkgs.items():
                 print("=" * 80, flush=True)
                 print("=" * 80, flush=True)
