@@ -18,6 +18,8 @@ USER = GH.get_user().login
 REPO = GH.get_repo("conda-forge/admin-requests")
 REPO.create_fork()
 
+MAX_PRS = 10
+
 
 def _get_sharded_path(output):
     chars = [c for c in output if c.isalnum()]
@@ -146,6 +148,8 @@ def main(dry_run, job_url):
     else:
         pkg_prs = {}
 
+    num_prs = 0
+
     try:
         with tempfile.TemporaryDirectory() as tmpdir:
             _run_git_cmd(
@@ -181,11 +185,22 @@ def main(dry_run, job_url):
                         pkg, dists_to_pr, v, tmpdir,
                         dry_run=dry_run, job_url=job_url,
                     )
+
+                    if pr_data is not None:
+                        num_prs += 1
+
                     for dist in dists_to_pr:
                         if pr_data is not None:
                             pkg_prs[dist] = copy.deepcopy(pr_data)
 
                 print("\n", flush=True)
+                if num_prs >= MAX_PRS:
+                    print(
+                        "made the maximum number of "
+                        "allowed PRS: %d - stopping!" % num_prs,
+                        flush=True,
+                    )
+                    break
 
     finally:
         for k in pkg_prs:
