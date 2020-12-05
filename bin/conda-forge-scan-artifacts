@@ -46,6 +46,9 @@ def _test_file_paths(pkg_name, fnames, validate_yamls):
                     bad_pths[key] = [fname]
                     break
 
+            if key in bad_pths:
+                break
+
     return valid, bad_pths
 
 
