@@ -14,8 +14,11 @@ PKGS_DATA = "scan_data/invalid_packages.yaml"
 PKG_PRS_DATA = "scan_data/invalid_packages_prs.yaml"
 
 GH = github.Github(os.environ["GH_TOKEN"])
-
+USER = GH.get_user().login
 REPO = GH.get_repo("conda-forge/admin-requests")
+REPO.create_fork()
+
+MAX_PRS = 10
 
 
 def _get_sharded_path(output):
@@ -83,13 +86,13 @@ def _make_pr(pkg, dists_to_pr, v, tmpdir, dry_run=False, job_url=None):
     )
 
     body = """\
-Hi %s! I am the friendly conda-forge webservice!
+Hi %s! I am the friendly conda-forge artifact validation bot!
 
 I made this PR because I found files in one or more of your packages that are not allowed \
 for that package. Once this PR is merged, the builds listed below will be marked as broken. They will not be installable \
 from the main conda-forge channels, but you will still be able to download them from anaconda.org.
 
-The core team will usually wait a week to merge these PRs. However, we may merge them earlier if we \
+The core team will usually wait a week to merge these PRs. However, they may merge them earlier if they \
 deem the packages below a signifcant security or usability issue.
 
 If you think this PR was made by mistake or is incorrect, please get in touch with the core team in this PR or on \
@@ -116,7 +119,7 @@ Information on invalid packages (see the files listed under `bad_paths`):
             title=title,
             body=body,
             base="master",
-            head=branch_name,
+            head="%s:%s" % (USER, branch_name),
             maintainer_can_modify=True,
         )
 
@@ -145,15 +148,18 @@ def main(dry_run, job_url):
     else:
         pkg_prs = {}
 
+    num_prs = 0
+
     try:
         with tempfile.TemporaryDirectory() as tmpdir:
             _run_git_cmd(
-                "clone https://github.com/conda-forge/admin-requests.git",
+                f"clone https://github.com/{USER}/admin-requests.git",
                 cwd=tmpdir,
             )
 
             _run_git_cmd(
-                "remote set-url --push origin https://%s@github.com/conda-forge/admin-requests.git" % os.environ["GH_TOKEN"],  # noqa
+                "remote set-url --push origin https://%s@github.com"
+                "/%s/admin-requests.git" % (os.environ["GH_TOKEN"], USER),
                 cwd=os.path.join(tmpdir, "admin-requests")
             )
 
@@ -179,11 +185,22 @@ def main(dry_run, job_url):
                         pkg, dists_to_pr, v, tmpdir,
                         dry_run=dry_run, job_url=job_url,
                     )
+
+                    if pr_data is not None:
+                        num_prs += 1
+
                     for dist in dists_to_pr:
                         if pr_data is not None:
                             pkg_prs[dist] = copy.deepcopy(pr_data)
 
                 print("\n", flush=True)
+                if num_prs >= MAX_PRS:
+                    print(
+                        "made the maximum number of "
+                        "allowed PRS: %d - stopping!" % num_prs,
+                        flush=True,
+                    )
+                    break
 
     finally:
         for k in pkg_prs:
