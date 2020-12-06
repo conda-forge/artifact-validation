@@ -15,6 +15,8 @@ LOGGER = logging.getLogger(__name__)
 
 
 def _validate_one(validate_yaml, pkg_dir):
+    valid = True
+    bad_paths = []
     for file in validate_yaml["files"]:
         pkg_dir_file = os.path.join(pkg_dir, file)
         LOGGER.debug("pkg_dir/file: %s", pkg_dir_file)
@@ -28,9 +30,11 @@ def _validate_one(validate_yaml, pkg_dir):
 
         for pth in pths:
             if os.path.exists(pth):
-                return False, [pth.replace(pkg_dir, "$PREFIX")]
+                valid = False
+                bad_paths.append(file)
+                break
 
-    return True, []
+    return valid, bad_paths
 
 
 def validate_file(path, validate_yamls, tmpdir=None, lock=None):
