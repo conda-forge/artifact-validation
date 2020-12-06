@@ -497,6 +497,24 @@ gensim:
       - Lib/site-packages/scipy-1.2.0.dist-info/INSTALLER
     valid: false
 google-api-core:
+  linux-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - lib/python*/site-packages/requests-*.dist-info/**/*
+      - lib/python*/site-packages/requests/**/*
+    valid: false
+  linux-64/google-api-core-1.20.1-py37hc8dfbb8_0.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - lib/python*/site-packages/requests-*.dist-info/**/*
+      - lib/python*/site-packages/requests/**/*
+    valid: false
+  linux-64/google-api-core-1.20.1-py38h32f6830_0.tar.bz2:
+    bad_paths:
+      requests.python.generated:
+      - lib/python*/site-packages/requests-*.dist-info/**/*
+      - lib/python*/site-packages/requests/**/*
+    valid: false
   osx-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
     bad_paths:
       requests.python.generated:
