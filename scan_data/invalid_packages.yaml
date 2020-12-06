@@ -670,3 +670,43 @@ spglib:
       numpy.python.generated:
       - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
     valid: false
+  win-64/spglib-1.11.1.2-py27hc997a72_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/spglib-1.11.1.2-py36h452e1ab_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/spglib-1.11.1.2-py37h452e1ab_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/spglib-1.11.2-py27hc997a72_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/spglib-1.11.2-py27hc997a72_1.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/spglib-1.11.2-py36h452e1ab_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/spglib-1.11.2-py36h452e1ab_1.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/spglib-1.11.2-py37h452e1ab_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
