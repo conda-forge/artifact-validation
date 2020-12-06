@@ -413,6 +413,25 @@ metakernel:
       setuptools.python.generated:
       - Scripts/easy_install-3.5-script.py
     valid: false
+pyamg:
+  win-64/pyamg-4.0.0-py36h8300f20_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      scipy.python.generated:
+      - Lib/site-packages/scipy-1.2.0.dist-info/INSTALLER
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools-40.6.3.dist-info/INSTALLER
+    valid: false
+  win-64/pyamg-4.0.0-py37h8300f20_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      scipy.python.generated:
+      - Lib/site-packages/scipy-1.2.0.dist-info/INSTALLER
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools-40.6.3.dist-info/INSTALLER
+    valid: false
 pyemd:
   osx-64/pyemd-0.5.1-py27h1702cab_1000.tar.bz2:
     bad_paths:
@@ -443,6 +462,27 @@ pyemd:
     bad_paths:
       numpy.python.generated:
       - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  win-64/pyemd-0.5.1-py27h39f3610_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/pyemd-0.5.1-py36h830ac7b_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/pyemd-0.5.1-py37h830ac7b_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+pymapd:
+  win-64/pymapd-0.6.0-py36he025d50_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
     valid: false
 racket:
   osx-64/racket-6.12-hfc679d8_0.tar.bz2:
@@ -532,6 +572,21 @@ signac-dashboard:
     bad_paths:
       click.python.generated:
       - lib/python3.7/site-packages/click/__init__.py
+    valid: false
+  win-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
+  win-64/signac-dashboard-0.1.6-py36_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
+    valid: false
+  win-64/signac-dashboard-0.1.6-py37_1000.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click/__init__.py
     valid: false
 sisl:
   osx-64/sisl-0.9.5-py27h6762db8_1002.tar.bz2:
