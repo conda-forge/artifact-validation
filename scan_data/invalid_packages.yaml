@@ -397,6 +397,22 @@ libarchive:
       - bin/activate
     valid: false
 libmemcached: {}
+metakernel:
+  win-64/metakernel-0.12.6-py27_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-2.7-script.py
+    valid: false
+  win-64/metakernel-0.12.6-py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-3.4-script.py
+    valid: false
+  win-64/metakernel-0.12.6-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Scripts/easy_install-3.5-script.py
+    valid: false
 pyemd:
   osx-64/pyemd-0.5.1-py27h1702cab_1000.tar.bz2:
     bad_paths:
