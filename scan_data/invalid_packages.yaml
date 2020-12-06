@@ -636,6 +636,42 @@ pyamg:
       - Lib/site-packages/setuptools-40.6.3.dist-info/INSTALLER
 
 pyemd:
+  linux-64/pyemd-0.5.1-py27h637b7d7_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
+    valid: false
+  linux-64/pyemd-0.5.1-py27hf8a1672_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
+    valid: false
+  linux-64/pyemd-0.5.1-py36h637b7d7_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
+    valid: false
+  linux-64/pyemd-0.5.1-py36hf8a1672_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
+    valid: false
+  linux-64/pyemd-0.5.1-py37h637b7d7_1000.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
+    valid: false
+  linux-64/pyemd-0.5.1-py37hf8a1672_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
+    valid: false
   osx-64/pyemd-0.5.1-py27h1702cab_1000.tar.bz2:
     bad_paths:
       numpy.python.generated:
@@ -686,7 +722,17 @@ pymapd:
     bad_paths:
       numpy.python.generated:
       - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
-
+    valid: false
+pypy2.7:
+  linux-64/pypy2.7-5.10.0-0.tar.bz2:
+    bad_paths:
+      openssl:
+      - include/openssl/**/*
+      openssl.generated:
+      - lib/libcrypto.so
+      - lib/libcrypto.so.1.1
+      - lib/libssl.so
+      - lib/libssl.so.1.1
 racket:
   osx-64/racket-6.12-hfc679d8_0.tar.bz2:
     bad_paths:
