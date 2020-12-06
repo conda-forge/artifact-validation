@@ -1,4 +1,11 @@
 apache-libcloud:
+  noarch/apache-libcloud-2.4.0-py_1000.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+      - site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
+      requests.python.generated:
+      - site-packages/requests-2.20.1.dist-info/INSTALLER
+    valid: false
   osx-64/apache-libcloud-2.4.0-py27_1000.tar.bz2:
     bad_paths:
       certifi.python.generated:
