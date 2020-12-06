@@ -396,7 +396,6 @@ libarchive:
       conda.python.generated:
       - bin/activate
     valid: false
-libmemcached: {}
 metakernel:
   win-64/metakernel-0.12.6-py27_0.tar.bz2:
     bad_paths:
