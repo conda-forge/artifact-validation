@@ -43,8 +43,8 @@ def _test_file_paths(pkg_name, fnames, validate_yamls):
             continue
 
         for rep, patt in zip(
-            validate_yamls[key]["glob_regexes"], 
-            validate_yamls[key]["files"]
+            validate_yamls[key]["glob_regexes"],
+            validate_yamls[key]["files"],
         ):
             for fname in fnames:
                 if rep.fullmatch(fname) is not None:
