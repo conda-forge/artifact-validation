@@ -17,6 +17,7 @@ files:
 - Lib/site-packages/yaml-*.egg-info
 - Lib/site-packages/yaml-*.egg-info/**/*
 - Lib/site-packages/yaml/**/*
+- bin/python.bak
 - lib/python*/site-packages/PyYAML-*.dist-info/**/*
 - lib/python*/site-packages/PyYAML-*.egg
 - lib/python*/site-packages/PyYAML-*.egg-info
