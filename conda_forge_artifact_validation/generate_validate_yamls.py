@@ -31,10 +31,12 @@ DEFAULT_PYTHON_GLOBS = [
     "lib/python*/site-packages/{import_name}-*.egg-info/**/*",
 ]
 
-# these files appear to be made when 2to3 was used on windows
-# any package can write them
 DEFAULT_PYTHON_EXCLUDES = [
-    "Lib/lib2to3/**/*"
+    # these files appear to be made when 2to3 was used on windows
+    # any package can write them
+    "Lib/lib2to3/**/*",
+    # this file is made by cross-python on some cross-compile builds
+    "bin/python.bak",
 ]
 
 
