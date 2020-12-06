@@ -8,6 +8,7 @@ from collections import defaultdict
 import time
 import subprocess
 import copy
+import threading
 
 import rapidjson as json
 import click
@@ -28,6 +29,7 @@ from conda_forge_artifact_validation.cached_repodata import (
 )
 
 CHUNKSIZE = 64
+CPHLock = threading.RLock()
 
 yaml.add_representer(defaultdict, Representer.represent_dict)
 
@@ -97,6 +99,7 @@ def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, ve
             f"{subdir}/{pkg}",
             validate_yamls,
             md5sum=repodata["md5"],
+            lock=CPHLock,
         )
     else:
         valid, bad_pths = _test_file_paths(repodata["name"], data, validate_yamls)
@@ -154,7 +157,9 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
             resdat = {"subdir": None, "pkg": None}
     skipped_for_restart = False
 
-    with joblib.Parallel(n_jobs=8, backend='threading') as para:
+    joblib_verbose = {0: 0, 1: 0, 2: 100}[verbose]
+
+    with joblib.Parallel(n_jobs=8, backend='threading', verbose=joblib_verbose) as para:
         for subdir in SUBDIRS:
             if (
                 restart_data
@@ -224,7 +229,7 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
                     break
 
             if out_of_time:
-                print("\nout of time - stopping!", flush=True)
+                print("\n\nout of time - stopping!\n", flush=True)
                 break
 
     # do a git pull here in case repo is out of date
@@ -246,11 +251,14 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
             old_data[k].update(final_data[k])
 
         # clean out things not in the main channel
-        for pkg_nm in old_data:
+        for pkg_nm in list(old_data):
             for subdir_pkg in list(old_data[pkg_nm]):
                 subdir, pkg = os.path.split(subdir_pkg)
                 if pkg not in REPODATA_CACHE[subdir]["packages"]:
                     del old_data[pkg_nm][subdir_pkg]
+
+            if not old_data[pkg_nm]:
+                del old_data[pkg_nm]
 
         with open(output_path, "w") as fp:
             fp.write(yaml.dump(old_data, default_flow_style=False, indent=2))

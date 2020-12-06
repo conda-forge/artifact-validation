@@ -33,7 +33,7 @@ def _validate_one(validate_yaml, pkg_dir):
     return True, []
 
 
-def validate_file(path, validate_yamls, tmpdir=None):
+def validate_file(path, validate_yamls, tmpdir=None, lock=None):
     """Validate a file on disk.
 
     Parameters
@@ -45,6 +45,8 @@ def validate_file(path, validate_yamls, tmpdir=None):
         contents.
     tmpdir : str, optional
         If not None, copy the data to this location before unpacking it.
+    lock : threading.Lock or None, optional
+        If not None, use this lock to protect calls to `conda_package_handling`.
 
     Returns
     -------
@@ -70,7 +72,11 @@ def validate_file(path, validate_yamls, tmpdir=None):
     else:
         pkg_nm = pkg[: -len(".conda")]
 
-    conda_package_handling.api.extract(path)
+    if lock is not None:
+        with lock:
+            conda_package_handling.api.extract(path)
+    else:
+        conda_package_handling.api.extract(path)
 
     for validate_name, validate_yaml in validate_yamls.items():
         if output_name not in validate_yaml["allowed"]:
@@ -90,7 +96,9 @@ def validate_file(path, validate_yamls, tmpdir=None):
     return valid, bad_pths
 
 
-def download_and_validate(channel_url, subdir_pkg, validate_yamls, md5sum=None):
+def download_and_validate(
+    channel_url, subdir_pkg, validate_yamls, md5sum=None, lock=None,
+):
     """Download and validate a package.
 
     Parameters
@@ -104,6 +112,8 @@ def download_and_validate(channel_url, subdir_pkg, validate_yamls, md5sum=None):
         contents.
     md5sum : str
         If not None, then checksum the downloaded file with md5 before we validate.
+    lock : threading.Lock or None, optional
+        If not None, use this lock to protect calls to `conda_package_handling`.
 
     Returns
     -------
@@ -133,7 +143,11 @@ def download_and_validate(channel_url, subdir_pkg, validate_yamls, md5sum=None):
                     else:
                         LOGGER.info("md5 sum is valid")
 
-                valid, bad_pths = validate_file(f"{tmpdir}/{pkg}", validate_yamls)
+                valid, bad_pths = validate_file(
+                    f"{tmpdir}/{pkg}",
+                    validate_yamls,
+                    lock=lock,
+                )
             else:
                 valid = False
                 bad_pths = {}
