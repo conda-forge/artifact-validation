@@ -27,6 +27,27 @@ apache-libcloud:
       requests.python.generated:
       - lib/python3.7/site-packages/requests-2.20.1.dist-info/INSTALLER
     valid: false
+  win-64/apache-libcloud-2.4.0-py27_1000.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+      - Lib/site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
+      requests.python.generated:
+      - Lib/site-packages/requests-2.20.1.dist-info/INSTALLER
+    valid: false
+  win-64/apache-libcloud-2.4.0-py36_1000.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+      - Lib/site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
+      requests.python.generated:
+      - Lib/site-packages/requests-2.20.1.dist-info/INSTALLER
+    valid: false
+  win-64/apache-libcloud-2.4.0-py37_1000.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+      - Lib/site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
+      requests.python.generated:
+      - Lib/site-packages/requests-2.20.1.dist-info/INSTALLER
+    valid: false
 aubio:
   osx-64/aubio-0.4.8-py27h7273d18_0.tar.bz2:
     bad_paths:
@@ -37,6 +58,16 @@ aubio:
     bad_paths:
       numpy.python.generated:
       - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+    valid: false
+  win-64/aubio-0.4.8-py27hc997a72_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+    valid: false
+  win-64/aubio-0.4.8-py36h7fad82b_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
     valid: false
 conda-devenv:
   osx-64/conda-devenv-0.9.3-py27_0.tar.bz2:
@@ -53,6 +84,14 @@ conda-devenv:
     bad_paths:
       conda.python.generated:
       - bin/conda
+    valid: false
+dbxfs:
+  noarch/dbxfs-1.0.38-py_0.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+      - site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
+      requests.python.generated:
+      - site-packages/requests-2.20.0.dist-info/DESCRIPTION.rst
     valid: false
 flask-creole:
   osx-64/flask-creole-0.4.4-py27_1000.tar.bz2:
@@ -223,6 +262,28 @@ google-api-core:
       requests.python.generated:
       - lib/python3.8/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
     valid: false
+google-cloud-bigquery-storage-core:
+  noarch/google-cloud-bigquery-storage-core-2.0.0-pyh9f0ad1d_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - site-packages/PyYAML-5.3.1.dist-info/INSTALLER
+      requests.python.generated:
+      - site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+    valid: false
+  noarch/google-cloud-bigquery-storage-core-2.0.1-pyh9f0ad1d_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - site-packages/PyYAML-5.3.1.dist-info/INSTALLER
+      requests.python.generated:
+      - site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+    valid: false
+  noarch/google-cloud-bigquery-storage-core-2.1.0-pyhd3deb0d_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - site-packages/PyYAML-5.3.1.dist-info/INSTALLER
+      requests.python.generated:
+      - site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+    valid: false
 jsoncpp:
   osx-64/jsoncpp-0.10.6-0.tar.bz2:
     bad_paths:
@@ -333,6 +394,12 @@ ruamel.yaml:
     bad_paths:
       pyyaml.python.generated:
       - lib/python2.7/site-packages/_yaml.so
+    valid: false
+sentry-sdk:
+  noarch/sentry-sdk-0.5.3-py_0.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+      - site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
     valid: false
 signac-dashboard:
   osx-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
