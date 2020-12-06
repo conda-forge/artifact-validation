@@ -114,9 +114,9 @@ def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, ve
             flush=True,
         )
 
-    return {
+    return valid, {
         repodata["name"]: {
-            f"{subdir}/{pkg}": {"valid": valid, "bad_paths": bad_pths},
+            f"{subdir}/{pkg}": {"bad_paths": bad_pths},
         },
     }
 
@@ -208,8 +208,8 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
                     for pkg in pkg_chunk
                 ]
                 any_new = False
-                for d in para(jobs):
-                    if not list(list(d.values())[0].values())[0]["valid"]:
+                for d_valid, d in para(jobs):
+                    if not d_valid:
                         for k, v in d.items():
                             final_data[k].update(v)
                             any_new = True

@@ -91,7 +91,6 @@ def validate_file(path, validate_yamls, tmpdir=None, lock=None):
             valid = valid and _valid
             if not _valid:
                 bad_pths[validate_name] = {
-                    "valid": _valid,
                     "bad_paths": sorted(_bad_pths),
                 }
         else:
