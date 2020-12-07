@@ -129,7 +129,7 @@ flask-creole:
   osx-64/flask-creole-0.4.4-py27_1000.tar.bz2:
     bad_paths:
       click.python.generated:
-      - lib/python2.7/site-packages/click/__init__.py
+      - lib/python*/site-packages/click/**/*
   win-64/flask-creole-0.4.4-py27_1000.tar.bz2:
     bad_paths:
       click.python.generated:
@@ -138,19 +138,19 @@ flask-debugtoolbar:
   osx-64/flask-debugtoolbar-0.10.1-py27_1000.tar.bz2:
     bad_paths:
       click.python.generated:
-      - lib/python2.7/site-packages/click/__init__.py
+      - lib/python*/site-packages/click/**/*
   osx-64/flask-debugtoolbar-0.10.1-py35_1000.tar.bz2:
     bad_paths:
       click.python.generated:
-      - lib/python3.5/site-packages/click/__init__.py
+      - lib/python*/site-packages/click/**/*
   osx-64/flask-debugtoolbar-0.10.1-py36_1000.tar.bz2:
     bad_paths:
       click.python.generated:
-      - lib/python3.6/site-packages/click/__init__.py
+      - lib/python*/site-packages/click/**/*
   osx-64/flask-debugtoolbar-0.10.1-py37_1000.tar.bz2:
     bad_paths:
       click.python.generated:
-      - lib/python3.7/site-packages/click/__init__.py
+      - lib/python*/site-packages/click/**/*
   win-64/flask-debugtoolbar-0.10.1-py27_1000.tar.bz2:
     bad_paths:
       click.python.generated:
@@ -288,103 +288,128 @@ freud:
   osx-64/freud-0.11.0-py27h3e44d54_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python2.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.0-py27h9888f84_1000.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python2.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.0-py35h3e44d54_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.5/site-packages/numpy-1.15.2.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.0-py36h3e44d54_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.6/site-packages/numpy-1.15.2.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.0-py36h9888f84_1000.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.6/site-packages/numpy-1.15.2.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.0-py37h3e44d54_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.0-py37h9888f84_1000.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.3-py27h04f5b5a_1.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python2.7/site-packages/numpy-1.15.3.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.3-py27h2d50403_1.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python2.7/site-packages/numpy-1.15.3.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.3-py27h3e44d54_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python2.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.3-py27h9888f84_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python2.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.3-py36h04f5b5a_1.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.6/site-packages/numpy-1.15.3.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.3-py36h2d50403_1.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.6/site-packages/numpy-1.15.3.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.3-py36h3e44d54_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.6/site-packages/numpy-1.15.2.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.3-py36h9888f84_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.6/site-packages/numpy-1.15.2.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.3-py37h04f5b5a_1.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.7/site-packages/numpy-1.15.3.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.3-py37h2d50403_1.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.7/site-packages/numpy-1.15.3.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.3-py37h3e44d54_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.3-py37h9888f84_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.7/site-packages/numpy-1.15.2.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.4-py27h04f5b5a_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.4-py27h2d50403_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.4-py36h04f5b5a_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.4-py36h2d50403_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.4-py37h04f5b5a_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/freud-0.11.4-py37h2d50403_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
 gensim:
   win-64/gensim-3.5.0-py27h39f3610_1000.tar.bz2:
     bad_paths:
