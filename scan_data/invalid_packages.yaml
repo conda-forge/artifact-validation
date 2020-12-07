@@ -519,6 +519,8 @@ jsoncpp:
     bad_paths:
       conda.python.generated:
       - bin/activate
+      - bin/conda
+      - bin/deactivate
 libarchive:
   osx-64/libarchive-3.2.1-0.tar.bz2:
     bad_paths:
