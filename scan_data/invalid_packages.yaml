@@ -26,21 +26,24 @@ apache-libcloud:
   osx-64/apache-libcloud-2.4.0-py27_1000.tar.bz2:
     bad_paths:
       certifi.python.generated:
-      - lib/python2.7/site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
+      - lib/python*/site-packages/certifi-*.dist-info/**/*
       requests.python.generated:
-      - lib/python2.7/site-packages/requests-2.20.1.dist-info/INSTALLER
+      - lib/python*/site-packages/requests-*.dist-info/**/*
+      - lib/python*/site-packages/requests/**/*
   osx-64/apache-libcloud-2.4.0-py36_1000.tar.bz2:
     bad_paths:
       certifi.python.generated:
-      - lib/python3.6/site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
+      - lib/python*/site-packages/certifi-*.dist-info/**/*
       requests.python.generated:
-      - lib/python3.6/site-packages/requests-2.20.1.dist-info/INSTALLER
+      - lib/python*/site-packages/requests-*.dist-info/**/*
+      - lib/python*/site-packages/requests/**/*
   osx-64/apache-libcloud-2.4.0-py37_1000.tar.bz2:
     bad_paths:
       certifi.python.generated:
-      - lib/python3.7/site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
+      - lib/python*/site-packages/certifi-*.dist-info/**/*
       requests.python.generated:
-      - lib/python3.7/site-packages/requests-2.20.1.dist-info/INSTALLER
+      - lib/python*/site-packages/requests-*.dist-info/**/*
+      - lib/python*/site-packages/requests/**/*
   win-64/apache-libcloud-2.4.0-py27_1000.tar.bz2:
     bad_paths:
       certifi.python.generated:
@@ -71,11 +74,13 @@ aubio:
   osx-64/aubio-0.4.8-py27h7273d18_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/aubio-0.4.8-py36h7273d18_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   win-64/aubio-0.4.8-py27hc997a72_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
