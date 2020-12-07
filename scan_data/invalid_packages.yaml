@@ -743,15 +743,15 @@ signac-dashboard:
   osx-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
     bad_paths:
       click.python.generated:
-      - lib/python3.6/site-packages/click/__init__.py
+      - lib/python*/site-packages/click/**/*
   osx-64/signac-dashboard-0.1.6-py36_1000.tar.bz2:
     bad_paths:
       click.python.generated:
-      - lib/python3.6/site-packages/click/__init__.py
+      - lib/python*/site-packages/click/**/*
   osx-64/signac-dashboard-0.1.6-py37_1000.tar.bz2:
     bad_paths:
       click.python.generated:
-      - lib/python3.7/site-packages/click/__init__.py
+      - lib/python*/site-packages/click/**/*
   win-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
     bad_paths:
       click.python.generated:
@@ -875,27 +875,33 @@ spglib:
   osx-64/spglib-1.11.1.2-py27h7eb728f_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/spglib-1.11.1.2-py27h917ab60_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python2.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/spglib-1.11.1.2-py36h7eb728f_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/spglib-1.11.1.2-py36h917ab60_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.6/site-packages/numpy-1.15.4.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/spglib-1.11.1.2-py37h7eb728f_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   osx-64/spglib-1.11.1.2-py37h917ab60_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - lib/python3.7/site-packages/numpy-1.15.4.dist-info/INSTALLER
+      - lib/python*/site-packages/numpy-*.dist-info/**/*
+      - lib/python*/site-packages/numpy/**/*
   win-64/spglib-1.11.1.2-py27hc997a72_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
