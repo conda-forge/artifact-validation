@@ -88,11 +88,13 @@ aubio:
   win-64/aubio-0.4.8-py27hc997a72_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/numpy-*.dist-info/**/*
+      - Lib/site-packages/numpy/**/*
   win-64/aubio-0.4.8-py36h7fad82b_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/numpy-*.dist-info/**/*
+      - Lib/site-packages/numpy/**/*
 conda-devenv:
   linux-64/conda-devenv-0.9.3-py27_0.tar.bz2:
     bad_paths:
