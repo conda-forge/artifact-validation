@@ -794,15 +794,15 @@ signac-dashboard:
   win-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
     bad_paths:
       click.python.generated:
-      - Lib/site-packages/click/__init__.py
+      - Lib/site-packages/click/**/*
   win-64/signac-dashboard-0.1.6-py36_1000.tar.bz2:
     bad_paths:
       click.python.generated:
-      - Lib/site-packages/click/__init__.py
+      - Lib/site-packages/click/**/*
   win-64/signac-dashboard-0.1.6-py37_1000.tar.bz2:
     bad_paths:
       click.python.generated:
-      - Lib/site-packages/click/__init__.py
+      - Lib/site-packages/click/**/*
 sisl:
   linux-64/sisl-0.9.5-py27h29d635c_1002.tar.bz2:
     bad_paths:
@@ -944,32 +944,40 @@ spglib:
   win-64/spglib-1.11.1.2-py27hc997a72_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/numpy-*.dist-info/**/*
+      - Lib/site-packages/numpy/**/*
   win-64/spglib-1.11.1.2-py36h452e1ab_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/numpy-*.dist-info/**/*
+      - Lib/site-packages/numpy/**/*
   win-64/spglib-1.11.1.2-py37h452e1ab_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/numpy-*.dist-info/**/*
+      - Lib/site-packages/numpy/**/*
   win-64/spglib-1.11.2-py27hc997a72_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/numpy-*.dist-info/**/*
+      - Lib/site-packages/numpy/**/*
   win-64/spglib-1.11.2-py27hc997a72_1.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/numpy-*.dist-info/**/*
+      - Lib/site-packages/numpy/**/*
   win-64/spglib-1.11.2-py36h452e1ab_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/numpy-*.dist-info/**/*
+      - Lib/site-packages/numpy/**/*
   win-64/spglib-1.11.2-py36h452e1ab_1.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/numpy-*.dist-info/**/*
+      - Lib/site-packages/numpy/**/*
   win-64/spglib-1.11.2-py37h452e1ab_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/numpy-*.dist-info/**/*
+      - Lib/site-packages/numpy/**/*
