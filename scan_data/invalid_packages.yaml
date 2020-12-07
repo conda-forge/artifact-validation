@@ -140,7 +140,7 @@ flask-creole:
   win-64/flask-creole-0.4.4-py27_1000.tar.bz2:
     bad_paths:
       click.python.generated:
-      - Lib/site-packages/click/__init__.py
+      - Lib/site-packages/click/**/*
 flask-debugtoolbar:
   osx-64/flask-debugtoolbar-0.10.1-py27_1000.tar.bz2:
     bad_paths:
@@ -161,19 +161,19 @@ flask-debugtoolbar:
   win-64/flask-debugtoolbar-0.10.1-py27_1000.tar.bz2:
     bad_paths:
       click.python.generated:
-      - Lib/site-packages/click/__init__.py
+      - Lib/site-packages/click/**/*
   win-64/flask-debugtoolbar-0.10.1-py35_1000.tar.bz2:
     bad_paths:
       click.python.generated:
-      - Lib/site-packages/click/__init__.py
+      - Lib/site-packages/click/**/*
   win-64/flask-debugtoolbar-0.10.1-py36_1000.tar.bz2:
     bad_paths:
       click.python.generated:
-      - Lib/site-packages/click/__init__.py
+      - Lib/site-packages/click/**/*
   win-64/flask-debugtoolbar-0.10.1-py37_1000.tar.bz2:
     bad_paths:
       click.python.generated:
-      - Lib/site-packages/click/__init__.py
+      - Lib/site-packages/click/**/*
 flask-rest-orm:
   linux-64/flask-rest-orm-0.5.0-py35_0.tar.bz2:
     bad_paths:
@@ -186,11 +186,13 @@ flask-rest-orm:
   win-64/flask-rest-orm-0.5.0-py35_0.tar.bz2:
     bad_paths:
       click.python.generated:
-      - Lib/site-packages/click-6.7.dist-info/METADATA
+      - Lib/site-packages/click-*.dist-info/**/*
+      - Lib/site-packages/click/**/*
   win-64/flask-rest-orm-0.5.0-py36_0.tar.bz2:
     bad_paths:
       click.python.generated:
-      - Lib/site-packages/click-6.7.dist-info/METADATA
+      - Lib/site-packages/click-*.dist-info/**/*
+      - Lib/site-packages/click/**/*
 freud:
   linux-64/freud-0.11.0-py27h3e44d54_0.tar.bz2:
     bad_paths:
@@ -421,27 +423,33 @@ gensim:
   win-64/gensim-3.5.0-py27h39f3610_1000.tar.bz2:
     bad_paths:
       certifi.python.generated:
-      - Lib/site-packages/certifi-2018.11.29.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/certifi-*.dist-info/**/*
       numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/numpy-*.dist-info/**/*
+      - Lib/site-packages/numpy/**/*
       scipy.python.generated:
-      - Lib/site-packages/scipy-1.2.0.dist-info/INSTALLER
+      - Lib/site-packages/scipy-*.dist-info/**/*
+      - Lib/site-packages/scipy/**/*
   win-64/gensim-3.5.0-py36h830ac7b_1000.tar.bz2:
     bad_paths:
       certifi.python.generated:
-      - Lib/site-packages/certifi-2018.11.29.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/certifi-*.dist-info/**/*
       numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/numpy-*.dist-info/**/*
+      - Lib/site-packages/numpy/**/*
       scipy.python.generated:
-      - Lib/site-packages/scipy-1.2.0.dist-info/INSTALLER
+      - Lib/site-packages/scipy-*.dist-info/**/*
+      - Lib/site-packages/scipy/**/*
   win-64/gensim-3.5.0-py37h830ac7b_1000.tar.bz2:
     bad_paths:
       certifi.python.generated:
-      - Lib/site-packages/certifi-2018.11.29.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/certifi-*.dist-info/**/*
       numpy.python.generated:
-      - Lib/site-packages/numpy-1.15.4.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/numpy-*.dist-info/**/*
+      - Lib/site-packages/numpy/**/*
       scipy.python.generated:
-      - Lib/site-packages/scipy-1.2.0.dist-info/INSTALLER
+      - Lib/site-packages/scipy-*.dist-info/**/*
+      - Lib/site-packages/scipy/**/*
 google-api-core:
   linux-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
     bad_paths:
@@ -476,15 +484,18 @@ google-api-core:
   win-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
     bad_paths:
       requests.python.generated:
-      - Lib/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/requests-*.dist-info/**/*
+      - Lib/site-packages/requests/**/*
   win-64/google-api-core-1.20.1-py37hc8dfbb8_0.tar.bz2:
     bad_paths:
       requests.python.generated:
-      - Lib/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/requests-*.dist-info/**/*
+      - Lib/site-packages/requests/**/*
   win-64/google-api-core-1.20.1-py38h32f6830_0.tar.bz2:
     bad_paths:
       requests.python.generated:
-      - Lib/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/requests-*.dist-info/**/*
+      - Lib/site-packages/requests/**/*
 google-cloud-bigquery-storage-core:
   noarch/google-cloud-bigquery-storage-core-2.0.0-pyh9f0ad1d_1.tar.bz2:
     bad_paths:
@@ -515,18 +526,22 @@ gridfill:
     bad_paths:
       setuptools.python.generated:
       - Scripts/easy_install-2.7-script.py
+      - Scripts/easy_install-2.7.exe
   win-64/gridfill-1.0.0-np110py34_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
       - Scripts/easy_install-3.4-script.py
+      - Scripts/easy_install-3.4.exe
   win-64/gridfill-1.0.0-np111py27_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
       - Scripts/easy_install-2.7-script.py
+      - Scripts/easy_install-2.7.exe
   win-64/gridfill-1.0.0-np111py34_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
       - Scripts/easy_install-3.4-script.py
+      - Scripts/easy_install-3.4.exe
 jsoncpp:
   osx-64/jsoncpp-0.10.6-0.tar.bz2:
     bad_paths:
@@ -544,14 +559,17 @@ metakernel:
     bad_paths:
       setuptools.python.generated:
       - Scripts/easy_install-2.7-script.py
+      - Scripts/easy_install-2.7.exe
   win-64/metakernel-0.12.6-py34_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
       - Scripts/easy_install-3.4-script.py
+      - Scripts/easy_install-3.4.exe
   win-64/metakernel-0.12.6-py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
       - Scripts/easy_install-3.5-script.py
+      - Scripts/easy_install-3.5.exe
 pyamg:
   win-64/pyamg-4.0.0-py36h8300f20_1000.tar.bz2:
     bad_paths:
