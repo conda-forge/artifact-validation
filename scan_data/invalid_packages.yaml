@@ -20,9 +20,10 @@ apache-libcloud:
   noarch/apache-libcloud-2.4.0-py_1000.tar.bz2:
     bad_paths:
       certifi.python.generated:
-      - site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
+      - site-packages/certifi-*.dist-info/**/*
       requests.python.generated:
-      - site-packages/requests-2.20.1.dist-info/INSTALLER
+      - site-packages/requests-*.dist-info/**/*
+      - site-packages/requests/**/*
   osx-64/apache-libcloud-2.4.0-py27_1000.tar.bz2:
     bad_paths:
       certifi.python.generated:
@@ -47,21 +48,24 @@ apache-libcloud:
   win-64/apache-libcloud-2.4.0-py27_1000.tar.bz2:
     bad_paths:
       certifi.python.generated:
-      - Lib/site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/certifi-*.dist-info/**/*
       requests.python.generated:
-      - Lib/site-packages/requests-2.20.1.dist-info/INSTALLER
+      - Lib/site-packages/requests-*.dist-info/**/*
+      - Lib/site-packages/requests/**/*
   win-64/apache-libcloud-2.4.0-py36_1000.tar.bz2:
     bad_paths:
       certifi.python.generated:
-      - Lib/site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/certifi-*.dist-info/**/*
       requests.python.generated:
-      - Lib/site-packages/requests-2.20.1.dist-info/INSTALLER
+      - Lib/site-packages/requests-*.dist-info/**/*
+      - Lib/site-packages/requests/**/*
   win-64/apache-libcloud-2.4.0-py37_1000.tar.bz2:
     bad_paths:
       certifi.python.generated:
-      - Lib/site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
+      - Lib/site-packages/certifi-*.dist-info/**/*
       requests.python.generated:
-      - Lib/site-packages/requests-2.20.1.dist-info/INSTALLER
+      - Lib/site-packages/requests-*.dist-info/**/*
+      - Lib/site-packages/requests/**/*
 aubio:
   linux-64/aubio-0.4.8-py27h7273d18_0.tar.bz2:
     bad_paths:
@@ -118,9 +122,10 @@ dbxfs:
   noarch/dbxfs-1.0.38-py_0.tar.bz2:
     bad_paths:
       certifi.python.generated:
-      - site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
+      - site-packages/certifi-*.dist-info/**/*
       requests.python.generated:
-      - site-packages/requests-2.20.0.dist-info/DESCRIPTION.rst
+      - site-packages/requests-*.dist-info/**/*
+      - site-packages/requests/**/*
 flask-creole:
   linux-64/flask-creole-0.4.4-py27_1000.tar.bz2:
     bad_paths:
@@ -482,21 +487,27 @@ google-cloud-bigquery-storage-core:
   noarch/google-cloud-bigquery-storage-core-2.0.0-pyh9f0ad1d_1.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - site-packages/PyYAML-5.3.1.dist-info/INSTALLER
+      - site-packages/PyYAML-*.dist-info/**/*
+      - site-packages/yaml/**/*
       requests.python.generated:
-      - site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+      - site-packages/requests-*.dist-info/**/*
+      - site-packages/requests/**/*
   noarch/google-cloud-bigquery-storage-core-2.0.1-pyh9f0ad1d_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - site-packages/PyYAML-5.3.1.dist-info/INSTALLER
+      - site-packages/PyYAML-*.dist-info/**/*
+      - site-packages/yaml/**/*
       requests.python.generated:
-      - site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+      - site-packages/requests-*.dist-info/**/*
+      - site-packages/requests/**/*
   noarch/google-cloud-bigquery-storage-core-2.1.0-pyhd3deb0d_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - site-packages/PyYAML-5.3.1.dist-info/INSTALLER
+      - site-packages/PyYAML-*.dist-info/**/*
+      - site-packages/yaml/**/*
       requests.python.generated:
-      - site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst
+      - site-packages/requests-*.dist-info/**/*
+      - site-packages/requests/**/*
 gridfill:
   win-64/gridfill-1.0.0-np110py27_0.tar.bz2:
     bad_paths:
@@ -726,7 +737,7 @@ sentry-sdk:
   noarch/sentry-sdk-0.5.3-py_0.tar.bz2:
     bad_paths:
       certifi.python.generated:
-      - site-packages/certifi-2018.10.15.dist-info/DESCRIPTION.rst
+      - site-packages/certifi-*.dist-info/**/*
 signac-dashboard:
   linux-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
     bad_paths:
