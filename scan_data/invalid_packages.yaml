@@ -586,6 +586,8 @@ libarchive:
     bad_paths:
       conda.python.generated:
       - bin/activate
+      - bin/conda
+      - bin/deactivate
 metakernel:
   win-64/metakernel-0.12.6-py27_0.tar.bz2:
     bad_paths:
