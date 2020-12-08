@@ -1,25 +1,3 @@
-apache-libcloud:
-  linux-64/apache-libcloud-2.4.0-py27_1000.tar.bz2:
-    bad_paths:
-      certifi.python.generated:
-      - lib/python*/site-packages/certifi-*.dist-info/**/*
-      requests.python.generated:
-      - lib/python*/site-packages/requests-*.dist-info/**/*
-      - lib/python*/site-packages/requests/**/*
-  linux-64/apache-libcloud-2.4.0-py36_1000.tar.bz2:
-    bad_paths:
-      certifi.python.generated:
-      - lib/python*/site-packages/certifi-*.dist-info/**/*
-      requests.python.generated:
-      - lib/python*/site-packages/requests-*.dist-info/**/*
-      - lib/python*/site-packages/requests/**/*
-  linux-64/apache-libcloud-2.4.0-py37_1000.tar.bz2:
-    bad_paths:
-      certifi.python.generated:
-      - lib/python*/site-packages/certifi-*.dist-info/**/*
-      requests.python.generated:
-      - lib/python*/site-packages/requests-*.dist-info/**/*
-      - lib/python*/site-packages/requests/**/*
 aubio:
   linux-64/aubio-0.4.8-py27h7273d18_0.tar.bz2:
     bad_paths:
