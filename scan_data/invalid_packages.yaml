@@ -473,18 +473,6 @@ sentry-sdk:
       certifi.python.generated:
       - site-packages/certifi-*.dist-info/**/*
 signac-dashboard:
-  linux-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - lib/python*/site-packages/click/**/*
-  linux-64/signac-dashboard-0.1.6-py36_1000.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - lib/python*/site-packages/click/**/*
-  linux-64/signac-dashboard-0.1.6-py37_1000.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - lib/python*/site-packages/click/**/*
   osx-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
     bad_paths:
       click.python.generated:
@@ -497,18 +485,6 @@ signac-dashboard:
     bad_paths:
       click.python.generated:
       - lib/python*/site-packages/click/**/*
-  win-64/signac-dashboard-0.1.6-py36_0.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - Lib/site-packages/click/**/*
-  win-64/signac-dashboard-0.1.6-py36_1000.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - Lib/site-packages/click/**/*
-  win-64/signac-dashboard-0.1.6-py37_1000.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - Lib/site-packages/click/**/*
 sisl:
   linux-64/sisl-0.9.5-py27h29d635c_1002.tar.bz2:
     bad_paths:
