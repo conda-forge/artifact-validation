@@ -10,28 +10,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: install micromamba and code
-        run: |
-          rm -f ~/.bashrc
-          rm -f ~/.bash_profile
-          rm -f ~/.profile
-          touch ~/.bashrc
-          wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/latest | tar -xvj bin/micromamba --strip-components=1
-          ./micromamba shell init -s bash -p ~/micromamba
-          mkdir -p ~/micromamba/pkgs/
-          echo 'set -eo pipefail' >> ~/.bashrc
-          echo 'micromamba activate test' >> ~/.bashrc
-          mv ~/.bashrc ~/.profile
-          export MAMBA_ROOT_PREFIX=~/micromamba
-          export MAMBA_EXE=$(pwd)/micromamba
-          . $MAMBA_ROOT_PREFIX/etc/profile.d/mamba.sh
-          micromamba create -f environment.yml -y
-          micromamba activate test
-          python -m pip install -e .
+      - name: install micromamba
+        uses: mamba-org/provision-with-micromamba@main
 
-      - name: configure git
+      - name: configure git and install code
         shell: bash -l {0}
         run: |
+          python -m pip install -e .
+
           git config pull.rebase false
           git config user.name github-actions
           git config user.email github-actions@github.com
