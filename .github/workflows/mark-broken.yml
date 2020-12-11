@@ -17,7 +17,7 @@ jobs:
       - name: install micromamba
         uses: mamba-org/provision-with-micromamba@main
 
-      - name: configure git
+      - name: configure git and install code
         shell: bash -l {0}
         run: |
           python -m pip install -e .
