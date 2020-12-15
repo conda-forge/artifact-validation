@@ -9,26 +9,6 @@ aubio:
       numpy.python.generated:
       - lib/python*/site-packages/numpy-*.dist-info/**/*
       - lib/python*/site-packages/numpy/**/*
-  osx-64/aubio-0.4.8-py27h7273d18_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - lib/python*/site-packages/numpy-*.dist-info/**/*
-      - lib/python*/site-packages/numpy/**/*
-  osx-64/aubio-0.4.8-py36h7273d18_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - lib/python*/site-packages/numpy-*.dist-info/**/*
-      - lib/python*/site-packages/numpy/**/*
-  win-64/aubio-0.4.8-py27hc997a72_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-  win-64/aubio-0.4.8-py36h7fad82b_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
 conda-devenv:
   linux-64/conda-devenv-0.9.3-py27_0.tar.bz2:
     bad_paths:
@@ -42,26 +22,6 @@ conda-devenv:
     bad_paths:
       conda.python.generated:
       - bin/conda
-  osx-64/conda-devenv-0.9.3-py27_0.tar.bz2:
-    bad_paths:
-      conda.python.generated:
-      - bin/conda
-  osx-64/conda-devenv-0.9.3-py35_0.tar.bz2:
-    bad_paths:
-      conda.python.generated:
-      - bin/conda
-  osx-64/conda-devenv-0.9.3-py36_0.tar.bz2:
-    bad_paths:
-      conda.python.generated:
-      - bin/conda
-dbxfs:
-  noarch/dbxfs-1.0.38-py_0.tar.bz2:
-    bad_paths:
-      certifi.python.generated:
-      - site-packages/certifi-*.dist-info/**/*
-      requests.python.generated:
-      - site-packages/requests-*.dist-info/**/*
-      - site-packages/requests/**/*
 flask-creole:
   linux-64/flask-creole-0.4.4-py27_1000.tar.bz2:
     bad_paths:
@@ -231,27 +191,6 @@ google-cloud-bigquery-storage-core:
       requests.python.generated:
       - site-packages/requests-*.dist-info/**/*
       - site-packages/requests/**/*
-gridfill:
-  win-64/gridfill-1.0.0-np110py27_0.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - Scripts/easy_install-2.7-script.py
-      - Scripts/easy_install-2.7.exe
-  win-64/gridfill-1.0.0-np110py34_0.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - Scripts/easy_install-3.4-script.py
-      - Scripts/easy_install-3.4.exe
-  win-64/gridfill-1.0.0-np111py27_0.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - Scripts/easy_install-2.7-script.py
-      - Scripts/easy_install-2.7.exe
-  win-64/gridfill-1.0.0-np111py34_0.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - Scripts/easy_install-3.4-script.py
-      - Scripts/easy_install-3.4.exe
 jsoncpp:
   osx-64/jsoncpp-0.10.6-0.tar.bz2:
     bad_paths:
@@ -282,28 +221,6 @@ metakernel:
       setuptools.python.generated:
       - Scripts/easy_install-3.5-script.py
       - Scripts/easy_install-3.5.exe
-pyamg:
-  win-64/pyamg-4.0.0-py36h8300f20_1000.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-      scipy.python.generated:
-      - Lib/site-packages/scipy-*.dist-info/**/*
-      - Lib/site-packages/scipy/**/*
-      setuptools.python.generated:
-      - Lib/site-packages/setuptools-*.dist-info/**/*
-      - Scripts/easy_install-3.6.exe
-  win-64/pyamg-4.0.0-py37h8300f20_1000.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-      scipy.python.generated:
-      - Lib/site-packages/scipy-*.dist-info/**/*
-      - Lib/site-packages/scipy/**/*
-      setuptools.python.generated:
-      - Lib/site-packages/setuptools-*.dist-info/**/*
 pyemd:
   linux-64/pyemd-0.5.1-py27h637b7d7_1000.tar.bz2:
     bad_paths:
@@ -335,57 +252,6 @@ pyemd:
       numpy.python.generated:
       - lib/python*/site-packages/numpy-*.dist-info/**/*
       - lib/python*/site-packages/numpy/**/*
-  osx-64/pyemd-0.5.1-py27h1702cab_1000.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - lib/python*/site-packages/numpy-*.dist-info/**/*
-      - lib/python*/site-packages/numpy/**/*
-  osx-64/pyemd-0.5.1-py27hf8a1672_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - lib/python*/site-packages/numpy-*.dist-info/**/*
-      - lib/python*/site-packages/numpy/**/*
-  osx-64/pyemd-0.5.1-py36h1702cab_1000.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - lib/python*/site-packages/numpy-*.dist-info/**/*
-      - lib/python*/site-packages/numpy/**/*
-  osx-64/pyemd-0.5.1-py36hf8a1672_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - lib/python*/site-packages/numpy-*.dist-info/**/*
-      - lib/python*/site-packages/numpy/**/*
-  osx-64/pyemd-0.5.1-py37h1702cab_1000.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - lib/python*/site-packages/numpy-*.dist-info/**/*
-      - lib/python*/site-packages/numpy/**/*
-  osx-64/pyemd-0.5.1-py37hf8a1672_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - lib/python*/site-packages/numpy-*.dist-info/**/*
-      - lib/python*/site-packages/numpy/**/*
-  win-64/pyemd-0.5.1-py27h39f3610_1000.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-  win-64/pyemd-0.5.1-py36h830ac7b_1000.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-  win-64/pyemd-0.5.1-py37h830ac7b_1000.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-pymapd:
-  win-64/pymapd-0.6.0-py36he025d50_1000.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
 pypy2.7:
   linux-64/pypy2.7-5.10.0-0.tar.bz2:
     bad_paths:
@@ -509,46 +375,6 @@ sisl:
     bad_paths:
       setuptools.python.generated:
       - lib/python2.7/site-packages/setuptools.pth
-  osx-64/sisl-0.9.5-py27h6762db8_1002.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - lib/python2.7/site-packages/setuptools.pth
-  osx-64/sisl-0.9.5-py27hb086daf_1002.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - lib/python2.7/site-packages/setuptools.pth
-  osx-64/sisl-0.9.6-py27h6762db8_0.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - lib/python2.7/site-packages/setuptools.pth
-  osx-64/sisl-0.9.6-py27h6fe5f1d_1.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - lib/python2.7/site-packages/setuptools.pth
-  osx-64/sisl-0.9.6-py27hb086daf_0.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - lib/python2.7/site-packages/setuptools.pth
-  osx-64/sisl-0.9.6-py27he80694f_1.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - lib/python2.7/site-packages/setuptools.pth
-  osx-64/sisl-0.9.7-py27h4273ecb_0.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - lib/python2.7/site-packages/setuptools.pth
-  osx-64/sisl-0.9.7-py27h6fe5f1d_0.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - lib/python2.7/site-packages/setuptools.pth
-  osx-64/sisl-0.9.7-py27he80694f_0.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - lib/python2.7/site-packages/setuptools.pth
-  osx-64/sisl-0.9.8-py27h4273ecb_0.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - lib/python2.7/site-packages/setuptools.pth
 spglib:
   linux-64/spglib-1.11.1.2-py27h3010b51_0.tar.bz2:
     bad_paths:
@@ -580,73 +406,3 @@ spglib:
       numpy.python.generated:
       - lib/python*/site-packages/numpy-*.dist-info/**/*
       - lib/python*/site-packages/numpy/**/*
-  osx-64/spglib-1.11.1.2-py27h7eb728f_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - lib/python*/site-packages/numpy-*.dist-info/**/*
-      - lib/python*/site-packages/numpy/**/*
-  osx-64/spglib-1.11.1.2-py27h917ab60_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - lib/python*/site-packages/numpy-*.dist-info/**/*
-      - lib/python*/site-packages/numpy/**/*
-  osx-64/spglib-1.11.1.2-py36h7eb728f_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - lib/python*/site-packages/numpy-*.dist-info/**/*
-      - lib/python*/site-packages/numpy/**/*
-  osx-64/spglib-1.11.1.2-py36h917ab60_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - lib/python*/site-packages/numpy-*.dist-info/**/*
-      - lib/python*/site-packages/numpy/**/*
-  osx-64/spglib-1.11.1.2-py37h7eb728f_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - lib/python*/site-packages/numpy-*.dist-info/**/*
-      - lib/python*/site-packages/numpy/**/*
-  osx-64/spglib-1.11.1.2-py37h917ab60_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - lib/python*/site-packages/numpy-*.dist-info/**/*
-      - lib/python*/site-packages/numpy/**/*
-  win-64/spglib-1.11.1.2-py27hc997a72_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-  win-64/spglib-1.11.1.2-py36h452e1ab_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-  win-64/spglib-1.11.1.2-py37h452e1ab_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-  win-64/spglib-1.11.2-py27hc997a72_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-  win-64/spglib-1.11.2-py27hc997a72_1.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-  win-64/spglib-1.11.2-py36h452e1ab_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-  win-64/spglib-1.11.2-py36h452e1ab_1.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-  win-64/spglib-1.11.2-py37h452e1ab_0.tar.bz2:
-    bad_paths:
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
