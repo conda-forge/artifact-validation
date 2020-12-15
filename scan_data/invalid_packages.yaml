@@ -1,16 +1,8 @@
 flask-creole:
-  linux-64/flask-creole-0.4.4-py27_1000.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - lib/python*/site-packages/click/**/*
   osx-64/flask-creole-0.4.4-py27_1000.tar.bz2:
     bad_paths:
       click.python.generated:
       - lib/python*/site-packages/click/**/*
-  win-64/flask-creole-0.4.4-py27_1000.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - Lib/site-packages/click/**/*
 flask-debugtoolbar:
   osx-64/flask-debugtoolbar-0.10.1-py27_1000.tar.bz2:
     bad_paths:
@@ -28,90 +20,7 @@ flask-debugtoolbar:
     bad_paths:
       click.python.generated:
       - lib/python*/site-packages/click/**/*
-  win-64/flask-debugtoolbar-0.10.1-py27_1000.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - Lib/site-packages/click/**/*
-  win-64/flask-debugtoolbar-0.10.1-py35_1000.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - Lib/site-packages/click/**/*
-  win-64/flask-debugtoolbar-0.10.1-py36_1000.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - Lib/site-packages/click/**/*
-  win-64/flask-debugtoolbar-0.10.1-py37_1000.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - Lib/site-packages/click/**/*
-flask-rest-orm:
-  linux-64/flask-rest-orm-0.5.0-py35_0.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - lib/python*/site-packages/click-*.dist-info/**/*
-      - lib/python*/site-packages/click/**/*
-  linux-64/flask-rest-orm-0.5.0-py36_0.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - lib/python*/site-packages/click-*.dist-info/**/*
-      - lib/python*/site-packages/click/**/*
-  win-64/flask-rest-orm-0.5.0-py35_0.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - Lib/site-packages/click-*.dist-info/**/*
-      - Lib/site-packages/click/**/*
-  win-64/flask-rest-orm-0.5.0-py36_0.tar.bz2:
-    bad_paths:
-      click.python.generated:
-      - Lib/site-packages/click-*.dist-info/**/*
-      - Lib/site-packages/click/**/*
-gensim:
-  win-64/gensim-3.5.0-py27h39f3610_1000.tar.bz2:
-    bad_paths:
-      certifi.python.generated:
-      - Lib/site-packages/certifi-*.dist-info/**/*
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-      scipy.python.generated:
-      - Lib/site-packages/scipy-*.dist-info/**/*
-      - Lib/site-packages/scipy/**/*
-  win-64/gensim-3.5.0-py36h830ac7b_1000.tar.bz2:
-    bad_paths:
-      certifi.python.generated:
-      - Lib/site-packages/certifi-*.dist-info/**/*
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-      scipy.python.generated:
-      - Lib/site-packages/scipy-*.dist-info/**/*
-      - Lib/site-packages/scipy/**/*
-  win-64/gensim-3.5.0-py37h830ac7b_1000.tar.bz2:
-    bad_paths:
-      certifi.python.generated:
-      - Lib/site-packages/certifi-*.dist-info/**/*
-      numpy.python.generated:
-      - Lib/site-packages/numpy-*.dist-info/**/*
-      - Lib/site-packages/numpy/**/*
-      scipy.python.generated:
-      - Lib/site-packages/scipy-*.dist-info/**/*
-      - Lib/site-packages/scipy/**/*
 google-api-core:
-  linux-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
-    bad_paths:
-      requests.python.generated:
-      - lib/python*/site-packages/requests-*.dist-info/**/*
-      - lib/python*/site-packages/requests/**/*
-  linux-64/google-api-core-1.20.1-py37hc8dfbb8_0.tar.bz2:
-    bad_paths:
-      requests.python.generated:
-      - lib/python*/site-packages/requests-*.dist-info/**/*
-      - lib/python*/site-packages/requests/**/*
-  linux-64/google-api-core-1.20.1-py38h32f6830_0.tar.bz2:
-    bad_paths:
-      requests.python.generated:
-      - lib/python*/site-packages/requests-*.dist-info/**/*
-      - lib/python*/site-packages/requests/**/*
   osx-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
     bad_paths:
       requests.python.generated:
@@ -127,21 +36,6 @@ google-api-core:
       requests.python.generated:
       - lib/python*/site-packages/requests-*.dist-info/**/*
       - lib/python*/site-packages/requests/**/*
-  win-64/google-api-core-1.20.1-py36h9f0ad1d_0.tar.bz2:
-    bad_paths:
-      requests.python.generated:
-      - Lib/site-packages/requests-*.dist-info/**/*
-      - Lib/site-packages/requests/**/*
-  win-64/google-api-core-1.20.1-py37hc8dfbb8_0.tar.bz2:
-    bad_paths:
-      requests.python.generated:
-      - Lib/site-packages/requests-*.dist-info/**/*
-      - Lib/site-packages/requests/**/*
-  win-64/google-api-core-1.20.1-py38h32f6830_0.tar.bz2:
-    bad_paths:
-      requests.python.generated:
-      - Lib/site-packages/requests-*.dist-info/**/*
-      - Lib/site-packages/requests/**/*
 google-cloud-bigquery-storage-core:
   noarch/google-cloud-bigquery-storage-core-2.0.0-pyh9f0ad1d_1.tar.bz2:
     bad_paths:
@@ -181,22 +75,6 @@ libarchive:
       - bin/activate
       - bin/conda
       - bin/deactivate
-metakernel:
-  win-64/metakernel-0.12.6-py27_0.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - Scripts/easy_install-2.7-script.py
-      - Scripts/easy_install-2.7.exe
-  win-64/metakernel-0.12.6-py34_0.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - Scripts/easy_install-3.4-script.py
-      - Scripts/easy_install-3.4.exe
-  win-64/metakernel-0.12.6-py35_0.tar.bz2:
-    bad_paths:
-      setuptools.python.generated:
-      - Scripts/easy_install-3.5-script.py
-      - Scripts/easy_install-3.5.exe
 pypy2.7:
   linux-64/pypy2.7-5.10.0-0.tar.bz2:
     bad_paths:
@@ -278,8 +156,3 @@ sagelib:
     bad_paths:
       pip.python.generated:
       - bin/pip
-sentry-sdk:
-  noarch/sentry-sdk-0.5.3-py_0.tar.bz2:
-    bad_paths:
-      certifi.python.generated:
-      - site-packages/certifi-*.dist-info/**/*
