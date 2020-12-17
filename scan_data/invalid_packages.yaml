@@ -104,3 +104,10 @@ sagelib:
     bad_paths:
       pip.python.generated:
       - bin/pip
+viridis:
+  linux-64/viridis-0.4.1-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
