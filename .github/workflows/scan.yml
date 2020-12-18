@@ -10,17 +10,17 @@ jobs:
     name: scan
     runs-on: "ubuntu-latest"
     steps:
+      - uses: actions/checkout@v2
+        if: success() && ! env.CI_SKIP
+        with:
+          fetch-depth: 100
+
       - name: turnstyle
         uses: ./vendored_actions/turnstyle
         with:
           continue-after-seconds: 10
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: actions/checkout@v2
-        if: success() && ! env.CI_SKIP
-        with:
-          fetch-depth: 100
 
       - name: install micromamba
         if: success() && ! env.CI_SKIP
