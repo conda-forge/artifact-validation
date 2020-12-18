@@ -194,7 +194,7 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
                     else:
                         skipped_for_restart = True
 
-                curr_resdat["pkg"] = pkg_chunk[0][0:2]
+                curr_resdat["pkg"] = pkg_chunk[0][0:3]
 
                 jobs = [
                     joblib.delayed(_process_artifact)(
