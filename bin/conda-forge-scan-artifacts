@@ -189,12 +189,12 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
                     and resdat["pkg"] is not None
                     and not skipped_for_restart
                 ):
-                    if resdat["pkg"] not in pkg_chunk:
+                    if not pkg_chunk[0].startswith(resdat["pkg"]):
                         continue
                     else:
                         skipped_for_restart = True
 
-                curr_resdat["pkg"] = pkg_chunk[0]
+                curr_resdat["pkg"] = pkg_chunk[0][0:2]
 
                 jobs = [
                     joblib.delayed(_process_artifact)(

@@ -1,8 +1,8 @@
 name: scan
 
 on:
-#   schedule:
-#     - cron: "0 * * * *"
+  schedule:
+    - cron: "0 * * * *"
   workflow_dispatch: null
 
 jobs:
@@ -10,6 +10,13 @@ jobs:
     name: scan
     runs-on: "ubuntu-latest"
     steps:
+      - name: turnstyle
+        uses: softprops/turnstyle@v1
+        with:
+          abort-after-seconds: 10
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: actions/checkout@v2
         with:
           fetch-depth: 100
@@ -64,3 +71,10 @@ jobs:
           GH_TOKEN: ${{ secrets.CF_DAEMON_GH_TOKEN }}
           RUN_ID: ${{ github.run_id }}
           ACTION_NAME: ${{ github.workflow }}
+
+      - name: trigger next job
+        uses: benc-uk/workflow-dispatch@v1
+        if: github.ref == 'refs/heads/master' && ! cancelled() && ! failure()
+        with:
+          workflow: scan
+          token: ${{ secrets.CF_DAEMON_GH_TOKEN }}
