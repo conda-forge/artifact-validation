@@ -17,14 +17,23 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: catch fail
+        shell: bash -l {0}
+        if: github.ref == 'refs/heads/master' && failure()
+        run: |
+          echo "CI_SKIP=true" >> $GITHUB_ENV
+
       - uses: actions/checkout@v2
+        if: success() && ! env.CI_SKIP
         with:
           fetch-depth: 100
 
       - name: install micromamba
+        if: success() && ! env.CI_SKIP
         uses: mamba-org/provision-with-micromamba@main
 
       - name: configure git and install code
+        if: success() && ! env.CI_SKIP
         shell: bash -l {0}
         run: |
           python -m pip install -e .
@@ -33,11 +42,13 @@ jobs:
           git config user.email github-actions@github.com
 
       - name: clone libcfgraph
+        if: success() && ! env.CI_SKIP
         shell: bash -l {0}
         run: |
           git clone --depth=1 https://github.com/regro/libcfgraph.git
 
       - name: scan
+        if: success() && ! env.CI_SKIP
         shell: bash -l {0}
         run: |
           conda-forge-scan-artifacts \
@@ -49,6 +60,7 @@ jobs:
             --output-path=scan_data/invalid_packages.yaml
 
       - name: push
+        if: success() && ! env.CI_SKIP
         shell: bash -l {0}
         run: |
           git add scan_data/.
@@ -62,7 +74,7 @@ jobs:
 
       - name: bump on fail
         shell: bash -l {0}
-        if: github.ref == 'refs/heads/master' && failure()
+        if: github.ref == 'refs/heads/master' && failure() && ! env.CI_SKIP
         run: |
           conda-forge-bump-on-fail \
             --job-name=${ACTION_NAME} \
@@ -73,6 +85,7 @@ jobs:
           ACTION_NAME: ${{ github.workflow }}
 
       - name: trigger next job
+        if: success() && ! env.CI_SKIP
         uses: benc-uk/workflow-dispatch@v1
         if: github.ref == 'refs/heads/master' && ! cancelled() && ! failure()
         with:
