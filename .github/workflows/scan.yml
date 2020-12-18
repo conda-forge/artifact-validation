@@ -44,7 +44,7 @@ jobs:
             -v \
             --pull \
             --libcfgraph-path=libcfgraph \
-            --time-limit=19800 \
+            --time-limit=3600 \
             --restart-data=scan_data/restart.json \
             --output-path=scan_data/invalid_packages.yaml
 
