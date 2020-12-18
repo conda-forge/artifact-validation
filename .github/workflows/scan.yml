@@ -85,9 +85,8 @@ jobs:
           ACTION_NAME: ${{ github.workflow }}
 
       - name: trigger next job
-        if: success() && ! env.CI_SKIP
         uses: benc-uk/workflow-dispatch@v1
-        if: github.ref == 'refs/heads/master' && ! cancelled() && ! failure()
+        if: github.ref == 'refs/heads/master' && ! cancelled() && ! failure() && ! env.CI_SKIP
         with:
           workflow: scan
           token: ${{ secrets.CF_DAEMON_GH_TOKEN }}
