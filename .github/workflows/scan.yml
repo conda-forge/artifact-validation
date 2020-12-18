@@ -11,17 +11,11 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - name: turnstyle
-        uses: softprops/turnstyle@v1
+        uses: ./vendored_actions/turnstyle
         with:
-          abort-after-seconds: 10
+          continue-after-seconds: 10
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: catch fail
-        shell: bash -l {0}
-        if: github.ref == 'refs/heads/master' && failure()
-        run: |
-          echo "CI_SKIP=true" >> $GITHUB_ENV
 
       - uses: actions/checkout@v2
         if: success() && ! env.CI_SKIP
