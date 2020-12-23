@@ -22,6 +22,13 @@ jobs:
           continue-after-seconds: 10
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: results
+        shell: bash -l {0}
+        run: |
+          echo ${out}
+        env:
+          out: ${{ steps.turnstyle.outputs.force_continued }}
 
       - name: install micromamba
         if: success() && ! steps.turnstyle.outputs.force_continued
