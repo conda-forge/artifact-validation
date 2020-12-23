@@ -30,6 +30,14 @@ jobs:
         env:
           out: ${{ steps.turnstyle.outputs.force_continued }}
 
+      - name: show not
+        if: success() && ! steps.turnstyle.outputs.force_continued
+        shell: bash -l {0}
+        run: |
+          echo ${out}
+        env:
+          out: ${{ steps.turnstyle.outputs.force_continued }}
+
       - name: install micromamba
         if: success() && ! steps.turnstyle.outputs.force_continued
         uses: mamba-org/provision-with-micromamba@main
