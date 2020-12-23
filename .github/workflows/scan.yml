@@ -11,7 +11,6 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - uses: actions/checkout@v2
-        if: success() && ! env.CI_SKIP
         with:
           fetch-depth: 100
 
@@ -22,20 +21,13 @@ jobs:
           continue-after-seconds: 10
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: results
-        shell: bash -l {0}
-        run: |
-          echo ${out}
-        env:
-          out: ${{ steps.turnstyle.outputs.force_continued }}
 
       - name: install micromamba
-        if: success() && ! steps.turnstyle.outputs.force_continued
+        if: success() && steps.turnstyle.outputs.force_continued == 'true'
         uses: mamba-org/provision-with-micromamba@main
 
       - name: configure git and install code
-        if: success() && ! steps.turnstyle.outputs.force_continued
+        if: success() && steps.turnstyle.outputs.force_continued == 'true'
         shell: bash -l {0}
         run: |
           python -m pip install -e .
@@ -44,13 +36,13 @@ jobs:
           git config user.email github-actions@github.com
 
       - name: clone libcfgraph
-        if: success() && ! steps.turnstyle.outputs.force_continued
+        if: success() && steps.turnstyle.outputs.force_continued == 'true'
         shell: bash -l {0}
         run: |
           git clone --depth=1 https://github.com/regro/libcfgraph.git
 
       - name: scan
-        if: success() && ! steps.turnstyle.outputs.force_continued
+        if: success() && steps.turnstyle.outputs.force_continued == 'true'
         shell: bash -l {0}
         run: |
           conda-forge-scan-artifacts \
@@ -62,7 +54,7 @@ jobs:
             --output-path=scan_data/invalid_packages.yaml
 
       - name: push
-        if: success() && ! steps.turnstyle.outputs.force_continued
+        if: success() && steps.turnstyle.outputs.force_continued == 'true'
         shell: bash -l {0}
         run: |
           git add scan_data/.
@@ -76,7 +68,7 @@ jobs:
 
       - name: bump on fail
         shell: bash -l {0}
-        if: github.ref == 'refs/heads/master' && failure() && ! steps.turnstyle.outputs.force_continued
+        if: github.ref == 'refs/heads/master' && failure() && steps.turnstyle.outputs.force_continued == 'true'
         run: |
           conda-forge-bump-on-fail \
             --job-name=${ACTION_NAME} \
@@ -88,7 +80,7 @@ jobs:
 
       - name: trigger next job
         uses: benc-uk/workflow-dispatch@v1
-        if: github.ref == 'refs/heads/master' && ! cancelled() && ! failure() && ! steps.turnstyle.outputs.force_continued
+        if: github.ref == 'refs/heads/master' && ! cancelled() && ! failure() && steps.turnstyle.outputs.force_continued == 'true'
         with:
           workflow: scan
           token: ${{ secrets.CF_DAEMON_GH_TOKEN }}
