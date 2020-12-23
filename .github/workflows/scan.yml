@@ -19,6 +19,7 @@ jobs:
         uses: beckermr/turnstyle@beckermr-patch-1
         with:
           continue-after-seconds: 10
+          poll-interval-seconds: 5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
