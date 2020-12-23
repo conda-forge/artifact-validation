@@ -44,7 +44,7 @@ jobs:
         uses: mamba-org/provision-with-micromamba@main
 
       - name: configure git and install code
-        if: success() && steps.turnstyle.outputs.force_continued == 'false'
+        if: success() && ! steps.turnstyle.outputs.force_continued
         shell: bash -l {0}
         run: |
           python -m pip install -e .
