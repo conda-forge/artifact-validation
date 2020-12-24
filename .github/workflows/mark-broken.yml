@@ -26,6 +26,11 @@ jobs:
           git config --global user.name conda-forge-daemon
           git config --global user.email '64793534+conda-forge-daemon@users.noreply.github.com'
 
+          repo_url=https://${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git remote set-url --push origin ${repo_url}
+        env:
+          GH_TOKEN: ${{ secrets.CF_DAEMON_GH_TOKEN }}
+
       - name: mark-broken
         shell: bash -l {0}
         run: |
