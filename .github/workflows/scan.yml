@@ -16,7 +16,7 @@ jobs:
 
       - name: turnstyle
         id: turnstyle
-        uses: beckermr/turnstyle@beckermr-patch-1
+        uses: softprops/turnstyle@v1
         with:
           continue-after-seconds: 10
           poll-interval-seconds: 5
