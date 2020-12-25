@@ -143,6 +143,11 @@ def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, ve
 def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
     """Scan all conda-forge artifacts for invalid paths."""
 
+    # do a git pull here in case repo is out of date
+    if pull:
+        print("pulling latest changes...", flush=True)
+        subprocess.run("git pull", shell=True)
+
     validate_yamls = _munge_validate_yamls()
     final_data = defaultdict(dict)
     start_time = time.time()
