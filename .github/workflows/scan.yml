@@ -10,10 +10,6 @@ jobs:
     name: scan
     runs-on: "ubuntu-latest"
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 100
-
       - name: turnstyle
         id: turnstyle
         uses: softprops/turnstyle@v1
@@ -22,6 +18,10 @@ jobs:
           poll-interval-seconds: 5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 100
 
       - name: install micromamba
         if: success() && ! steps.turnstyle.outputs.force_continued
