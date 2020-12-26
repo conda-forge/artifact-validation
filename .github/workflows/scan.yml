@@ -56,14 +56,11 @@ jobs:
             -v \
             --pull \
             --libcfgraph-path=libcfgraph \
-            --time-limit=3000 \
+            --time-limit=5400 \
             --restart-data=scan_data/restart.json \
             --output-path=scan_data/invalid_packages.yaml
 
-      - name: push
-        if: success() && ! steps.turnstyle.outputs.force_continued
-        shell: bash -l {0}
-        run: |
+          git diff
           git add scan_data/.
           git commit -m "[ci skip] scan data for https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
           for _ in `seq 0 1`; do
