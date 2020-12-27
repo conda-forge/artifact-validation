@@ -129,7 +129,7 @@ def download_and_validate(
 
     _, pkg = subdir_pkg.split(os.path.sep)
 
-    with tempfile.TemporaryDirectory(dir=os.environ.get("RUNNER_TEMP")) as tmpdir:
+    with tempfile.TemporaryDirectory(dir=os.environ["GITHUB_WORKSPACE"])) as tmpdir:
         try:
             # download
             subprocess.run(
