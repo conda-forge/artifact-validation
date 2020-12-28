@@ -76,11 +76,18 @@ def validate_file(path, validate_yamls, tmpdir=None, lock=None):
     else:
         pkg_nm = pkg[: -len(".conda")]
 
-    if lock is not None:
-        with lock:
+    try:
+        if lock is not None:
+            with lock:
+                conda_package_handling.api.extract(path)
+        else:
             conda_package_handling.api.extract(path)
-    else:
-        conda_package_handling.api.extract(path)
+    except Exception as e:
+        print(
+            "error extracting archive %f: %s" % (os.path.basename(path), repr(e)),
+            flush=True,
+        )
+        return valid, bad_pths
 
     for validate_name, validate_yaml in validate_yamls.items():
         if output_name not in validate_yaml["allowed"]:
