@@ -7,6 +7,7 @@ import logging
 import shutil
 
 import github
+import conda_package_handling.api
 
 from .utils import split_pkg, compute_md5sum
 
@@ -78,18 +79,10 @@ def validate_file(path, validate_yamls, tmpdir=None, lock=None):
     try:
         if lock is not None:
             with lock:
-                subprocess.run(
-                    f"cph extract {path}",
-                    check=True,
-                    shell=True,
-                )
+                conda_package_handling.api.extract(path)
         else:
-            subprocess.run(
-                f"cph extract {path}",
-                check=True,
-                shell=True,
-            )
-    except subprocess.CalledProcessError as e:
+            conda_package_handling.api.extract(path)
+    except Exception as e:
         print(
             "error extracting archive %f: %s" % (os.path.basename(path), repr(e)),
             flush=True,
