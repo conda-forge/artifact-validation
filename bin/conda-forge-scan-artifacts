@@ -160,6 +160,7 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
                 resdat = json.load(fp)
         else:
             resdat = {"subdir": None, "pkg": None}
+    print("restart data: %s" % resdat, flush=True)
     skipped_for_restart = False
 
     joblib_verbose = {0: 0, 1: 0, 2: 100}[verbose]
