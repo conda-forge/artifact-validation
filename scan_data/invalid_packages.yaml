@@ -23,6 +23,15 @@ google-cloud-bigquery-storage-core:
       requests.python.generated:
       - site-packages/requests-*.dist-info/**/*
       - site-packages/requests/**/*
+pyemma:
+  linux-64/pyemma-2.2.6-np111py35_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
+      scipy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/scipy/**/*
 pypy2.7:
   linux-64/pypy2.7-5.10.0-0.tar.bz2:
     bad_paths:
