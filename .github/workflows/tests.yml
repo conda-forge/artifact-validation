@@ -11,45 +11,63 @@ jobs:
     name: tests
     runs-on: "ubuntu-latest"
     steps:
+      - name: skip me
+        shell: bash -l {0}
+        if: success() && contains(github.event.head_commit.message, 'ci skip')
+        run: |
+          echo "commit message: '${MSG}'"
+          echo "CI_SKIP=true" >> $GITHUB_ENV
+        env:
+          MSG: ${{ github.event.head_commit.message }}
+      
       - name: cancel previous runs
         uses: styfle/cancel-workflow-action@0.6.0
+        if: success() && ! env.CI_SKIP
         with:
           access_token: ${{ github.token }}
 
       - uses: actions/checkout@v2
+        if: success() && ! env.CI_SKIP
         
       - name: install micromamba
         uses: mamba-org/provision-with-micromamba@main
+        if: success() && ! env.CI_SKIP
 
       - name: install code
         shell: bash -l {0}
+        if: success() && ! env.CI_SKIP
         run: |
           python -m pip install -e .
 
       - name: lint
         shell: bash -l {0}
+        if: success() && ! env.CI_SKIP
         run: |
           flake8 conda_forge_artifact_validation
           flake8 bin/*
 
       - name: test
         shell: bash -l {0}
+        if: success() && ! env.CI_SKIP
         run: |
           pytest -vvs conda_forge_artifact_validation
 
       - name: run cli help commands
+        if: success() && ! env.CI_SKIP
         shell: bash -l {0}
         run: |
           conda-forge-validate-artifact --help
           conda-forge-generate-validate-yamls --help
 
       - name: run generate smoke test
+        if: success() && ! env.CI_SKIP
         shell: bash -l {0}
         run: |
           conda-forge-generate-validate-yamls --test
           git diff
 
       - name: run cli utils tests
+        if: success() && ! env.CI_SKIP
         shell: bash -l {0}
         run: |
           wget -q https://conda.anaconda.org/conda-forge/osx-64/numpy-1.19.4-py36hcf5569d_1.tar.bz2
