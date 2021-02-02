@@ -1,3 +1,32 @@
+cudatoolkit:
+  linux-64/cudatoolkit-10.0.130-hf841e97_7.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-64/cudatoolkit-10.1.243-h036e899_7.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-64/cudatoolkit-10.2.89-h8f6ccaa_7.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-64/cudatoolkit-11.0.3-h15472ef_7.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-64/cudatoolkit-11.1.1-h6406543_7.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-64/cudatoolkit-11.2.0-h73cb219_7.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-64/cudatoolkit-9.2.148-h80a95b2_7.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 google-cloud-bigquery-storage-core:
   noarch/google-cloud-bigquery-storage-core-2.0.0-pyh9f0ad1d_1.tar.bz2:
     bad_paths:
