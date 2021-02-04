@@ -27,6 +27,20 @@ cudatoolkit:
     bad_paths:
       md5sum:
         valid: false
+  win-64/cudatoolkit-10.0.130-h5327add_7.tar.bz2:
+    bad_paths: {}
+  win-64/cudatoolkit-11.0.3-h3f58a73_7.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  win-64/cudatoolkit-11.1.1-heb2d755_7.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  win-64/cudatoolkit-11.2.0-h608a323_7.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 google-cloud-bigquery-storage-core:
   noarch/google-cloud-bigquery-storage-core-2.0.0-pyh9f0ad1d_1.tar.bz2:
     bad_paths:
