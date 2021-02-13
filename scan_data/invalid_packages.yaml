@@ -15,11 +15,27 @@ cudatoolkit:
     bad_paths:
       md5sum:
         valid: false
+  linux-64/cudatoolkit-11.0.3-h15472ef_8.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
   linux-64/cudatoolkit-11.1.1-h6406543_7.tar.bz2:
     bad_paths:
       md5sum:
         valid: false
+  linux-64/cudatoolkit-11.1.1-h6406543_8.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
   linux-64/cudatoolkit-11.2.0-h73cb219_7.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-64/cudatoolkit-11.2.0-h73cb219_8.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-64/cudatoolkit-11.2.1-h8204236_8.tar.bz2:
     bad_paths:
       md5sum:
         valid: false
