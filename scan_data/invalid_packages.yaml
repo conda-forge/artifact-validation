@@ -61,7 +61,15 @@ cudatoolkit:
         valid: false
   win-64/cudatoolkit-10.0.130-h5327add_7.tar.bz2:
     bad_paths: {}
+  win-64/cudatoolkit-10.0.130-h5327add_8.tar.bz2:
+    bad_paths: {}
+  win-64/cudatoolkit-10.1.243-h3826478_8.tar.bz2:
+    bad_paths: {}
   win-64/cudatoolkit-11.0.3-h3f58a73_7.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  win-64/cudatoolkit-11.0.3-h3f58a73_8.tar.bz2:
     bad_paths:
       md5sum:
         valid: false
@@ -70,6 +78,10 @@ cudatoolkit:
       md5sum:
         valid: false
   win-64/cudatoolkit-11.2.0-h608a323_7.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  win-64/cudatoolkit-11.2.0-h608a323_8.tar.bz2:
     bad_paths:
       md5sum:
         valid: false
