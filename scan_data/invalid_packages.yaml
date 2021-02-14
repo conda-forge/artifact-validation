@@ -64,7 +64,9 @@ cudatoolkit:
   win-64/cudatoolkit-10.0.130-h5327add_8.tar.bz2:
     bad_paths: {}
   win-64/cudatoolkit-10.1.243-h3826478_8.tar.bz2:
-    bad_paths: {}
+    bad_paths:
+      md5sum:
+        valid: false
   win-64/cudatoolkit-11.0.3-h3f58a73_7.tar.bz2:
     bad_paths:
       md5sum:
@@ -85,6 +87,13 @@ cudatoolkit:
     bad_paths:
       md5sum:
         valid: false
+dill:
+  win-64/dill-0.2.5-py34_1.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 google-cloud-bigquery-storage-core:
   noarch/google-cloud-bigquery-storage-core-2.0.0-pyh9f0ad1d_1.tar.bz2:
     bad_paths:
