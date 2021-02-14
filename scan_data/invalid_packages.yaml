@@ -16,9 +16,7 @@ cudatoolkit:
       md5sum:
         valid: false
   linux-64/cudatoolkit-11.0.3-h15472ef_8.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
+    bad_paths: {}
   linux-64/cudatoolkit-11.1.1-h6406543_7.tar.bz2:
     bad_paths:
       md5sum:
@@ -112,6 +110,9 @@ dill:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+geant4:
+  linux-64/geant4-10.7.1-py38h383aeff_1.tar.bz2:
+    bad_paths: {}
 google-cloud-bigquery-storage-core:
   noarch/google-cloud-bigquery-storage-core-2.0.0-pyh9f0ad1d_1.tar.bz2:
     bad_paths:
