@@ -29,6 +29,9 @@ from conda_forge_artifact_validation.cached_repodata import (
 )
 
 CHUNKSIZE = 64
+BIG_PACKAGES = [
+    "cudatoolkit",
+]
 CPHLock = threading.RLock()
 
 yaml.add_representer(defaultdict, Representer.represent_dict)
@@ -169,54 +172,61 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
 
     joblib_verbose = {0: 0, 1: 0, 2: 100}[verbose]
 
-    with joblib.Parallel(n_jobs=1, backend='threading', verbose=joblib_verbose) as para:
-        for subdir in SUBDIRS:
-            if (
-                restart_data
-                and resdat["subdir"] is not None
-                and SUBDIRS.index(subdir) < SUBDIRS.index(resdat["subdir"])
-            ):
+    for subdir in SUBDIRS:
+        if (
+            restart_data
+            and resdat["subdir"] is not None
+            and SUBDIRS.index(subdir) < SUBDIRS.index(resdat["subdir"])
+        ):
+            continue
+
+        print("\n" + "=" * 80, flush=True)
+        print("=" * 80, flush=True)
+        print("processing subdir %s" % subdir, flush=True)
+        rd = REPODATA_CACHE[subdir]
+        curr_resdat["subdir"] = subdir
+
+        pkgs = sorted(rd["packages"])
+        tot = math.ceil(len(pkgs) / CHUNKSIZE)
+        for pkg_chunk in tqdm.tqdm(
+            chunk_iterable(pkgs, CHUNKSIZE),
+            total=tot,
+            desc=subdir,
+        ):
+            if len(pkg_chunk) == 0:
                 continue
 
-            print("\n" + "=" * 80, flush=True)
-            print("=" * 80, flush=True)
-            print("processing subdir %s" % subdir, flush=True)
-            rd = REPODATA_CACHE[subdir]
-            curr_resdat["subdir"] = subdir
-
-            pkgs = sorted(rd["packages"])
-            tot = math.ceil(len(pkgs) / CHUNKSIZE)
-            for pkg_chunk in tqdm.tqdm(
-                chunk_iterable(pkgs, CHUNKSIZE),
-                total=tot,
-                desc=subdir,
+            if (
+                restart_data
+                and resdat["pkg"] is not None
+                and not skipped_for_restart
             ):
-                if len(pkg_chunk) == 0:
+                if not pkg_chunk[0].startswith(resdat["pkg"]):
                     continue
+                else:
+                    skipped_for_restart = True
 
-                if (
-                    restart_data
-                    and resdat["pkg"] is not None
-                    and not skipped_for_restart
-                ):
-                    if not pkg_chunk[0].startswith(resdat["pkg"]):
-                        continue
-                    else:
-                        skipped_for_restart = True
+            curr_resdat["pkg"] = pkg_chunk[0][0:3]
 
-                curr_resdat["pkg"] = pkg_chunk[0][0:3]
+            jobs = [
+                joblib.delayed(_process_artifact)(
+                    pkg,
+                    copy.deepcopy(rd["packages"][pkg]),
+                    libcfgraph_path,
+                    subdir,
+                    validate_yamls,
+                    verbose,
+                )
+                for pkg in pkg_chunk
+            ]
+            if any(rd["packages"][pkg]["name"] in BIG_PACKAGES for pkg in pkg_chunk):
+                n_jobs = 1
+            else:
+                n_jobs = 8
 
-                jobs = [
-                    joblib.delayed(_process_artifact)(
-                        pkg,
-                        copy.deepcopy(rd["packages"][pkg]),
-                        libcfgraph_path,
-                        subdir,
-                        validate_yamls,
-                        verbose,
-                    )
-                    for pkg in pkg_chunk
-                ]
+            with joblib.Parallel(
+                n_jobs=n_jobs, backend='threading', verbose=joblib_verbose
+            ) as para:
                 any_new = False
                 for d_valid, d in para(jobs):
                     if d_valid is not None and not d_valid:
@@ -224,23 +234,23 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
                             final_data[k].update(v)
                             any_new = True
 
-                if any_new:
-                    print(
-                        "data:\n%s" % yaml.dump(
-                            final_data,
-                            default_flow_style=False,
-                            indent=2,
-                        ),
-                        flush=True,
-                    )
+            if any_new:
+                print(
+                    "data:\n%s" % yaml.dump(
+                        final_data,
+                        default_flow_style=False,
+                        indent=2,
+                    ),
+                    flush=True,
+                )
 
-                if time_limit is not None and time.time() - start_time >= time_limit:
-                    out_of_time = True
-                    break
-
-            if out_of_time:
-                print("\n\nout of time - stopping!\n", flush=True)
+            if time_limit is not None and time.time() - start_time >= time_limit:
+                out_of_time = True
                 break
+
+        if out_of_time:
+            print("\n\nout of time - stopping!\n", flush=True)
+            break
 
     # do a git pull here in case repo is out of date
     if pull:
