@@ -103,7 +103,7 @@ def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, ve
                 lock=CPHLock,
             )
         except Exception:
-            valid = None
+            valid = False
             bad_pths = None
     else:
         valid, bad_pths = _test_file_paths(repodata["name"], data, validate_yamls)
@@ -169,7 +169,7 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
 
     joblib_verbose = {0: 0, 1: 0, 2: 100}[verbose]
 
-    with joblib.Parallel(n_jobs=4, backend='threading', verbose=joblib_verbose) as para:
+    with joblib.Parallel(n_jobs=1, backend='threading', verbose=joblib_verbose) as para:
         for subdir in SUBDIRS:
             if (
                 restart_data
