@@ -104,7 +104,7 @@ def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, ve
             )
         except Exception:
             valid = None
-            bad_paths = None
+            bad_pths = None
     else:
         valid, bad_pths = _test_file_paths(repodata["name"], data, validate_yamls)
 
