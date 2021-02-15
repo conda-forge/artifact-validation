@@ -94,13 +94,17 @@ def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, ve
         if verbose > 0:
             print("downloading artifact '%s'" % pkg_url, flush=True)
 
-        valid, bad_pths = download_and_validate(
-            CHANNEL_URL,
-            f"{subdir}/{pkg}",
-            validate_yamls,
-            md5sum=repodata["md5"],
-            lock=CPHLock,
-        )
+        try:
+            valid, bad_pths = download_and_validate(
+                CHANNEL_URL,
+                f"{subdir}/{pkg}",
+                validate_yamls,
+                md5sum=repodata["md5"],
+                lock=CPHLock,
+            )
+        except Exception:
+            valid = None
+            bad_paths = None
     else:
         valid, bad_pths = _test_file_paths(repodata["name"], data, validate_yamls)
 
@@ -215,7 +219,7 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
                 ]
                 any_new = False
                 for d_valid, d in para(jobs):
-                    if not d_valid:
+                    if d_valid is not None and not d_valid:
                         for k, v in d.items():
                             final_data[k].update(v)
                             any_new = True
