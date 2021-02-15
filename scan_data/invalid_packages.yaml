@@ -1,3 +1,8 @@
+cffi:
+  win-64/cffi-1.14.5-py36he58ceb7_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 cudatoolkit:
   linux-64/cudatoolkit-10.0.130-hf841e97_7.tar.bz2:
     bad_paths:
