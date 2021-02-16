@@ -29,9 +29,7 @@ cudatoolkit:
       md5sum:
         valid: false
   linux-64/cudatoolkit-11.1.1-h6406543_8.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
+    bad_paths: {}
   linux-64/cudatoolkit-11.2.0-h73cb219_7.tar.bz2:
     bad_paths:
       md5sum:
@@ -41,9 +39,7 @@ cudatoolkit:
       md5sum:
         valid: false
   linux-64/cudatoolkit-11.2.1-h8204236_8.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
+    bad_paths: {}
   linux-64/cudatoolkit-9.2.148-h80a95b2_7.tar.bz2:
     bad_paths:
       md5sum:
