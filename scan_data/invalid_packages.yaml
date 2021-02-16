@@ -3,6 +3,13 @@ cffi:
     bad_paths:
       md5sum:
         valid: false
+conda-gitenv:
+  osx-64/conda-gitenv-0.2.1-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 cudatoolkit:
   linux-64/cudatoolkit-10.0.130-hf841e97_7.tar.bz2:
     bad_paths:
