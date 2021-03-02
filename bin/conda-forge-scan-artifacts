@@ -10,6 +10,7 @@ import subprocess
 import copy
 import threading
 
+import requests
 import rapidjson as json
 import click
 import yaml
@@ -78,19 +79,32 @@ def _munge_validate_yamls():
 
 
 def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, verbose):
-    lcfg_pth = os.path.join(
-        libcfgraph_path,
+    artif_pth = os.path.join(
         "artifacts",
         repodata["name"],
         "conda-forge",
         subdir,
         pkg.replace(".tar.bz2", ".json"),
     )
+
+    lcfg_pth = os.path.join(libcfgraph_path, artif_pth)
     try:
         with open(lcfg_pth, "r") as fp:
             data = json.load(fp).get("files", None)
     except Exception:
         data = None
+
+    if data is None:
+        http_url = os.path.join(
+            "https://raw.githubusercontent.com/regro/libcfgraph/master",
+            artif_pth,
+        )
+        try:
+            _rr = requests.get(http_url)
+            _rr.raise_for_status()
+            data = _rr.json().get("files", None)
+        except Exception:
+            data = None
 
     if data is None:
         pkg_url = f"{CHANNEL_URL}/{subdir}/{pkg}"
