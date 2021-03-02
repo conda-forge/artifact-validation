@@ -19,6 +19,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate token
+        if: success() && ! steps.turnstyle.outputs.force_continued
         id: generate_token
         uses: tibdex/github-app-token@v1
         with:
@@ -26,9 +27,10 @@ jobs:
           private_key: ${{ secrets.CF_CURATOR_PRIVATE_KEY }}
 
       - uses: actions/checkout@v2
+        if: success() && ! steps.turnstyle.outputs.force_continued
         with:
           fetch-depth: 100
-          token: ${{ steps.generate_token.outputs.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: install micromamba
         if: success() && ! steps.turnstyle.outputs.force_continued
@@ -83,7 +85,7 @@ jobs:
             --job-name=${ACTION_NAME} \
             --job-url="https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
         env:
-          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RUN_ID: ${{ github.run_id }}
           ACTION_NAME: ${{ github.workflow }}
 
