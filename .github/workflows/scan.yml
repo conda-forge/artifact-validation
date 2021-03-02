@@ -49,7 +49,7 @@ jobs:
         shell: bash -l {0}
         run: |
           curl -L https://github.com/regro/libcfgraph/archive/master.zip -o libcfgraph-master.zip
-          unzip libcfgraph-master.zip
+          unzip -qq libcfgraph-master.zip
           mv libcfgraph-master libcfgraph
           # git clone --depth=1 https://github.com/regro/libcfgraph.git
 
