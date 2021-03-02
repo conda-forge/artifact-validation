@@ -48,7 +48,10 @@ jobs:
         if: success() && ! steps.turnstyle.outputs.force_continued
         shell: bash -l {0}
         run: |
-          git clone --depth=1 https://github.com/regro/libcfgraph.git
+          curl -L https://github.com/regro/libcfgraph/archive/master.zip -o libcfgraph-master.zip
+          unzip libcfgraph-master.zip
+          mv libcfgraph-master libcfgraph
+          # git clone --depth=1 https://github.com/regro/libcfgraph.git
 
       - name: scan
         if: success() && ! steps.turnstyle.outputs.force_continued
