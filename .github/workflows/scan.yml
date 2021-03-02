@@ -60,18 +60,6 @@ jobs:
         env:
           RUN_ID: ${{ github.run_id }}
 
-      - name: bump on fail
-        shell: bash -l {0}
-        if: github.ref == 'refs/heads/master' && failure() && ! steps.turnstyle.outputs.force_continued
-        run: |
-          conda-forge-bump-on-fail \
-            --job-name=${ACTION_NAME} \
-            --job-url="https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RUN_ID: ${{ github.run_id }}
-          ACTION_NAME: ${{ github.workflow }}
-
       - name: Generate token
         if: success() && ! steps.turnstyle.outputs.force_continued
         id: generate_token
@@ -86,3 +74,15 @@ jobs:
         with:
           workflow: scan
           token: ${{ steps.generate_token.outputs.token }}
+
+      - name: bump on fail
+        shell: bash -l {0}
+        if: github.ref == 'refs/heads/master' && failure() && ! steps.turnstyle.outputs.force_continued
+        run: |
+          conda-forge-bump-on-fail \
+            --job-name=${ACTION_NAME} \
+            --job-url="https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_ID: ${{ github.run_id }}
+          ACTION_NAME: ${{ github.workflow }}
