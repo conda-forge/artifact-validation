@@ -46,7 +46,7 @@ def _get_subdir_pkg_from_libcfgraph_artifact(artifact_pth):
     return subdir, pkg
 
 
-def _get_all_json_blobs_for_artifact(artifact_name):
+def _get_all_json_blobs_for_artifact(artifact_name, verbose=0):
     """Given the name of a conda package, download all libcfgraph entries for it."""
     global LIBCFGRAPH_INDEX
     if LIBCFGRAPH_INDEX is None:
@@ -80,12 +80,14 @@ def _get_all_json_blobs_for_artifact(artifact_name):
         joblib.delayed(_download_jsob_blob)(artifact_pth)
         for artifact_pth in artifact_pths
     ]
-    artifacts = joblib.Parallel(n_jobs=20, backend="threading", verbose=0)(jobs)
+    artifacts = joblib.Parallel(n_jobs=20, backend="threading", verbose=verbose)(jobs)
 
     return [a for a in artifacts if a is not None]
 
 
-def generate_validate_yaml_from_libcfgraph(artifact_name, exclude_globs=None):
+def generate_validate_yaml_from_libcfgraph(
+    artifact_name, exclude_globs=None, verbose=0
+):
     """Generate a validation YAML file from an artifact using libcfgraph.
 
     This function uses libcfgraph (https://raw.githubusercontent.com/regro/libcfgraph)
@@ -101,6 +103,9 @@ def generate_validate_yaml_from_libcfgraph(artifact_name, exclude_globs=None):
     exclude_globs : list of str, optional
         If given, any file in artifact that would be matched by any of the glob
         patterns will be excluded.
+    verbose : int, optional
+        Integer between 0 and 100. Passed to joblib. Zero produces no output (default)
+        and 100 produces the maximum amount of output.
 
     Returns
     -------
@@ -115,7 +120,7 @@ def generate_validate_yaml_from_libcfgraph(artifact_name, exclude_globs=None):
     LOGGER.debug("using %s regexes for %s", re_patt_comps, artifact_name)
 
     # get all json blobs for artifact
-    blobs = _get_all_json_blobs_for_artifact(artifact_name)
+    blobs = _get_all_json_blobs_for_artifact(artifact_name, verbose=verbose)
     LOGGER.debug("found %s json blobs for %s", len(blobs), artifact_name)
 
     # now find any files not matched by the excluide_globs, if any
@@ -138,6 +143,7 @@ def generate_validate_yaml_for_python(
     top_level_imports,
     allowed=None,
     exclude_files=None,
+    verbose=0,
 ):
     """Generate a validation YAML file from an artifact that is a python package.
 
@@ -160,6 +166,9 @@ def generate_validate_yaml_for_python(
     exclude_files : list of str
         Any files matching these glob patterns will not be added to the list of
         files in the outputs.
+    verbose : int, optional
+        Integer between 0 and 100. Passed to joblib. Zero produces no output (default)
+        and 100 produces the maximum amount of output.
 
     Returns
     -------
@@ -181,6 +190,7 @@ def generate_validate_yaml_for_python(
     validate_yaml = generate_validate_yaml_from_libcfgraph(
         artifact_name,
         exclude_globs=default_globs + exclude_files,
+        verbose=verbose,
     )
 
     validate_yaml["files"].extend(default_globs)
