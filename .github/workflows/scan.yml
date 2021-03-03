@@ -83,6 +83,6 @@ jobs:
             --job-name=${ACTION_NAME} \
             --job-url="https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
         env:
-          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
+          GH_TOKEN: ${{ secrets.CF_DAEMON_GH_TOKEN }}
           RUN_ID: ${{ github.run_id }}
           ACTION_NAME: ${{ github.workflow }}

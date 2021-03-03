@@ -11,13 +11,6 @@ jobs:
     name: tests
     runs-on: "ubuntu-latest"
     steps:
-      - name: Generate token
-        id: generate_token
-        uses: tibdex/github-app-token@v1
-        with:
-          app_id: ${{ secrets.CF_CURATOR_APP_ID }}
-          private_key: ${{ secrets.CF_CURATOR_PRIVATE_KEY }}
-
       - name: skip me
         shell: bash -l {0}
         if: success() && contains(github.event.head_commit.message, 'ci skip')
@@ -82,4 +75,4 @@ jobs:
           wget -q https://conda.anaconda.org/conda-forge/linux-64/freud-0.11.0-py27h3e44d54_0.tar.bz2
           pytest -vvs scripts/test_cli_utils.py
         env:
-          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
+          GH_TOKEN: ${{ secrets.CF_DAEMON_GH_TOKEN }}
