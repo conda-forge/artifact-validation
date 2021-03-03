@@ -46,7 +46,7 @@ jobs:
             -v \
             --pull \
             --libcfgraph-path=libcfgraph \
-            --time-limit=1800 \
+            --time-limit=3600 \
             --restart-data=scan_data/restart.json \
             --output-path=scan_data/invalid_packages.yaml
 
@@ -61,7 +61,7 @@ jobs:
           RUN_ID: ${{ github.run_id }}
 
       - name: Generate token
-        if: success() && ! steps.turnstyle.outputs.force_continued
+        if: ! steps.turnstyle.outputs.force_continued && ! cancelled()
         id: generate_token
         uses: tibdex/github-app-token@v1
         with:
@@ -83,6 +83,6 @@ jobs:
             --job-name=${ACTION_NAME} \
             --job-url="https://github.com/conda-forge/artifact-validation/actions/runs/${RUN_ID}"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
           RUN_ID: ${{ github.run_id }}
           ACTION_NAME: ${{ github.workflow }}
