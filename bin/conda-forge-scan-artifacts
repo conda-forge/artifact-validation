@@ -100,7 +100,7 @@ def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, ve
             artif_pth,
         )
         try:
-            _rr = requests.get(http_url)
+            _rr = requests.get(http_url, timeout=1)
             _rr.raise_for_status()
             data = _rr.json().get("files", None)
         except Exception:
