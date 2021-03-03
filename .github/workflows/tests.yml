@@ -20,6 +20,14 @@ jobs:
         env:
           MSG: ${{ github.event.head_commit.message }}
 
+      - name: Generate token
+        if: success() && ! env.CI_SKIP
+        id: generate_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.CF_CURATOR_APP_ID }}
+          private_key: ${{ secrets.CF_CURATOR_PRIVATE_KEY }}
+
       - name: cancel previous runs
         uses: styfle/cancel-workflow-action@0.6.0
         if: success() && ! env.CI_SKIP
