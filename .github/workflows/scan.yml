@@ -61,7 +61,7 @@ jobs:
           RUN_ID: ${{ github.run_id }}
 
       - name: Generate token
-        if: ! steps.turnstyle.outputs.force_continued && ! cancelled()
+        if: "! cancelled() && ! steps.turnstyle.outputs.force_continued"
         id: generate_token
         uses: tibdex/github-app-token@v1
         with:
