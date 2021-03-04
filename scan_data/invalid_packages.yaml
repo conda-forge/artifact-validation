@@ -177,6 +177,19 @@ islpy:
       setuptools.python.generated:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
+multipledispatch:
+  osx-64/multipledispatch-0.4.8-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
+notebook:
+  osx-64/notebook-5.2.2-py35_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pip/**/*
 pyemma:
   linux-64/pyemma-2.2.6-np111py35_0.tar.bz2:
     bad_paths:
@@ -186,6 +199,15 @@ pyemma:
       scipy.python.generated:
         bad_paths:
         - lib/python*/site-packages/scipy/**/*
+pyosf:
+  osx-64/pyosf-1.0.4-py35_0.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/certifi/**/*
+      requests.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/requests/**/*
 pypy2.7:
   linux-64/pypy2.7-5.10.0-0.tar.bz2:
     bad_paths:
