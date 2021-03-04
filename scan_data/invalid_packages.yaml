@@ -1,3 +1,8 @@
+aiohttp:
+  linux-64/aiohttp-3.7.3-py36h70b1f00_3.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 cffi:
   win-64/cffi-1.14.5-py36he58ceb7_0.tar.bz2:
     bad_paths:
