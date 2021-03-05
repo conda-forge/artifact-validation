@@ -258,6 +258,13 @@ pypy2.7:
       - lib/libcrypto.so.1.1
       - lib/libssl.so
       - lib/libssl.so.1.1
+pytest-runner:
+  linux-64/pytest-runner-2.9-py35_2.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 racket:
   osx-64/racket-6.12-hfc679d8_0.tar.bz2:
     bad_paths:
