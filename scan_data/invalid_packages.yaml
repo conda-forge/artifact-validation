@@ -3,6 +3,15 @@ aiohttp:
     bad_paths:
       md5sum:
         valid: false
+bhmm:
+  osx-64/bhmm-0.6.1-np111py35_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/setuptools/**/*
 cffi:
   win-64/cffi-1.14.5-py36he58ceb7_0.tar.bz2:
     bad_paths:
