@@ -288,6 +288,12 @@ pytest-runner:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+python-stratify:
+  osx-64/python-stratify-0.1a1-np111py35_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
 racket:
   osx-64/racket-6.12-hfc679d8_0.tar.bz2:
     bad_paths:
