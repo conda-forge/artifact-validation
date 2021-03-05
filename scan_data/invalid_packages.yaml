@@ -134,9 +134,23 @@ dill:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+docker-pycreds:
+  osx-64/docker-pycreds-0.2.1-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 geant4:
   linux-64/geant4-10.7.1-py38h383aeff_1.tar.bz2:
     bad_paths: {}
+glob2:
+  osx-64/glob2-0.5-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 google-cloud-bigquery-storage-core:
   noarch/google-cloud-bigquery-storage-core-2.0.0-pyh9f0ad1d_1.tar.bz2:
     bad_paths:
