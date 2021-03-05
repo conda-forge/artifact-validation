@@ -182,6 +182,13 @@ islpy:
       setuptools.python.generated:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
+kuyruk:
+  linux-64/kuyruk-7.0.1-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 lmfit:
   win-64/lmfit-0.8.3-py35_0.tar.bz2:
     bad_paths:
@@ -189,6 +196,20 @@ lmfit:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+misaka:
+  linux-64/misaka-2.0.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
+mongoengine:
+  linux-64/mongoengine-0.10.6-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 multipledispatch:
   osx-64/multipledispatch-0.4.8-py35_0.tar.bz2:
     bad_paths:
