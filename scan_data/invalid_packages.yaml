@@ -45,6 +45,13 @@ conda-gitenv:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+conda-smithy:
+  osx-64/conda-smithy-1.6.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 cudatoolkit:
   linux-64/cudatoolkit-10.0.130-hf841e97_7.tar.bz2:
     bad_paths:
@@ -155,6 +162,17 @@ dill:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+discretisedfield:
+  osx-64/discretisedfield-0.7.2-py35_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pip/**/*
+  osx-64/discretisedfield-0.7.4-py35_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pip/**/*
 django:
   win-64/django-1.10.3-py35_0.tar.bz2:
     bad_paths:
@@ -172,6 +190,13 @@ docker-pycreds:
 geant4:
   linux-64/geant4-10.7.1-py38h383aeff_1.tar.bz2:
     bad_paths: {}
+gitpython:
+  osx-64/gitpython-2.0.8-py35_1.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 glob2:
   osx-64/glob2-0.5-py35_0.tar.bz2:
     bad_paths:
