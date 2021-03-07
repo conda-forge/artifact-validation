@@ -257,6 +257,12 @@ google-cloud-sdk:
     bad_paths: {}
   osx-64/google-cloud-sdk-326.0.0-py39h6e9494a_0.tar.bz2:
     bad_paths: {}
+html5lib:
+  linux-64/html5lib-0.999-py35_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pip/**/*
 islpy:
   linux-64/islpy-2016.2.1-py35_0.tar.bz2:
     bad_paths:
