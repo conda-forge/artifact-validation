@@ -296,6 +296,13 @@ markupsafe:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+metakernel:
+  win-64/metakernel-0.13.5-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 mimerender:
   win-64/mimerender-0.6.0-py35_0.tar.bz2:
     bad_paths:
