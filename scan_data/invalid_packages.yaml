@@ -179,6 +179,12 @@ django:
       pip.python.generated:
         bad_paths:
         - lib/python*/site-packages/pip/**/*
+  osx-64/django-1.8.16-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
   win-64/django-1.10.3-py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
