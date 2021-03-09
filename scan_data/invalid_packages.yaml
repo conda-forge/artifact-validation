@@ -46,7 +46,25 @@ conda-gitenv:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
 conda-smithy:
+  osx-64/conda-smithy-1.1.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
+  osx-64/conda-smithy-1.3.2-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
   osx-64/conda-smithy-1.6.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
+  osx-64/conda-smithy-1.7.0-py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
         bad_paths:
@@ -191,6 +209,13 @@ django:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+django-grappelli:
+  osx-64/django-grappelli-2.8.2-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 docker-pycreds:
   osx-64/docker-pycreds-0.2.1-py35_0.tar.bz2:
     bad_paths:
