@@ -223,6 +223,13 @@ docker-pycreds:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+flask-principal:
+  win-64/flask-principal-0.4.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 geant4:
   linux-64/geant4-10.7.1-py38h383aeff_1.tar.bz2:
     bad_paths: {}
@@ -314,6 +321,13 @@ lmfit:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+luigi:
+  win-64/luigi-2.3.1-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 markupsafe:
   win-64/markupsafe-0.23-py34_1.tar.bz2:
     bad_paths:
@@ -342,6 +356,12 @@ misaka:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+  win-64/misaka-2.0.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 mongoengine:
   linux-64/mongoengine-0.10.6-py35_0.tar.bz2:
     bad_paths:
