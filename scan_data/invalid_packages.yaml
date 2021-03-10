@@ -341,6 +341,12 @@ markupsafe:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+matplotlib:
+  linux-64/matplotlib-1.5.3-np111py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/setuptools/**/*
 metakernel:
   win-64/metakernel-0.13.5-py35_0.tar.bz2:
     bad_paths:
@@ -633,6 +639,19 @@ pyaxiom:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+pybind11:
+  linux-64/pybind11-1.8.1-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
+  linux-64/pybind11-2.0.0rc1-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 pycparser:
   linux-64/pycparser-2.14-py35_0.tar.bz2:
     bad_paths:
