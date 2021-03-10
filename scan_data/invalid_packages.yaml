@@ -918,6 +918,11 @@ viridis:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+warpx:
+  linux-64/warpx-21.03-py38h44cd30a_2.tar.bz2:
+    bad_paths: {}
+  linux-64/warpx-21.03-py38h5e94bd3_0.tar.bz2:
+    bad_paths: {}
 watchtower:
   win-64/watchtower-0.3.3-py35_0.tar.bz2:
     bad_paths:
