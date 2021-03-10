@@ -70,6 +70,19 @@ conda-smithy:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+coverage:
+  osx-64/coverage-4.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
+  osx-64/coverage-4.0.2-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 cudatoolkit:
   linux-64/cudatoolkit-10.0.130-hf841e97_7.tar.bz2:
     bad_paths:
@@ -228,6 +241,12 @@ docker-pycreds:
       setuptools.python.generated:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
+fiona:
+  osx-64/fiona-1.7.0-np110py35_3.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
         - lib/python*/site-packages/setuptools/**/*
 flask-principal:
   win-64/flask-principal-0.4.0-py35_0.tar.bz2:
