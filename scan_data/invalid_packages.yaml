@@ -326,6 +326,11 @@ html5lib:
       pip.python.generated:
         bad_paths:
         - lib/python*/site-packages/pip/**/*
+  linux-64/html5lib-0.999999999-py35_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pip/**/*
 islpy:
   linux-64/islpy-2016.2.1-py35_0.tar.bz2:
     bad_paths:
