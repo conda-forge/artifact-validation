@@ -393,6 +393,13 @@ misaka:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+mmtf-python:
+  win-64/mmtf-python-1.0.5-py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 mongoengine:
   linux-64/mongoengine-0.10.6-py35_0.tar.bz2:
     bad_paths:
@@ -407,6 +414,12 @@ multipledispatch:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+ndarray-listener:
+  win-64/ndarray-listener-1.0.17-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/setuptools/**/*
 notebook:
   osx-64/notebook-5.1.0-py35_0.tar.bz2:
     bad_paths:
