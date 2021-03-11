@@ -917,6 +917,11 @@ tensorflow:
       pip.python.generated:
         bad_paths:
         - lib/python*/site-packages/pip/**/*
+  osx-64/tensorflow-1.4.0-py35_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pip/**/*
 thredds_crawler:
   linux-64/thredds_crawler-1.5.1-py35_0.tar.bz2:
     bad_paths:
