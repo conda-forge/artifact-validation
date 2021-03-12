@@ -992,6 +992,12 @@ watchtower:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+wrf-python:
+  osx-64/wrf-python-1.0b1-np111py35_1.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
 zarr:
   win-64/zarr-2.1.3-py35_1.tar.bz2:
     bad_paths:
