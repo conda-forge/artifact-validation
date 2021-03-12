@@ -1352,3 +1352,10 @@ zarr:
       setuptools.python.generated:
         bad_paths:
         - Lib/site-packages/setuptools/**/*
+zict:
+  win-64/zict-0.1.1-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
