@@ -574,6 +574,12 @@ pillow:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+pkgconfig:
+  osx-64/pkgconfig-1.1.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
 pretend:
   win-64/pretend-1.0.8-py35_0.tar.bz2:
     bad_paths:
