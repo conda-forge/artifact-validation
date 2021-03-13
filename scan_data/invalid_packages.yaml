@@ -1256,6 +1256,11 @@ sagelib:
       pip.python.generated:
       - bin/pip
 scipy:
+  linux-64/scipy-0.17.1-np110py35_blas_openblas_204.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
   linux-64/scipy-0.18.1-np110py35_blas_openblas_201.tar.bz2:
     bad_paths:
       numpy.python.generated:
@@ -1291,6 +1296,11 @@ sqlparse:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
 tensorflow:
+  linux-64/tensorflow-0.10.0-py35_0.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/certifi/**/*
   linux-64/tensorflow-1.2.0-py35_0.tar.bz2:
     bad_paths:
       pip.python.generated:
