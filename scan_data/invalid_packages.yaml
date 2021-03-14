@@ -705,6 +705,12 @@ kuyruk:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+libcmaes:
+  linux-64/libcmaes-0.9.5-np110py35_1.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
 lmfit:
   win-64/lmfit-0.8.3-py35_0.tar.bz2:
     bad_paths:
