@@ -1208,6 +1208,13 @@ python-stratify:
       numpy.python.generated:
         bad_paths:
         - lib/python*/site-packages/numpy/**/*
+python-symengine:
+  linux-64/python-symengine-0.2.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 racket:
   osx-64/racket-6.12-hfc679d8_0.tar.bz2:
     bad_paths:
