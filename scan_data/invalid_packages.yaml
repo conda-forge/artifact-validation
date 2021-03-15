@@ -10,6 +10,13 @@ aniso8601:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+anyqt:
+  win-64/anyqt-0.0.7-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 arrow:
   win-64/arrow-0.10.0-py34_0.tar.bz2:
     bad_paths:
