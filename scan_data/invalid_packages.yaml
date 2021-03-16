@@ -1355,7 +1355,20 @@ scipy:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+sphinx:
+  linux-64/sphinx-1.4.6-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 spylon:
+  linux-64/spylon-0.2.2-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
   osx-64/spylon-0.2.3-py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
