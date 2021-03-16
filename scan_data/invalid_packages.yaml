@@ -751,6 +751,14 @@ matplotlib:
       setuptools.python.generated:
         bad_paths:
         - lib/python*/site-packages/setuptools/**/*
+  linux-64/matplotlib-1.5.3-np111py35_2.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/setuptools/**/*
 metakernel:
   win-64/metakernel-0.13.5-py35_0.tar.bz2:
     bad_paths:
@@ -799,6 +807,17 @@ multipledispatch:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+ncephes:
+  linux-64/ncephes-1.0.17-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/setuptools/**/*
+  linux-64/ncephes-1.0.17-py35_2.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/setuptools/**/*
 ndarray-listener:
   win-64/ndarray-listener-1.0.17-py35_0.tar.bz2:
     bad_paths:
@@ -834,6 +853,23 @@ openturns:
       numpy.python.generated:
         bad_paths:
         - lib/python*/site-packages/numpy/**/*
+orange3:
+  linux-64/orange3-3.3.8-np111py35_4.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
+osmnx:
+  linux-64/osmnx-0.1a1.dev11-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 partd:
   win-64/partd-0.3.7-py35_0.tar.bz2:
     bad_paths:
