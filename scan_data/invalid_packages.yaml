@@ -1276,6 +1276,9 @@ python-symengine:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+r-e1071:
+  osx-64/r-e1071-1.7_5-r40h9951f98_0.tar.bz2:
+    bad_paths: {}
 racket:
   osx-64/racket-6.12-hfc679d8_0.tar.bz2:
     bad_paths:
