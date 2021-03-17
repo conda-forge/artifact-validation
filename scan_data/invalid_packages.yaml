@@ -1462,6 +1462,14 @@ warpx:
     bad_paths: {}
   linux-64/warpx-21.03-py38h5e94bd3_0.tar.bz2:
     bad_paths: {}
+  linux-aarch64/warpx-21.03-py36h4229439_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/warpx-21.03-py36h99c505a_2.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 watchtower:
   win-64/watchtower-0.3.3-py35_0.tar.bz2:
     bad_paths:
