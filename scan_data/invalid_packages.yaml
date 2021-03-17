@@ -725,6 +725,11 @@ kuyruk:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
 libcmaes:
+  linux-64/libcmaes-0.9.5-np110py35_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
   linux-64/libcmaes-0.9.5-np110py35_1.tar.bz2:
     bad_paths:
       numpy.python.generated:
@@ -752,6 +757,11 @@ markupsafe:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
 matplotlib:
+  linux-64/matplotlib-1.5.3-np110py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/setuptools/**/*
   linux-64/matplotlib-1.5.3-np111py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
