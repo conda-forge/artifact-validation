@@ -1,3 +1,10 @@
+addict:
+  win-64/addict-1.1.0-py35_1.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 aiohttp:
   linux-64/aiohttp-3.7.3-py36h70b1f00_3.tar.bz2:
     bad_paths:
