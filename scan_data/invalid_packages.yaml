@@ -347,6 +347,13 @@ google-cloud-sdk:
     bad_paths: {}
   osx-64/google-cloud-sdk-326.0.0-py39h6e9494a_0.tar.bz2:
     bad_paths: {}
+holoviews:
+  linux-64/holoviews-1.6.2-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 html5lib:
   linux-64/html5lib-0.999-py35_0.tar.bz2:
     bad_paths:
