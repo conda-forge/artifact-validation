@@ -22,7 +22,7 @@ jobs:
         if: success() && ! steps.turnstyle.outputs.force_continued
         with:
           fetch-depth: 100
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.CF_DAEMON_GH_TOKEN }}
 
       - name: install micromamba
         if: success() && ! steps.turnstyle.outputs.force_continued
