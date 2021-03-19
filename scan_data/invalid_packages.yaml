@@ -1144,6 +1144,13 @@ pyarrow:
       numpy.python.generated:
         bad_paths:
         - lib/python*/site-packages/numpy/**/*
+pyasn1-modules:
+  linux-64/pyasn1-modules-0.0.8-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 pyaxiom:
   win-64/pyaxiom-1.2.3-py35_0.tar.bz2:
     bad_paths:
