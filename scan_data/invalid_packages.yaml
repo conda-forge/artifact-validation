@@ -275,6 +275,16 @@ fiona:
       setuptools.python.generated:
         bad_paths:
         - lib/python*/site-packages/setuptools/**/*
+  win-64/fiona-1.7.0-np111py35_4.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/setuptools/**/*
+  win-64/fiona-1.7.1-np110py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/setuptools/**/*
 flask-principal:
   win-64/flask-principal-0.4.0-py35_0.tar.bz2:
     bad_paths:
