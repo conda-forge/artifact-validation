@@ -140,21 +140,33 @@ def download_and_validate(
         dir=os.environ.get("GITHUB_WORKSPACE", None)
     ) as tmpdir:
         try:
-            # download
-            subprocess.run(
-                f"cd {tmpdir} && curl -s -L {channel_url}/{subdir_pkg} --output {pkg}",
-                shell=True,
-            )
+            max_attempts = 5
+            for attempt in range(max_attempts):
+                # download
+                subprocess.run(
+                    f"cd {tmpdir} && curl -s -L "
+                    f"{channel_url}/{subdir_pkg} --output {pkg}",
+                    shell=True,
+                )
 
-            # unpack and validate
-            if os.path.exists(f"{tmpdir}/{pkg}"):
-                if md5sum is not None:
-                    if md5sum != compute_md5sum(f"{tmpdir}/{pkg}"):
-                        LOGGER.info("bad md5sum")
-                        return False, {"md5sum": {"valid": False}}
+                # unpack
+                if os.path.exists(f"{tmpdir}/{pkg}"):
+                    if md5sum is not None:
+                        if md5sum != compute_md5sum(f"{tmpdir}/{pkg}"):
+                            if attempt == max_attempts-1:
+                                LOGGER.info("bad md5sum")
+                                return False, {"md5sum": {"valid": False}}
+                            else:
+                                os.remove(f"{tmpdir}/{pkg}")
+                                continue
+                        else:
+                            LOGGER.info("md5 sum is valid")
+                            break
                     else:
-                        LOGGER.info("md5 sum is valid")
+                        LOGGER.warning("not checking md5 sum!")
+                        break
 
+            if os.path.exists(f"{tmpdir}/{pkg}"):
                 valid, bad_pths = validate_file(
                     f"{tmpdir}/{pkg}",
                     validate_yamls,

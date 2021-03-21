@@ -5,11 +5,6 @@ addict:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
-aiohttp:
-  linux-64/aiohttp-3.7.3-py36h70b1f00_3.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
 aniso8601:
   win-64/aniso8601-1.1.0-py35_0.tar.bz2:
     bad_paths:
@@ -47,11 +42,6 @@ boto3:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
-cffi:
-  win-64/cffi-1.14.5-py36he58ceb7_0.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
 conda-execute:
   osx-64/conda-execute-0.6.0-py35_1.tar.bz2:
     bad_paths:
@@ -104,109 +94,6 @@ coverage:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
-cudatoolkit:
-  linux-64/cudatoolkit-10.0.130-hf841e97_7.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-64/cudatoolkit-10.1.243-h036e899_7.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-64/cudatoolkit-10.2.89-h8f6ccaa_7.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-64/cudatoolkit-11.0.3-h15472ef_7.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-64/cudatoolkit-11.0.3-h15472ef_8.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-64/cudatoolkit-11.1.1-h6406543_7.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-64/cudatoolkit-11.1.1-h6406543_8.tar.bz2:
-    bad_paths: {}
-  linux-64/cudatoolkit-11.2.0-h73cb219_7.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-64/cudatoolkit-11.2.0-h73cb219_8.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-64/cudatoolkit-11.2.1-h8204236_8.tar.bz2:
-    bad_paths: {}
-  linux-64/cudatoolkit-9.2.148-h80a95b2_7.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-ppc64le/cudatoolkit-10.2.89-h455192d_7.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-ppc64le/cudatoolkit-10.2.89-h455192d_8.tar.bz2:
-    bad_paths: {}
-  linux-ppc64le/cudatoolkit-11.0.3-h5f28151_7.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-ppc64le/cudatoolkit-11.0.3-h5f28151_8.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-ppc64le/cudatoolkit-11.1.1-hb0e9987_7.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-ppc64le/cudatoolkit-11.1.1-hb0e9987_8.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-ppc64le/cudatoolkit-11.2.0-hf3655b2_7.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-ppc64le/cudatoolkit-11.2.0-hf3655b2_8.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-ppc64le/cudatoolkit-11.2.1-h4f55fa5_8.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  win-64/cudatoolkit-10.0.130-h5327add_7.tar.bz2:
-    bad_paths: {}
-  win-64/cudatoolkit-10.0.130-h5327add_8.tar.bz2:
-    bad_paths: {}
-  win-64/cudatoolkit-10.1.243-h3826478_8.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  win-64/cudatoolkit-11.0.3-h3f58a73_7.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  win-64/cudatoolkit-11.0.3-h3f58a73_8.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  win-64/cudatoolkit-11.1.1-heb2d755_7.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  win-64/cudatoolkit-11.2.0-h608a323_7.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  win-64/cudatoolkit-11.2.0-h608a323_8.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
 dill:
   win-64/dill-0.2.5-py34_1.tar.bz2:
     bad_paths:
@@ -292,9 +179,6 @@ flask-principal:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
-geant4:
-  linux-64/geant4-10.7.1-py38h383aeff_1.tar.bz2:
-    bad_paths: {}
 gitpython:
   osx-64/gitpython-2.0.8-py35_1.tar.bz2:
     bad_paths:
@@ -334,29 +218,6 @@ google-cloud-bigquery-storage-core:
       requests.python.generated:
       - site-packages/requests-*.dist-info/**/*
       - site-packages/requests/**/*
-google-cloud-sdk:
-  linux-64/google-cloud-sdk-326.0.0-py36hd000896_0.tar.bz2:
-    bad_paths: {}
-  linux-64/google-cloud-sdk-326.0.0-py37h89c1867_0.tar.bz2:
-    bad_paths: {}
-  linux-64/google-cloud-sdk-326.0.0-py37h9c2f6ca_0.tar.bz2:
-    bad_paths: {}
-  linux-64/google-cloud-sdk-326.0.0-py38h578d9bd_0.tar.bz2:
-    bad_paths: {}
-  linux-64/google-cloud-sdk-326.0.0-py39hf3d152e_0.tar.bz2:
-    bad_paths: {}
-  osx-64/google-cloud-sdk-326.0.0-py36h5dafb3c_0.tar.bz2:
-    bad_paths: {}
-  osx-64/google-cloud-sdk-326.0.0-py36h79c6626_0.tar.bz2:
-    bad_paths: {}
-  osx-64/google-cloud-sdk-326.0.0-py37h5186d4c_0.tar.bz2:
-    bad_paths: {}
-  osx-64/google-cloud-sdk-326.0.0-py37hf985489_0.tar.bz2:
-    bad_paths: {}
-  osx-64/google-cloud-sdk-326.0.0-py38h50d1736_0.tar.bz2:
-    bad_paths: {}
-  osx-64/google-cloud-sdk-326.0.0-py39h6e9494a_0.tar.bz2:
-    bad_paths: {}
 holoviews:
   linux-64/holoviews-1.6.2-py35_0.tar.bz2:
     bad_paths:
@@ -1335,9 +1196,6 @@ python-symengine:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
-r-e1071:
-  osx-64/r-e1071-1.7_5-r40h9951f98_0.tar.bz2:
-    bad_paths: {}
 racket:
   osx-64/racket-6.12-hfc679d8_0.tar.bz2:
     bad_paths:
@@ -1524,21 +1382,6 @@ vulture:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
-warpx:
-  linux-64/warpx-21.03-py36hb5aa67e_2.tar.bz2:
-    bad_paths: {}
-  linux-64/warpx-21.03-py38h44cd30a_2.tar.bz2:
-    bad_paths: {}
-  linux-64/warpx-21.03-py38h5e94bd3_0.tar.bz2:
-    bad_paths: {}
-  linux-aarch64/warpx-21.03-py36h4229439_0.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
-  linux-aarch64/warpx-21.03-py36h99c505a_2.tar.bz2:
-    bad_paths:
-      md5sum:
-        valid: false
 watchtower:
   win-64/watchtower-0.3.3-py35_0.tar.bz2:
     bad_paths:
