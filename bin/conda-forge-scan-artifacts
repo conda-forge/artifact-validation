@@ -9,6 +9,7 @@ import time
 import subprocess
 import copy
 import threading
+import datetime
 
 import requests
 import rapidjson as json
@@ -16,6 +17,7 @@ import click
 import yaml
 import tqdm
 import joblib
+import github
 from yaml.representer import Representer
 
 from conda_forge_artifact_validation.validate import (
@@ -140,6 +142,34 @@ def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, ve
             f"{subdir}/{pkg}": {"bad_paths": bad_pths},
         },
     }
+
+
+def _bump_systems(final_data):
+    gh = github.Github(os.environ["GH_TOKEN"])
+    repo = gh.get_repo("conda-forge/artifact-validation")
+
+    title = "[warning] %s - invalid artifacts" % (
+        datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+    )
+
+    body = """
+Hey @conda-forge/systems!
+
+It appears that we found some invalid artifacts:
+
+```yaml
+%s
+```
+
+We might want to mark these as broken if they are serious!
+
+""" % (yaml.dump(
+        final_data,
+        default_flow_style=False,
+        indent=2,
+    ))
+
+    repo.create_issue(title=title, body=body)
 
 
 @click.command()
@@ -306,6 +336,20 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
                 json.dump(curr_resdat, fp)
             else:
                 json.dump({"subdir": None, "pkg": None}, fp)
+
+    if final_data:
+        any_nonmd5 = defaultdict(dict)
+        for pkg_nm, art_data in final_data.items():
+            for art, v in art_data.items():
+                if len(v["bad_paths"]) == 0:
+                    continue
+                elif all(k == "md5sum" for k in v["bad_paths"]):
+                    continue
+                else:
+                    any_nonmd5[pkg_nm][art] = v
+
+        if any_nonmd5:
+            _bump_systems(final_data)
 
 
 if __name__ == "__main__":
