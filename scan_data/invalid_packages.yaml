@@ -1525,6 +1525,8 @@ vulture:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
 warpx:
+  linux-64/warpx-21.03-py36hb5aa67e_2.tar.bz2:
+    bad_paths: {}
   linux-64/warpx-21.03-py38h44cd30a_2.tar.bz2:
     bad_paths: {}
   linux-64/warpx-21.03-py38h5e94bd3_0.tar.bz2:
