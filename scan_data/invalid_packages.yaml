@@ -1382,6 +1382,9 @@ vulture:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+warpx:
+  linux-64/warpx-21.03-py36ha753790_3.tar.bz2:
+    bad_paths: {}
 watchtower:
   win-64/watchtower-0.3.3-py35_0.tar.bz2:
     bad_paths:
