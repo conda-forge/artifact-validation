@@ -10,6 +10,7 @@ import subprocess
 import copy
 import threading
 import datetime
+import difflib
 
 import requests
 import rapidjson as json
@@ -38,6 +39,38 @@ BIG_PACKAGES = [
 CPHLock = threading.RLock()
 
 yaml.add_representer(defaultdict, Representer.represent_dict)
+
+
+def _strip_md5_or_error(data):
+    any_nonmd5 = defaultdict(dict)
+    for pkg_nm, art_data in data.items():
+        for art, v in art_data.items():
+            if len(v["bad_paths"]) == 0:
+                continue
+            elif all(k == "md5sum" for k in v["bad_paths"]):
+                continue
+            else:
+                any_nonmd5[pkg_nm][art] = v
+    return any_nonmd5
+
+
+def _diff_res(old_data, new_data):
+    old_lines = yaml.dump(
+        old_data,
+        default_flow_style=False,
+        indent=2,
+    ).splitlines()
+    new_lines = yaml.dump(
+        new_data,
+        default_flow_style=False,
+        indent=2,
+    ).splitlines()
+    diff_lines = []
+    for ln in difflib.unified_diff(old_lines, new_lines, n=0, lineterm=''):
+        if ln.startswith('+++') or ln.startswith('---') or ln.startswith('@@'):
+            continue
+        diff_lines.append(ln)
+    return "\n".join(diff_lines)
 
 
 def _test_file_paths(pkg_name, fnames, validate_yamls):
@@ -157,17 +190,13 @@ Hey @conda-forge/systems!
 
 It appears that we found some invalid artifacts:
 
-```yaml
+```diff
 %s
 ```
 
 We might want to mark these as broken if they are serious!
 
-""" % (yaml.dump(
-        final_data,
-        default_flow_style=False,
-        indent=2,
-    ))
+""" % (final_data)
 
     repo.create_issue(title=title, body=body)
 
@@ -311,6 +340,8 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
         else:
             old_data = {}
 
+        orig_data = copy.deepcopy(old_data)
+
         for k, v in final_data.items():
             if k not in old_data:
                 old_data[k] = {}
@@ -329,6 +360,16 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
         with open(output_path, "w") as fp:
             fp.write(yaml.dump(old_data, default_flow_style=False, indent=2))
 
+        diff_lines = _diff_res(
+            _strip_md5_or_error(orig_data),
+            _strip_md5_or_error(old_data),
+        )
+    else:
+        diff_lines = _diff_res(
+            {},
+            _strip_md5_or_error(final_data),
+        )
+
     if restart_data is not None:
         print("writing restart info to '%s'..." % restart_data, flush=True)
         with open(restart_data, "w") as fp:
@@ -337,19 +378,8 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
             else:
                 json.dump({"subdir": None, "pkg": None}, fp)
 
-    if final_data:
-        any_nonmd5 = defaultdict(dict)
-        for pkg_nm, art_data in final_data.items():
-            for art, v in art_data.items():
-                if len(v["bad_paths"]) == 0:
-                    continue
-                elif all(k == "md5sum" for k in v["bad_paths"]):
-                    continue
-                else:
-                    any_nonmd5[pkg_nm][art] = v
-
-        if any_nonmd5:
-            _bump_systems(final_data)
+    if diff_lines:
+        _bump_systems(diff_lines)
 
 
 if __name__ == "__main__":
