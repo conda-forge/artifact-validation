@@ -19,10 +19,6 @@ from conda_forge_artifact_validation.validate import (
     download_and_validate,
     bump_team_with_error,
 )
-from conda_forge_artifact_validation.feedstock_outputs import (
-    validate_feedstock_outputs,
-    STAGING,
-)
 
 LOGGER = logging.getLogger("conda_forge_artifact_validation")
 
@@ -97,22 +93,6 @@ def main(artifact_path, md5sum, verbose, feedstock, job_url, git_sha):
             validate_yamls,
             md5sum=md5sum,
         )
-
-        if valid and feedstock is not None:
-            LOGGER.info("validating outputs:")
-            valid_mapping, _errors = validate_feedstock_outputs(
-                feedstock,
-                {subdir_pkg: md5sum},
-                register=False,
-                check_hashes=(
-                    True
-                    if md5sum is not None and STAGING in artifact_path
-                    else False
-                ),
-            )
-            errors.extend(_errors)
-            valid = valid and all(valid_mapping.values())
-
     else:
         if md5sum is not None and md5sum != compute_md5sum(artifact_path):
             LOGGER.info("bad md5sum")
@@ -132,17 +112,6 @@ def main(artifact_path, md5sum, verbose, feedstock, job_url, git_sha):
                     validate_yamls,
                     tmpdir=str(tmpdir),
                 )
-
-            if feedstock is not None:
-                LOGGER.info("validating outputs:")
-                valid_mapping, _errors = validate_feedstock_outputs(
-                    feedstock,
-                    {subdir_pkg: md5sum},  # md5sum not actually used
-                    register=False,
-                    check_hashes=False,
-                )
-                errors.extend(_errors)
-                valid = valid and all(valid_mapping.values())
 
     if not valid:
         LOGGER.info("invalid artifact: %s", pprint.pformat(bad_pths))
