@@ -12,10 +12,18 @@ CHANNEL_URL = "https://conda.anaconda.org/conda-forge"
 
 @functools.lru_cache(maxsize=16)
 def _load_repodata(subdir):
-    rd = requests.get(
-        f"{CHANNEL_URL}/{subdir}/repodata.json"
-    )
-    rd.raise_for_status()
+    for i in range(10):
+        try:
+            rd = requests.get(
+                f"{CHANNEL_URL}/{subdir}/repodata.json"
+            )
+            rd.raise_for_status()
+            break
+        except Exception:
+            if i == 9:
+                raise
+            else:
+                pass
     return rd.json()
 
 
