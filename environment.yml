@@ -15,5 +15,6 @@ dependencies:
   - python-rapidjson
   - pyyaml
   - requests
+  - tenacity
   - tqdm
   - wget
