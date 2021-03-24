@@ -35,6 +35,13 @@ bhmm:
       setuptools.python.generated:
         bad_paths:
         - lib/python*/site-packages/setuptools/**/*
+binaryornot:
+  osx-64/binaryornot-0.4.0-py35_1.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 boost:
   linux-64/boost-1.64.0-np111py35_1.tar.bz2:
     bad_paths:
