@@ -719,6 +719,13 @@ matplotlib:
       setuptools.python.generated:
         bad_paths:
         - lib/python*/site-packages/setuptools/**/*
+mercantile:
+  osx-64/mercantile-0.9.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 metakernel:
   win-64/metakernel-0.13.5-py35_0.tar.bz2:
     bad_paths:
