@@ -1246,6 +1246,13 @@ pytest-runner:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+python-lmdb:
+  osx-64/python-lmdb-0.92-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 python-stratify:
   osx-64/python-stratify-0.1a1-np111py35_0.tar.bz2:
     bad_paths:
