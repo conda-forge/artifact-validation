@@ -155,6 +155,13 @@ django-admin-shortcuts:
       setuptools.python.generated:
         bad_paths:
         - lib/python*/site-packages/setuptools/**/*
+django-ajax-selects:
+  win-64/django-ajax-selects-1.5.2-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 django-grappelli:
   osx-64/django-grappelli-2.8.2-py35_0.tar.bz2:
     bad_paths:
@@ -681,6 +688,13 @@ libcmaes:
         - lib/python*/site-packages/numpy/**/*
 lmfit:
   win-64/lmfit-0.8.3-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
+loghub:
+  win-64/loghub-0.1.1-py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
         bad_paths:
