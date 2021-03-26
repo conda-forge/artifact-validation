@@ -1431,7 +1431,17 @@ tensorflow:
       certifi.python.generated:
         bad_paths:
         - lib/python*/site-packages/certifi/**/*
+  linux-64/tensorflow-0.12.1-py35_2.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pip/**/*
   linux-64/tensorflow-1.2.0-py35_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pip/**/*
+  linux-64/tensorflow-1.4.0-py35_0.tar.bz2:
     bad_paths:
       pip.python.generated:
         bad_paths:
