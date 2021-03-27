@@ -1385,6 +1385,11 @@ scipy:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+  linux-64/scipy-0.19.0-np111py35_blas_openblas_200.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
 sortedcollections:
   linux-64/sortedcollections-0.4.2-py35_0.tar.bz2:
     bad_paths:
