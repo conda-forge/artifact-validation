@@ -1444,6 +1444,13 @@ sqlparse:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+statuspage:
+  win-64/statuspage-0.8.1-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 tensorflow:
   linux-64/tensorflow-0.10.0-py35_0.tar.bz2:
     bad_paths:
