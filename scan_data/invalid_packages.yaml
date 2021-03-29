@@ -700,6 +700,12 @@ libcmaes:
       numpy.python.generated:
         bad_paths:
         - lib/python*/site-packages/numpy/**/*
+limix_util:
+  linux-64/limix_util-1.0.7-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/setuptools/**/*
 lmfit:
   win-64/lmfit-0.8.3-py35_0.tar.bz2:
     bad_paths:
