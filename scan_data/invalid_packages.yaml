@@ -1385,6 +1385,19 @@ read-roi:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+refnx:
+  osx-64/refnx-0.0.6-np110py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
+  osx-64/refnx-0.0.6-np111py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 retrying:
   linux-64/retrying-1.3.3-py35_0.tar.bz2:
     bad_paths:
