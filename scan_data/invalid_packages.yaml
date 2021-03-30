@@ -26,6 +26,27 @@ arrow:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+arrow-cpp:
+  linux-64/arrow-cpp-0.5.0-np111py35_1.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
+  linux-64/arrow-cpp-0.5.0.pre-np111py35_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
+  linux-64/arrow-cpp-0.8.0-py35_2.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
+  linux-64/arrow-cpp-0.9.0-py35_7.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
 bhmm:
   osx-64/bhmm-0.6.1-np111py35_0.tar.bz2:
     bad_paths:
