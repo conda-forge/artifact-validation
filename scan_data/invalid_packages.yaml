@@ -1430,6 +1430,13 @@ refnx:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+requests:
+  osx-64/requests-2.12.1-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 retrying:
   linux-64/retrying-1.3.3-py35_0.tar.bz2:
     bad_paths:
