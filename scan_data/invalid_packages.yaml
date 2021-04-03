@@ -156,6 +156,11 @@ dill:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
 discretisedfield:
+  linux-64/discretisedfield-0.7.2-py35_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pip/**/*
   linux-64/discretisedfield-0.7.4-py35_0.tar.bz2:
     bad_paths:
       pip.python.generated:
