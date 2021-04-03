@@ -918,6 +918,11 @@ openturns:
         bad_paths:
         - lib/python*/site-packages/numpy/**/*
 orange3:
+  linux-64/orange3-3.3.10-np110py35_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
   linux-64/orange3-3.3.8-np110py35_2.tar.bz2:
     bad_paths:
       numpy.python.generated:
