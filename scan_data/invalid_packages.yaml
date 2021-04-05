@@ -1677,6 +1677,8 @@ warpx:
     bad_paths: {}
   linux-64/warpx-21.03-py36ha753790_3.tar.bz2:
     bad_paths: {}
+  linux-64/warpx-21.03-py36hb5aa67e_2.tar.bz2:
+    bad_paths: {}
   linux-64/warpx-21.03-py38h44cd30a_1.tar.bz2:
     bad_paths: {}
   linux-aarch64/warpx-21.03-py36h99c505a_2.tar.bz2:
