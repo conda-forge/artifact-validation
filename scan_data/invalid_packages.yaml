@@ -362,6 +362,12 @@ google-cloud-bigquery-storage-core:
       requests.python.generated:
       - site-packages/requests-*.dist-info/**/*
       - site-packages/requests/**/*
+gsw:
+  osx-64/gsw-3.1.1-np111py35_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
 h5py:
   win-64/h5py-2.6.0-np110py35_6.tar.bz2:
     bad_paths:
