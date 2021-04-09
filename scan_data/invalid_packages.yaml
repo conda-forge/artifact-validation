@@ -963,6 +963,19 @@ oceans:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+oct2py:
+  win-64/oct2py-3.6.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
+  win-64/oct2py-3.8.1-py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 openturns:
   osx-64/openturns-1.8-py35_blas_openblas_202.tar.bz2:
     bad_paths:
@@ -1156,6 +1169,12 @@ pretend:
         - Lib/site-packages/setuptools/**/*
 progress_reporter:
   win-64/progress_reporter-1.2-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
+  win-64/progress_reporter-1.3-py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
         bad_paths:
