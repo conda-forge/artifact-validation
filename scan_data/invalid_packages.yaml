@@ -1336,6 +1336,11 @@ pyemma:
         bad_paths:
         - lib/python*/site-packages/scipy/**/*
 pygit2:
+  linux-64/pygit2-0.25.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/setuptools/**/*
   win-64/pygit2-0.25.0-py35_vc14_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
