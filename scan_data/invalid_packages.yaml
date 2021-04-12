@@ -1816,6 +1816,11 @@ tensorflow:
       pip.python.generated:
         bad_paths:
         - lib/python*/site-packages/pip/**/*
+  osx-64/tensorflow-1.2.1-py35_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pip/**/*
   osx-64/tensorflow-1.4.0-py35_0.tar.bz2:
     bad_paths:
       pip.python.generated:
@@ -1846,6 +1851,13 @@ tifffile:
       numpy.python.generated:
         bad_paths:
         - Lib/site-packages/numpy/**/*
+us:
+  osx-64/us-0.9.1-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 versioneer:
   linux-64/versioneer-0.16-py35_0.tar.bz2:
     bad_paths:
