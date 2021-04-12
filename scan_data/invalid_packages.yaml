@@ -247,6 +247,16 @@ exec-wrappers:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+extinction:
+  linux-64/extinction-0.2.2-np111py35_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 fastparquet:
   osx-64/fastparquet-0.0.1post2-py35_0.tar.bz2:
     bad_paths:
