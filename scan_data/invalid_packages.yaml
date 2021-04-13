@@ -60,6 +60,13 @@ asyncssh:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+awscli:
+  osx-64/awscli-1.18.14-py36_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 bhmm:
   osx-64/bhmm-0.6.1-np111py35_0.tar.bz2:
     bad_paths:
