@@ -790,6 +790,13 @@ jupyterlab:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+keyrings.alt:
+  osx-64/keyrings.alt-1.2-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 kuyruk:
   linux-64/kuyruk-7.0.1-py35_0.tar.bz2:
     bad_paths:
