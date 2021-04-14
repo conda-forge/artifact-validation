@@ -1520,6 +1520,13 @@ python-symengine:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+pytz:
+  osx-64/pytz-2016.7-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 pyvtk:
   linux-64/pyvtk-0.5.18-py35_0.tar.bz2:
     bad_paths:
@@ -1649,8 +1656,7 @@ ruamel.yaml:
   osx-64/ruamel.yaml-0.10.5-py27_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - lib/python2.7/site-packages/_yaml.so
+      - lib/python2.7/site-packages/_yaml.so
 sagelib:
   linux-64/sagelib-7.6-np111py27_blas_openblas_0.tar.bz2:
     bad_paths:
