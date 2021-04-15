@@ -1470,6 +1470,13 @@ pytest:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+pytest-cookies:
+  win-64/pytest-cookies-0.2.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 pytest-runner:
   linux-64/pytest-runner-2.9-py35_2.tar.bz2:
     bad_paths:
