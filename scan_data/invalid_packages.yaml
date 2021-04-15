@@ -987,6 +987,11 @@ notebook:
       pip.python.generated:
         bad_paths:
         - lib/python*/site-packages/pip/**/*
+  win-64/notebook-5.1.0-py35_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+        bad_paths:
+        - Lib/site-packages/pip/**/*
 oceans:
   win-64/oceans-0.3.0-py35_0.tar.bz2:
     bad_paths:
