@@ -1947,6 +1947,11 @@ thredds_crawler:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
 tifffile:
+  osx-64/tifffile-0.10.0-np111py35_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
   win-64/tifffile-0.3.1-np19py34_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
