@@ -53,6 +53,12 @@ arrow-cpp:
       numpy.python.generated:
         bad_paths:
         - lib/python*/site-packages/numpy/**/*
+asv:
+  win-64/asv-0.2-py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/setuptools/**/*
 asyncssh:
   linux-64/asyncssh-1.6.1-py35_0.tar.bz2:
     bad_paths:
