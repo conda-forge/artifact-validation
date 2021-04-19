@@ -95,6 +95,11 @@ boost:
       numpy.python.generated:
         bad_paths:
         - lib/python*/site-packages/numpy/**/*
+  osx-64/boost-1.64.0-np111py35_2.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
 boto3:
   win-64/boto3-1.4.2-py35_0.tar.bz2:
     bad_paths:
