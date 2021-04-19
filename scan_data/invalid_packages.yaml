@@ -1943,6 +1943,13 @@ statuspage:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+tablib:
+  linux-64/tablib-0.11.3-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 tensorflow:
   linux-64/tensorflow-0.10.0-py35_0.tar.bz2:
     bad_paths:
@@ -1986,6 +1993,16 @@ testtools:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+thermotools:
+  linux-64/thermotools-0.2.3-np110py35_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 thredds_crawler:
   linux-64/thredds_crawler-1.5.1-py35_0.tar.bz2:
     bad_paths:
