@@ -1107,6 +1107,15 @@ orange3:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+  osx-64/orange3-3.3.8-np111py35_4.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
   win-64/orange3-3.3.8-np111py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
@@ -1435,6 +1444,11 @@ pyemma:
         - lib/python*/site-packages/scipy/**/*
 pygit2:
   linux-64/pygit2-0.25.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/setuptools/**/*
+  osx-64/pygit2-0.25.0-py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
         bad_paths:
