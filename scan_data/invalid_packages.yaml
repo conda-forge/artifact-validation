@@ -165,6 +165,15 @@ coverage:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+cysignals:
+  osx-64/cysignals-1.4.0-py35_0.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/certifi/**/*
+      pip.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pip/**/*
 dataspyre:
   linux-64/dataspyre-0.2.6-py35_0.tar.bz2:
     bad_paths:
