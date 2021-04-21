@@ -1386,6 +1386,11 @@ px4tools:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
 pyarrow:
+  linux-64/pyarrow-0.3.0-np111py35_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
   linux-64/pyarrow-0.3.0-np111py35_1.tar.bz2:
     bad_paths:
       numpy.python.generated:
