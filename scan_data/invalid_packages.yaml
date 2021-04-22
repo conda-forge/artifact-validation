@@ -1069,6 +1069,15 @@ notebook:
       pip.python.generated:
         bad_paths:
         - lib/python*/site-packages/pip/**/*
+  win-64/notebook-4.2.3-py35_0.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+        bad_paths:
+        - Lib/site-packages/certifi/**/*
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
   win-64/notebook-5.1.0-py35_0.tar.bz2:
     bad_paths:
       pip.python.generated:
@@ -1535,6 +1544,13 @@ pymbolic:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
   win-64/pymbolic-2016.2.3-py35_1.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
+pymeasure:
+  win-64/pymeasure-v0.4.2-py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
         bad_paths:
