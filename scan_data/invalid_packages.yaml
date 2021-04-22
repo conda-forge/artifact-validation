@@ -1154,6 +1154,11 @@ orange3:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+  linux-64/orange3-3.4.4-np111py35_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
   osx-64/orange3-3.3.8-np111py35_4.tar.bz2:
     bad_paths:
       numpy.python.generated:
@@ -1421,6 +1426,11 @@ px4tools:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
 pyarrow:
+  linux-64/pyarrow-0.1.post-np110py35_5.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
   linux-64/pyarrow-0.3.0-np111py35_0.tar.bz2:
     bad_paths:
       numpy.python.generated:
