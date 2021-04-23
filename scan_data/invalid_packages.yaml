@@ -1114,6 +1114,11 @@ openturns:
       numpy.python.generated:
         bad_paths:
         - lib/python*/site-packages/numpy/**/*
+  osx-64/openturns-1.8-py35_blas_openblas_200.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
   osx-64/openturns-1.8-py35_blas_openblas_202.tar.bz2:
     bad_paths:
       numpy.python.generated:
