@@ -1926,6 +1926,12 @@ setuptools_scm:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+setuptools_scm_git_archive:
+  osx-64/setuptools_scm_git_archive-1.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/setuptools/**/*
 signac:
   osx-64/signac-0.7.0-py35_0.tar.bz2:
     bad_paths:
