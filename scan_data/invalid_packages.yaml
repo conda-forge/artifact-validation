@@ -1413,6 +1413,12 @@ pweave:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
 px4tools:
+  linux-64/px4tools-0.4.6-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
   win-64/px4tools-0.4.5-py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
