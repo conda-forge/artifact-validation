@@ -390,6 +390,13 @@ flake8-quotes:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+flask-httpauth:
+  win-64/flask-httpauth-3.2.0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 flask-principal:
   win-64/flask-principal-0.4.0-py35_0.tar.bz2:
     bad_paths:
