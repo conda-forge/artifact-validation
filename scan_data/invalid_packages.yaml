@@ -1053,6 +1053,18 @@ mongoengine:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+mpi4py:
+  osx-64/mpi4py-2.0.0-py35_1.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/certifi/**/*
+      pip.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pip/**/*
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/setuptools/**/*
 mplexporter:
   win-64/mplexporter-0.0.1-py35_1.tar.bz2:
     bad_paths:
