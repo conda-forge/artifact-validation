@@ -1140,6 +1140,12 @@ oceans:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
 oct2py:
+  win-64/oct2py-3.5.10-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
   win-64/oct2py-3.6.0-py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
