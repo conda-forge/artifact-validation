@@ -2274,6 +2274,13 @@ tifffile:
       numpy.python.generated:
         bad_paths:
         - Lib/site-packages/numpy/**/*
+tldextract:
+  linux-64/tldextract-2.0.1-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 tpot:
   osx-64/tpot-0.6.4-py35_0.tar.bz2:
     bad_paths:
