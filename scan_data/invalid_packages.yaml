@@ -500,6 +500,33 @@ html5lib:
       pip.python.generated:
         bad_paths:
         - lib/python*/site-packages/pip/**/*
+ipython:
+  linux-64/ipython-5.1.0-py35_0.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/certifi/**/*
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
+  linux-64/ipython-5.1.0-py35_1.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/certifi/**/*
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
+  linux-64/ipython-5.1.0-py35_2.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/certifi/**/*
+      pip.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pip/**/*
 iris-sample-data:
   win-64/iris-sample-data-2.0.0-py35_0.tar.bz2:
     bad_paths:
