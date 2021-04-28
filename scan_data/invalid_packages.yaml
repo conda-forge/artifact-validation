@@ -961,6 +961,12 @@ luigi:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+lxml:
+  win-64/lxml-3.7.0-py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/setuptools/**/*
 markupsafe:
   win-64/markupsafe-0.23-py34_1.tar.bz2:
     bad_paths:
