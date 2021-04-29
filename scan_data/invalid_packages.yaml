@@ -2033,6 +2033,13 @@ sortedcollections:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+sound_field_analysis:
+  win-64/sound_field_analysis-0.1.dev0-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 spglib:
   win-64/spglib-1.9.8.11-np110py35_0.tar.bz2:
     bad_paths:
