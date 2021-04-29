@@ -59,6 +59,12 @@ asap:
       numpy.python.generated:
         bad_paths:
         - lib/python*/site-packages/numpy/**/*
+astropy-healpix:
+  linux-64/astropy-healpix-0.2-py35_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
 asv:
   win-64/asv-0.2-py34_0.tar.bz2:
     bad_paths:
