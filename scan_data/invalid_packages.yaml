@@ -1136,6 +1136,11 @@ ncephes:
       setuptools.python.generated:
         bad_paths:
         - lib/python*/site-packages/setuptools/**/*
+  linux-64/ncephes-1.0.16-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/setuptools/**/*
   linux-64/ncephes-1.0.17-py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
