@@ -240,6 +240,12 @@ django:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+  linux-64/django-1.10.5-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
   linux-64/django-2.0-py35_0.tar.bz2:
     bad_paths:
       pip.python.generated:
