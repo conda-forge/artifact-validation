@@ -251,6 +251,12 @@ django:
       pip.python.generated:
         bad_paths:
         - lib/python*/site-packages/pip/**/*
+  osx-64/django-1.10.5-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
   osx-64/django-1.8.16-py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
@@ -414,6 +420,13 @@ flask-httpauth:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+flask-openid:
+  osx-64/flask-openid-1.2.5-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 flask-principal:
   win-64/flask-principal-0.4.0-py35_0.tar.bz2:
     bad_paths:
