@@ -2434,6 +2434,13 @@ wrf-python:
       numpy.python.generated:
         bad_paths:
         - lib/python*/site-packages/numpy/**/*
+wtf-peewee:
+  linux-64/wtf-peewee-0.2.6-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 wtforms-appengine:
   win-64/wtforms-appengine-0.1-py35_1.tar.bz2:
     bad_paths:
