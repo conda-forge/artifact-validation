@@ -962,6 +962,12 @@ keyrings.alt:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
 kuyruk:
+  linux-64/kuyruk-5.0.4-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
   linux-64/kuyruk-7.0.1-py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
