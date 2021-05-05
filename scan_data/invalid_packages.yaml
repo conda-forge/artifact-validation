@@ -1191,6 +1191,13 @@ ndarray-listener:
       setuptools.python.generated:
         bad_paths:
         - Lib/site-packages/setuptools/**/*
+nose:
+  osx-64/nose-1.3.7-py35_1.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 notebook:
   osx-64/notebook-5.1.0-py35_0.tar.bz2:
     bad_paths:
