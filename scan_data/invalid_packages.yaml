@@ -119,6 +119,18 @@ boto3:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+brent-search:
+  linux-64/brent-search-1.0.17-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/setuptools/**/*
+brian2:
+  linux-64/brian2-2.1.3-py35h2d50403_0.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
 conda-execute:
   osx-64/conda-execute-0.6.0-py35_1.tar.bz2:
     bad_paths:
