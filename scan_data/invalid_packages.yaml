@@ -2090,6 +2090,11 @@ scipy:
       numpy.python.generated:
         bad_paths:
         - lib/python*/site-packages/numpy/**/*
+  osx-64/scipy-0.17.1-np110py35_blas_openblas_205.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/numpy/**/*
   osx-64/scipy-0.18.1-np110py35_blas_openblas_201.tar.bz2:
     bad_paths:
       numpy.python.generated:
@@ -2305,6 +2310,12 @@ spylon:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
   osx-64/spylon-0.2.5-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
+  osx-64/spylon-0.2.6-py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
         bad_paths:
