@@ -1071,6 +1071,12 @@ markupsafe:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+  win-64/markupsafe-0.23-py35_1.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 matplotlib:
   linux-64/matplotlib-1.5.3-np110py35_0.tar.bz2:
     bad_paths:
