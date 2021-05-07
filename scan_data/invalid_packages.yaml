@@ -2047,6 +2047,11 @@ regex:
       pip.python.generated:
         bad_paths:
         - lib/python*/site-packages/pip/**/*
+  win-64/regex-2017.12.12-py35_0.tar.bz2:
+    bad_paths:
+      pip.python.generated:
+        bad_paths:
+        - Lib/site-packages/pip/**/*
 requests:
   osx-64/requests-2.12.1-py35_0.tar.bz2:
     bad_paths:
