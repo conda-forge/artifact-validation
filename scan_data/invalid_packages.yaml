@@ -2457,6 +2457,13 @@ tpot:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+traits:
+  linux-64/traits-4.6.0-py35_1.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 treq:
   win-64/treq-15.1.0-py35_0.tar.bz2:
     bad_paths:
