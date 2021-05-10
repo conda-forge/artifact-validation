@@ -136,6 +136,12 @@ brian2:
       numpy.python.generated:
         bad_paths:
         - lib/python*/site-packages/numpy/**/*
+build-capi:
+  win-64/build-capi-1.1.9-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/setuptools/**/*
 conda-execute:
   osx-64/conda-execute-0.6.0-py35_1.tar.bz2:
     bad_paths:
