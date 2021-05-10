@@ -1006,6 +1006,12 @@ kuyruk:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+  osx-64/kuyruk-7.0.1-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
   win-64/kuyruk-5.1.2-py35_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
