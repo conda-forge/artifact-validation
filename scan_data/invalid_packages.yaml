@@ -2159,6 +2159,12 @@ setuptools_scm_git_archive:
       setuptools.python.generated:
         bad_paths:
         - lib/python*/site-packages/setuptools/**/*
+shapely:
+  win-64/shapely-1.5.13-np110py35_1.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - Lib/site-packages/numpy/**/*
 signac:
   osx-64/signac-0.7.0-py35_0.tar.bz2:
     bad_paths:
