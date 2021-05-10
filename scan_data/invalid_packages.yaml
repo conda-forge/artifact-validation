@@ -363,6 +363,12 @@ exec-wrappers:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+  win-64/exec-wrappers-1.0.1-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 extinction:
   linux-64/extinction-0.2.2-np111py35_0.tar.bz2:
     bad_paths:
