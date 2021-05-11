@@ -215,6 +215,12 @@ cysignals:
       pip.python.generated:
         bad_paths:
         - lib/python*/site-packages/pip/**/*
+cytoolz:
+  linux-64/cytoolz-0.8.2-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/setuptools/**/*
 dataspyre:
   linux-64/dataspyre-0.2.6-py35_0.tar.bz2:
     bad_paths:
