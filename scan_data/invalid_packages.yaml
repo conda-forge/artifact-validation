@@ -348,6 +348,13 @@ django-grappelli:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+djangorestframework:
+  osx-64/djangorestframework-3.5.2-py35_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 docker-pycreds:
   osx-64/docker-pycreds-0.2.1-py35_0.tar.bz2:
     bad_paths:
