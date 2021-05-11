@@ -2165,6 +2165,12 @@ setuptools_scm_git_archive:
       setuptools.python.generated:
         bad_paths:
         - lib/python*/site-packages/setuptools/**/*
+sfepy:
+  linux-64/sfepy-2016.4-np110py35_0.tar.bz2:
+    bad_paths:
+      scipy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/scipy/**/*
 shapely:
   win-64/shapely-1.5.13-np110py35_1.tar.bz2:
     bad_paths:
