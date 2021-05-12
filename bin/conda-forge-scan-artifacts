@@ -25,7 +25,10 @@ from conda_forge_artifact_validation.validate import (
     download_and_validate,
 )
 from conda_forge_artifact_validation.glob_to_re import glob_to_re
-from conda_forge_artifact_validation.utils import chunk_iterable
+from conda_forge_artifact_validation.utils import (
+    chunk_iterable,
+    split_pkg,
+)
 from conda_forge_artifact_validation.cached_repodata import (
     CHANNEL_URL,
     SUBDIRS,
@@ -168,6 +171,16 @@ def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, ve
                 pprint.pformat(bad_pths),
             ),
             flush=True,
+        )
+
+    if "py35" in split_pkg(pkg)[-1]:
+        valid = True
+        print(
+            "skipping invalid artifact %s/%s due to 'py35' in build string: %s" % (
+                subdir,
+                pkg,
+                pprint.pformat(bad_pths)
+            )
         )
 
     return valid, {
