@@ -2026,8 +2026,9 @@ racket:
   osx-64/racket-6.12-hfc679d8_0.tar.bz2:
     bad_paths:
       openssl.generated:
-      - lib/libcrypto.1.0.0.dylib
-      - lib/libssl.1.0.0.dylib
+        bad_paths:
+        - lib/libcrypto.1.0.0.dylib
+        - lib/libssl.1.0.0.dylib
   osx-64/racket-7.0-h0a44026_2000.tar.bz2:
     bad_paths:
       openssl.generated:
