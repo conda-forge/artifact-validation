@@ -53,6 +53,10 @@ arrow-cpp:
       numpy.python.generated:
         bad_paths:
         - lib/python*/site-packages/numpy/**/*
+  linux-aarch64/arrow-cpp-2.0.0-py39hb67bfd5_34_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 asap:
   osx-64/asap-3.10.0-np110py35_0.tar.bz2:
     bad_paths:
@@ -142,6 +146,11 @@ build-capi:
       setuptools.python.generated:
         bad_paths:
         - Lib/site-packages/setuptools/**/*
+catalogue:
+  linux-aarch64/catalogue-2.0.2-py37h4bcbb9b_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 cis:
   win-64/cis-1.4.0-py35_0.tar.bz2:
     bad_paths:
@@ -546,6 +555,25 @@ google-cloud-bigquery-storage-core:
       requests.python.generated:
       - site-packages/requests-*.dist-info/**/*
       - site-packages/requests/**/*
+gst-plugins-good:
+  linux-aarch64/gst-plugins-good-1.18.4-h01406a2_1.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/gst-plugins-good-1.18.4-h01406a2_2.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+gstreamer:
+  linux-aarch64/gstreamer-1.18.4-h6d0dd4b_1.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+gstreamer-orc:
+  linux-aarch64/gstreamer-orc-0.4.32-hf897c2e_1.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 gsw:
   osx-64/gsw-3.1.1-np111py35_0.tar.bz2:
     bad_paths:
@@ -1072,6 +1100,57 @@ libcmaes:
       numpy.python.generated:
         bad_paths:
         - lib/python*/site-packages/numpy/**/*
+libignition-cmake2:
+  linux-aarch64/libignition-cmake2-2.7.0-h01db608_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/libignition-cmake2-2.8.0-h01db608_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+libignition-math6:
+  linux-aarch64/libignition-math6-6.8.0-h01db608_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+libignition-msgs7:
+  linux-aarch64/libignition-msgs7-7.0.0-h306527f_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+libignition-tools1:
+  linux-aarch64/libignition-tools1-1.2.0-ha768e4a_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+libllvm10:
+  linux-aarch64/libllvm10-10.0.1-h6bb024c_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+libm2k:
+  linux-aarch64/libm2k-0.4.0-py36hf406b85_2.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/libm2k-0.4.0-py37hb734a87_2.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/libm2k-0.4.0-py38hd5152b8_2.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/libm2k-0.4.0-py39h8712f56_2.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+libmamba:
+  linux-aarch64/libmamba-0.12.1-h9aab707_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 limix_util:
   linux-64/limix_util-1.0.7-py35_0.tar.bz2:
     bad_paths:
@@ -1112,6 +1191,123 @@ lxml:
       setuptools.python.generated:
         bad_paths:
         - Lib/site-packages/setuptools/**/*
+mamba:
+  linux-aarch64/mamba-0.11.3-py36h1eb8ba7_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.11.3-py36he1ca912_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.11.3-py37h48ed4ad_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.11.3-py37hf14380e_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.11.3-py38h9d6459c_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.11.3-py39he574936_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.0-py36h1eb8ba7_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.0-py36he1ca912_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.0-py37h48ed4ad_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.0-py37hf14380e_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.0-py38h9d6459c_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.0-py39he574936_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.1-py36h1eb8ba7_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.1-py36he1ca912_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.1-py37h48ed4ad_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.1-py37hf14380e_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.1-py38h9d6459c_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.1-py39he574936_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.2-py36he1ca912_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.2-py37h48ed4ad_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.2-py37hf14380e_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.2-py38h9d6459c_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.12.2-py39he574936_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.13.0-py36h1eb8ba7_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.13.0-py36he1ca912_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.13.0-py37h48ed4ad_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.13.0-py37hf14380e_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.13.0-py38h9d6459c_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/mamba-0.13.0-py39he574936_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 markupsafe:
   win-64/markupsafe-0.23-py34_1.tar.bz2:
     bad_paths:
