@@ -1124,8 +1124,41 @@ libignition-tools1:
     bad_paths:
       md5sum:
         valid: false
+liblapacke:
+  osx-arm64/liblapacke-3.9.0-4_h880f123_netlib.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+liblief:
+  osx-arm64/liblief-0.11.3-hbdafb3b_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/liblief-0.11.4-hbdafb3b_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+liblimesuite:
+  osx-arm64/liblimesuite-20.10.0-hbdafb3b_1.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 libllvm10:
   linux-aarch64/libllvm10-10.0.1-h6bb024c_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+libllvm11:
+  osx-arm64/libllvm11-11.1.0-h93073aa_1.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+libllvm12:
+  osx-arm64/libllvm12-12.0.0-h93073aa_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libllvm12-12.0.0-h93073aa_1.tar.bz2:
     bad_paths:
       md5sum:
         valid: false
@@ -1146,8 +1179,97 @@ libm2k:
     bad_paths:
       md5sum:
         valid: false
+  osx-arm64/libm2k-0.4.0-py38h006e211_2.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libm2k-0.4.0-py39h1e86038_2.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 libmamba:
   linux-aarch64/libmamba-0.12.1-h9aab707_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libmamba-0.11.3-h238089d_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libmamba-0.12.0-h238089d_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libmamba-0.12.1-h238089d_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libmamba-0.12.2-h238089d_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libmamba-0.12.3-h238089d_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libmamba-0.13.0-h238089d_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libmamba-0.13.1-h238089d_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+libnetcdf:
+  osx-arm64/libnetcdf-4.8.0-mpi_mpich_hb7ee5b1_1.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libnetcdf-4.8.0-mpi_mpich_hb7ee5b1_2.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libnetcdf-4.8.0-mpi_mpich_hc1bce26_3.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libnetcdf-4.8.0-mpi_openmpi_h1cc98ea_3.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libnetcdf-4.8.0-mpi_openmpi_hd885e69_1.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libnetcdf-4.8.0-mpi_openmpi_hd885e69_2.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libnetcdf-4.8.0-nompi_hc896b4c_101.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/libnetcdf-4.8.0-nompi_hc896b4c_102.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+libode:
+  osx-arm64/libode-0.16.2-py38hc470f4d_5.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+libpq:
+  osx-arm64/libpq-13.2-h8bb6238_3.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+librsvg:
+  osx-arm64/librsvg-2.50.4-h957afdb_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+libtiff:
+  osx-arm64/libtiff-4.2.0-hcbb2f27_1.tar.bz2:
     bad_paths:
       md5sum:
         valid: false
@@ -1890,6 +2012,103 @@ pyarrow:
       numpy.python.generated:
         bad_paths:
         - lib/python*/site-packages/numpy/**/*
+  osx-arm64/pyarrow-3.0.0-py38h5211c98_11_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-3.0.0-py38h5211c98_12_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-3.0.0-py38h5211c98_13_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-3.0.0-py38h5211c98_14_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-3.0.0-py39h6134bab_11_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-3.0.0-py39h6134bab_12_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-3.0.0-py39h6134bab_13_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-3.0.0-py39h6134bab_14_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-4.0.0-py38h5211c98_0_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-4.0.0-py38h5211c98_1_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-4.0.0-py38h5211c98_2_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-4.0.0-py38h5211c98_3_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-4.0.0-py38h5211c98_4_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-4.0.0-py39h6134bab_0_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-4.0.0-py39h6134bab_1_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-4.0.0-py39h6134bab_2_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-4.0.0-py39h6134bab_3_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-4.0.0-py39h6134bab_4_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+pyarrow-tests:
+  osx-arm64/pyarrow-tests-1.0.1-py38h5211c98_36_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-tests-1.0.1-py38h5211c98_37_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-tests-1.0.1-py38h5211c98_38_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-tests-1.0.1-py38h5211c98_39_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-tests-1.0.1-py39h6134bab_36_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pyarrow-tests-1.0.1-py39h6134bab_37_cpu.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 pyasn1-modules:
   linux-64/pyasn1-modules-0.0.8-py35_0.tar.bz2:
     bad_paths:
@@ -1944,6 +2163,11 @@ pydocstyle:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+pydot:
+  osx-arm64/pydot-1.4.2-py39h2804cbe_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 pyemma:
   linux-64/pyemma-2.2.6-np111py35_0.tar.bz2:
     bad_paths:
@@ -1982,6 +2206,11 @@ pygithub:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+pyglet:
+  osx-arm64/pyglet-1.5.16-py39h2804cbe_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 pygraphml:
   osx-64/pygraphml-2.2-py35_0.tar.bz2:
     bad_paths:
@@ -1989,6 +2218,27 @@ pygraphml:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+pykerberos:
+  linux-aarch64/pykerberos-1.2.1-py37h594f281_5.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/pykerberos-1.2.1-py37hfccc055_5.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/pykerberos-1.2.1-py38h03cd067_5.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/pykerberos-1.2.1-py39hf508a29_5.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/pykerberos-1.2.1-py38hc178c0b_5.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 pykml:
   win-64/pykml-0.1.3-py34_0.tar.bz2:
     bad_paths:
@@ -2022,6 +2272,11 @@ pymeasure:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+pymetis:
+  linux-aarch64/pymetis-2020.1-py38hfb5f772_3.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 pyoos:
   win-64/pyoos-0.8.1-py35_0.tar.bz2:
     bad_paths:
@@ -2036,6 +2291,10 @@ pyoos:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
 pyopencl:
+  linux-aarch64/pyopencl-2021.2.1-py37hce16e70_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
   win-64/pyopencl-2016.2-py34_1.tar.bz2:
     bad_paths:
       setuptools.python.generated:
@@ -2218,6 +2477,48 @@ qimage2ndarray:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+r-lattice:
+  linux-aarch64/r-lattice-0.20_44-r36h96a179c_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+r-lightgbm:
+  linux-aarch64/r-lightgbm-3.2.1-r36hecdc70b_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/r-lightgbm-3.2.1-r40hecdc70b_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+r-lme4:
+  linux-aarch64/r-lme4-1.1_27-r36hecdc70b_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/r-lme4-1.1_27-r40hecdc70b_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+r-mass:
+  linux-aarch64/r-mass-7.3_54-r36h96a179c_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/r-mass-7.3_54-r40h96a179c_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+r-officer:
+  linux-aarch64/r-officer-0.3.18-r36hecdc70b_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+r-rbibutils:
+  linux-aarch64/r-rbibutils-2.1.1-r36h96a179c_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 racket:
   osx-64/racket-6.12-hfc679d8_0.tar.bz2:
     bad_paths:
@@ -2316,6 +2617,11 @@ regex:
       pip.python.generated:
         bad_paths:
         - Lib/site-packages/pip/**/*
+reportlab:
+  osx-arm64/reportlab-3.5.67-py39h3fc2f6e_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 requests:
   osx-64/requests-2.12.1-py35_0.tar.bz2:
     bad_paths:
@@ -2336,11 +2642,149 @@ retrying:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+rhumba:
+  osx-arm64/rhumba-0.1.0-r40hc470f4d_1.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/rhumba-0.1.0-r40hc470f4d_2.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/rhumba-0.1.1-r40hc470f4d_2.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/rhumba-0.1.1-r40hc470f4d_3.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/rhumba-0.1.1-r40hc470f4d_4.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+rich:
+  osx-arm64/rich-10.0.0-py38h10201cd_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/rich-10.0.0-py39h2804cbe_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/rich-10.2.0-py38h10201cd_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/rich-10.2.0-py39h2804cbe_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/rich-10.2.1-py38h10201cd_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/rich-10.2.1-py39h2804cbe_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/rich-9.12.0-py39h2804cbe_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/rich-9.12.3-py38h10201cd_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+rmf:
+  osx-arm64/rmf-1.3-py38h038fba0_2.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/rmf-1.3-py39he0b8d23_2.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+roboticstoolbox-python:
+  osx-arm64/roboticstoolbox-python-0.10.0-py38h691f20f_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/roboticstoolbox-python-0.10.0-py39h20ef057_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/roboticstoolbox-python-0.10.1-py38h691f20f_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/roboticstoolbox-python-0.10.1-py39h20ef057_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+root:
+  osx-arm64/root-6.22.8-py38h595776f_3.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/root-6.22.8-py39h7188df7_3.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/root-6.24.0-py38h92c76d4_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/root-6.24.0-py39ha49f62b_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+root-binaries:
+  osx-arm64/root-binaries-6.22.8-py38h595776f_3.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/root-binaries-6.22.8-py39h7188df7_3.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+root-dependencies:
+  osx-arm64/root-dependencies-6.22.8-py38h595776f_3.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/root-dependencies-6.22.8-py39h7188df7_3.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+root_base:
+  osx-arm64/root_base-6.22.8-py38h9d209ef_3.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/root_base-6.22.8-py39h56fb6bf_3.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-arm64/root_base-6.24.0-py38h21e4016_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+rsync:
+  osx-arm64/rsync-3.2.3-hfb12827_2.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 ruamel.yaml:
   osx-64/ruamel.yaml-0.10.5-py27_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - lib/python2.7/site-packages/_yaml.so
+rubin-env:
+  osx-arm64/rubin-env-0.5.0-hce30654_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 sagelib:
   linux-64/sagelib-7.6-np111py27_blas_openblas_0.tar.bz2:
     bad_paths:
@@ -2781,6 +3225,15 @@ viridis:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+vscode-python:
+  linux-aarch64/vscode-python-2021.2.582707922-py36h895d50e_3.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/vscode-python-2021.2.582707922-py36ha9f966f_4.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 vulture:
   win-64/vulture-0.10-py35_0.tar.bz2:
     bad_paths:
@@ -2852,6 +3305,19 @@ xnumpy:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+yoda:
+  linux-aarch64/yoda-1.9.0-py36h73d3421_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/yoda-1.9.0-py37hb278c70_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  linux-aarch64/yoda-1.9.0-py39h430422d_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 zarr:
   win-64/zarr-2.1.3-py35_1.tar.bz2:
     bad_paths:
