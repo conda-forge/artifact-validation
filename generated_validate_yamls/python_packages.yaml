@@ -26,6 +26,8 @@ certifi:
 click:
   top_level_imports:
     - click
+  exclude_files:
+    - lib-python/3/lib2to3/**/*    
 conda:
   top_level_imports:
     - conda
