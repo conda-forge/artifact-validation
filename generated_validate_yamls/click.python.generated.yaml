@@ -6,8 +6,6 @@ files:
 - Lib/site-packages/click-*.egg-info
 - Lib/site-packages/click-*.egg-info/**/*
 - Lib/site-packages/click/**/*
-- lib-python/3/lib2to3/Grammar3.7.10.final.0.pickle
-- lib-python/3/lib2to3/PatternGrammar3.7.10.final.0.pickle
 - lib/python*/site-packages/click-*.dist-info/**/*
 - lib/python*/site-packages/click-*.egg
 - lib/python*/site-packages/click-*.egg-info
