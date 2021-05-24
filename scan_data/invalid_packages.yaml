@@ -2327,6 +2327,12 @@ pypy2.7:
       - lib/libcrypto.so.1.1
       - lib/libssl.so
       - lib/libssl.so.1.1
+pypy3.7:
+  linux-ppc64le/pypy3.7-7.3.4-h7de1484_4.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - lib-python/3/lib2to3/Grammar3.7.10.final.0.pickle
+      - lib-python/3/lib2to3/PatternGrammar3.7.10.final.0.pickle
 pyroma:
   win-64/pyroma-2.0.2-py35_0.tar.bz2:
     bad_paths:
