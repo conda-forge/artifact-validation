@@ -1619,6 +1619,13 @@ notebook:
       pip.python.generated:
         bad_paths:
         - Lib/site-packages/pip/**/*
+nr:
+  win-64/nr-1.3.5-py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 oceans:
   win-64/oceans-0.3.0-py35_0.tar.bz2:
     bad_paths:
