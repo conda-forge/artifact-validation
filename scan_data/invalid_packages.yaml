@@ -3568,6 +3568,12 @@ websockets:
       click.python.generated:
       - lib-python/3/lib2to3/Grammar3.7.10.final.0.pickle
       - lib-python/3/lib2to3/PatternGrammar3.7.10.final.0.pickle
+  win-64/websockets-3.2-py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 whoosh:
   osx-64/whoosh-2.7.4-py37h5186d4c_4.tar.bz2:
     bad_paths:
