@@ -1896,6 +1896,13 @@ pkgconfig:
       setuptools.python.generated:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
+ply:
+  win-64/ply-3.9-py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 pretend:
   win-64/pretend-1.0.8-py35_0.tar.bz2:
     bad_paths:
