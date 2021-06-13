@@ -2948,6 +2948,11 @@ sfepy:
         bad_paths:
         - lib/python*/site-packages/scipy/**/*
 shapely:
+  win-64/shapely-1.5.13-np110py34_1.tar.bz2:
+    bad_paths:
+      numpy.python.generated:
+        bad_paths:
+        - Lib/site-packages/numpy/**/*
   win-64/shapely-1.5.13-np110py35_1.tar.bz2:
     bad_paths:
       numpy.python.generated:
