@@ -87,6 +87,12 @@ awscli:
     bad_paths:
       md5sum:
         valid: false
+  linux-64/awscli-1.18.14-py36_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
   osx-64/awscli-1.18.14-py36_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
