@@ -2470,6 +2470,13 @@ python-dotenv:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+python-graphviz:
+  win-64/python-graphviz-0.5.1-py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 python-lmdb:
   osx-64/python-lmdb-0.92-py35_0.tar.bz2:
     bad_paths:
