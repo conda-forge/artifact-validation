@@ -179,6 +179,12 @@ cis:
       setuptools.python.generated:
         bad_paths:
         - Lib/site-packages/setuptools/**/*
+  win-64/cis-1.5.1-py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 conda-execute:
   osx-64/conda-execute-0.6.0-py35_1.tar.bz2:
     bad_paths:
@@ -264,6 +270,11 @@ cytoolz:
       setuptools.python.generated:
         bad_paths:
         - lib/python*/site-packages/setuptools/**/*
+  win-64/cytoolz-0.8.2-py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/setuptools/**/*
 dataspyre:
   linux-64/dataspyre-0.2.6-py35_0.tar.bz2:
     bad_paths:
