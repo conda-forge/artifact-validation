@@ -2201,6 +2201,12 @@ pybind11:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+  win-64/pybind11-2.0.1-py34_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
 pycparser:
   linux-64/pycparser-2.14-py35_0.tar.bz2:
     bad_paths:
@@ -2319,6 +2325,13 @@ pymbolic:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
   win-64/pymbolic-2016.2.3-py35_1.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
+pymc3:
+  win-64/pymc3-3.0rc6-py34_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
         bad_paths:
