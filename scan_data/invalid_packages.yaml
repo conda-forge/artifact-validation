@@ -581,11 +581,13 @@ google-cloud-bigquery-storage-core:
   noarch/google-cloud-bigquery-storage-core-2.0.1-pyh9f0ad1d_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - site-packages/PyYAML-*.dist-info/**/*
-      - site-packages/yaml/**/*
+        bad_paths:
+        - site-packages/PyYAML-*.dist-info/**/*
+        - site-packages/yaml/**/*
       requests.python.generated:
-      - site-packages/requests-*.dist-info/**/*
-      - site-packages/requests/**/*
+        bad_paths:
+        - site-packages/requests-*.dist-info/**/*
+        - site-packages/requests/**/*
   noarch/google-cloud-bigquery-storage-core-2.1.0-pyhd3deb0d_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
