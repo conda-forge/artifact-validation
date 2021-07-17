@@ -168,6 +168,13 @@ build-capi:
       setuptools.python.generated:
         bad_paths:
         - Lib/site-packages/setuptools/**/*
+calliope:
+  linux-64/calliope-0.4.0-0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/pkg_resources/**/*
+        - lib/python*/site-packages/setuptools/**/*
 catalogue:
   linux-aarch64/catalogue-2.0.2-py37h4bcbb9b_0.tar.bz2:
     bad_paths:
