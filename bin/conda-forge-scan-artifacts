@@ -173,10 +173,10 @@ def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, ve
             flush=True,
         )
 
-    if "py35" in split_pkg(os.path.join(subdir, pkg))[-1]:
+    if any(ss in split_pkg(os.path.join(subdir, pkg))[-1] for ss in ["py34", "py35"]):
         valid = True
         print(
-            "skipping invalid artifact %s/%s due to 'py35' in build string: %s" % (
+            "skipping invalid artifact %s/%s due to py34/py35 in build string: %s" % (
                 subdir,
                 pkg,
                 pprint.pformat(bad_pths)
