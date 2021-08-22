@@ -117,12 +117,17 @@ def _munge_validate_yamls():
 
 
 def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, verbose):
+    if pkg.endswith(".tar.bz2"):
+        pkg_json = pkg[:-len(".tar.bz2")] + ".json"
+    else:
+        pkg_json = pkg
+
     artif_pth = os.path.join(
         "artifacts",
         repodata["name"],
         "conda-forge",
         subdir,
-        pkg.replace(".tar.bz2", ".json"),
+        pkg_json,
     )
 
     lcfg_pth = os.path.join(libcfgraph_path, artif_pth)
