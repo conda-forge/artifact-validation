@@ -41,7 +41,10 @@ DEFAULT_PYTHON_EXCLUDES = [
 
 
 def _get_subdir_pkg_from_libcfgraph_artifact(artifact_pth):
-    subdir_pkg = "/".join(artifact_pth.split('/')[-2:]).replace(".json", ".tar.bz2")
+    subdir_pkg = "/".join(artifact_pth.split('/')[-2:])
+    if subdir_pkg.endswith(".json"):
+        subdir_pkg = subdir_pkg[:-len(".json")] + ".tar.bz2"
+
     subdir, pkg = os.path.split(subdir_pkg)
     return subdir, pkg
 
