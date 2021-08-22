@@ -51,7 +51,7 @@ jobs:
             --output-path=scan_data/invalid_packages.yaml
 
       - name: generate token
-        if: ! canelled() && ! steps.turnstyle.outputs.force_continued
+        if: ! cancelled() && ! steps.turnstyle.outputs.force_continued
         id: generate_token
         uses: tibdex/github-app-token@v1
         with:
