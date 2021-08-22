@@ -10,21 +10,58 @@ jobs:
     name: scan
     runs-on: "ubuntu-latest"
     steps:
+      - name: turnstyle
+        id: turnstyle
+        uses: beckermr/turnstyle-python@v1
+        with:
+          continue-after-seconds: 10
+          poll-interval-seconds: 5
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v2
+        if: success() && ! steps.turnstyle.outputs.force_continued
+        with:
+          fetch-depth: 100
+
+      - name: install micromamba
+        if: success() && ! steps.turnstyle.outputs.force_continued
+        uses: mamba-org/provision-with-micromamba@main
+
+      - name: configure git and install code
+        if: success() && ! steps.turnstyle.outputs.force_continued
+        shell: bash -l {0}
+        run: |
+          python -m pip install -e .
+
+          git config --global pull.rebase false
+          git config --global user.email 'pelson.pub+conda-forge@gmail.com'
+          git config --global user.name 'conda-forge-admin'
+
       - name: generate token
+        if: success() && ! steps.turnstyle.outputs.force_continued
         id: generate_token
         uses: tibdex/github-app-token@v1
         with:
           app_id: ${{ secrets.CF_CURATOR_APP_ID }}
           private_key: ${{ secrets.CF_CURATOR_PRIVATE_KEY }}
 
-      - name: sleep
+      - name: push change
+        if: success() && ! steps.turnstyle.outputs.force_continued
         shell: bash -l {0}
         run: |
-          sleep 10
+          repo_url=https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git remote set-url --push origin ${repo_url}
+
+          date > test.txt
+          git add test.txt
+          git ci -m "[ci skip] test commit of date"
+          git push
+        env:
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
 
       - name: trigger next job
         uses: benc-uk/workflow-dispatch@v1
-        if: github.ref == 'refs/heads/master' && ! cancelled() && ! failure()
+        if: github.ref == 'refs/heads/master' && success() && ! steps.turnstyle.outputs.force_continued
         with:
           workflow: scan
           token: ${{ steps.generate_token.outputs.token }}
