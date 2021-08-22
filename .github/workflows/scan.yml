@@ -54,7 +54,7 @@ jobs:
 
           date > test.txt
           git add test.txt
-          git ci -m "[ci skip] test commit of date"
+          git commit -m "[ci skip] test commit of date"
           git push
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
