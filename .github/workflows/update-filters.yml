@@ -57,7 +57,7 @@ jobs:
 
       - name: bump on fail
         shell: bash -l {0}
-        if: github.ref == 'refs/heads/master' && failure()
+        if: github.ref == 'refs/heads/main' && failure()
         run: |
           conda-forge-bump-on-fail \
             --job-name=${ACTION_NAME} \

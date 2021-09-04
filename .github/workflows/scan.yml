@@ -77,14 +77,14 @@ jobs:
 
       - name: trigger next job
         uses: benc-uk/workflow-dispatch@v1
-        if: github.ref == 'refs/heads/master' && success() && ! steps.turnstyle.outputs.force_continued
+        if: github.ref == 'refs/heads/main' && success() && ! steps.turnstyle.outputs.force_continued
         with:
           workflow: scan
           token: ${{ steps.generate_token.outputs.token }}
 
       - name: bump on fail
         shell: bash -l {0}
-        if: github.ref == 'refs/heads/master' && failure() && ! steps.turnstyle.outputs.force_continued
+        if: github.ref == 'refs/heads/main' && failure() && ! steps.turnstyle.outputs.force_continued
         run: |
           conda-forge-bump-on-fail \
             --job-name=${ACTION_NAME} \
