@@ -1,0 +1,44 @@
+#!/usr/bin/env python
+import os
+import datetime
+
+import click
+import github
+
+
+@click.command()
+def main():
+    """Report scan results as a github issue"""
+    fname = "scan_results.txt"
+    if os.path.exists(fname):
+        with open(fname, "r") as fp:
+            diff_lines = fp.read()
+
+        if len(diff_lines) > 0:
+            gh = github.Github(os.environ["GH_TOKEN"])
+            repo = gh.get_repo("conda-forge/artifact-validation")
+
+            title = "[warning] %s - invalid artifacts" % (
+                datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+            )
+
+            body = """
+        Hey @conda-forge/systems!
+
+        It appears that we found some invalid artifacts:
+
+        ```diff
+        %s
+        ```
+
+        We might want to mark these as broken if they are serious!
+
+        """ % (diff_lines)
+
+            repo.create_issue(title=title, body=body)
+
+        os.system("rm -f " + fname)
+
+
+if __name__ == "__main__":
+    main()

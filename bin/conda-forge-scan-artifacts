@@ -9,7 +9,6 @@ import time
 import subprocess
 import copy
 import threading
-import datetime
 import difflib
 
 import requests
@@ -18,7 +17,6 @@ import click
 import yaml
 import tqdm
 import joblib
-import github
 from yaml.representer import Representer
 
 from conda_forge_artifact_validation.validate import (
@@ -193,30 +191,6 @@ def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, ve
             f"{subdir}/{pkg}": {"bad_paths": bad_pths},
         },
     }
-
-
-def _bump_systems(final_data):
-    gh = github.Github(os.environ["GH_TOKEN"])
-    repo = gh.get_repo("conda-forge/artifact-validation")
-
-    title = "[warning] %s - invalid artifacts" % (
-        datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
-    )
-
-    body = """
-Hey @conda-forge/systems!
-
-It appears that we found some invalid artifacts:
-
-```diff
-%s
-```
-
-We might want to mark these as broken if they are serious!
-
-""" % (final_data)
-
-    repo.create_issue(title=title, body=body)
 
 
 @click.command()
@@ -397,7 +371,8 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
                 json.dump({"subdir": None, "pkg": None}, fp)
 
     if diff_lines:
-        _bump_systems(diff_lines)
+        with open("scan_results.txt", "w") as fp:
+            fp.write(diff_lines)
 
 
 if __name__ == "__main__":

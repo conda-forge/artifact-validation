@@ -57,6 +57,14 @@ jobs:
           app_id: ${{ secrets.CF_CURATOR_APP_ID }}
           private_key: ${{ secrets.CF_CURATOR_PRIVATE_KEY }}
 
+      - name: bump errors
+        if: success() && ! steps.turnstyle.outputs.force_continued
+        shell: bash -l {0}
+        run: |
+          conda-forge-report-scan-results
+        env:
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
+
       - name: push
         if: success() && ! steps.turnstyle.outputs.force_continued
         shell: bash -l {0}
