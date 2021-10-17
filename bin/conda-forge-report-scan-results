@@ -22,18 +22,18 @@ def main():
                 datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
             )
 
-            body = """
-        Hey @conda-forge/systems!
+            body = """\
+Hey @conda-forge/systems!
 
-        It appears that we found some invalid artifacts:
+It appears that we found some invalid artifacts:
 
-        ```diff
-        %s
-        ```
+```diff
+%s
+```
 
-        We might want to mark these as broken if they are serious!
+We might want to mark these as broken if they are serious!
 
-        """ % (diff_lines)
+""" % (diff_lines)
 
             repo.create_issue(title=title, body=body)
 
