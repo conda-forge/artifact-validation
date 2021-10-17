@@ -22,6 +22,23 @@ calliope:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+compass-interface-http:
+  noarch/compass-interface-http-0.24.1-pyhd8ed1ab_4.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+      - site-packages/certifi-*.dist-info/**/*
+      - site-packages/certifi/**/*
+  noarch/compass-interface-http-0.24.1-pyhd8ed1ab_7.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+      - site-packages/certifi-*.dist-info/**/*
+      - site-packages/certifi/**/*
+compass-interface-pandas:
+  noarch/compass-interface-pandas-0.24.1-pyhd8ed1ab_4.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+      - site-packages/certifi-*.dist-info/**/*
+      - site-packages/certifi/**/*
 cysignals:
   osx-64/cysignals-1.4.0-py35_0.tar.bz2:
     bad_paths:
