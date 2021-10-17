@@ -129,6 +129,27 @@ jupyter_core:
       pip.python.generated:
         bad_paths:
         - Lib/site-packages/pip/**/*
+libpython:
+  win-64/libpython-2.1-py36ha15d459_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools/**/*
+  win-64/libpython-2.1-py37h03978a9_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools/**/*
+  win-64/libpython-2.1-py37h4c0cbd9_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools/**/*
+  win-64/libpython-2.1-py38haa244fe_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools/**/*
+  win-64/libpython-2.1-py39hcbf5309_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools/**/*
 maturin:
   osx-64/maturin-0.7.7-py36h0b31af3_0.tar.bz2:
     bad_paths:
