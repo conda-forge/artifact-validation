@@ -22,23 +22,6 @@ calliope:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
-compass-interface-http:
-  noarch/compass-interface-http-0.24.1-pyhd8ed1ab_4.tar.bz2:
-    bad_paths:
-      certifi.python.generated:
-      - site-packages/certifi-*.dist-info/**/*
-      - site-packages/certifi/**/*
-  noarch/compass-interface-http-0.24.1-pyhd8ed1ab_7.tar.bz2:
-    bad_paths:
-      certifi.python.generated:
-      - site-packages/certifi-*.dist-info/**/*
-      - site-packages/certifi/**/*
-compass-interface-pandas:
-  noarch/compass-interface-pandas-0.24.1-pyhd8ed1ab_4.tar.bz2:
-    bad_paths:
-      certifi.python.generated:
-      - site-packages/certifi-*.dist-info/**/*
-      - site-packages/certifi/**/*
 cysignals:
   osx-64/cysignals-1.4.0-py35_0.tar.bz2:
     bad_paths:
@@ -146,6 +129,27 @@ jupyter_core:
       pip.python.generated:
         bad_paths:
         - Lib/site-packages/pip/**/*
+libpython:
+  win-64/libpython-2.1-py36ha15d459_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools/**/*
+  win-64/libpython-2.1-py37h03978a9_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools/**/*
+  win-64/libpython-2.1-py37h4c0cbd9_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools/**/*
+  win-64/libpython-2.1-py38haa244fe_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools/**/*
+  win-64/libpython-2.1-py39hcbf5309_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools/**/*
 maturin:
   osx-64/maturin-0.7.7-py36h0b31af3_0.tar.bz2:
     bad_paths:
