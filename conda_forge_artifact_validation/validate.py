@@ -32,6 +32,7 @@ def _validate_one(validate_yaml, pkg_dir):
             if os.path.exists(pth):
                 valid = False
                 bad_paths.append(file)
+                LOGGER.info("path %s failed for file %s", pth, file)
                 break
 
     return valid, bad_paths
