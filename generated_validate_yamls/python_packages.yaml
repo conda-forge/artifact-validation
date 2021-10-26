@@ -75,6 +75,8 @@ setuptools:
   top_level_imports:
     - setuptools
     - pkg_resources
+  allowed:
+    - libpython
 tqdm:
   top_level_imports:
     - tqdm
