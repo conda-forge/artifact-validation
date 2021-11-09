@@ -92,6 +92,12 @@ ipython:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+isce3:
+  osx-64/isce3-0.4.0-py37h0d64919_0.tar.bz2:
+    bad_paths:
+      scipy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/scipy/**/*
 jupyter_client:
   win-64/jupyter_client-4.4.0-py35_0.tar.bz2:
     bad_paths:
