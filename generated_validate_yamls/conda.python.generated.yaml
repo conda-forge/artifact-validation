@@ -59,6 +59,7 @@ files:
 - lib/python*/site-packages/conda_env/**/*
 - lib/python2.7/site-packages/xonsh/conda.xsh
 - lib/python2.7/site-packages/xontrib/conda.xsh
+- lib/python3.10/site-packages/xontrib/conda.xsh
 - lib/python3.5/site-packages/xonsh/conda.xsh
 - lib/python3.6/site-packages/xonsh/conda.xsh
 - lib/python3.6/site-packages/xontrib/conda.xsh
