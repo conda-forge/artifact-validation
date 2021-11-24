@@ -93,6 +93,21 @@ ipython:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
 isce3:
+  linux-64/isce3-0.3.0-py37hb2c68c2_0.tar.bz2:
+    bad_paths:
+      scipy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/scipy/**/*
+  linux-64/isce3-0.3.0-py38h1655694_0.tar.bz2:
+    bad_paths:
+      scipy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/scipy/**/*
+  linux-64/isce3-0.3.0-py39hb7f1eaa_0.tar.bz2:
+    bad_paths:
+      scipy.python.generated:
+        bad_paths:
+        - lib/python*/site-packages/scipy/**/*
   osx-64/isce3-0.4.0-py37h0d64919_0.tar.bz2:
     bad_paths:
       scipy.python.generated:
