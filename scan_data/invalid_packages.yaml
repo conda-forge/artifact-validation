@@ -22,6 +22,17 @@ calliope:
         bad_paths:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
+  win-64/calliope-0.4.0-1.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+        bad_paths:
+        - Lib/site-packages/pkg_resources/**/*
+        - Lib/site-packages/setuptools/**/*
+cheroot:
+  win-64/cheroot-6.1.2-py36_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 cysignals:
   osx-64/cysignals-1.4.0-py35_0.tar.bz2:
     bad_paths:
