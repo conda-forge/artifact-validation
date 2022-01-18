@@ -33,6 +33,44 @@ cheroot:
     bad_paths:
       md5sum:
         valid: false
+clang_bootstrap_osx-64:
+  osx-arm64/clang_bootstrap_osx-64-12.0.1-h2c3288c_6.tar.bz2:
+    bad_paths:
+      openssl:
+      - include/openssl/**/*
+      - bin/openssl
+      openssl.generated:
+      - bin/c_rehash
+      - lib/engines-3/capi.dylib
+      - lib/engines-3/loader_attic.dylib
+      - lib/engines-3/padlock.dylib
+      - lib/libcrypto.3.dylib
+      - lib/libcrypto.dylib
+      - lib/libssl.3.dylib
+      - lib/libssl.dylib
+      - lib/ossl-modules/legacy.dylib
+      - lib/pkgconfig/libcrypto.pc
+      - lib/pkgconfig/libssl.pc
+      - lib/pkgconfig/openssl.pc
+clang_bootstrap_osx-arm64:
+  osx-arm64/clang_bootstrap_osx-arm64-12.0.1-h753c72e_6.tar.bz2:
+    bad_paths:
+      openssl:
+      - include/openssl/**/*
+      - bin/openssl
+      openssl.generated:
+      - bin/c_rehash
+      - lib/engines-3/capi.dylib
+      - lib/engines-3/loader_attic.dylib
+      - lib/engines-3/padlock.dylib
+      - lib/libcrypto.3.dylib
+      - lib/libcrypto.dylib
+      - lib/libssl.3.dylib
+      - lib/libssl.dylib
+      - lib/ossl-modules/legacy.dylib
+      - lib/pkgconfig/libcrypto.pc
+      - lib/pkgconfig/libssl.pc
+      - lib/pkgconfig/openssl.pc
 cysignals:
   osx-64/cysignals-1.4.0-py35_0.tar.bz2:
     bad_paths:
