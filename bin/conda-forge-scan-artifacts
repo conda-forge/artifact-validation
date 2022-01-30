@@ -117,6 +117,8 @@ def _munge_validate_yamls():
 def _process_artifact(pkg, repodata, libcfgraph_path, subdir, validate_yamls, verbose):
     if pkg.endswith(".tar.bz2"):
         pkg_json = pkg[:-len(".tar.bz2")] + ".json"
+    elif pkg.endswith(".conda"):
+        pkg_json = pkg[:-len(".conda")] + ".json"
     else:
         pkg_json = pkg
 
