@@ -18,7 +18,7 @@ def test_get_subdir_pkg_from_libcfgraph_artifact():
         ".conda",
     )
     assert subdir == "osx-64"
-    assert pkg == "foo.tar.bz2"
+    assert pkg == "foo.conda"
 
 
 def test_generate_validate_yaml_from_libcfgraph():
