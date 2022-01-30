@@ -73,9 +73,13 @@ def validate_file(path, validate_yamls, tmpdir=None, lock=None):
     _, output_name, _, _ = split_pkg(os.path.join("foo", pkg))
 
     if pkg.endswith(".tar.bz2"):
-        pkg_nm = pkg[: -len(".tar.bz2")]
+        pkg_nm = pkg[:-len(".tar.bz2")]
+    elif pkg.endswith(".conda"):
+        pkg_nm = pkg[:-len(".conda")]
     else:
-        pkg_nm = pkg[: -len(".conda")]
+        raise RuntimeError(
+            "Can only process packages that end in .tar.bz2 or .conda!"
+        )
 
     try:
         if lock is not None:

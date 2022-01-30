@@ -40,10 +40,10 @@ DEFAULT_PYTHON_EXCLUDES = [
 ]
 
 
-def _get_subdir_pkg_from_libcfgraph_artifact(artifact_pth):
+def _get_subdir_pkg_from_libcfgraph_artifact(artifact_pth, tail):
     subdir_pkg = "/".join(artifact_pth.split('/')[-2:])
     if subdir_pkg.endswith(".json"):
-        subdir_pkg = subdir_pkg[:-len(".json")] + ".tar.bz2"
+        subdir_pkg = subdir_pkg[:-len(".json")] + tail
 
     subdir, pkg = os.path.split(subdir_pkg)
     return subdir, pkg
@@ -63,9 +63,9 @@ def _get_all_json_blobs_for_artifact(artifact_name, verbose=0):
     sentinel = os.path.join("artifacts", artifact_name) + "/"
     artifact_pths = [pth for pth in LIBCFGRAPH_INDEX if pth.startswith(sentinel)]
 
-    def _download_jsob_blob(artifact_pth):
+    def _download_jsob_blob(artifact_pth, tail):
         # ignore things not on the main channel
-        subdir, pkg = _get_subdir_pkg_from_libcfgraph_artifact(artifact_pth)
+        subdir, pkg = _get_subdir_pkg_from_libcfgraph_artifact(artifact_pth, tail)
         if pkg not in REPODATA_CACHE[subdir]["packages"]:
             return None
 
@@ -79,10 +79,11 @@ def _get_all_json_blobs_for_artifact(artifact_name, verbose=0):
         except Exception:
             return None
 
-    jobs = [
-        joblib.delayed(_download_jsob_blob)(artifact_pth)
-        for artifact_pth in artifact_pths
-    ]
+    jobs = []
+    for artifact_pth in artifact_pths:
+        for tail in [".tar.bz2", ".conda"]:
+            jobs.append(joblib.delayed(_download_jsob_blob)(artifact_pth, tail))
+
     artifacts = joblib.Parallel(n_jobs=20, backend="threading", verbose=verbose)(jobs)
 
     return [a for a in artifacts if a is not None]
