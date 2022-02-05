@@ -50,6 +50,7 @@ files:
 - lib/python3.5/distutils/command/bdist_conda.py
 - lib/python3.6/distutils/command/bdist_conda.py
 - lib/python3.7/distutils/command/bdist_conda.py
+- lib/python3.7/site-packages/setuptools/_distutils/command/bdist_conda.py
 - lib/python3.8/distutils/command/bdist_conda.py
 - lib/python3.8/site-packages/setuptools/_distutils/command/bdist_conda.py
 - lib/python3.9/distutils/command/bdist_conda.py
