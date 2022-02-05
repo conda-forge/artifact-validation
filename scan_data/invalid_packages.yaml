@@ -33,6 +33,23 @@ cheroot:
     bad_paths:
       md5sum:
         valid: false
+conda-build:
+  win-64/conda-build-3.21.8-py310h5588dad_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools/**/*
+  win-64/conda-build-3.21.8-py37h03978a9_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools/**/*
+  win-64/conda-build-3.21.8-py38haa244fe_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools/**/*
+  win-64/conda-build-3.21.8-py39hcbf5309_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/setuptools/**/*
 cysignals:
   osx-64/cysignals-1.4.0-py35_0.tar.bz2:
     bad_paths:
