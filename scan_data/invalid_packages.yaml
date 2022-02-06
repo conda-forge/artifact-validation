@@ -34,6 +34,22 @@ cheroot:
       md5sum:
         valid: false
 conda-build:
+  linux-aarch64/conda-build-3.21.8-py310h4c7bcd0_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python*/site-packages/setuptools/**/*
+  linux-aarch64/conda-build-3.21.8-py37hfd236b0_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python*/site-packages/setuptools/**/*
+  linux-aarch64/conda-build-3.21.8-py38he3eb160_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python*/site-packages/setuptools/**/*
+  linux-aarch64/conda-build-3.21.8-py39h4420490_0.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python*/site-packages/setuptools/**/*
   linux-ppc64le/conda-build-3.21.8-py310h194a6c8_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
