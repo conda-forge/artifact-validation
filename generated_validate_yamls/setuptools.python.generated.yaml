@@ -1,4 +1,5 @@
 allowed:
+- conda-build
 - libpython
 - setuptools
 files:
