@@ -49,6 +49,11 @@ conda-package-handling:
 conda-smithy:
   top_level_imports:
     - conda_smithy
+distutils:
+  top_level_imports:
+    - distutils
+  allowed:
+    - conda-build
 joblib:
   top_level_imports:
     - joblib
@@ -77,6 +82,7 @@ setuptools:
     - pkg_resources
   allowed:
     - libpython
+    - conda-build
 tqdm:
   top_level_imports:
     - tqdm
