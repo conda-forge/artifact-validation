@@ -42,6 +42,24 @@ cysignals:
       pip.python.generated:
         bad_paths:
         - lib/python*/site-packages/pip/**/*
+finesse:
+  win-64/finesse-3.0a3-py310h39ba554_1.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click-*.egg-info/**/*
+      - Lib/site-packages/click/**/*
+  win-64/finesse-3.0a3-py38h148ddfe_1.tar.bz2:
+    bad_paths:
+      click.python.generated:
+        bad_paths:
+        - Lib/site-packages/click-*.egg-info
+        - Lib/site-packages/click-*.egg-info/**/*
+        - Lib/site-packages/click/**/*
+  win-64/finesse-3.0a3-py39h1cfdcae_1.tar.bz2:
+    bad_paths:
+      click.python.generated:
+      - Lib/site-packages/click-*.egg-info/**/*
+      - Lib/site-packages/click/**/*
 google-cloud-bigquery-storage-core:
   noarch/google-cloud-bigquery-storage-core-2.0.0-pyh9f0ad1d_1.tar.bz2:
     bad_paths:
