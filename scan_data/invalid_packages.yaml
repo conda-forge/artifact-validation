@@ -51,10 +51,8 @@ finesse:
   win-64/finesse-3.0a3-py38h148ddfe_1.tar.bz2:
     bad_paths:
       click.python.generated:
-        bad_paths:
-        - Lib/site-packages/click-*.egg-info
-        - Lib/site-packages/click-*.egg-info/**/*
-        - Lib/site-packages/click/**/*
+      - Lib/site-packages/click-*.egg-info/**/*
+      - Lib/site-packages/click/**/*
   win-64/finesse-3.0a3-py39h1cfdcae_1.tar.bz2:
     bad_paths:
       click.python.generated:
