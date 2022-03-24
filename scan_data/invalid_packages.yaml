@@ -241,6 +241,14 @@ omniorb-libs:
     bad_paths:
       openssl:
       - include/openssl/**/*
+  win-64/omniorb-libs-4.2.5-h8b1b97a_1.tar.bz2:
+    bad_paths:
+      openssl:
+      - Library/include/openssl/**/*
+  win-64/omniorb-libs-4.2.5-hc7e8586_1.tar.bz2:
+    bad_paths:
+      openssl:
+      - Library/include/openssl/**/*
 pyosf:
   osx-64/pyosf-1.0.4-py35_0.tar.bz2:
     bad_paths:
