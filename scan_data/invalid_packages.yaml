@@ -232,31 +232,6 @@ notebook:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
-omniorb-libs:
-  linux-ppc64le/omniorb-libs-4.2.5-h262a72d_1.tar.bz2:
-    bad_paths:
-      openssl:
-      - include/openssl/**/*
-  linux-ppc64le/omniorb-libs-4.2.5-h350ef5c_1.tar.bz2:
-    bad_paths:
-      openssl:
-      - include/openssl/**/*
-  osx-64/omniorb-libs-4.2.5-h942079c_1.tar.bz2:
-    bad_paths:
-      openssl:
-      - include/openssl/**/*
-  osx-64/omniorb-libs-4.2.5-hca56917_1.tar.bz2:
-    bad_paths:
-      openssl:
-      - include/openssl/**/*
-  win-64/omniorb-libs-4.2.5-h8b1b97a_1.tar.bz2:
-    bad_paths:
-      openssl:
-      - Library/include/openssl/**/*
-  win-64/omniorb-libs-4.2.5-hc7e8586_1.tar.bz2:
-    bad_paths:
-      openssl:
-      - Library/include/openssl/**/*
 pyosf:
   osx-64/pyosf-1.0.4-py35_0.tar.bz2:
     bad_paths:
