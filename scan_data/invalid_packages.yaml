@@ -1,3 +1,37 @@
+arm_pyart:
+  win-64/arm_pyart-1.12.1-py310h2873277_0.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+      - Lib/site-packages/certifi-*.egg-info/**/*
+      - Lib/site-packages/certifi/**/*
+      requests.python.generated:
+      - Lib/site-packages/requests-*.egg-info/**/*
+      - Lib/site-packages/requests/**/*
+      scipy.python.generated:
+      - Lib/site-packages/scipy-*.egg-info/**/*
+      - Lib/site-packages/scipy/**/*
+  win-64/arm_pyart-1.12.1-py38hbdcd294_0.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+      - Lib/site-packages/certifi-*.egg-info/**/*
+      - Lib/site-packages/certifi/**/*
+      requests.python.generated:
+      - Lib/site-packages/requests-*.egg-info/**/*
+      - Lib/site-packages/requests/**/*
+      scipy.python.generated:
+      - Lib/site-packages/scipy-*.egg-info/**/*
+      - Lib/site-packages/scipy/**/*
+  win-64/arm_pyart-1.12.1-py39h5d4886f_0.tar.bz2:
+    bad_paths:
+      certifi.python.generated:
+      - Lib/site-packages/certifi-*.egg-info/**/*
+      - Lib/site-packages/certifi/**/*
+      requests.python.generated:
+      - Lib/site-packages/requests-*.egg-info/**/*
+      - Lib/site-packages/requests/**/*
+      scipy.python.generated:
+      - Lib/site-packages/scipy-*.egg-info/**/*
+      - Lib/site-packages/scipy/**/*
 awscli:
   linux-64/awscli-1.16.37-py36_0.tar.bz2:
     bad_paths:
