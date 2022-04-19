@@ -83,7 +83,7 @@ def _get_all_json_blobs_for_artifact(artifact_name, verbose=0):
         joblib.delayed(_download_jsob_blob)(artifact_pth)
         for artifact_pth in artifact_pths
     ]
-    artifacts = joblib.Parallel(n_jobs=20, backend="threading", verbose=verbose)(jobs)
+    artifacts = joblib.Parallel(n_jobs=5, backend="threading", verbose=verbose)(jobs)
 
     return [a for a in artifacts if a is not None]
 
