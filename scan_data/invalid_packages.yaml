@@ -405,6 +405,71 @@ tensorflow:
       certifi.python.generated:
         bad_paths:
         - lib/python*/site-packages/certifi/**/*
+vim:
+  osx-64/vim-8.2.1981-py39h4e8f7e3_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-64/vim-8.2.1985-py38h824d61f_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-64/vim-8.2.2029-py37hc05d004_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-64/vim-8.2.2032-py39hecadfae_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-64/vim-8.2.2042-py39hecadfae_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-64/vim-8.2.2110-py39h60d8927_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-64/vim-8.2.2183-py37h86c5cc1_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-64/vim-8.2.2214-py36hf3cb852_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-64/vim-8.2.2298-py37h86c5cc1_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-64/vim-8.2.2307-py36hf3cb852_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-64/vim-8.2.2353-py37h2f5c533_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-64/vim-8.2.2359-py37h2f5c533_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-64/vim-8.2.2387-py38h2ef3a0f_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-64/vim-8.2.2408-py37h2f5c533_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-64/vim-8.2.2410-py38h2ef3a0f_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
+  osx-64/vim-8.2.2537-py36hd09ed37_0.tar.bz2:
+    bad_paths:
+      md5sum:
+        valid: false
 wrf-python:
   win-64/wrf-python-1.3.2.6-py310hf8fe482_1.tar.bz2:
     bad_paths:
