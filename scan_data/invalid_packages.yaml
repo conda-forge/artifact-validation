@@ -1,3 +1,16 @@
+arch-py:
+  linux-aarch64/arch-py-5.3.1-py310h7943a33_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-aarch64/arch-py-5.3.1-py38hc40ab35_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-aarch64/arch-py-5.3.1-py39h890285e_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 arm_pyart:
   win-64/arm_pyart-1.12.1-py310h2873277_0.tar.bz2:
     bad_paths:
@@ -95,6 +108,30 @@ awscli:
         - lib/python*/site-packages/pkg_resources/**/*
         - lib/python*/site-packages/setuptools/**/*
 awscrt:
+  linux-aarch64/awscrt-0.13.13-py310h556106b_8.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-aarch64/awscrt-0.13.13-py310h989cf32_7.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-aarch64/awscrt-0.13.13-py38h545bcbc_8.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-aarch64/awscrt-0.13.13-py38h5be0135_7.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-aarch64/awscrt-0.13.13-py39h035ccf6_7.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  linux-aarch64/awscrt-0.13.13-py39h3c22493_8.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
   linux-ppc64le/awscrt-0.13.13-py310h1bef779_8.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -133,6 +170,18 @@ calliope:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
 cartopy:
+  linux-aarch64/cartopy-0.20.3-py310h419ee0b_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-aarch64/cartopy-0.20.3-py38hacf91dc_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-aarch64/cartopy-0.20.3-py39h0be1737_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
   linux-ppc64le/cartopy-0.20.3-py310h53d3e0d_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -146,6 +195,18 @@ cartopy:
       pyyaml.python.generated:
       - bin/python3.9.bak
 cftime:
+  linux-aarch64/cftime-1.6.0-py310h7943a33_2.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-aarch64/cftime-1.6.0-py38hc40ab35_2.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-aarch64/cftime-1.6.0-py39h890285e_2.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
   linux-ppc64le/cftime-1.6.0-py310hf126fe3_2.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -163,6 +224,31 @@ cheroot:
     bad_paths:
       md5sum:
         valid: false
+cppcheck:
+  linux-aarch64/cppcheck-2.7.2-py310h1c0ffb1_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-aarch64/cppcheck-2.7.2-py38h408b2fb_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-aarch64/cppcheck-2.7.2-py39h723322e_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  linux-aarch64/cppcheck-2.7.5-py310h1c0ffb1_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-aarch64/cppcheck-2.7.5-py38h408b2fb_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-aarch64/cppcheck-2.7.5-py39h723322e_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 cysignals:
   osx-64/cysignals-1.4.0-py35_0.tar.bz2:
     bad_paths:
@@ -173,6 +259,18 @@ cysignals:
         bad_paths:
         - lib/python*/site-packages/pip/**/*
 cython-blis:
+  linux-aarch64/cython-blis-0.7.8-py310h7943a33_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-aarch64/cython-blis-0.7.8-py38hc40ab35_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-aarch64/cython-blis-0.7.8-py39h890285e_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
   linux-ppc64le/cython-blis-0.7.8-py310hf126fe3_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -202,6 +300,18 @@ finesse:
       - Lib/site-packages/click-*.egg-info/**/*
       - Lib/site-packages/click/**/*
 fortls:
+  linux-aarch64/fortls-2.10.0-py310h4c7bcd0_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-aarch64/fortls-2.10.0-py38he3eb160_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-aarch64/fortls-2.10.0-py39h4420490_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
   linux-ppc64le/fortls-2.10.0-py310h194a6c8_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -625,6 +735,19 @@ pyosf:
       requests.python.generated:
         bad_paths:
         - lib/python*/site-packages/requests/**/*
+pyppmd:
+  linux-ppc64le/pyppmd-0.18.2-py310h76aa780_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/pyppmd-0.18.2-py38h5482240_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/pyppmd-0.18.2-py39h62245c2_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 pypy2.7:
   linux-64/pypy2.7-5.10.0-0.tar.bz2:
     bad_paths:
@@ -635,6 +758,19 @@ pypy2.7:
       - lib/libcrypto.so.1.1
       - lib/libssl.so
       - lib/libssl.so.1.1
+pytz-deprecation-shim:
+  linux-ppc64le/pytz-deprecation-shim-0.1.0.post0-py310h194a6c8_2.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/pytz-deprecation-shim-0.1.0.post0-py38h8328f6c_2.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/pytz-deprecation-shim-0.1.0.post0-py39h0b1cf3c_2.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 racket:
   osx-64/racket-6.12-hfc679d8_0.tar.bz2:
     bad_paths:
@@ -696,6 +832,34 @@ racket:
       openssl.generated:
       - lib/libcrypto.1.1.dylib
       - lib/libssl.1.1.dylib
+rapidfuzz:
+  linux-ppc64le/rapidfuzz-2.0.15-py310h7b168e4_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/rapidfuzz-2.0.15-py38h8af89d0_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/rapidfuzz-2.0.15-py39h9c2015c_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  linux-ppc64le/rapidfuzz-2.1.0-py310h7b168e4_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+        bad_paths:
+        - bin/python3.10.bak
+  linux-ppc64le/rapidfuzz-2.1.0-py38h8af89d0_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+        bad_paths:
+        - bin/python3.8.bak
+  linux-ppc64le/rapidfuzz-2.1.0-py39h9c2015c_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+        bad_paths:
+        - bin/python3.9.bak
 ruamel.yaml:
   osx-64/ruamel.yaml-0.10.5-py27_0.tar.bz2:
     bad_paths:
@@ -716,12 +880,38 @@ setuptools_scm:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+shortuuid:
+  linux-ppc64le/shortuuid-1.0.9-py310h194a6c8_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/shortuuid-1.0.9-py38h8328f6c_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/shortuuid-1.0.9-py39h0b1cf3c_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 tensorflow:
   linux-64/tensorflow-0.10.0-py35_0.tar.bz2:
     bad_paths:
       certifi.python.generated:
         bad_paths:
         - lib/python*/site-packages/certifi/**/*
+tzlocal:
+  linux-ppc64le/tzlocal-4.2-py310h194a6c8_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/tzlocal-4.2-py38h8328f6c_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/tzlocal-4.2-py39h0b1cf3c_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 vim:
   osx-64/vim-8.2.1981-py39h4e8f7e3_0.tar.bz2:
     bad_paths:
