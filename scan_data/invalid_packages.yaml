@@ -24,6 +24,15 @@ aggdraw:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+apache-beam:
+  osx-arm64/apache-beam-2.40.0-py38he5c2ac2_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/apache-beam-2.40.0-py39h9eb174b_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 apscheduler:
   osx-arm64/apscheduler-3.6.3-py310hbe9552e_5.tar.bz2:
     bad_paths:
@@ -244,6 +253,30 @@ awscli:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+  osx-arm64/awscli-1.25.20-py310hbe9552e_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/awscli-1.25.20-py38h10201cd_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/awscli-1.25.20-py39h2804cbe_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  osx-arm64/awscli-1.25.21-py310hbe9552e_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/awscli-1.25.21-py38h10201cd_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/awscli-1.25.21-py39h2804cbe_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 awscrt:
   linux-aarch64/awscrt-0.13.13-py310h556106b_8.tar.bz2:
     bad_paths:
@@ -343,6 +376,18 @@ bottleneck:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+  osx-arm64/bottleneck-1.3.5-py310h611a7d1_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/bottleneck-1.3.5-py38hd91e067_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/bottleneck-1.3.5-py39h7b9fbcb_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 brian2:
   osx-arm64/brian2-2.5.1-py310ha6127ee_0.tar.bz2:
     bad_paths:
@@ -407,15 +452,27 @@ cartopy:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+  osx-arm64/cartopy-0.20.3-py310h4b64ff1_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
   osx-arm64/cartopy-0.20.3-py310ha5714eb_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.10.bak
+  osx-arm64/cartopy-0.20.3-py38hb02dfe2_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
   osx-arm64/cartopy-0.20.3-py38hdb520c5_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.8.bak
   osx-arm64/cartopy-0.20.3-py39h83a2afc_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  osx-arm64/cartopy-0.20.3-py39h9217dac_1.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
@@ -429,6 +486,32 @@ casadi:
       pyyaml.python.generated:
       - bin/python3.8.bak
   osx-arm64/casadi-3.5.5-py39h6970697_10.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+cf-units:
+  osx-arm64/cf-units-3.1.0-py310h611a7d1_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/cf-units-3.1.0-py38hd91e067_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/cf-units-3.1.0-py39h7b9fbcb_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+cffi:
+  osx-arm64/cffi-1.15.1-py310he00a5c5_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/cffi-1.15.1-py38h0e10f82_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/cffi-1.15.1-py39h04d3946_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
@@ -490,6 +573,18 @@ cftime:
       pyyaml.python.generated:
       - bin/python3.8.bak
   osx-arm64/cftime-1.6.0-py39h7b9fbcb_2.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  osx-arm64/cftime-1.6.1-py310h611a7d1_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/cftime-1.6.1-py38hd91e067_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/cftime-1.6.1-py39h7b9fbcb_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
@@ -598,6 +693,18 @@ cppyy-cling:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+  osx-arm64/cppyy-cling-6.27.0-py310he0c1fe7_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/cppyy-cling-6.27.0-py38h4d7b76e_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/cppyy-cling-6.27.0-py39h9dd4a2c_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 cwinpy:
   osx-arm64/cwinpy-0.8.0-py310h611a7d1_2.tar.bz2:
     bad_paths:
@@ -671,6 +778,18 @@ dagster:
       pyyaml.python.generated:
       - bin/python3.8.bak
   osx-arm64/dagster-0.15.2-py39h2804cbe_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  osx-arm64/dagster-0.15.3-py310hbe9552e_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/dagster-0.15.3-py38h10201cd_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/dagster-0.15.3-py39h2804cbe_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
@@ -851,6 +970,31 @@ fortls:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+  osx-arm64/fortls-2.11.0-py310hbe9552e_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/fortls-2.11.0-py38h10201cd_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/fortls-2.11.0-py39h2804cbe_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+galsim:
+  osx-arm64/galsim-2.3.5-py310h2c2970f_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/galsim-2.3.5-py38hfe45c23_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/galsim-2.3.5-py39hd90f313_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 geventhttpclient:
   linux-aarch64/geventhttpclient-1.5.5-py310h761cc84_0.tar.bz2:
     bad_paths:
@@ -876,6 +1020,18 @@ geventhttpclient:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+  osx-arm64/geventhttpclient-1.5.5-py310h02f21da_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/geventhttpclient-1.5.5-py38he5c2ac2_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/geventhttpclient-1.5.5-py39h9eb174b_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 glum:
   osx-arm64/glum-2.1.0-py310hb60ed02_0.tar.bz2:
     bad_paths:
@@ -898,6 +1054,18 @@ glum:
       pyyaml.python.generated:
       - bin/python3.9.bak
   osx-arm64/glum-2.1.0-py39h4c01d86_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  osx-arm64/glum-2.1.2-py310hb60ed02_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/glum-2.1.2-py38h65103c3_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/glum-2.1.2-py39h4c01d86_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
@@ -1450,6 +1618,18 @@ iminuit:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+  osx-arm64/iminuit-2.12.1-py310hb07a4bc_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/iminuit-2.12.1-py38h396b780_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/iminuit-2.12.1-py39h6e3512e_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 imp:
   osx-arm64/imp-2.17.0-py310h61d3a6e_0.tar.bz2:
     bad_paths:
@@ -1756,6 +1936,18 @@ lxml:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+  osx-arm64/lxml-4.9.1-py310h02f21da_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/lxml-4.9.1-py38he5c2ac2_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/lxml-4.9.1-py39h9eb174b_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 maturin:
   osx-64/maturin-0.7.7-py36h0b31af3_0.tar.bz2:
     bad_paths:
@@ -1935,6 +2127,10 @@ nutpie:
       pyyaml.python.generated:
       - bin/python3.9.bak
 openmeeg:
+  osx-arm64/openmeeg-2.4.2-py310h6e1f347_4.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
   osx-arm64/openmeeg-2.4.2-py310haddacac_3.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -1943,7 +2139,15 @@ openmeeg:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.8.bak
+  osx-arm64/openmeeg-2.4.2-py38hbab9506_4.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
   osx-arm64/openmeeg-2.4.2-py39h54c461b_3.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  osx-arm64/openmeeg-2.4.2-py39h6db3175_4.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
@@ -2017,6 +2221,42 @@ openpmd-api:
       pyyaml.python.generated:
       - bin/python3.8.bak
   linux-ppc64le/openpmd-api-0.14.5-nompi_py39hf0b68f3_101.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  osx-arm64/openpmd-api-0.14.5-mpi_mpich_py310h9415824_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/openpmd-api-0.14.5-mpi_mpich_py38h022abd5_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/openpmd-api-0.14.5-mpi_mpich_py39h1dd3e25_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  osx-arm64/openpmd-api-0.14.5-mpi_openmpi_py310h1f06c1b_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/openpmd-api-0.14.5-mpi_openmpi_py38h916374a_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/openpmd-api-0.14.5-mpi_openmpi_py39h8fd6c58_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  osx-arm64/openpmd-api-0.14.5-nompi_py310h8014b7f_101.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/openpmd-api-0.14.5-nompi_py38h4bcb3ea_101.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/openpmd-api-0.14.5-nompi_py39haf807e5_101.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
@@ -2406,6 +2646,19 @@ python-ligo-lw:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+pytorch_sparse:
+  osx-arm64/pytorch_sparse-0.6.14-py310h05c80da_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/pytorch_sparse-0.6.14-py38he02f4ef_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/pytorch_sparse-0.6.14-py39h1d658c3_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 pytype:
   osx-arm64/pytype-2022.06.23-py310hb07a4bc_0.tar.bz2:
     bad_paths:
@@ -2416,6 +2669,18 @@ pytype:
       pyyaml.python.generated:
       - bin/python3.8.bak
   osx-arm64/pytype-2022.06.23-py39h6e3512e_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  osx-arm64/pytype-2022.06.30-py310hb07a4bc_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/pytype-2022.06.30-py38h396b780_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/pytype-2022.06.30-py39h6e3512e_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
@@ -2627,6 +2892,18 @@ rapidfuzz:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+  osx-arm64/rapidfuzz-2.1.1-py310ha6a5cd6_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/rapidfuzz-2.1.1-py38h6724fcd_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/rapidfuzz-2.1.1-py39hd2dba81_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 ruamel.yaml:
   osx-64/ruamel.yaml-0.10.5-py27_0.tar.bz2:
     bad_paths:
@@ -2650,6 +2927,19 @@ sagemaker-python-sdk:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+scqubits:
+  osx-arm64/scqubits-3.0.1-py310ha6127ee_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/scqubits-3.0.1-py38h7fa088a_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/scqubits-3.0.1-py39hc86685f_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 setuptools_scm:
   win-64/setuptools_scm-1.15.0-py35_0.tar.bz2:
     bad_paths:
@@ -2670,6 +2960,18 @@ shapely:
       pyyaml.python.generated:
       - bin/python3.8.bak
   linux-ppc64le/shapely-1.8.2-py39h103d081_3.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  osx-arm64/shapely-1.8.2-py310h2f3af10_3.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/shapely-1.8.2-py38h7253250_3.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/shapely-1.8.2-py39h12552bf_3.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
@@ -2733,6 +3035,19 @@ sunpy:
       pyyaml.python.generated:
       - bin/python3.8.bak
   osx-arm64/sunpy-4.0.2-py39h7b9fbcb_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+tabmat:
+  osx-arm64/tabmat-3.1.2-py310hb60ed02_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/tabmat-3.1.2-py38h65103c3_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/tabmat-3.1.2-py39h4c01d86_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
@@ -2944,6 +3259,19 @@ vmprof:
       pyyaml.python.generated:
       - bin/python3.9.bak
   osx-arm64/vmprof-0.4.15-py39h9eb174b_3.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+westpa:
+  osx-arm64/westpa-2022.01-py310h02f21da_2.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  osx-arm64/westpa-2022.01-py38he5c2ac2_2.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  osx-arm64/westpa-2022.01-py39h9eb174b_2.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
