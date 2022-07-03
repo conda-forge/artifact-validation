@@ -304,6 +304,20 @@ awscrt:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+bottleneck:
+  linux-ppc64le/bottleneck-1.3.5-py310hf126fe3_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+        bad_paths:
+        - bin/python3.10.bak
+  linux-ppc64le/bottleneck-1.3.5-py38hf1e54c8_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/bottleneck-1.3.5-py39h4730999_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 brian2:
   osx-arm64/brian2-2.5.1-py310ha6127ee_0.tar.bz2:
     bad_paths:
@@ -418,6 +432,18 @@ cftime:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+  linux-ppc64le/cftime-1.6.1-py310hf126fe3_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/cftime-1.6.1-py38hf1e54c8_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/cftime-1.6.1-py39h4730999_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
   osx-arm64/cftime-1.6.0-py310h611a7d1_2.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -507,6 +533,19 @@ cppcheck:
       pyyaml.python.generated:
       - bin/python3.8.bak
   osx-arm64/cppcheck-2.7.5-py39h05339f1_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+cppyy-cling:
+  linux-ppc64le/cppyy-cling-6.27.0-py310hbbdc3b4_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/cppyy-cling-6.27.0-py38hb6edf9e_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/cppyy-cling-6.27.0-py39h51b9803_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
@@ -727,6 +766,18 @@ fortls:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+  linux-ppc64le/fortls-2.11.0-py310h194a6c8_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/fortls-2.11.0-py38h8328f6c_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/fortls-2.11.0-py39h0b1cf3c_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
   osx-arm64/fortls-2.10.0-py310hbe9552e_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -736,6 +787,19 @@ fortls:
       pyyaml.python.generated:
       - bin/python3.8.bak
   osx-arm64/fortls-2.10.0-py39h2804cbe_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+geventhttpclient:
+  linux-ppc64le/geventhttpclient-1.5.5-py310h939259b_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/geventhttpclient-1.5.5-py38hf25ed59_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/geventhttpclient-1.5.5-py39h98ec90c_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
