@@ -1222,11 +1222,23 @@ hpgeom:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.10.bak
+  linux-ppc64le/hpgeom-0.6.0-py310hf126fe3_2.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
   linux-ppc64le/hpgeom-0.6.0-py38hf1e54c8_1.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.8.bak
+  linux-ppc64le/hpgeom-0.6.0-py38hf1e54c8_2.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
   linux-ppc64le/hpgeom-0.6.0-py39h4730999_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  linux-ppc64le/hpgeom-0.6.0-py39h4730999_2.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
@@ -1326,6 +1338,18 @@ iminuit:
       pyyaml.python.generated:
       - bin/python3.8.bak
   linux-ppc64le/iminuit-2.12.0-py39h62245c2_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  linux-ppc64le/iminuit-2.12.1-py310h76aa780_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/iminuit-2.12.1-py38h5482240_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/iminuit-2.12.1-py39h62245c2_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
@@ -1622,6 +1646,19 @@ linearmodels:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+lxml:
+  linux-ppc64le/lxml-4.9.1-py310h939259b_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/lxml-4.9.1-py38hf25ed59_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/lxml-4.9.1-py39h98ec90c_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 maturin:
   osx-64/maturin-0.7.7-py36h0b31af3_0.tar.bz2:
     bad_paths:
@@ -1810,6 +1847,43 @@ openmeeg:
       pyyaml.python.generated:
       - bin/python3.8.bak
   osx-arm64/openmeeg-2.4.2-py39h54c461b_3.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+openpmd-api:
+  linux-ppc64le/openpmd-api-0.14.5-mpi_mpich_py310h3c4db57_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/openpmd-api-0.14.5-mpi_mpich_py38hee50933_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/openpmd-api-0.14.5-mpi_mpich_py39h60ddeed_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  linux-ppc64le/openpmd-api-0.14.5-mpi_openmpi_py310hadb1240_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/openpmd-api-0.14.5-mpi_openmpi_py38h3be91f3_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/openpmd-api-0.14.5-mpi_openmpi_py39h55da7b9_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  linux-ppc64le/openpmd-api-0.14.5-nompi_py310he14cb75_101.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/openpmd-api-0.14.5-nompi_py38h27573b3_101.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/openpmd-api-0.14.5-nompi_py39hf0b68f3_101.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
@@ -2364,18 +2438,27 @@ rapidfuzz:
   linux-ppc64le/rapidfuzz-2.1.0-py310h7b168e4_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.10.bak
+      - bin/python3.10.bak
   linux-ppc64le/rapidfuzz-2.1.0-py38h8af89d0_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.8.bak
+      - bin/python3.8.bak
   linux-ppc64le/rapidfuzz-2.1.0-py39h9c2015c_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.9.bak
+      - bin/python3.9.bak
+  linux-ppc64le/rapidfuzz-2.1.1-py310h7b168e4_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/rapidfuzz-2.1.1-py38h8af89d0_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/rapidfuzz-2.1.1-py39h9c2015c_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
   osx-arm64/rapidfuzz-2.0.15-py310ha6a5cd6_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -2433,6 +2516,19 @@ setuptools_scm:
         bad_paths:
         - Lib/site-packages/pkg_resources/**/*
         - Lib/site-packages/setuptools/**/*
+shapely:
+  linux-ppc64le/shapely-1.8.2-py310hbc22e62_3.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/shapely-1.8.2-py38ha06a5d8_3.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/shapely-1.8.2-py39h103d081_3.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 shortuuid:
   linux-aarch64/shortuuid-1.0.9-py310h4c7bcd0_0.tar.bz2:
     bad_paths:
