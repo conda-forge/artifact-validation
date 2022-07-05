@@ -2372,6 +2372,55 @@ perspective:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+petsc4py:
+  linux-ppc64le/petsc4py-3.17.3-complex_h5b94410_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/petsc4py-3.17.3-complex_h7d27782_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  linux-ppc64le/petsc4py-3.17.3-complex_h9b8e05a_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  linux-ppc64le/petsc4py-3.17.3-complex_hb0bb1a8_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/petsc4py-3.17.3-complex_hbd7c2cc_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/petsc4py-3.17.3-complex_hd8e0b1e_0.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/petsc4py-3.17.3-real_h2f705e5_100.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/petsc4py-3.17.3-real_h2f98093_100.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/petsc4py-3.17.3-real_h3e9b927_100.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
+  linux-ppc64le/petsc4py-3.17.3-real_h7ce1403_100.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
+  linux-ppc64le/petsc4py-3.17.3-real_hb7b5d4a_100.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
+  linux-ppc64le/petsc4py-3.17.3-real_hda14804_100.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
 piff:
   osx-arm64/piff-1.2.4-py310hbe9552e_0.tar.bz2:
     bad_paths:
