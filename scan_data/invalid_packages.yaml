@@ -354,8 +354,7 @@ bottleneck:
   linux-ppc64le/bottleneck-1.3.5-py310hf126fe3_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.10.bak
+      - bin/python3.10.bak
   linux-ppc64le/bottleneck-1.3.5-py38hf1e54c8_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -428,14 +427,26 @@ cartopy:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
+  linux-ppc64le/cartopy-0.20.3-py310h2f133e4_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.10.bak
   linux-ppc64le/cartopy-0.20.3-py310h53d3e0d_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.10.bak
+  linux-ppc64le/cartopy-0.20.3-py38ha1ea52e_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.8.bak
   linux-ppc64le/cartopy-0.20.3-py38hf631522_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.8.bak
+  linux-ppc64le/cartopy-0.20.3-py39h6875273_1.tar.bz2:
+    bad_paths:
+      pyyaml.python.generated:
+      - bin/python3.9.bak
   linux-ppc64le/cartopy-0.20.3-py39hf3475f2_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
