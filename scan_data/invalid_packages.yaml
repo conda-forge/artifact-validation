@@ -222,7 +222,8 @@ awscli:
   osx-arm64/awscli-1.25.18-py38h10201cd_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - bin/python3.8.bak
+        bad_paths:
+        - bin/python3.8.bak
   osx-arm64/awscli-1.25.18-py39h2804cbe_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
