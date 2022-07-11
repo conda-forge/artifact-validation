@@ -216,8 +216,7 @@ awscli:
   osx-arm64/awscli-1.25.18-py38h10201cd_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.8.bak
+      - bin/python3.8.bak
   osx-arm64/awscli-1.25.18-py39h2804cbe_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -2575,18 +2574,15 @@ pygit2:
   linux-aarch64/pygit2-1.9.2-py310h761cc84_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.10.bak
+      - bin/python3.10.bak
   linux-aarch64/pygit2-1.9.2-py38hdacc76a_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.8.bak
+      - bin/python3.8.bak
   linux-aarch64/pygit2-1.9.2-py39h0fd3b05_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.9.bak
+      - bin/python3.9.bak
   osx-arm64/pygit2-1.9.2-py310h02f21da_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -2850,15 +2846,18 @@ pytz-deprecation-shim:
   linux-aarch64/pytz-deprecation-shim-0.1.0.post0-py310h4c7bcd0_2.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - bin/python3.10.bak
+        bad_paths:
+        - bin/python3.10.bak
   linux-aarch64/pytz-deprecation-shim-0.1.0.post0-py38he3eb160_2.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - bin/python3.8.bak
+        bad_paths:
+        - bin/python3.8.bak
   linux-aarch64/pytz-deprecation-shim-0.1.0.post0-py39h4420490_2.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - bin/python3.9.bak
+        bad_paths:
+        - bin/python3.9.bak
   linux-ppc64le/pytz-deprecation-shim-0.1.0.post0-py310h194a6c8_2.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
