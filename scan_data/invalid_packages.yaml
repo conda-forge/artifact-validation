@@ -3092,15 +3092,18 @@ scqubits:
   osx-arm64/scqubits-3.0.1-py310ha6127ee_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - bin/python3.10.bak
+        bad_paths:
+        - bin/python3.10.bak
   osx-arm64/scqubits-3.0.1-py38h7fa088a_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - bin/python3.8.bak
+        bad_paths:
+        - bin/python3.8.bak
   osx-arm64/scqubits-3.0.1-py39hc86685f_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - bin/python3.9.bak
+        bad_paths:
+        - bin/python3.9.bak
 setuptools_scm:
   win-64/setuptools_scm-1.15.0-py35_0.tar.bz2:
     bad_paths:
