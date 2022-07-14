@@ -2593,7 +2593,8 @@ pygit2:
   osx-arm64/pygit2-1.9.2-py39h9eb174b_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - bin/python3.9.bak
+        bad_paths:
+        - bin/python3.9.bak
 pyosf:
   osx-64/pyosf-1.0.4-py35_0.tar.bz2:
     bad_paths:
@@ -2847,18 +2848,15 @@ pytz-deprecation-shim:
   linux-aarch64/pytz-deprecation-shim-0.1.0.post0-py310h4c7bcd0_2.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.10.bak
+      - bin/python3.10.bak
   linux-aarch64/pytz-deprecation-shim-0.1.0.post0-py38he3eb160_2.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.8.bak
+      - bin/python3.8.bak
   linux-aarch64/pytz-deprecation-shim-0.1.0.post0-py39h4420490_2.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.9.bak
+      - bin/python3.9.bak
   linux-ppc64le/pytz-deprecation-shim-0.1.0.post0-py310h194a6c8_2.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
