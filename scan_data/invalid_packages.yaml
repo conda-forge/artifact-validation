@@ -2202,7 +2202,8 @@ openpmd-api:
   linux-ppc64le/openpmd-api-0.14.5-mpi_mpich_py310h3c4db57_1.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - bin/python3.10.bak
+        bad_paths:
+        - bin/python3.10.bak
   linux-ppc64le/openpmd-api-0.14.5-mpi_mpich_py38hee50933_1.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
