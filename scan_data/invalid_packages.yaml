@@ -2595,8 +2595,7 @@ pygit2:
   osx-arm64/pygit2-1.9.2-py39h9eb174b_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.9.bak
+      - bin/python3.9.bak
 pyosf:
   osx-64/pyosf-1.0.4-py35_0.tar.bz2:
     bad_paths:
