@@ -1992,7 +1992,8 @@ mlflow:
   linux-ppc64le/mlflow-1.27.0-py39h3a6fa0e_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - bin/python3.9.bak
+        bad_paths:
+        - bin/python3.9.bak
   osx-arm64/mlflow-1.27.0-py310h37bd5d9_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -2204,8 +2205,7 @@ openpmd-api:
   linux-ppc64le/openpmd-api-0.14.5-mpi_mpich_py310h3c4db57_1.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.10.bak
+      - bin/python3.10.bak
   linux-ppc64le/openpmd-api-0.14.5-mpi_mpich_py38hee50933_1.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -2995,7 +2995,8 @@ rapidfuzz:
   linux-ppc64le/rapidfuzz-2.0.15-py310h7b168e4_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - bin/python3.10.bak
+        bad_paths:
+        - bin/python3.10.bak
   linux-ppc64le/rapidfuzz-2.0.15-py38h8af89d0_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -3019,15 +3020,18 @@ rapidfuzz:
   linux-ppc64le/rapidfuzz-2.1.1-py310h7b168e4_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - bin/python3.10.bak
+        bad_paths:
+        - bin/python3.10.bak
   linux-ppc64le/rapidfuzz-2.1.1-py38h8af89d0_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - bin/python3.8.bak
+        bad_paths:
+        - bin/python3.8.bak
   linux-ppc64le/rapidfuzz-2.1.1-py39h9c2015c_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - bin/python3.9.bak
+        bad_paths:
+        - bin/python3.9.bak
   osx-arm64/rapidfuzz-2.0.15-py310ha6a5cd6_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
