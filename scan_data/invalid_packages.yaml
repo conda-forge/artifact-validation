@@ -2653,7 +2653,8 @@ pyprind:
   osx-arm64/pyprind-2.11.2-py38h10201cd_1003.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-      - bin/python3.8.bak
+        bad_paths:
+        - bin/python3.8.bak
   osx-arm64/pyprind-2.11.2-py39h2804cbe_1003.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
