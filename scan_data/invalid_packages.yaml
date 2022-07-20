@@ -2993,8 +2993,7 @@ rapidfuzz:
   linux-ppc64le/rapidfuzz-2.0.15-py310h7b168e4_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.10.bak
+      - bin/python3.10.bak
   linux-ppc64le/rapidfuzz-2.0.15-py38h8af89d0_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -3018,18 +3017,15 @@ rapidfuzz:
   linux-ppc64le/rapidfuzz-2.1.1-py310h7b168e4_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.10.bak
+      - bin/python3.10.bak
   linux-ppc64le/rapidfuzz-2.1.1-py38h8af89d0_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.8.bak
+      - bin/python3.8.bak
   linux-ppc64le/rapidfuzz-2.1.1-py39h9c2015c_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.9.bak
+      - bin/python3.9.bak
   osx-arm64/rapidfuzz-2.0.15-py310ha6a5cd6_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
