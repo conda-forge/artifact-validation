@@ -2663,12 +2663,14 @@ pypy2.7:
   linux-64/pypy2.7-5.10.0-0.tar.bz2:
     bad_paths:
       openssl:
-      - include/openssl/**/*
+        bad_paths:
+        - include/openssl/**/*
       openssl.generated:
-      - lib/libcrypto.so
-      - lib/libcrypto.so.1.1
-      - lib/libssl.so
-      - lib/libssl.so.1.1
+        bad_paths:
+        - lib/libcrypto.so
+        - lib/libcrypto.so.1.1
+        - lib/libssl.so
+        - lib/libssl.so.1.1
 pyre2:
   osx-arm64/pyre2-0.3.6-py310h0a7f3a2_8.tar.bz2:
     bad_paths:
