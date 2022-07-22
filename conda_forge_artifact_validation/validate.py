@@ -98,9 +98,7 @@ def validate_file(path, validate_yamls, tmpdir=None, lock=None):
             )
             valid = valid and _valid
             if not _valid:
-                bad_pths[validate_name] = {
-                    "bad_paths": sorted(_bad_pths),
-                }
+                bad_pths[validate_name] = sorted(_bad_pths)
         else:
             LOGGER.debug("skipping %s for %s", pkg_nm, validate_name)
 
