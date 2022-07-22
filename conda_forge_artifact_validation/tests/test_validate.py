@@ -102,7 +102,7 @@ def test_validate_glob_dir_file(subdir_pkg, ok, globstr):
     else:
         assert bad_pths != {}
         assert "numpy" in bad_pths
-        assert bad_pths["numpy"]["bad_paths"] == [globstr]
+        assert bad_pths["numpy"] == [globstr]
 
 
 @pytest.mark.parametrize(
@@ -145,7 +145,7 @@ def test_validate_file(subdir_pkg, ok):
     else:
         assert not valid
         assert bad_pths != {}
-        assert bad_pths["numpy"]["bad_paths"] == [
+        assert bad_pths["numpy"] == [
             "lib/python*/site-packages/numpy",
             "lib/python*/site-packages/numpy-*.dist-info",
         ]
