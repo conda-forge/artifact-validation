@@ -1588,8 +1588,7 @@ iminuit:
   linux-aarch64/iminuit-2.12.1-py38h5f8a8d0_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.8.bak
+      - bin/python3.8.bak
   linux-aarch64/iminuit-2.12.1-py39h3d8bfb9_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
@@ -1844,8 +1843,7 @@ libopencv:
   linux-aarch64/libopencv-4.5.5-py310h97fa367_12.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.10.bak
+      - bin/python3.10.bak
   linux-aarch64/libopencv-4.5.5-py38ha83d297_12.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
