@@ -1737,13 +1737,11 @@ jarowinkler:
   linux-ppc64le/jarowinkler-1.0.5-py38h5482240_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.8.bak
+      - bin/python3.8.bak
   linux-ppc64le/jarowinkler-1.0.5-py39h62245c2_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
-        bad_paths:
-        - bin/python3.9.bak
+      - bin/python3.9.bak
   osx-arm64/jarowinkler-1.0.5-py310hb07a4bc_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
