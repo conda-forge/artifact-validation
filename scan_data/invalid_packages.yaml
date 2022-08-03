@@ -915,6 +915,42 @@ docutils:
       - lib/python*/site-packages/pkg_resources/**/*
       - lib/python*/site-packages/setuptools-*.dist-info/**/*
       - lib/python*/site-packages/setuptools/**/*
+  win-64/docutils-0.15.2-py310h5588dad_4.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/pkg_resources/**/*
+      - Lib/site-packages/setuptools-*.dist-info/**/*
+      - Lib/site-packages/setuptools/**/*
+  win-64/docutils-0.15.2-py37h03978a9_4.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/pkg_resources/**/*
+      - Lib/site-packages/setuptools-*.dist-info/**/*
+      - Lib/site-packages/setuptools/**/*
+  win-64/docutils-0.15.2-py38h32ec214_4.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/pkg_resources/**/*
+      - Lib/site-packages/setuptools-*.dist-info/**/*
+      - Lib/site-packages/setuptools/**/*
+  win-64/docutils-0.15.2-py38haa244fe_4.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/pkg_resources/**/*
+      - Lib/site-packages/setuptools-*.dist-info/**/*
+      - Lib/site-packages/setuptools/**/*
+  win-64/docutils-0.15.2-py39h0d475fb_4.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/pkg_resources/**/*
+      - Lib/site-packages/setuptools-*.dist-info/**/*
+      - Lib/site-packages/setuptools/**/*
+  win-64/docutils-0.15.2-py39hcbf5309_4.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - Lib/site-packages/pkg_resources/**/*
+      - Lib/site-packages/setuptools-*.dist-info/**/*
+      - Lib/site-packages/setuptools/**/*
 fastavro:
   osx-arm64/fastavro-1.5.2-py310h02f21da_0.tar.bz2:
     bad_paths:
