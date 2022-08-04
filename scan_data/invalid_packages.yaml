@@ -2370,31 +2370,6 @@ orjson:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
-pandas-stubs:
-  linux-aarch64/pandas-stubs-1.4.2.220626-py310h4c7bcd0_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.10.bak
-  linux-aarch64/pandas-stubs-1.4.2.220626-py38he3eb160_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.8.bak
-  linux-aarch64/pandas-stubs-1.4.2.220626-py39h4420490_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.9.bak
-  linux-ppc64le/pandas-stubs-1.4.2.220626-py310h194a6c8_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.10.bak
-  linux-ppc64le/pandas-stubs-1.4.2.220626-py38h8328f6c_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.8.bak
-  linux-ppc64le/pandas-stubs-1.4.2.220626-py39h0b1cf3c_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.9.bak
 pdm:
   linux-aarch64/pdm-1.15.4-py310h4c7bcd0_0.tar.bz2:
     bad_paths:
