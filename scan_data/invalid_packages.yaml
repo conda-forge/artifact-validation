@@ -915,6 +915,42 @@ docutils:
       - lib/python*/site-packages/pkg_resources/**/*
       - lib/python*/site-packages/setuptools-*.dist-info/**/*
       - lib/python*/site-packages/setuptools/**/*
+  linux-ppc64le/docutils-0.15.2-py310hd032262_4.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python*/site-packages/pkg_resources/**/*
+      - lib/python*/site-packages/setuptools-*.dist-info/**/*
+      - lib/python*/site-packages/setuptools/**/*
+  linux-ppc64le/docutils-0.15.2-py37h35e4cab_4.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python*/site-packages/pkg_resources/**/*
+      - lib/python*/site-packages/setuptools-*.dist-info/**/*
+      - lib/python*/site-packages/setuptools/**/*
+  linux-ppc64le/docutils-0.15.2-py38hf1d151d_4.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python*/site-packages/pkg_resources/**/*
+      - lib/python*/site-packages/setuptools-*.dist-info/**/*
+      - lib/python*/site-packages/setuptools/**/*
+  linux-ppc64le/docutils-0.15.2-py38hf8b3453_4.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python*/site-packages/pkg_resources/**/*
+      - lib/python*/site-packages/setuptools-*.dist-info/**/*
+      - lib/python*/site-packages/setuptools/**/*
+  linux-ppc64le/docutils-0.15.2-py39hb881913_4.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python*/site-packages/pkg_resources/**/*
+      - lib/python*/site-packages/setuptools-*.dist-info/**/*
+      - lib/python*/site-packages/setuptools/**/*
+  linux-ppc64le/docutils-0.15.2-py39hc1b9086_4.tar.bz2:
+    bad_paths:
+      setuptools.python.generated:
+      - lib/python*/site-packages/pkg_resources/**/*
+      - lib/python*/site-packages/setuptools-*.dist-info/**/*
+      - lib/python*/site-packages/setuptools/**/*
   win-64/docutils-0.15.2-py310h5588dad_4.tar.bz2:
     bad_paths:
       setuptools.python.generated:
