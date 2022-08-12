@@ -339,6 +339,11 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
                 old_data[k] = {}
             old_data[k].update(final_data[k])
 
+        diff_lines = _diff_res(
+            _strip_md5_or_error(orig_data),
+            _strip_md5_or_error(old_data),
+        )
+
         # clean out things not in the main channel
         for pkg_nm in list(old_data):
             for subdir_pkg in list(old_data[pkg_nm]):
@@ -351,11 +356,6 @@ def main(libcfgraph_path, verbose, time_limit, restart_data, output_path, pull):
 
         with open(output_path, "w") as fp:
             fp.write(yaml.dump(old_data, default_flow_style=False, indent=2))
-
-        diff_lines = _diff_res(
-            _strip_md5_or_error(orig_data),
-            _strip_md5_or_error(old_data),
-        )
     else:
         diff_lines = _diff_res(
             {},
