@@ -1886,18 +1886,6 @@ jarowinkler:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
-  osx-arm64/jarowinkler-1.0.5-py310hb07a4bc_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.10.bak
-  osx-arm64/jarowinkler-1.0.5-py38h396b780_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.8.bak
-  osx-arm64/jarowinkler-1.0.5-py39h6e3512e_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.9.bak
 jaxlib:
   osx-arm64/jaxlib-0.3.14-cpu_py310h006dc33_0.tar.bz2:
     bad_paths:
@@ -3141,42 +3129,6 @@ rapidfuzz:
       pyyaml.python.generated:
       - bin/python3.8.bak
   linux-ppc64le/rapidfuzz-2.1.1-py39h9c2015c_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.9.bak
-  osx-arm64/rapidfuzz-2.0.15-py310ha6a5cd6_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.10.bak
-  osx-arm64/rapidfuzz-2.0.15-py38h6724fcd_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.8.bak
-  osx-arm64/rapidfuzz-2.0.15-py39hd2dba81_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.9.bak
-  osx-arm64/rapidfuzz-2.1.0-py310ha6a5cd6_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.10.bak
-  osx-arm64/rapidfuzz-2.1.0-py38h6724fcd_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.8.bak
-  osx-arm64/rapidfuzz-2.1.0-py39hd2dba81_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.9.bak
-  osx-arm64/rapidfuzz-2.1.1-py310ha6a5cd6_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.10.bak
-  osx-arm64/rapidfuzz-2.1.1-py38h6724fcd_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.8.bak
-  osx-arm64/rapidfuzz-2.1.1-py39hd2dba81_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
