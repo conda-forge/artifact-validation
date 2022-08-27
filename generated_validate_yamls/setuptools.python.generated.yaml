@@ -500,6 +500,9 @@ files:
 - lib/python3.9/site-packages/_distutils_hack/override.py
 - lib/python3.9/site-packages/distutils-precedence.pth
 - lib/python3.9/site-packages/easy_install.py
+- site-packages/_distutils_hack/__init__.py
+- site-packages/_distutils_hack/override.py
+- site-packages/distutils-precedence.pth
 - site-packages/pkg_resources-*.dist-info/**/*
 - site-packages/pkg_resources-*.egg-info/**/*
 - site-packages/pkg_resources/**/*
