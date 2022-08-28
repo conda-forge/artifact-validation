@@ -197,9 +197,8 @@ awscli:
   osx-64/awscli-1.18.14-py36_0.tar.bz2:
     bad_paths:
       setuptools.python.generated:
-        bad_paths:
-        - lib/python*/site-packages/pkg_resources/**/*
-        - lib/python*/site-packages/setuptools/**/*
+      - lib/python*/site-packages/pkg_resources/**/*
+      - lib/python*/site-packages/setuptools/**/*
   osx-arm64/awscli-1.25.16-py38h10201cd_0.tar.bz2:
     bad_paths:
       pyyaml.python.generated:
