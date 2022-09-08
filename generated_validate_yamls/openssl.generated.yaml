@@ -38,6 +38,9 @@ files:
 - Library/lib/ossl-modules/fips.pdb
 - Library/lib/ossl-modules/legacy.dll
 - Library/lib/ossl-modules/legacy.pdb
+- Library/lib/pkgconfig/libcrypto.pc
+- Library/lib/pkgconfig/libssl.pc
+- Library/lib/pkgconfig/openssl.pc
 - Library/lib/ssleay32.lib
 - Library/lib/ssleay32_static.lib
 - Library/misc/CA.pl
