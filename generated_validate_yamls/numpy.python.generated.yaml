@@ -18,6 +18,7 @@ files:
 - bin/f2py2.7
 - bin/f2py3
 - bin/f2py3.10
+- bin/f2py3.11
 - bin/f2py3.6
 - bin/f2py3.7
 - bin/f2py3.8
