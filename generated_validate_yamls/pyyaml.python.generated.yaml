@@ -166,6 +166,7 @@ files:
 - lib/python3.10/site-packages/PyYAML-6.0-py3.10-macosx-11.0-arm64.egg/yaml/tokens.py
 - lib/python3.10/site-packages/PyYAML.pth
 - lib/python3.10/site-packages/_yaml/__init__.py
+- lib/python3.11/site-packages/_yaml/__init__.py
 - lib/python3.4/site-packages/_yaml.cpython-34m.so
 - lib/python3.4/site-packages/_yaml.so
 - lib/python3.5/site-packages/_yaml.cpython-35m-darwin.so
