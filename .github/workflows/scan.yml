@@ -84,10 +84,11 @@ jobs:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
 
       - name: trigger next job
-        uses: benc-uk/workflow-dispatch@v1
+        uses: benc-uk/workflow-dispatch@798e70c97009500150087d30d9f11c5444830385
         if: github.ref == 'refs/heads/main' && success() && ! steps.turnstyle.outputs.force_continued
         with:
           workflow: scan
+          ref: ${{ github.event.ref }}
           token: ${{ steps.generate_token.outputs.token }}
 
       - name: bump on fail
