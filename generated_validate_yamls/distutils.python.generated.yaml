@@ -1,0 +1,17 @@
+allowed:
+- conda-build
+- distutils
+files:
+- Lib/site-packages/distutils-*.dist-info/**/*
+- Lib/site-packages/distutils-*.egg
+- Lib/site-packages/distutils-*.egg-info
+- Lib/site-packages/distutils-*.egg-info/**/*
+- Lib/site-packages/distutils/**/*
+- lib/python*/site-packages/distutils-*.dist-info/**/*
+- lib/python*/site-packages/distutils-*.egg
+- lib/python*/site-packages/distutils-*.egg-info
+- lib/python*/site-packages/distutils-*.egg-info/**/*
+- lib/python*/site-packages/distutils/**/*
+- site-packages/distutils-*.dist-info/**/*
+- site-packages/distutils-*.egg-info/**/*
+- site-packages/distutils/**/*

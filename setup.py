@@ -2,7 +2,6 @@ from setuptools import setup, find_packages
 
 setup(
     name="conda-forge-artifact-validation",
-    version="0.0.1",
     description="",
     author="conda-forge/core",
     author_email="",
@@ -15,4 +14,6 @@ setup(
     ],
     url="https://github.com/conda-forge/artifact-validation",
     packages=find_packages(),
+    use_scm_version=True,
+    setup_requires=['setuptools_scm', 'setuptools_scm_git_archive'],
 )

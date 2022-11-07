@@ -34,8 +34,8 @@ jobs:
           python -m pip install -e .
 
           git config --global pull.rebase false
-          git config --global user.email 'pelson.pub+conda-forge@gmail.com'
-          git config --global user.name 'conda-forge-admin'
+          git config --global user.email "79913779+conda-forge-curator[bot]@users.noreply.github.com"
+          git config --global user.name "conda-forge-curator[bot]"
 
       - name: scan
         if: success() && ! steps.turnstyle.outputs.force_continued
@@ -84,10 +84,11 @@ jobs:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
 
       - name: trigger next job
-        uses: benc-uk/workflow-dispatch@v1
+        uses: benc-uk/workflow-dispatch@798e70c97009500150087d30d9f11c5444830385
         if: github.ref == 'refs/heads/main' && success() && ! steps.turnstyle.outputs.force_continued
         with:
           workflow: scan
+          ref: ${{ github.event.ref }}
           token: ${{ steps.generate_token.outputs.token }}
 
       - name: bump on fail
