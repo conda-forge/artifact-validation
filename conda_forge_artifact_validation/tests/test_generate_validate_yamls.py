@@ -7,10 +7,18 @@ from ..generate_validate_yamls import (
 
 def test_get_subdir_pkg_from_libcfgraph_artifact():
     subdir, pkg = _get_subdir_pkg_from_libcfgraph_artifact(
-        "artifacts/foo/conda-forge/osx-64/foo.json"
+        "artifacts/foo/conda-forge/osx-64/foo.json",
+        ".tar.bz2",
     )
     assert subdir == "osx-64"
     assert pkg == "foo.tar.bz2"
+
+    subdir, pkg = _get_subdir_pkg_from_libcfgraph_artifact(
+        "artifacts/foo/conda-forge/osx-64/foo.json",
+        ".conda",
+    )
+    assert subdir == "osx-64"
+    assert pkg == "foo.conda"
 
 
 def test_generate_validate_yaml_from_libcfgraph():

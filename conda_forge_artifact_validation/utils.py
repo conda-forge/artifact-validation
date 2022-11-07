@@ -29,9 +29,12 @@ def split_pkg(pkg):
     build : str
         The build string (e.g., `py37djfa_0`)
     """
-    if not pkg.endswith(".tar.bz2"):
-        raise RuntimeError("Can only process packages that end in .tar.bz2")
-    pkg = pkg[:-8]
+    if pkg.endswith(".tar.bz2"):
+        pkg = pkg[:-len(".tar.bz2")]
+    elif pkg.endswith(".conda"):
+        pkg = pkg[:-len(".conda")]
+    else:
+        raise RuntimeError("Can only process packages that end in .tar.bz2 or .conda!")
     plat, pkg_name = pkg.split(os.path.sep)
     name_ver, build = pkg_name.rsplit("-", 1)
     name, ver = name_ver.rsplit("-", 1)
@@ -92,9 +95,13 @@ def extract_subdir(path):
         pkg_dir, pkg = os.path.split(path)
 
         if pkg.endswith(".tar.bz2"):
-            pkg_nm = pkg[: -len(".tar.bz2")]
+            pkg_nm = pkg[:-len(".tar.bz2")]
+        elif pkg.endswith(".conda"):
+            pkg_nm = pkg[:-len(".conda")]
         else:
-            pkg_nm = pkg[: -len(".conda")]
+            raise RuntimeError(
+                "Can only process packages that end in .tar.bz2 or .conda!"
+            )
 
         conda_package_handling.api.extract(path)
 
