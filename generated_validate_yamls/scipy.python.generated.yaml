@@ -1,6 +1,12 @@
 allowed:
 - scipy
 files:
+- Lib/site-packages/SciPy-1.7.3.dist-info/INSTALLER
+- Lib/site-packages/SciPy-1.7.3.dist-info/METADATA
+- Lib/site-packages/SciPy-1.7.3.dist-info/RECORD
+- Lib/site-packages/SciPy-1.7.3.dist-info/REQUESTED
+- Lib/site-packages/SciPy-1.7.3.dist-info/WHEEL
+- Lib/site-packages/SciPy-1.7.3.dist-info/direct_url.json
 - Lib/site-packages/scipy-*.dist-info/**/*
 - Lib/site-packages/scipy-*.egg
 - Lib/site-packages/scipy-*.egg-info
