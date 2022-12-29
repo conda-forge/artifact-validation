@@ -68,8 +68,6 @@ def _diff_res(old_data, new_data):
     ).splitlines()
     diff_lines = []
     for ln in difflib.unified_diff(old_lines, new_lines, n=0, lineterm=''):
-        if ln.startswith('+++') or ln.startswith('---') or ln.startswith('@@'):
-            continue
         diff_lines.append(ln)
     return "\n".join(diff_lines)
 
