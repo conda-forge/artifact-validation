@@ -1021,6 +1021,9 @@ docutils:
       - Lib/site-packages/pkg_resources/**/*
       - Lib/site-packages/setuptools-*.dist-info/**/*
       - Lib/site-packages/setuptools/**/*
+emscripten:
+  win-64/emscripten-2.0.8-py39h2e07f2f_1.tar.bz2:
+    bad_paths: {}
 fastavro:
   osx-arm64/fastavro-1.5.2-py310h02f21da_0.tar.bz2:
     bad_paths:
