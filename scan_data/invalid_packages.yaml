@@ -2924,31 +2924,6 @@ pytorch_sparse:
     bad_paths:
       pyyaml.python.generated:
       - bin/python3.9.bak
-pytype:
-  osx-arm64/pytype-2022.06.23-py310hb07a4bc_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.10.bak
-  osx-arm64/pytype-2022.06.23-py38h396b780_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.8.bak
-  osx-arm64/pytype-2022.06.23-py39h6e3512e_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.9.bak
-  osx-arm64/pytype-2022.06.30-py310hb07a4bc_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.10.bak
-  osx-arm64/pytype-2022.06.30-py38h396b780_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.8.bak
-  osx-arm64/pytype-2022.06.30-py39h6e3512e_0.tar.bz2:
-    bad_paths:
-      pyyaml.python.generated:
-      - bin/python3.9.bak
 pytz-deprecation-shim:
   linux-aarch64/pytz-deprecation-shim-0.1.0.post0-py310h4c7bcd0_2.tar.bz2:
     bad_paths:
