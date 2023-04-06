@@ -49,16 +49,29 @@ def _get_subdir_pkg_from_libcfgraph_artifact(artifact_pth, tail):
     return subdir, pkg
 
 
+def _download_libcfgraph_index():
+    global LIBCFGRAPH_INDEX
+    r = requests.get(
+        "https://raw.githubusercontent.com/regro/libcfgraph"
+        "/master/.file_listing_meta.json",
+    )
+    r.raise_for_status()
+    n_files = r.json()["n_files"]
+    LIBCFGRAPH_INDEX = []
+    for i in range(n_files):
+        r = requests.get(
+            "https://raw.githubusercontent.com/regro/libcfgraph"
+            "/master/.file_listing_%d.json" % i,
+        )
+        r.raise_for_status()
+        LIBCFGRAPH_INDEX += r.json()
+
+
 def _get_all_json_blobs_for_artifact(artifact_name, verbose=0):
     """Given the name of a conda package, download all libcfgraph entries for it."""
     global LIBCFGRAPH_INDEX
     if LIBCFGRAPH_INDEX is None:
-        r = requests.get(
-            "https://raw.githubusercontent.com/regro/libcfgraph/master/"
-            ".file_listing.json"
-        )
-        r.raise_for_status()
-        LIBCFGRAPH_INDEX = r.json()
+        _download_libcfgraph_index()
 
     sentinel = os.path.join("artifacts", artifact_name) + "/"
     artifact_pths = [pth for pth in LIBCFGRAPH_INDEX if pth.startswith(sentinel)]
