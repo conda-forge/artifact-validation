@@ -96,7 +96,7 @@ The core team will usually wait a week to merge these PRs. However, they may mer
 deem the packages below a signifcant security or usability issue.
 
 If you think this PR was made by mistake or is incorrect, please get in touch with the core team in this PR or on \
-[gitter](https://gitter.im/conda-forge/conda-forge.github.io)!
+[Element channel](https://app.element.io/#/room/#conda-forge:matrix.org)!
 
 Information on invalid packages (see the files listed under `bad_paths`):
 

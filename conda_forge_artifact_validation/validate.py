@@ -234,8 +234,8 @@ about the failure to help you debug it.
 
 **Rerendering the feedstock will usually fix these problems.**
 
-If you have any issues or questions, you can find us on gitter in the
-community [chat room](https://gitter.im/conda-forge/conda-forge.github.io) or you can bump us right here.
+If you have any issues or questions, you can find us on Element in the
+community [channel](https://app.element.io/#/room/#conda-forge:matrix.org) or you can bump us right here.
 """ % team_name  # noqa
 
     if len(valid) > 0:
