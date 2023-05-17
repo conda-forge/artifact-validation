@@ -2978,6 +2978,8 @@ pyzmq:
       pyyaml.python.generated:
       - bin/python3.9.bak
 qt6-main:
+  win-64/qt6-main-6.4.0-h7a4ecde_4.tar.bz2:
+    bad_paths: {}
   win-64/qt6-main-6.4.0-he608ae7_3.tar.bz2:
     bad_paths: {}
 racket:
