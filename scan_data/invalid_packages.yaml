@@ -1973,6 +1973,9 @@ jupyter_core:
       pip.python.generated:
         bad_paths:
         - Lib/site-packages/pip/**/*
+libgz-physics6:
+  win-64/libgz-physics6-6.0.0-h0ea7e44_1.tar.bz2:
+    bad_paths: {}
 libopencv:
   linux-aarch64/libopencv-4.5.5-py310h97fa367_12.tar.bz2:
     bad_paths:
