@@ -1033,6 +1033,9 @@ docutils:
 emscripten:
   win-64/emscripten-2.0.8-py39h2e07f2f_1.tar.bz2:
     bad_paths: {}
+fast-rtps:
+  win-64/fast-rtps-2.2.0-h2d70ccf_0.tar.bz2:
+    bad_paths: {}
 fastavro:
   osx-arm64/fastavro-1.5.2-py310h02f21da_0.tar.bz2:
     bad_paths:
@@ -1992,6 +1995,9 @@ jupyter_core:
         - Lib/site-packages/pip/**/*
 libgz-physics6:
   win-64/libgz-physics6-6.0.0-h0ea7e44_1.tar.bz2:
+    bad_paths: {}
+libignition-physics5:
+  win-64/libignition-physics5-5.2.0-h63175ca_0.tar.bz2:
     bad_paths: {}
 libopencv:
   linux-aarch64/libopencv-4.5.5-py310h97fa367_12.tar.bz2:
