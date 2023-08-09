@@ -1024,6 +1024,11 @@ docutils:
 emscripten:
   win-64/emscripten-2.0.8-py39h2e07f2f_1.tar.bz2:
     bad_paths: {}
+fast-dds:
+  win-64/fast-dds-2.3.3-h1176d77_0.tar.bz2:
+    bad_paths: {}
+  win-64/fast-dds-2.4.0-h4e83ee3_1.tar.bz2:
+    bad_paths: {}
 fast-rtps:
   win-64/fast-rtps-2.2.0-h2d70ccf_0.tar.bz2:
     bad_paths: {}
