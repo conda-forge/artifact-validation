@@ -1865,6 +1865,10 @@ isce3:
       scipy.python.generated:
         bad_paths:
         - lib/python*/site-packages/scipy/**/*
+  osx-64/isce3-0.3.0-py39hbbc9796_0.tar.bz2:
+    bad_paths:
+      scipy.python.generated:
+      - lib/python*/site-packages/scipy/**/*
   osx-64/isce3-0.4.0-py37h0d20cec_1.tar.bz2:
     bad_paths:
       scipy.python.generated:
